@@ -43,9 +43,13 @@ I am actively seeking interesting research opportunities and Ph.D. positions sta
 <span class='anchor' id='news'></span>
 # 🔥 News
 - *2024.10*  &nbsp;🎉🎉 Our paper *Hierarchical Spatial-Temporal Graph-Enhanced Model for Map-Matching* accepted by *Australasian Database Conference 2025*, to be hold at Tokyo on 16 Dec.
+- *2024.10*  &nbsp;🎉🎉 One paper submitted to *The Thirteenth International Conference on Learning Representations (ICLR 2025)*.
+- *2024.10*  &nbsp;🎉🎉 One paper submitted to *The 24th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2025)*.
 - *2024.10*  &nbsp;🎉🎉 I have ended my memorable attachment at [Centre for Frontier AI Research](https://www.a-star.edu.sg/cfar), Agency for Science, Technology and Research [(A*STAR)](https://www.a-star.edu.sg/) at Singapore, serving as an intern researcher.
 - *2024.09*  &nbsp;🎉🎉 Our paper [*Machine Learning-Driven Spatiotemporal Analysis of Ozone Exposure and Health Risks in China*](https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2024JD041593) is accepted by *Journal of Geophysical Research - Atmospheres*.
 - *2024.09*  &nbsp;🎉🎉 My invention patent *A Single-UAV Atmospheric Pollutant Source Tracing Method Based on Gradient Ascent and Physical Kinematics* is published.
+- *2024.08*  &nbsp;🎉🎉 One paper submitted to *The 31th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (ACM KDD 2025)*.
+  *2024.08*  &nbsp;🎉🎉 One paper submitted to *The 39th Annual AAAI Conference on Artificial Intelligence (AAAI 2025)*.
 - *2024.05*  &nbsp;🎉🎉 My invention patent *A Method, System, Terminal Device, and Storage Medium for Air Quality Spatial Inference* is officially granted! 
 - *2023.12*  &nbsp;🎉🎉 I co-founded one enterprise named "Metasequoia Intelligence" (in Chinese 水杉智算) located at FuTian, Shenzhen, China, with [Dr. Jun Song](https://scholars.hkbu.edu.hk/en/persons/JUNSONG) from HKBU, as technical collaborator.
 
