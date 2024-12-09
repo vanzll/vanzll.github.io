@@ -18,31 +18,19 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 # 😊 About me
 
-Greetings! I am Zhenglin Wan, an undergraduate student from CUHKsz majoring in Data Science. You can find my CV at [CV](https://github.com/Carlos133386/Carlos133386.github.io/raw/main/cV%20(2).pdf). In campus, you can always find my at 320 A, ChengDao building (also known as Shenzhen key Laboratory of loT Intelligent Systems and Wireless Network Technology).
+Greetings! I am Zhenglin Wan, an undergraduate student from CUHK-Shenzhen, majoring in Data Science. You can find my CV at [CV](https://github.com/Carlos133386/Carlos133386.github.io/raw/main/cV%20(2).pdf). In campus, you can always find my at 320 A, ChengDao building (also known as Shenzhen key Laboratory of loT Intelligent Systems and Wireless Network Technology).
 
-During high school, I was fortunate to win the first prize in the Chinese High School Mathematics Olympics, during which I developed a habit of independent learning. In my undergraduate studies, I achieved nearly all A grades (4.0/4.0) in my major-related courses (statistics, mathematics, and computer science). I often preferred independent study over traditional classes, which allowed me to save time and engage in challenging and interesting research projects. My primary research interests lie in:
-
-## Enabling agents to make intelligent decisions:
-
-- Reinforcement Learning (RL) allows agents to learn from their environment through trial and error (e.g., the remarkable AlphaGo, which defeated the Go master Shishi Li in 2016, was made possible by advancements in RL). However, in my view, many "simple" real-world tasks (e.g., picking up chopsticks from a table and grasping food) are actually far more complex for robots than Go. The state space for these "simple" tasks is actually very large in RL terms, and traditional RL algorithms (like PPO) require enormous amount of samples to converge, making learning extremely slow. This is counter-intuitive, since that humans naturally view these tasks as simple, thanks to our remarkable biological evolution. We still face substantial challenges in enabling intelligent agents learn to perform even basic human tasks in a efficient way. My long-term goal is to explore novel, genuinely sample-efficient RL algorithms to bridge this gap.
-
-- Imitation Learning (IL) appears promising because it enables agents to mimic expert (or human) behavior directly, avoiding learning from scratch by aimless trial and error in the environment. Learning from demonstrations also aligns closely with human learning patterns. However, IL faces limitations when an agent encounters new scenarios not covered in the demonstrations. This issue mirrors a common question in human learning: “Can you generalize the knowledge from this lesson to solve new problems?” (In Chinese, this is known as “举一反三”). My interest lies in unlocking the power of IL to try to answer above question.
-
-- Both RL and IL represent purely data-driven approaches to agent learning and decision-making. However, I believe that human learning involves a much more complex system that includes memory, reflection, and reasoning and so on. Currently, there is a substantial gap between RL/IL approaches and genuine intelligence. Large Language Model (LLM) agents have shown promise in bridging this gap, given their remarkable inference capabilities. However, as LLMs are largely "black boxes," their potential limitations and capacities remain a great valuable research avenue, which continues to fuel my curiosity and future research.
-
-## Applications of intelligent agents:
-
-- I have observed that many real-world problems in fields such as the environment, transportation, and urban planning can be modeled as decision-making processes. I am eager to adopt this novel perspective and apply it to offer fresh insights into these complex, multidisciplinary problems.
+During high school, I was fortunate to win the first prize in the Chinese High School Mathematics Olympics, during which I developed a habit of independent learning. In my undergraduate studies, I achieved nearly all A grades (4.0/4.0) in my major-related courses (statistics, mathematics, and computer science). I often preferred independent study over traditional classes, which allowed me to save time and engage in challenging and interesting research projects. My primary research interests lie in: 1) **Decision-Making in Machine Learning**: Reinforcement Learning, Imitation Learning, Multi-agent systems 2) **The application of decision-making support systems in urban context**: such as smart transportation systems, environment monitoring, etc.
 
 ---
 
-I have been an intern researcher at [Centre for Frontier AI Research](https://www.a-star.edu.sg/cfar), Agency for Science, Technology and Research [(A*STAR)](https://www.a-star.edu.sg/) at Singapore. During my undergraduate, I am lucky to work with [Dr. Jun Song](https://scholars.hkbu.edu.hk/en/persons/JUNSONG) and co-found one enterprise named "Metasequoia Intelligence" with him as the technical collaborator, driven by my research interest. Our aim is to utilizing the power of LLM agents to integrate data querying, data process, data visualization and intelligent decision making, thus providing comprehensive AI empowerment services for industry purposes. We have published serveral invention patents and academic papers together. Prior to that, I was the key member of the research group of Prof. [Jianfeng Mao](https://sds.cuhk.edu.cn/en/teacher/268), the Assistant Dean of School of Data Science of CUHKsz.
+I have been an intern researcher at [Centre for Frontier AI Research](https://www.a-star.edu.sg/cfar), Agency for Science, Technology and Research [(A*STAR)](https://www.a-star.edu.sg/) at Singapore. During my undergraduate, I am lucky to work with [Dr. Jun Song](https://scholars.hkbu.edu.hk/en/persons/JUNSONG) and co-found one company named "Metasequoia Intelligence" with him as the technical collaborator, driven by my research interest. Our aim is to utilizing the power of LLM agents to integrate data querying, data process, data visualization and intelligent decision making, thus making AI contribute to the urban well-being. We have published serveral invention patents and academic papers together. Prior to that, I was the key member of the research group of Prof. [Jianfeng Mao](https://sds.cuhk.edu.cn/en/teacher/268), the Assistant Dean of School of Data Science of CUHK-Shenzhen.
 
 I am actively seeking interesting research opportunities and Ph.D. positions starting in Fall 2025. If you are looking for a dedicated and self-motivated candidate, please DO contact me at vanzl3386@gmail.com or carlos@metaseq.ai !
 
 <span class='anchor' id='news'></span>
 # 🔥 News
-- *2024.10*  &nbsp;🎉🎉 Our paper *Hierarchical Spatial-Temporal Graph-Enhanced Model for Map-Matching* accepted by *Australasian Database Conference 2025*, to be hold at Tokyo on 16 Dec.
+- *2024.10*  &nbsp;🎉🎉 Our paper *Hierarchical Spatial-Temporal Graph-Enhanced Model for Map-Matching* accepted by *Australasian Database Conference 2025*, to be hold at Tokyo on 16 Dec (oral presentation).
 - *2024.10*  &nbsp;🎉🎉 One paper submitted to *The Thirteenth International Conference on Learning Representations (ICLR 2025)*.
 - *2024.10*  &nbsp;🎉🎉 One paper submitted to *The 24th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2025)*.
 - *2024.10*  &nbsp;🎉🎉 I have ended my memorable attachment at [Centre for Frontier AI Research](https://www.a-star.edu.sg/cfar), Agency for Science, Technology and Research [(A*STAR)](https://www.a-star.edu.sg/) at Singapore, serving as an intern researcher.
@@ -54,7 +42,7 @@ I am actively seeking interesting research opportunities and Ph.D. positions sta
 - *2023.12*  &nbsp;🎉🎉 I co-founded one enterprise named "Metasequoia Intelligence" (in Chinese 水杉智算) located at FuTian, Shenzhen, China, with [Dr. Jun Song](https://scholars.hkbu.edu.hk/en/persons/JUNSONG) from HKBU, as technical collaborator.
 
 <span class='anchor' id='academic-results'></span>
-# 📝 Academic Results
+# 📝 Selected Academic Results
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Conference Under Review</div><img src='personal_page_sources/QD-IL/show.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -208,4 +196,10 @@ Graph-based Reinforcement learning Approach for influential Node Detection in ai
 
 <span class='anchor' id='person'></span>
 # Personal Life
-For the time I am not doing research, I am a music enthusiast: I have been playing guitar for ten years and began learning to play the piano and electronic piano independently when I was 15 years old. During my undergraduate years, I established a band named "Minor Blue" and performed multiple times on campus, which is one of the most memorable moments of my campus life. Additionally, I sometimes play video games, like League of Legends and Genshin Impact, to relax. I also enjoy reading literature on Buddhism and Daoism (in Chinese culture), such as the Diamond Sutra (in Chinese "金刚经") and the Tao Te Ching (in Chinese "道德经"), because the ideas behind them really attract me, help me observe my thoughts and understand myself.
+For the time I am not doing research, I am a **music** enthusiast: I have been playing guitar for ten years and began learning to play the piano and electronic piano independently when I was 15 years old. During my undergraduate years, I established a band named "Minor Blue" and performed multiple times inside and outside campus. I plan to learn playing drums during my spare time at Ph.D.
+
+I am also a ten-year chess player, with national third-rank honor. I love the process of comprehensive planning, logical-thinking and inferring.
+
+
+
+
