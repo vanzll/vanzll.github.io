@@ -30,6 +30,7 @@ I am actively seeking interesting research opportunities and Ph.D. positions sta
 
 <span class='anchor' id='news'></span>
 # 🔥 News
+- *2024.12*  &nbsp;🎉🎉 My paper *Next-POI Recommendation via Multi-Objective Adversarial Imitation Learning* is accepted by *The 39th Annual AAAI Conference on Artificial Intelligence (AAAI 2025)*.
 - *2024.10*  &nbsp;🎉🎉 Our paper *Hierarchical Spatial-Temporal Graph-Enhanced Model for Map-Matching* accepted by *Australasian Database Conference 2025*, to be hold at Tokyo on 16 Dec (oral presentation).
 - *2024.10*  &nbsp;🎉🎉 One paper submitted to *The Thirteenth International Conference on Learning Representations (ICLR 2025)*.
 - *2024.10*  &nbsp;🎉🎉 One paper submitted to *The 24th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2025)*.
@@ -61,7 +62,7 @@ I am actively seeking interesting research opportunities and Ph.D. positions sta
 
 ---
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Conference Under Review</div><img src='personal_page_sources/POI/show.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2025</div><img src='personal_page_sources/POI/show.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 Next-POI Recommendation via Multi-Objective Adversarial Imitation Learning
