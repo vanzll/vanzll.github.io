@@ -31,7 +31,7 @@ I am actively seeking interesting research opportunities and Ph.D. positions sta
 <span class='anchor' id='news'></span>
 # 🔥 News
 - *2024.12*  &nbsp;🎉🎉 My paper *Next-POI Recommendation via Multi-Objective Adversarial Imitation Learning* is accepted by *The 39th Annual AAAI Conference on Artificial Intelligence (AAAI 2025)*.
-- *2024.10*  &nbsp;🎉🎉 Our paper *Hierarchical Spatial-Temporal Graph-Enhanced Model for Map-Matching* accepted by *Australasian Database Conference 2025*, to be hold at Tokyo on 16 Dec (oral presentation).
+- *2024.10*  &nbsp;🎉🎉 Our paper *Hierarchical Spatial-Temporal Graph-Enhanced Model for Map-Matching* accepted by *Australasian Database Conference 2025*, to be hold at Tokyo on 16 Dec (oral presentation), and published at [*Springer Nature*](https://link.springer.com/chapter/10.1007/978-981-96-1242-0_4).
 - *2024.10*  &nbsp;🎉🎉 One paper submitted to *The Thirteenth International Conference on Learning Representations (ICLR 2025)*.
 - *2024.10*  &nbsp;🎉🎉 One paper submitted to *The 24th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2025)*.
 - *2024.10*  &nbsp;🎉🎉 I have ended my memorable attachment at [Centre for Frontier AI Research](https://www.a-star.edu.sg/cfar), Agency for Science, Technology and Research [(A*STAR)](https://www.a-star.edu.sg/) at Singapore, serving as an intern researcher.
