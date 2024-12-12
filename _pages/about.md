@@ -20,7 +20,7 @@ redirect_from:
 
 Greetings! I am Zhenglin Wan, an undergraduate student from CUHK-Shenzhen, majoring in Data Science. You can find my CV at [CV](https://drive.google.com/file/d/1fYYlj0MhJGsPPDdWUMB9LHMTqUo3bL1s/view?usp=sharing). My office/working station in campus: 320 A, ChengDao building (also known as Shenzhen key Laboratory of loT Intelligent Systems and Wireless Network Technology).
 
-During high school, I was fortunate to win the first prize in the Chinese High School Mathematics Olympics, during which I developed personalized paradigm of learning and the habit of independent study. This enables me to achieve nearly all A grades (4.0/4.0) in my major-related courses (statistics, mathematics, and computer science) in a self-directed way, which allowed me to save time and engage in challenging and interesting research projects. My primary research interests lie in: 1) **Decision-Making in Machine Learning**: How to embed the human's learning and decision-making patterns into machine's learning paradigm, such as Reinforcement Learning, Imitation Learning, Multi-agent systems?  2) **The application of decision-making support systems in urban context**: such as smart transportation systems, environment monitoring, etc.
+During high school, I was fortunate to win the first prize in the Chinese High School Mathematics Olympics, during which I developed personalized paradigm of learning and the habit of independent study. This enables me to achieve nearly all A grades (4.0/4.0) in my major-related courses (statistics, mathematics, and computer science) in a self-directed way, which allowed me to save time and engage in challenging and interesting research projects. My primary research interests lie in: 1) **Decision-Making in Machine Learning**: How to embed the human's learning and decision-making patterns into machine's learning paradigm, such as Reinforcement Learning, Imitation Learning, Multi-agent systems? I am also interested in adopting statistical view to understand these problems.  2) **The application of decision-making support systems in urban context**: such as smart transportation systems, environment monitoring, etc.
 
 ---
 
@@ -49,10 +49,12 @@ I am actively seeking interesting research opportunities and Ph.D. positions sta
 <div class='paper-box-text' markdown="1">
 
 [Quality Diversity Imitation Learning](https://arxiv.org/abs/2410.06151)
+Author: **Zhenglin Wan**, Xingrui Yu*, David Bossens, Yueming Lyu, Qing Guo, Flint Xiaofeng Fan, Ivor Tsang
 
 **Supervisor:** [Xingrui Yu](https://www.a-star.edu.sg/cfar/about-cfar/our-team/yu-xingrui), [David Bossens](https://www.a-star.edu.sg/cfar/about-cfar/our-team/david-bossens), [Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang).
 **Host:** [Centre for Frontier AI Research](https://www.a-star.edu.sg/cfar), [A*STAR](https://www.a-star.edu.sg/), Singapore  
 **Duration:** Jun. 2024 - Oct. 2024  
+
 
 - Imitation learning (IL) approaches succeed in fast adaptation for dozens of applications. However, traditional IL assumes the demonstrations comes from one specific expert policy, thus containing only one behavior pattern. This way may result in the lack of robustness of agent to deal with various and stochastic situations.
 - To address above issue, this work pioneers a new paradigm- learning from diverse behaviors. We proposed a novel quality-diversity imitation learning model to enable the agent to learn a broad set of skills from limited but diverse demonstrations. With multiple skills equipped, the agent can robustly deal with unseen and stochastic environment.
@@ -62,14 +64,15 @@ I am actively seeking interesting research opportunities and Ph.D. positions sta
 
 ---
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2025</div><img src='personal_page_sources/POI/show.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2025 Accepted</div><img src='personal_page_sources/POI/show.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 Next-POI Recommendation via Multi-Objective Adversarial Imitation Learning
 
-**Supervisor:** [Xingrui Yu](https://www.a-star.edu.sg/cfar/about-cfar/our-team/yu-xingrui)  
+**Supervisor:** [Pingfu Chao](https://www.researchgate.net/profile/Pingfu-Chao), [Xingrui Yu](https://www.a-star.edu.sg/cfar/about-cfar/our-team/yu-xingrui)  
 **Host:** [Centre for Frontier AI Research](https://www.a-star.edu.sg/cfar), A*STAR, Singapore  
 **Duration:** Feb. 2024 - Aug. 2024  
+**Author:** **Zhenglin Wan**, Anjun Gao, Xingrui Yu, Pingfu Chao*, Jun Song, Maohao Ran
 
 - We proposed a multi-objective imitation learning architecture with variational inference to address the notorious data sparsity and data noise issue in POI data, and we utilize a novel adaptive graphs to capture spatial-temporal dependencies of POI sequences and user patterns.
 - Demonstrated that the proposed architecture outperformed the current state-of-the-art by 8%, and by 31% in extremely sparse data scenarios.
@@ -87,6 +90,7 @@ Graph-based Reinforcement learning Approach for influential Node Detection in ai
 **Supervisor:** [Jianfeng Mao](https://sds.cuhk.edu.cn/en/teacher/268)  
 **Host:** School of Data Science, CUHK (Shenzhen)  
 **Duration:** Jun. 2023 - Aug. 2024  
+**Author:** Chi Li, **Zhenglin Wan**, Kaize Wang, Yuxuan Huang, Chengxi Li, Jianfeng Mao*
 
 - We developed a data-driven method combining graph representation learning with value-based reinforcement learning to identify key airports in delay networks, addressing the issue of low inference efficiency and cost-unaware management.
 - Empirically, we achieved a 32% performance increase on the US airport delay dataset. Submitted a paper to *Transportation Research Part E: Logistics and Transportation Review*.
@@ -120,6 +124,7 @@ Graph-based Reinforcement learning Approach for influential Node Detection in ai
 
 **Supervisor:** [Jun Song](https://scholars.hkbu.edu.hk/en/persons/JUNSONG), HKBU  
 **Duration:** Nov. 2023 - Jan. 2024  
+**Author:** Jun Song*, Chendong Ma, Maohao Ran, **Zhenglin Wan**
 
 - We integrated air quality assessment into tools for an LLM-based agent using LangChain, enabling real-time interaction for efficient data analysis.
 - Submitted to *Science Advances*.
@@ -138,7 +143,7 @@ Graph-based Reinforcement learning Approach for influential Node Detection in ai
 **Duration:** Nov. 2023 - Feb. 2024  
 
 - Developed optimization algorithms for UAV-based pollutant tracking, demonstrating notable improvements in accuracy and efficiency.
-- Conducted simulations validating the algorithms' effectiveness in real-world tracking, resulting in two invention patents under review.
+- Conducted simulations validating the algorithms' effectiveness in real-world tracking, resulting in two invention patents.
 
 </div>
 </div>
