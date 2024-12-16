@@ -160,7 +160,7 @@ Graph-based Reinforcement learning Approach for influential Node Detection in ai
 
 ---
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Australian Database Conference (Best Paper Runner-Up)</div><img src='' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Australian Database Conference (Best Paper Runner-Up)</div><img src='personal_page_sources/AlphaAir/show.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Hierarchical Spatial-Temporal Graph-Enhanced Model for Map-Matching](https://link.springer.com/chapter/10.1007/978-981-96-1242-0_4)
