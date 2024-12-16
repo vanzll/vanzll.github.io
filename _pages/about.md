@@ -173,6 +173,8 @@ Author: Anjun Gao†, Zhenglin Wan†, Pingfu Chao*, Shunyu Yao (†: co-first a
 </div>
 </div>
 
+---
+
 <span class='anchor' id='honors-and-awards'></span>
 # 🎖 Honors and Awards
 - **Zhejiang Guolong Inspirational & Diligentia Bowen II Scholarship** (Outstanding Academic Performance)  
