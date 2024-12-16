@@ -167,8 +167,11 @@ Graph-based Reinforcement learning Approach for influential Node Detection in ai
 <div class='paper-box-text' markdown="1">
 
 [Hierarchical Spatial-Temporal Graph-Enhanced Model for Map-Matching](https://link.springer.com/chapter/10.1007/978-981-96-1242-0_4)
+
 Author: Anjun Gao†, Zhenglin Wan†, Pingfu Chao*, Shunyu Yao (†: co-first author)
+
 **Institution:** Soochow University, Metasequoia Intelligence 
+
 **Duration:** Jun. 2024 - Oct. 2024
 
 
