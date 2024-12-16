@@ -158,6 +158,9 @@ Graph-based Reinforcement learning Approach for influential Node Detection in ai
 **Institution:** Metasequoia Intelligence  
 **Duration:** Feb. 2023 - May. 2023  
 
+</div>
+</div>
+
 ---
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Australian Database Conference (Best Paper Runner-Up)</div><img src='personal_page_sources/AlphaAir/show.png' alt="sym" width="100%"></div></div>
