@@ -134,7 +134,7 @@ Graph-based Reinforcement learning Approach for influential Node Detection in ai
 
 ---
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Patent Pending</div><img src='personal_page_sources/UAV/show.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Patent Pending</div><img src='personal_page_sources/ADC/figure.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Unmanned Aerial Vehicle Pollutant Tracking using Optimization Methods]()
