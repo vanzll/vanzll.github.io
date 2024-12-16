@@ -158,6 +158,15 @@ Graph-based Reinforcement learning Approach for influential Node Detection in ai
 **Institution:** Metasequoia Intelligence  
 **Duration:** Feb. 2023 - May. 2023  
 
+---
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Australian Database Conference (Best Paper Runner-Up)</div><img src='' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Hierarchical Spatial-Temporal Graph-Enhanced Model for Map-Matching](https://link.springer.com/chapter/10.1007/978-981-96-1242-0_4)
+Author: Anjun Gao†, Zhenglin Wan†, Pingfu Chao*, Shunyu Yao (†: co-first author)
+**Institution:** Soochow University, Metasequoia Intelligence 
+**Duration:** Jun. 2024 - Oct. 2024
 
 
 
