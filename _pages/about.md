@@ -15,6 +15,17 @@ redirect_from:
 {% endif %}
 {% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
 
+<span class='anchor' id='news'></span>
+# 🔥 News
+- *2024.12*  &nbsp;🎉🎉 My co-first-author paper [*Imitation From Diverse Behaviors: Wasserstein Quality Diversity Imitation Learning with Single-Step Archive Exploration*](https://arxiv.org/abs/2411.06965) is accepted (oral presentation) by *The 24th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2025)*.
+- *2024.12*  &nbsp;🎉🎉 My first-author paper *Next-POI Recommendation via Multi-Objective Adversarial Imitation Learning* is accepted by *The 39th Annual AAAI Conference on Artificial Intelligence (AAAI 2025)*.
+- *2024.10*  &nbsp;🎉🎉 My co-first-author paper *Hierarchical Spatial-Temporal Graph-Enhanced Model for Map-Matching* is accepted by *Australasian Database Conference 2025*, to be hold at Tokyo on 16 Dec (oral presentation ＆ best paper runner-up), and published at [*Springer Nature*](https://link.springer.com/chapter/10.1007/978-981-96-1242-0_4).
+- *2024.10*  &nbsp;🎉🎉 I have ended my memorable attachment at [Centre for Frontier AI Research](https://www.a-star.edu.sg/cfar), Agency for Science, Technology and Research [(A*STAR)](https://www.a-star.edu.sg/) at Singapore, serving as an intern researcher.
+- *2024.09*  &nbsp;🎉🎉 Our paper [*Machine Learning-Driven Spatiotemporal Analysis of Ozone Exposure and Health Risks in China*](https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2024JD041593) is accepted by *Journal of Geophysical Research - Atmospheres*.
+- *2024.09*  &nbsp;🎉🎉 My invention patent *A Single-UAV Atmospheric Pollutant Source Tracing Method Based on Gradient Ascent and Physical Kinematics* is published.
+- *2024.05*  &nbsp;🎉🎉 My invention patent *A Method, System, Terminal Device, and Storage Medium for Air Quality Spatial Inference* is officially granted! 
+- *2023.12*  &nbsp;🎉🎉 I co-founded one enterprise named "Metasequoia Intelligence" (in Chinese 水杉智算) located at FuTian, Shenzhen, China, with [Dr. Jun Song](https://scholars.hkbu.edu.hk/en/persons/JUNSONG) from HKBU, as technical collaborator.
+
 <span class='anchor' id='about-me'></span>
 # 😊 About me
 
@@ -28,16 +39,6 @@ I have been an intern researcher at [Centre for Frontier AI Research](https://ww
 
 I am actively seeking interesting research opportunities and Ph.D. positions starting in Fall 2025. If you are looking for a dedicated and self-motivated candidate, please DO contact me at vanzl3386@gmail.com or carlos@metaseq.ai !
 
-<span class='anchor' id='news'></span>
-# 🔥 News
-- *2024.12*  &nbsp;🎉🎉 My co-first-author paper [*Imitation From Diverse Behaviors: Wasserstein Quality Diversity Imitation Learning with Single-Step Archive Exploration*](https://arxiv.org/abs/2411.06965) is accepted (oral presentation) by *The 24th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2025)*.
-- *2024.12*  &nbsp;🎉🎉 My first-author paper *Next-POI Recommendation via Multi-Objective Adversarial Imitation Learning* is accepted by *The 39th Annual AAAI Conference on Artificial Intelligence (AAAI 2025)*.
-- *2024.10*  &nbsp;🎉🎉 My co-first-author paper *Hierarchical Spatial-Temporal Graph-Enhanced Model for Map-Matching* is accepted by *Australasian Database Conference 2025*, to be hold at Tokyo on 16 Dec (oral presentation ＆ best paper runner-up), and published at [*Springer Nature*](https://link.springer.com/chapter/10.1007/978-981-96-1242-0_4).
-- *2024.10*  &nbsp;🎉🎉 I have ended my memorable attachment at [Centre for Frontier AI Research](https://www.a-star.edu.sg/cfar), Agency for Science, Technology and Research [(A*STAR)](https://www.a-star.edu.sg/) at Singapore, serving as an intern researcher.
-- *2024.09*  &nbsp;🎉🎉 Our paper [*Machine Learning-Driven Spatiotemporal Analysis of Ozone Exposure and Health Risks in China*](https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2024JD041593) is accepted by *Journal of Geophysical Research - Atmospheres*.
-- *2024.09*  &nbsp;🎉🎉 My invention patent *A Single-UAV Atmospheric Pollutant Source Tracing Method Based on Gradient Ascent and Physical Kinematics* is published.
-- *2024.05*  &nbsp;🎉🎉 My invention patent *A Method, System, Terminal Device, and Storage Medium for Air Quality Spatial Inference* is officially granted! 
-- *2023.12*  &nbsp;🎉🎉 I co-founded one enterprise named "Metasequoia Intelligence" (in Chinese 水杉智算) located at FuTian, Shenzhen, China, with [Dr. Jun Song](https://scholars.hkbu.edu.hk/en/persons/JUNSONG) from HKBU, as technical collaborator.
 
 <span class='anchor' id='academic-results'></span>
 # 📝 Selected Academic Results
