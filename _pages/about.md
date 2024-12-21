@@ -31,7 +31,7 @@ redirect_from:
 
 Greetings! I am Zhenglin Wan, an undergraduate student from CUHK-Shenzhen, majoring in Data Science. You can find my CV at [CV](https://drive.google.com/file/d/1fYYlj0MhJGsPPDdWUMB9LHMTqUo3bL1s/view?usp=sharing). My office/working station in campus: 320 A, ChengDao building (also known as Shenzhen key Laboratory of loT Intelligent Systems and Wireless Network Technology).
 
-During high school, I was fortunate to win the first prize in the Chinese High School Mathematics Olympics, during which I developed personalized paradigm of learning and the habit of independent study. This enables me to achieve nearly all A grades (4.0/4.0) in my major-related courses (statistics, mathematics, and computer science) in a self-directed way, which allowed me to save time and engage in challenging and interesting research projects. My primary research interests lie in: 1) **Decision-Making in Machine Learning**: How to embed the human's learning and decision-making patterns into machine's learning paradigm, such as Reinforcement Learning, Imitation Learning, Multi-agent systems? I am also interested in adopting statistical view to understand these problems.  2) **The application of decision-making support systems in urban context**: such as smart transportation systems, environment monitoring, etc.
+During high school, I was fortunate to win the first prize in the Chinese High School Mathematics Olympics, during which I developed personalized paradigm of learning and the habit of independent study. This enables me to achieve nearly all A grades (4.0/4.0) in my major-related courses (statistics, mathematics, and computer science) in a self-directed way, which allowed me to save time and engage in challenging and interesting research projects. My primary research interests lie in: 1) **Decision-Making in Machine Learning**: How to embed the human's learning and decision-making patterns into machine's learning paradigm, such as Reinforcement Learning, Imitation Learning, Multi-agent systems? I am also interested in adopting statistics and optimization view to understand these problems.  2) **The application of decision-making support systems in urban context**: such as smart transportation systems, environment monitoring, etc.
 
 ---
 
@@ -43,19 +43,19 @@ I am actively seeking interesting research opportunities and Ph.D. positions sta
 <span class='anchor' id='academic-results'></span>
 # 📝 Selected Academic Results
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Conference Under Review</div><img src='personal_page_sources/QD-IL/show.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAMAS 2025 (oral presentation)</div><img src='personal_page_sources/QD-IL/show.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Quality Diversity Imitation Learning](https://arxiv.org/abs/2410.06151)
-Author: **Zhenglin Wan**, Xingrui Yu*, David Bossens, Yueming Lyu, Qing Guo, Flint Xiaofeng Fan, Ivor Tsang
+[Imitation From Diverse Behaviors](https://arxiv.org/abs/2411.06965)
+Author: Xingrui Yu*, **Zhenglin Wan***, David Bossens, Yueming Lyu, Qing Guo, Ivor Tsang (*:Co-first author: Equal Contribution)
 
 **Supervisor:** [Xingrui Yu](https://www.a-star.edu.sg/cfar/about-cfar/our-team/yu-xingrui), [David Bossens](https://www.a-star.edu.sg/cfar/about-cfar/our-team/david-bossens), [Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang).
 **Host:** [Centre for Frontier AI Research](https://www.a-star.edu.sg/cfar), [A*STAR](https://www.a-star.edu.sg/), Singapore  
 **Duration:** Jun. 2024 - Oct. 2024  
 
 
-- Imitation learning (IL) approaches succeed in fast adaptation for dozens of applications. However, traditional IL assumes the demonstrations comes from one specific expert policy, thus containing only one behavior pattern. This way may result in the lack of robustness of agent to deal with various and stochastic situations.
-- To address above issue, this work pioneers a new paradigm- learning from diverse behaviors. We proposed a novel quality-diversity imitation learning model to enable the agent to learn a broad set of skills from limited but diverse demonstrations. With multiple skills equipped, the agent can robustly deal with unseen and stochastic environment.
+- Imitation learning (IL) approaches succeed in fast adaptation for dozens of applications. However, traditional IL assumes the demonstrations comes from one specific expert policy, thus containing only one behavior pattern. This way may result in the lack of robustness of agent to deal with various and unpredicatable real-world situations.
+- To address above issue, this work pioneers a new paradigm- learning from diverse behaviors. We proposed a novel quality-diversity imitation learning model to enable the agent to learn a broad set of skills from limited but diverse demonstrations. With multiple viable and high-performing skills equipped, the agent can robustly deal with unseen and stochastic environment.
 
 </div>
 </div>
