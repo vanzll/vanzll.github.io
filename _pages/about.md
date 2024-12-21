@@ -47,7 +47,7 @@ I am actively seeking interesting research opportunities and Ph.D. positions sta
 <div class='paper-box-text' markdown="1">
 
 [Imitation From Diverse Behaviors](https://arxiv.org/abs/2411.06965)
-Author: Xingrui Yu*, **Zhenglin Wan***, David Bossens, Yueming Lyu, Qing Guo, Ivor Tsang (*:Co-first author: Equal Contribution)
+Author: Xingrui Yu <sup>1</sup>, **Zhenglin Wan <sup>1</sup>**, David Bossens, Yueming Lyu, Qing Guo, Ivor Tsang (1:Co-first author: Equal Contribution)
 
 **Supervisor:** [Xingrui Yu](https://www.a-star.edu.sg/cfar/about-cfar/our-team/yu-xingrui), [David Bossens](https://www.a-star.edu.sg/cfar/about-cfar/our-team/david-bossens), [Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang).
 **Host:** [Centre for Frontier AI Research](https://www.a-star.edu.sg/cfar), [A*STAR](https://www.a-star.edu.sg/), Singapore  
