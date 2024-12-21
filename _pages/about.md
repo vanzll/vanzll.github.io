@@ -43,7 +43,7 @@ I am actively seeking interesting research opportunities and Ph.D. positions sta
 <span class='anchor' id='academic-results'></span>
 # 📝 Selected Academic Results
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAMAS 2025 (oral presentation)</div><img src='personal_page_sources/QD-IL/show.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAMAS 2025 Accepted (oral presentation)</div><img src='personal_page_sources/QD-IL/show.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Imitation From Diverse Behaviors](https://arxiv.org/abs/2411.06965)
