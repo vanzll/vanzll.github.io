@@ -65,7 +65,7 @@ Author: Xingrui Yu <sup>1</sup>, **Zhenglin Wan <sup>1</sup>**, David Bossens, Y
 
 ---
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2025 Accepted</div><img src='personal_page_sources/POI/show.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2025 Accepted(oral presentation)</div><img src='personal_page_sources/POI/show.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 Next-POI Recommendation via Multi-Objective Adversarial Imitation Learning
