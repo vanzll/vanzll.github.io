@@ -71,8 +71,9 @@ Author: Xingrui Yu <sup>1</sup>, **Zhenglin Wan <sup>1</sup>**, David Bossens, Y
 Next-POI Recommendation via Multi-Objective Adversarial Imitation Learning
 
 **Supervisor:** [Pingfu Chao](https://www.researchgate.net/profile/Pingfu-Chao), [Xingrui Yu](https://www.a-star.edu.sg/cfar/about-cfar/our-team/yu-xingrui)  
-**Host:** [Centre for Frontier AI Research](https://www.a-star.edu.sg/cfar), A*STAR, Singapore  
+
 **Duration:** Feb. 2024 - Aug. 2024  
+
 **Author:** **Zhenglin Wan**, Anjun Gao, Xingrui Yu, Pingfu Chao*, Jun Song, Maohao Ran
 
 - We proposed a multi-objective imitation learning architecture with variational inference to address the notorious data sparsity and data noise issue in POI data, and we utilize a novel adaptive graphs to capture spatial-temporal dependencies of POI sequences and user patterns.
