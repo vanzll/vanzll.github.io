@@ -17,6 +17,7 @@ redirect_from:
 
 <span class='anchor' id='news'></span>
 # 🔥 News
+- *2024.12*  &nbsp;🎉🎉 One first-author paper accepted by *The Thirteenth International Conference on Learning Representations (ICLR 2025)* (workshop).
 - *2024.12*  &nbsp;🎉🎉 One co-first-author paper accepted by *The 24th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2025)* (**oral**).
 - *2024.12*  &nbsp;🎉🎉 One first-author paper accepted by *The 39th Annual AAAI Conference on Artificial Intelligence (AAAI 2025)* (**oral, oral rate: 4.6%**).
 - *2024.10*  &nbsp;🎉🎉 One co-first-author paper accepted by *Australasian Database Conference 2025* (**oral＆ best paper runner-up**), and published at [*Springer Nature*](https://link.springer.com/chapter/10.1007/978-981-96-1242-0_4).
