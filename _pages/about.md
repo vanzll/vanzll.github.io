@@ -223,7 +223,7 @@ Author: Anjun Gao†, Zhenglin Wan†, Pingfu Chao*, Shunyu Yao (†: co-first a
 # Personal Life
 For the time I am not doing research, I am a **music enthusiast**: I have been playing guitar for ten years and began learning to play the piano and electronic piano independently when I was 15 years old. During my undergraduate years, I established a band named "Minor Blue" and performed multiple times inside and outside campus. I plan to learn playing drums during my spare time at Ph.D.
 
-I am also a **15-years chess player**, with national third-rank honor. I love the process of comprehensive planning, logical-thinking and inferring.
+I am also a **15-years chess player**, with national third-rank honor. I love the process of comprehensive planning, logical-thinking and inferring. Visit my Lichess profile at [link](https://lichess.org/@/Carlos1333860) and play chess with me!
 
 
 
