@@ -85,9 +85,9 @@ I have been an intern researcher at [Centre for Frontier AI Research](https://ww
 ## Invention Patents
 
 - **A Method, System, Terminal Device, and Storage Medium for Air Quality Spatial Inference** (Granted)
-Inventor: Jun Song, Yibo Xu, Yiwen Pan, Maohao Ran, **Zhenglin Wan**, Xiaoyun Yan, Yike Guo
+   Inventor: Jun Song, Yibo Xu, Yiwen Pan, Maohao Ran, **Zhenglin Wan**, Xiaoyun Yan, Yike Guo
 - **A Single-UAV Atmospheric Pollutant Source Tracing Method Based on Gradient Ascent and Physical Kinematics** (Public)
-Inventor: **Zhenglin Wan**, Jun Song, Yibo Xu, Maohao Ran, Yike Guo
+   Inventor: **Zhenglin Wan**, Jun Song, Yibo Xu, Maohao Ran, Yike Guo
 - **A Large Language Model Learning Method Based on Agent-Based Collaborative Reasoning and Action** (submitted)
 - **An Atmospheric Pollutant Source Tracing Algorithm Based on Improved Swarm Optimization and Path Planning** (submitted)
 
