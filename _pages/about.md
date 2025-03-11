@@ -79,7 +79,7 @@ I have been an intern researcher at [Centre for Frontier AI Research](https://ww
 
 
 
-
+<!--
 <span class='anchor' id='academic-results'></span>
 # 📝 Selected Academic Results
 
@@ -204,7 +204,7 @@ Author: Anjun Gao†, Zhenglin Wan†, Pingfu Chao*, Shunyu Yao (†: co-first a
 
 </div>
 </div>
-
+-->
 ---
 
 <span class='anchor' id='honors-and-awards'></span>
