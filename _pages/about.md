@@ -46,7 +46,7 @@ I have been an intern researcher at [Centre for Frontier AI Research](https://ww
 
 [Imitation From Diverse Behaviors](https://arxiv.org/abs/2411.06965)
 
-Author: Xingrui Yu <sup>1</sup>, **Zhenglin Wan <sup>1</sup>**, David Bossens, Yueming Lyu, Qing Guo, Ivor Tsang (1:Co-first author: Equal Contribution)
+Author: Xingrui Yu <sup>1</sup>, **Zhenglin Wan <sup>1</sup>**, David Bossens, Yueming Lyu, Qing Guo, Ivor Tsang (1:Co-first author & Equal Contribution)
 
 **Supervisor:** [Xingrui Yu](https://www.a-star.edu.sg/cfar/about-cfar/our-team/yu-xingrui), [David Bossens](https://www.a-star.edu.sg/cfar/about-cfar/our-team/david-bossens), [Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang).
 
@@ -152,7 +152,7 @@ Graph-based Reinforcement learning Approach for influential Node Detection in ai
 
 [Hierarchical Spatial-Temporal Graph-Enhanced Model for Map-Matching](https://link.springer.com/chapter/10.1007/978-981-96-1242-0_4)
 
-Author: Anjun Gao†, Zhenglin Wan†, Pingfu Chao*, Shunyu Yao (†: co-first author)
+Author: Anjun Gao†, Zhenglin Wan†, Pingfu Chao*, Shunyu Yao (†: co-first author & equal contribution)
 
 **Institution:** Soochow University, Metasequoia Intelligence 
 
@@ -167,7 +167,10 @@ Author: Anjun Gao†, Zhenglin Wan†, Pingfu Chao*, Shunyu Yao (†: co-first a
 
 <span class='anchor' id='honors-and-awards'></span>
 # 🎖 Honors and Awards
-- **Zhejiang Guolong Inspirational & Diligentia Bowen II Scholarship** (Outstanding Academic Performance)  
+- **Zhejiang Guolong Inspirational & Diligentia Bowen II Scholarship** (First-Prize in Chinese Mathematics Olympics (CMO)-Preliminary Round)  
+  *September 2021*
+
+- **Diligentia Bowen II Scholarship** (Top 0.5% in Chinese College Entrance Exam) 
   *September 2021*
 
 - **Yearly Dean List Award** (Outstanding Academic Performance)  
