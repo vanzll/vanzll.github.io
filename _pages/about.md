@@ -30,13 +30,54 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 # 😊 About me
 
-Greetings! I am Zhenglin Wan, an undergraduate student from CUHK-Shenzhen, majoring in Data Science. You can find my CV at [CV](https://drive.google.com/file/d/1fYYlj0MhJGsPPDdWUMB9LHMTqUo3bL1s/view?usp=sharing). My office/working station in campus: 320 A, ChengDao building (also known as Shenzhen key Laboratory of loT Intelligent Systems and Wireless Network Technology).
+Greetings! I am Zhenglin Wan, an undergraduate student at CUHK-Shenzhen, majoring in Data Science. You can find my most-updated CV at [CV](https://drive.google.com/file/d/1fYYlj0MhJGsPPDdWUMB9LHMTqUo3bL1s/view?usp=sharing).
 
 During high school, I was fortunate to win the first prize in the Chinese High School Mathematics Olympics, during which I developed personalized paradigm of learning and the habit of independent study. This enables me to achieve nearly all A grades (4.0/4.0) in my major-related courses (statistics, mathematics, and computer science) in a self-directed way, which allowed me to save time and engage in challenging and interesting research projects. My primary research interests lie in: 1) **Decision-Making in Machine Learning**: How to embed the human's learning and decision-making patterns into machine's learning paradigm, such as Reinforcement Learning, Imitation Learning, Multi-agent systems? I am also interested in adopting statistics and optimization view to understand these problems.  2) **The application of decision-making support systems in urban context**: such as smart transportation systems, environment monitoring, etc.
 
 ---
 
-I have been an intern researcher at [Centre for Frontier AI Research](https://www.a-star.edu.sg/cfar), Agency for Science, Technology and Research [(A*STAR)](https://www.a-star.edu.sg/) at Singapore, working on developing robust imitation learning algorithm that is capable to deal with unpredicatable emergencies and cater to diverse real-world needs. During my undergraduate, I am lucky to work with [Dr. Jun Song](https://scholars.hkbu.edu.hk/en/persons/JUNSONG) and co-found one company, as technical collaborator, named "Metasequoia Intelligence" with him. Our aim is to utilizing the power of LLM agents to integrate data querying, data process, data visualization and intelligent decision making, thus making AI contribute to the urban well-being. We have published serveral invention patents and academic papers together. Prior to that, I was the key member of the research group of Prof. [Jianfeng Mao](https://sds.cuhk.edu.cn/en/teacher/268), the Assistant Dean of School of Data Science of CUHK-Shenzhen, playing a key role in a project regarding decision-making systems in transportation network.
+I have been an intern researcher at [Centre for Frontier AI Research](https://www.a-star.edu.sg/cfar), [(A*STAR)](https://www.a-star.edu.sg/) at Singapore, working on developing robust imitation learning algorithm that is capable to deal with unpredicatable emergencies and cater to diverse real-world needs. During my undergraduate, I am lucky to work with [Dr. Jun Song](https://scholars.hkbu.edu.hk/en/persons/JUNSONG) and co-found one company, as technical collaborator, named "Metasequoia Intelligence" with him. We have published serveral invention patents and academic papers together. Prior to that, I was the key member of the research group of Prof. [Jianfeng Mao](https://sds.cuhk.edu.cn/en/teacher/268), playing a key role in a project regarding decision-making systems in transportation network.
+
+<span class='anchor' id='Publication List'></span>
+# 📝 Publication List
+- Accepted Papers
+-- **Imitation From Diverse Behaviors: Wasserstein Quality Diversity Imitation Learning with Single-Step Archive Exploration**
+  Author: *Xingrui Yu*†, **Zhenglin Wan**†, David Bossens, Yueming Lyu, Qing Guo, Ivor Tsang* ~~~(†: co-first author & equal contribution) 
+  *The 24th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2025)* （**oral**）
+
+-- **POI Recommendation via Multi-Objective Adversarial Imitation Learning**  
+  Author: **Zhenglin Wan**, Anjun Gao, Xingrui Yu, Pingfu Chao*, Jun Song, Maohao Ran  
+  *The 39th Annual AAAI Conference on Artificial Intelligence (AAAI 2025)* (**oral**)
+
+-- **Generative Quality Diversity Imitation Learning for Robot Skill Acquisition**  
+  Author: **Zhenglin Wan**, Xingrui Yu, David Bossens, Yueming Lyu, Qing Guo, Flint Xiaofeng Fan, Ivor Tsang*  
+  *The Thirteenth International Conference on Learning Representations (ICLR 2025)* (workshop on **Generative Models for Robot Learning**)
+
+-- **Machine Learning-Driven Spatiotemporal Analysis of Ozone Exposure and Health Risks in China** ~~[AGU](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JD041593)  
+  Author: *Chendong Ma*, Jun Song*, Maohao Ran, **Zhenglin Wan**, Yike Guo, Meng Gao  
+  *Journal of Geophysical Research - Atmospheres* (SCI Q2, Impact Factor: 4.7), **published** (DOI: [https://doi.org/10.1029/2024JD041593](https://doi.org/10.1029/2024JD041593))
+
+-- **Hierarchical Spatial-Temporal Graph-Enhanced Model for Map-Matching** ~~[Springer Nature](https://link.springer.com/chapter/10.1007/978-981-96-1242-0_4)  
+   Author: *Anjun Gao*†, **Zhenglin Wan**†, Pingfu Chao*, Shunyu Yao ~~~(†: co-first author)  
+  *Australasian Database Conference 2024*, **published** (oral & best paper runner-up) (DOI: [https://doi.org/10.1007/978-981-96-1242-0_4](https://doi.org/10.1007/978-981-96-1242-0_4))
+
+- Manuscripts under Review
+
+-- **Towards Diverse Robot Locomotion Behaviors with Extrinsic Behavioral Curiosity**  
+  Author: **Zhenglin Wan**, Xingrui Yu, David Bossens, Yueming Lyu, Qing Guo, Flint Xiaofeng Fan, Ong Yew Soon, Ivor Tsang*  
+
+-- **AsyncGuard: Secure Asynchronous Federated Learning**  
+  Author: Anjun Gao, Feng Wang, **Zhenglin Wan**, Zhuqing Liu, Minghong Fang*  
+  
+-- **Graph-based Reinforcement Learning Approach for Influential Node Detection in Airport Delay Networks**  
+  Author: Chi Li, **Zhenglin Wan**, Kaize Wang, Yuxuan Huang, Chengxi Li, Jianfeng Mao*  
+  
+- **GESEN: Graph-Enhanced Self-Supervised Embedding Network for Next POI Recommendation**  
+  Author: Anjun Gao†, **Zhenglin Wan**†, Pingfu Chao*, Jiajie Xu, Tao Gong, Jun Song ~~~(†: co-first author)  
+
+
+
+
 
 <span class='anchor' id='academic-results'></span>
 # 📝 Selected Academic Results
