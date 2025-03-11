@@ -83,7 +83,7 @@ I have been an intern researcher at [Centre for Frontier AI Research](https://ww
   Author: Anjun Gao†, **Zhenglin Wan**†, Pingfu Chao*, Jiajie Xu, Tao Gong, Jun Song
 
 ## Invention Patents
-As these works are patented in China Mainland, all these names are directly translated from Chinese.
+As these works are patented in China, all these names are directly translated from Chinese.
 - **A Method, System, Terminal Device, and Storage Medium for Air Quality Spatial Inference** (Granted)
   
    Inventor: Jun Song, Yibo Xu, Yiwen Pan, Maohao Ran, **Zhenglin Wan**, Xiaoyun Yan, Yike Guo
