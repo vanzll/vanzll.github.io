@@ -43,7 +43,8 @@ I have been an intern researcher at [Centre for Frontier AI Research](https://ww
 ## Accepted Papers
   
 - **Imitation From Diverse Behaviors: Wasserstein Quality Diversity Imitation Learning with Single-Step Archive Exploration**
-  Author: *Xingrui Yu*†, **Zhenglin Wan**†, David Bossens, Yueming Lyu, Qing Guo, Ivor Tsang* ~~~(†: co-first author & equal contribution) 
+  
+  Author: *Xingrui Yu*†, **Zhenglin Wan**†, David Bossens, Yueming Lyu, Qing Guo, Ivor Tsang*   (†: co-first author & equal contribution) 
   *The 24th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2025)* （**oral**）
 
 - **POI Recommendation via Multi-Objective Adversarial Imitation Learning**  
@@ -54,11 +55,11 @@ I have been an intern researcher at [Centre for Frontier AI Research](https://ww
   Author: **Zhenglin Wan**, Xingrui Yu, David Bossens, Yueming Lyu, Qing Guo, Flint Xiaofeng Fan, Ivor Tsang*  
   *The Thirteenth International Conference on Learning Representations (ICLR 2025)* (workshop on **Generative Models for Robot Learning**)
 
-- **Machine Learning-Driven Spatiotemporal Analysis of Ozone Exposure and Health Risks in China** ~~[AGU](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JD041593)  
+- **Machine Learning-Driven Spatiotemporal Analysis of Ozone Exposure and Health Risks in China**   [AGU](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JD041593)  
   Author: *Chendong Ma*, Jun Song*, Maohao Ran, **Zhenglin Wan**, Yike Guo, Meng Gao  
   *Journal of Geophysical Research - Atmospheres* (SCI Q2, Impact Factor: 4.7), **published** (DOI: [https://doi.org/10.1029/2024JD041593](https://doi.org/10.1029/2024JD041593))
 
-- **Hierarchical Spatial-Temporal Graph-Enhanced Model for Map-Matching** ~~[Springer Nature](https://link.springer.com/chapter/10.1007/978-981-96-1242-0_4)  
+- **Hierarchical Spatial-Temporal Graph-Enhanced Model for Map-Matching**   [Springer Nature](https://link.springer.com/chapter/10.1007/978-981-96-1242-0_4)  
    Author: *Anjun Gao*†, **Zhenglin Wan**†, Pingfu Chao*, Shunyu Yao ~~~(†: co-first author)  
   *Australasian Database Conference 2024*, **published** (oral & best paper runner-up) (DOI: [https://doi.org/10.1007/978-981-96-1242-0_4](https://doi.org/10.1007/978-981-96-1242-0_4))
 
