@@ -17,6 +17,7 @@ redirect_from:
 
 <span class='anchor' id='news'></span>
 # 🔥 News
+<font size="1">
 - *2025.03*  &nbsp;🎉🎉 One first-author paper accepted by *The Thirteenth International Conference on Learning Representations (ICLR 2025)* (workshop).
 - *2024.12*  &nbsp;🎉🎉 One co-first-author paper accepted by *The 24th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2025)* (**oral**).
 - *2024.12*  &nbsp;🎉🎉 One first-author paper accepted by *The 39th Annual AAAI Conference on Artificial Intelligence (AAAI 2025)* (**oral, oral rate: 4.6%**).
@@ -26,7 +27,7 @@ redirect_from:
 - *2024.09*  &nbsp;🎉🎉 One invention patent *A Single-UAV Atmospheric Pollutant Source Tracing Method Based on Gradient Ascent and Physical Kinematics* is published.
 - *2024.05*  &nbsp;🎉🎉 One invention patent *A Method, System, Terminal Device, and Storage Medium for Air Quality Spatial Inference* is officially granted. 
 - *2023.12*  &nbsp;🎉🎉 As technical co-founder, I co-founded one enterprise named "Metasequoia Intelligence".
-
+</font>
 <span class='anchor' id='about-me'></span>
 # 😊 About me
 
