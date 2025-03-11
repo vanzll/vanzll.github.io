@@ -38,7 +38,7 @@ During high school, I was fortunate to win the first prize in the Chinese High S
 
 I have been an intern researcher at [Centre for Frontier AI Research](https://www.a-star.edu.sg/cfar), [(A*STAR)](https://www.a-star.edu.sg/) at Singapore, working on developing robust imitation learning algorithm that is capable to deal with unpredicatable emergencies and cater to diverse real-world needs. During my undergraduate, I am lucky to work with [Dr. Jun Song](https://scholars.hkbu.edu.hk/en/persons/JUNSONG) and co-found one company, as technical collaborator, named "Metasequoia Intelligence" with him. We have published serveral invention patents and academic papers together. Prior to that, I was the key member of the research group of Prof. [Jianfeng Mao](https://sds.cuhk.edu.cn/en/teacher/268), playing a key role in a project regarding decision-making systems in transportation network.
 
-<span class='anchor' id='Publication List'></span>
+<span class='anchor' id='Publication-List'></span>
 # 📝 Publication List
 ## Published (Accepted) Papers 
 (†: co-first author & equal contribution, *: corresponding author)
