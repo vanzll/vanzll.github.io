@@ -134,22 +134,6 @@ Graph-based Reinforcement learning Approach for influential Node Detection in ai
 
 ---
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Patent Pending</div><img src='' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[Unmanned Aerial Vehicle Pollutant Tracking using Optimization Methods]()
-
-**Institution:** Metasequoia Intelligence  
-**Duration:** Nov. 2023 - Feb. 2024  
-
-- Developed optimization algorithms for UAV-based pollutant tracking, demonstrating notable improvements in accuracy and efficiency.
-- Conducted simulations validating the algorithms' effectiveness in real-world tracking, resulting in two invention patents.
-
-</div>
-</div>
-
----
-
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Journal of Geophysical Research - Atmospheres</div><img src='personal_page_sources/NetGBM/show.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
@@ -219,9 +203,21 @@ Author: Anjun Gao†, Zhenglin Wan†, Pingfu Chao*, Shunyu Yao (†: co-first a
 
 <span class='anchor' id='person'></span>
 # Personal Life
-For the time I am not doing research, I am a **music enthusiast**: I have been playing guitar for ten years and began learning to play the piano and electronic piano independently when I was 15 years old. During my undergraduate years, I established a band named "Minor Blue" and performed multiple times inside and outside campus. I plan to learn playing drums during my spare time at Ph.D.
+For the time I am not doing research, I am a **music enthusiast**: I have been playing guitar for ten years and began learning to play the piano and electronic piano independently when I was 15 years old. During my undergraduate years, I engaged in one band named "Minor Blue" and one band named "Major Pink", and performed multiple times inside and outside campus. 
 
-I am also a **15-years chess player**, with national third-rank honor. I love the process of comprehensive planning, logical-thinking and inferring. Visit my Lichess profile at [link](https://lichess.org/@/Carlos1333860) and play chess with me!
+<div style="display: flex; justify-content: space-between;">
+  <img src='images/Major pink.jpg' alt="sym" width="33%" style="display: inline-block;">
+  <img src='images/Minor Blue.jpg' alt="sym" width="33%" style="display: inline-block;">
+  <img src='images/Minor Blue_1.jpg' alt="sym" width="33%" style="display: inline-block;">
+</div>
+
+
+
+---
+
+
+
+I am also a **15-years chess player**, with national third-rank honor. I love the process of comprehensive planning, logical-thinking and inferring. Visit my [Lichess profile](https://lichess.org/@/Carlos1333860) and play chess with me!
 
 
 
