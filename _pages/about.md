@@ -43,7 +43,6 @@ I have been an intern researcher at [Centre for Frontier AI Research](https://ww
 ## Accepted Papers
   
 - **Imitation From Diverse Behaviors: Wasserstein Quality Diversity Imitation Learning with Single-Step Archive Exploration**
-  
   Author: *Xingrui Yu*†, **Zhenglin Wan**†, David Bossens, Yueming Lyu, Qing Guo, Ivor Tsang*   (†: co-first author & equal contribution) 
   *The 24th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2025)* （**oral**）
 
