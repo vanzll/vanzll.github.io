@@ -25,8 +25,8 @@ redirect_from:
 - *2024.12*  &nbsp;🎉🎉 One first-author paper accepted by *The 39th Annual AAAI Conference on Artificial Intelligence (AAAI 2025)* (**oral, oral rate: 4.6%**).
 - *2024.10*  &nbsp;🎉🎉 One co-first-author paper accepted by *Australasian Database Conference 2025* (**oral＆ best paper runner-up**), and published at [*Springer Nature*](https://link.springer.com/chapter/10.1007/978-981-96-1242-0_4).
 - *2024.09*  &nbsp;🎉🎉 One paper accepted by *Journal of Geophysical Research - Atmospheres*.
-- *2024.09*  &nbsp;🎉🎉 One invention patent *A Single-UAV Atmospheric Pollutant Source Tracing Method Based on Gradient Ascent and Physical Kinematics* is published.
-- *2024.05*  &nbsp;🎉🎉 One invention patent *A Method, System, Terminal Device, and Storage Medium for Air Quality Spatial Inference* is officially granted. 
+- *2024.09*  &nbsp;🎉🎉 One invention patent is published.
+- *2024.05*  &nbsp;🎉🎉 One invention patent is officially granted. 
 - *2023.12*  &nbsp;🎉🎉 As technical co-founder, I co-founded one enterprise named "Metasequoia Intelligence".
 - 
 </font>
@@ -82,6 +82,14 @@ I have been an intern researcher at [Centre for Frontier AI Research](https://ww
 - **GESEN: Graph-Enhanced Self-Supervised Embedding Network for Next POI Recommendation**  
   Author: Anjun Gao†, **Zhenglin Wan**†, Pingfu Chao*, Jiajie Xu, Tao Gong, Jun Song
 
+## Invention Patents
+
+- **A Method, System, Terminal Device, and Storage Medium for Air Quality Spatial Inference** (Granted)
+Inventor: Jun Song, Yibo Xu, Yiwen Pan, Maohao Ran, **Zhenglin Wan**, Xiaoyun Yan, Yike Guo
+- **A Single-UAV Atmospheric Pollutant Source Tracing Method Based on Gradient Ascent and Physical Kinematics** (Public)
+Inventor: **Zhenglin Wan**, Jun Song, Yibo Xu, Maohao Ran, Yike Guo
+- **A Large Language Model Learning Method Based on Agent-Based Collaborative Reasoning and Action** (submitted)
+- **An Atmospheric Pollutant Source Tracing Algorithm Based on Improved Swarm Optimization and Path Planning** (submitted)
 
 
 <!--
