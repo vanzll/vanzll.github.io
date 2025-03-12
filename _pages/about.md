@@ -45,42 +45,42 @@ I have been an intern researcher at [Centre for Frontier AI Research](https://ww
 <span class='anchor' id='Publication-List'></span>
 # 📝 Selected Publication List
 ## Published (Accepted) Papers 
-(†: co-first author & equal contribution, *: corresponding author)
+(†: co-first author & equal contribution, \*: corresponding author)
 - **Imitation From Diverse Behaviors: Wasserstein Quality Diversity Imitation Learning with Single-Step Archive Exploration**
 
-  Author: *Xingrui Yu*†, **<u>Zhenglin Wan</u>**†, David Bossens, Yueming Lyu, Qing Guo, Ivor Tsang*    
+  Author: Xingrui Yu†, **<u>Zhenglin Wan</u>**†, David Bossens, Yueming Lyu, Qing Guo, Ivor Tsang\*    
   *The 24th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2025)* （**oral**）
 
 - **POI Recommendation via Multi-Objective Adversarial Imitation Learning**  
-  Author: **<u>Zhenglin Wan</u>**, Anjun Gao, Xingrui Yu, Pingfu Chao*, Jun Song, Maohao Ran  
+  Author: **<u>Zhenglin Wan</u>**, Anjun Gao, Xingrui Yu, Pingfu Chao\*, Jun Song, Maohao Ran  
   *The 39th Annual AAAI Conference on Artificial Intelligence (AAAI 2025)* (**oral**)
 
 - **Generative Quality Diversity Imitation Learning for Robot Skill Acquisition**  
-  Author: **<u>Zhenglin Wan</u>**, Xingrui Yu, David Bossens, Yueming Lyu, Qing Guo, Flint Xiaofeng Fan, Ivor Tsang*  
+  Author: **<u>Zhenglin Wan</u>**, Xingrui Yu, David Bossens, Yueming Lyu, Qing Guo, Flint Xiaofeng Fan, Ivor Tsang\*  
   *The Thirteenth International Conference on Learning Representations (ICLR 2025)* (workshop on **Generative Models for Robot Learning**)
 
 - **Machine Learning-Driven Spatiotemporal Analysis of Ozone Exposure and Health Risks in China**   [(AGU)](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JD041593)  
-  Author: *Chendong Ma*, Jun Song*, Maohao Ran, **<u>Zhenglin Wan</u>**, Yike Guo, Meng Gao  
+  Author: *Chendong Ma*, Jun Song\*, Maohao Ran, **<u>Zhenglin Wan</u>**, Yike Guo, Meng Gao  
   *Journal of Geophysical Research - Atmospheres* (DOI: [https://doi.org/10.1029/2024JD041593](https://doi.org/10.1029/2024JD041593))
 
 - **Hierarchical Spatial-Temporal Graph-Enhanced Model for Map-Matching**   [(Springer Nature)](https://link.springer.com/chapter/10.1007/978-981-96-1242-0_4)  
-   Author: *Anjun Gao*†, **<u>Zhenglin Wan</u>**†, Pingfu Chao*, Shunyu Yao
+   Author: *Anjun Gao*†, **<u>Zhenglin Wan</u>**†, Pingfu Chao\*, Shunyu Yao
   
   *Australasian Database Conference 2024* **(oral & best paper runner-up)** (DOI: [https://doi.org/10.1007/978-981-96-1242-0_4](https://doi.org/10.1007/978-981-96-1242-0_4))
 
 ## Manuscripts under Review
 
 - **Towards Diverse Robot Locomotion Behaviors with Extrinsic Behavioral Curiosity**  
-  Author: **<u>Zhenglin Wan</u>**, Xingrui Yu, David Bossens, Yueming Lyu, Qing Guo, Flint Xiaofeng Fan, Ong Yew Soon, Ivor Tsang*  
+  Author: **<u>Zhenglin Wan</u>**, Xingrui Yu, David Bossens, Yueming Lyu, Qing Guo, Flint Xiaofeng Fan, Ong Yew Soon, Ivor Tsang\*  
 
 - **AsyncGuard: Secure Asynchronous Federated Learning**  
-  Author: Anjun Gao, Feng Wang, **<u>Zhenglin Wan</u>**, Zhuqing Liu, Minghong Fang*  
+  Author: Anjun Gao, Feng Wang, **<u>Zhenglin Wan</u>**, Zhuqing Liu, Minghong Fang\*  
   
 - **Graph-based Reinforcement Learning Approach for Influential Node Detection in Airport Delay Networks**  
-  Author: Chi Li, **<u>Zhenglin Wan</u>**, Kaize Wang, Yuxuan Huang, Chengxi Li, Jianfeng Mao*  
+  Author: Chi Li, **<u>Zhenglin Wan</u>**, Kaize Wang, Yuxuan Huang, Chengxi Li, Jianfeng Mao\*  
   
 - **GESEN: Graph-Enhanced Self-Supervised Embedding Network for Next POI Recommendation**  
-  Author: Anjun Gao†, **<u>Zhenglin Wan</u>**†, Pingfu Chao*, Jiajie Xu, Tao Gong, Jun Song
+  Author: Anjun Gao†, **<u>Zhenglin Wan</u>**†, Pingfu Chao\*, Jiajie Xu, Tao Gong, Jun Song
 
 ## Invention Patents
 As these works are patented in China, all these names are directly translated from Chinese.
