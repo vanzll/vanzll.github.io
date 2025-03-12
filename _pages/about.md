@@ -52,7 +52,7 @@ I have been an intern researcher at [Centre for Frontier AI Research](https://ww
   *The 24th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2025)* （**oral**）
 
 - **POI Recommendation via Multi-Objective Adversarial Imitation Learning**  
-  Author: **Zhenglin Wan**, Anjun Gao, Xingrui Yu, Pingfu Chao*, Jun Song, Maohao Ran  
+  Author: **<u>Zhenglin Wan</u>**, Anjun Gao, Xingrui Yu, Pingfu Chao*, Jun Song, Maohao Ran  
   *The 39th Annual AAAI Conference on Artificial Intelligence (AAAI 2025)* (**oral**)
 
 - **Generative Quality Diversity Imitation Learning for Robot Skill Acquisition**  
