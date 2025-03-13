@@ -20,14 +20,14 @@ redirect_from:
 
 
   
-- *2025.03*  &ampnbsp;🎉🎉 One first-author paper accepted by *The Thirteenth International Conference on Learning Representations (ICLR 2025)* (workshop).
-- *2024.12*  &ampnbsp;🎉🎉 One co-first-author paper accepted by *The 24th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2025)* (**oral**).
-- *2024.12*  &ampnbsp;🎉🎉 One first-author paper accepted by *The 39th Annual AAAI Conference on Artificial Intelligence (AAAI 2025)* (**oral, oral rate: 4.6%**).
-- *2024.10*  &ampnbsp;🎉🎉 One co-first-author paper accepted by *Australasian Database Conference 2025* (**oral&amp best paper runner-up**), and published at [*Springer Nature*](https://link.springer.com/chapter/10.1007/978-981-96-1242-0_4).
-- *2024.09*  &ampnbsp;🎉🎉 One paper accepted by *Journal of Geophysical Research - Atmospheres*.
-- *2024.09*  &ampnbsp;🎉🎉 One invention patent is published.
-- *2024.05*  &ampnbsp;🎉🎉 One invention patent is officially granted. 
-- *2023.12*  &ampnbsp;🎉🎉 As technical co-founder, I co-founded one enterprise named "Metasequoia Intelligence".
+- *2025.03*  \&nbsp;🎉🎉 One first-author paper accepted by *The Thirteenth International Conference on Learning Representations (ICLR 2025)* (workshop).
+- *2024.12*  \&nbsp;🎉🎉 One co-first-author paper accepted by *The 24th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2025)* (**oral**).
+- *2024.12*  \&nbsp;🎉🎉 One first-author paper accepted by *The 39th Annual AAAI Conference on Artificial Intelligence (AAAI 2025)* (**oral, oral rate: 4.6%**).
+- *2024.10*  \&nbsp;🎉🎉 One co-first-author paper accepted by *Australasian Database Conference 2025* (**oral\& best paper runner-up**), and published at [*Springer Nature*](https://link.springer.com/chapter/10.1007/978-981-96-1242-0_4).
+- *2024.09*  \&nbsp;🎉🎉 One paper accepted by *Journal of Geophysical Research - Atmospheres*.
+- *2024.09*  \&nbsp;🎉🎉 One invention patent is published.
+- *2024.05*  \&nbsp;🎉🎉 One invention patent is officially granted. 
+- *2023.12*  \&nbsp;🎉🎉 As technical co-founder, I co-founded one enterprise named "Metasequoia Intelligence".
 
 
 
@@ -44,7 +44,7 @@ I have been an intern researcher at [Centre for Frontier AI Research](https://ww
 <span class='anchor' id='Publication-List'></span>
 # 📝 Selected Publication List
 ## Published (Accepted) Papers 
-(†: co-first author &amp equal contribution, \*: corresponding author)
+(†: co-first author &amp; equal contribution, \*: corresponding author)
 - **Imitation From Diverse Behaviors: Wasserstein Quality Diversity Imitation Learning with Single-Step Archive Exploration**
 
   Author: Xingrui Yu†, **<u>Zhenglin Wan</u>**†, David Bossens, Yueming Lyu, Qing Guo, Ivor Tsang\*    
@@ -65,7 +65,7 @@ I have been an intern researcher at [Centre for Frontier AI Research](https://ww
 - **Hierarchical Spatial-Temporal Graph-Enhanced Model for Map-Matching**   [(Springer Nature)](https://link.springer.com/chapter/10.1007/978-981-96-1242-0_4)  
    Author: *Anjun Gao*†, **<u>Zhenglin Wan</u>**†, Pingfu Chao\*, Shunyu Yao
   
-  *Australasian Database Conference 2024* **(oral &amp best paper runner-up)** (DOI: [https://doi.org/10.1007/978-981-96-1242-0_4](https://doi.org/10.1007/978-981-96-1242-0_4))
+  *Australasian Database Conference 2024* **(oral &amp; best paper runner-up)** (DOI: [https://doi.org/10.1007/978-981-96-1242-0_4](https://doi.org/10.1007/978-981-96-1242-0_4))
 
 ## Manuscripts under Review
 
@@ -102,7 +102,7 @@ As these works are patented in China, all these names are directly translated fr
 
 [Imitation From Diverse Behaviors](https://arxiv.org/abs/2411.06965)
 
-Author: Xingrui Yu <sup>1</sup>, **Zhenglin Wan <sup>1</sup>**, David Bossens, Yueming Lyu, Qing Guo, Ivor Tsang (1:Co-first author &amp Equal Contribution)
+Author: Xingrui Yu <sup>1</sup>, **Zhenglin Wan <sup>1</sup>**, David Bossens, Yueming Lyu, Qing Guo, Ivor Tsang (1:Co-first author &amp; Equal Contribution)
 
 **Supervisor:** [Xingrui Yu](https://www.a-star.edu.sg/cfar/about-cfar/our-team/yu-xingrui), [David Bossens](https://www.a-star.edu.sg/cfar/about-cfar/our-team/david-bossens), [Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang).
 
@@ -208,7 +208,7 @@ Graph-based Reinforcement learning Approach for influential Node Detection in ai
 
 [Hierarchical Spatial-Temporal Graph-Enhanced Model for Map-Matching](https://link.springer.com/chapter/10.1007/978-981-96-1242-0_4)
 
-Author: Anjun Gao†, Zhenglin Wan†, Pingfu Chao*, Shunyu Yao (†: co-first author &amp equal contribution)
+Author: Anjun Gao†, Zhenglin Wan†, Pingfu Chao*, Shunyu Yao (†: co-first author &amp; equal contribution)
 
 **Institution:** Soochow University, Metasequoia Intelligence 
 
