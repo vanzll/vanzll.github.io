@@ -223,10 +223,10 @@ Author: Anjun Gao†, Zhenglin Wan†, Pingfu Chao*, Shunyu Yao (†: co-first a
 
 <span class='anchor' id='honors-and-awards'></span>
 # 🎖 Honors and Awards
-- **Zhejiang Guolong Inspirational** (Undergraduate Admin Scholarship: for First-Prize in Chinese Mathematics Olympics (CMO)-1st Round)  
+- **Zhejiang Guolong Inspirational** (Undergraduate Admission Scholarship: for First-Prize in Chinese Mathematics Olympics (CMO)-1st Round)  
   *September 2021*
 
-- **Diligentia Bowen II Scholarship** (Undergraduate Admin Scholarship: for Top 0.5% in Chinese College Entrance Exam)
+- **Diligentia Bowen II Scholarship** (Undergraduate Admission Scholarship: for Top 0.5% in Chinese College Entrance Exam)
   
   *September 2021*
 
