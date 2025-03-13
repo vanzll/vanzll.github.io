@@ -35,8 +35,7 @@ redirect_from:
 # 😊 About me
 
 Greetings! I am Zhenglin Wan, an undergraduate student at CUHK-Shenzhen, majoring in Data Science. You can find my most-updated CV at [CV](https://drive.google.com/file/d/1fYYlj0MhJGsPPDdWUMB9LHMTqUo3bL1s/view?usp=sharing).
-
-During high school, I was fortunate to win the first prize in the Chinese High School Mathematics Olympics, during which I developed personalized paradigm of learning and the habit of independent study. This enables me to achieve nearly all A grades (4.0/4.0) in my major-related courses (statistics, mathematics, and computer science) in a self-directed way, which allowed me to save time and engage in challenging and interesting research projects. My primary research interests lie in: 1) **Decision-Making in Machine Learning**: How to embed the human's learning and decision-making patterns into machine's learning paradigm, such as Reinforcement Learning, Imitation Learning, Multi-agent systems? I am also interested in adopting statistics and optimization view to understand these problems.  2) **The application of decision-making support systems in urban context**: such as smart transportation systems, environment monitoring, etc.
+My primary research interests lie in: 1) **Decision-Making in Machine Learning**: How to embed the human's learning and decision-making patterns into machine's learning paradigm, such as Reinforcement Learning, Imitation Learning, Multi-agent systems? How to enable intelligent agent to perform high-level planning and strategic thinking? I am also interested in adopting statistics and optimization view to understand these problems.
 
 ---
 
@@ -224,10 +223,10 @@ Author: Anjun Gao†, Zhenglin Wan†, Pingfu Chao*, Shunyu Yao (†: co-first a
 
 <span class='anchor' id='honors-and-awards'></span>
 # 🎖 Honors and Awards
-- **Zhejiang Guolong Inspirational & Diligentia Bowen II Scholarship** (First-Prize in Chinese Mathematics Olympics (CMO)-1st Round)  
+- **Zhejiang Guolong Inspirational & Diligentia Bowen II Scholarship** (Undergraduate Admin Scholarship: for First-Prize in Chinese Mathematics Olympics (CMO)-1st Round)  
   *September 2021*
 
-- **Diligentia Bowen II Scholarship** (Top 0.5% in Chinese College Entrance Exam)
+- **Diligentia Bowen II Scholarship** (Undergraduate Admin Scholarship: for Top 0.5% in Chinese College Entrance Exam)
   
   *September 2021*
 
@@ -264,7 +263,7 @@ Author: Anjun Gao†, Zhenglin Wan†, Pingfu Chao*, Shunyu Yao (†: co-first a
 
 <span class='anchor' id='person'></span>
 # Personal Life and History
-When I'm not immersed in research, I’m an avid **music enthusiast**. I’ve been playing guitar for over a decade and began teaching myself the piano and electronic piano at the age of 15. Music has always been a significant part of my life. During my undergraduate years, I had the incredible opportunity to play in two bands: "Minor Blue" and "Major Pink." The experience of performing on and off campus, sharing the stage with talented musicians, and connecting with audiences through music was truly exhilarating. These moments of creative expression and collaboration remain some of my most cherished memories.
+When I'm not doing research, I’m an **music enthusiast**. I’ve been playing guitar for more than 10 years and began teaching myself the piano and electronic piano at the age of 15. Music has always been a significant part of my life. During my undergraduate, I had the incredible opportunity to play in two bands: "Minor Blue" and "Major Pink." These moments remain some of my most cherished memories.
 
 <div style="display: flex; justify-content: space-between;">
   <img src='images/Major pink.jpg' alt="sym" width="33%" style="display: inline-block;">
@@ -282,7 +281,7 @@ I am also a **15-years chess player**, with the honor of "National Level-3 Athle
 
 ---
 
-I was once a patient with moderate Obsessive-Compulsive Disorder **(OCD, 强迫症 in Chinese)**, a mental illness as painful as depression. My mind would get stuck on simple problems, both academic and personal, and I couldn’t control it. I self-rescued through reading mind-philosophy books and exploring Buddhist and Taoist philosophies. The most inspiring part of this journey was learning to practice mindfulness—observing what was happening inside my mind and finding inner peace, allowing my brain to become my tool rather than being controlled by it. This experience became a valuable treasure, shaping my attitude towards life and challenges afterwards. I'd like to recommend you the book *The Power of Now*, along with Buddhist classics like The Diamond Sutra and Taoist texts like Tao Te Ching, which are beneficial to all of us, especially who are facing similar difficulties.
+I was once diagnosised with Obsessive-Compulsive Disorder **(OCD, 强迫症 in Chinese)**, specifically Obsessive-Thinking, a mental illness as painful as depression. My mind would get stuck on meaningless details, both academic and personal, generating unrelentless ideas and I couldn’t control it. I self-rescued through reading mind-philosophy books and exploring Buddhist and Taoist philosophies. The most inspiring part of this journey was learning to practice mindfulness—observing what was happening inside my mind and finding inner peace, allowing my brain to become my tool rather than being controlled by it. This experience became a valuable treasure, shaping my attitude towards life and challenges afterwards. I'd like to recommend you the book *The Power of Now*, along with Buddhist classics like The Diamond Sutra and Taoist texts like Tao Te Ching, which are beneficial to all of us, especially who are facing similar difficulties.
 
 
 
