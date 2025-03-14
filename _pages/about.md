@@ -70,7 +70,7 @@ I have been an intern researcher at [Centre for Frontier AI Research](https://ww
 ## Manuscripts under Review
 
 - **Towards Diverse Robot Locomotion Behaviors with Extrinsic Behavioral Curiosity**  
-  Author: **<u>Zhenglin Wan</u>**, Xingrui Yu, David Bossens, Yueming Lyu, Qing Guo, Flint Xiaofeng Fan, Ong Yew Soon, Ivor Tsang\*  
+  Author: **<u>Zhenglin Wan</u>**, Xingrui Yu, David Bossens, Yueming Lyu, Qing Guo, Flint Xiaofeng Fan, Yew Soon Ong, Ivor Tsang\*  
 
 - **AsyncGuard: Secure Asynchronous Federated Learning**  
   Author: Anjun Gao, Feng Wang, **<u>Zhenglin Wan</u>**, Zhuqing Liu, Minghong Fang\*  
