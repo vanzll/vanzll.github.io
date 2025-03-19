@@ -57,7 +57,7 @@ I am always open to academic collaborations, please drop me an email if you are 
   *The 39th Annual AAAI Conference on Artificial Intelligence (AAAI 2025)* (**oral**)
 
 - **Generative Quality Diversity Imitation Learning for Robot Skill Acquisition**  
-  Author: **<u>Zhenglin Wan</u>**, Xingrui Yu, David Bossens, Yueming Lyu, Qing Guo, Flint Xiaofeng Fan, Ivor Tsang\*  
+  Author: **<u>Zhenglin Wan</u>**†, Xingrui Yu†, David Bossens, Yueming Lyu, Qing Guo, Flint Xiaofeng Fan, Ivor Tsang\*  
   *The Thirteenth International Conference on Learning Representations (ICLR 2025)* (workshop on **Generative Models for Robot Learning**)
 
 - **Machine Learning-Driven Spatiotemporal Analysis of Ozone Exposure and Health Risks in China**   [(AGU)](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JD041593)  
@@ -81,7 +81,7 @@ I am always open to academic collaborations, please drop me an email if you are 
   Author: Chi Li, **<u>Zhenglin Wan</u>**, Kaize Wang, Yuxuan Huang, Chengxi Li, Jianfeng Mao\*  
   
 - **GESEN: Graph-Enhanced Self-Supervised Embedding Network for Next POI Recommendation**  
-  Author: Anjun Gao†, **<u>Zhenglin Wan</u>**†, Pingfu Chao\*, Jiajie Xu, Tao Gong, Jun Song
+  Author: Anjun Gao†, **<u>Zhenglin Wan</u>**†, Pingfu Chao\*, Jiajie Xu, Tao Gong, Jun Song\*
 
 ## Invention Patents
 As these works are patented in China, all these names are directly translated from Chinese.
