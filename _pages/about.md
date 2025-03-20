@@ -41,7 +41,7 @@ My primary research interests lie in: 1) **Decision-Making in Machine Learning**
 
 I have been an intern researcher at [Centre for Frontier AI Research](https://www.a-star.edu.sg/cfar), [(A*STAR)](https://www.a-star.edu.sg/) at Singapore, under the supervision of [Dr. Xingrui Yu](https://www.a-star.edu.sg/cfar/about-cfar/our-team/yu-xingrui) and [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang). During my undergraduate, I am lucky to work with [Dr. Jun Song](https://scholars.hkbu.edu.hk/en/persons/JUNSONG) and co-found one company, as technical collaborator, named "Metasequoia Intelligence" with him. We have published serveral invention patents and academic papers together. Prior to that, I was the key member of the research group of Prof. [Jianfeng Mao](https://sds.cuhk.edu.cn/en/teacher/268), playing a key role in a project regarding decision-making systems in transportation network.
 
-==I am always open to academic collaborations, please drop me an email if you are interested (email: vanzl3386@gmail.com).==
+<mark style="background-color: yellow; color: black;">I am always open to academic collaborations, please drop me an email if you are interested (email: vanzl3386@gmail.com)</mark>
 
 <span class='anchor' id='Publication-List'></span>
 # 📝 Selected Publication List
