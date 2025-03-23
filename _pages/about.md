@@ -245,7 +245,7 @@ Author: Anjun Gao†, Zhenglin Wan†, Pingfu Chao*, Shunyu Yao (†: co-first a
 # 📖 Educations and Standarlized Tests
 - *2021.09 - 2025.06 (now)*, *The Chinese University of Hong Kong, Shenzhen*
   
-  (Degree: Bsc; Major: Data Science; Cumulative GPA: 3.75/4.0; Major GPA: 3.84/4.0; Rank: top 7\%)
+  (Degree: Bsc; Major: Data Science; Cumulative GPA: 3.75/4.0; Major GPA: 3.84/4.0; Rank: top 7%)
 - **GRE: 331** (Verbal: 161 + quant: 170 + writing: 3.5)
 - **TOEFL: 101** (R: 28 + L: 26 + S: 23 + W: 24)
 
