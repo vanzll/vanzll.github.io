@@ -35,7 +35,7 @@ redirect_from:
 # 😊 About me
 
 Greetings! I am Zhenglin Wan (万政霖 in Chinese), an undergraduate student at CUHK-Shenzhen, majoring in Data Science. You can find my most-updated CV at [CV](https://drive.google.com/file/d/1fYYlj0MhJGsPPDdWUMB9LHMTqUo3bL1s/view?usp=sharing).
-My primary research interests lie in: 1) **Decision-Making in Machine Learning**: How to embed the human's learning and decision-making patterns into machine's learning paradigm, such as Reinforcement Learning, Imitation Learning, Multi-agent systems? How to enable intelligent agent to perform high-level planning and strategic thinking? I am also interested in adopting statistics and optimization view to understand these problems.
+My primary research interests lie in: **Decision-Making in Machine Learning**: How to embed the human's learning and decision-making patterns into machine's learning paradigm, such as Reinforcement Learning, Imitation Learning, Multi-agent systems? How to enable intelligent agent to perform high-level planning and strategic thinking? I am also interested in adopting statistics and optimization view to understand these problems.
 
 ---
 
@@ -242,8 +242,10 @@ Author: Anjun Gao†, Zhenglin Wan†, Pingfu Chao*, Shunyu Yao (†: co-first a
   *Third Academic Year: September 2024*
 
 <span class='anchor' id='educations'></span>
-# 📖 Educations
-- *2021.09 - 2025.06 (now)*, The Chinese University of Hong Kong, Shenzhen 
+# 📖 Educations and Standarlized Tests
+- *2021.09 - 2025.06 (now)*, The Chinese University of Hong Kong, Shenzhen  (Degree: Bsc  Major: Data Science  Cumulative GPA: 3.75/4.0  Major GPA: 3.84/4.0  Rank: top 7\%)
+- GRE: 331 (Verbal: 161 + quant: 170 + writing: 3.5)
+- TOEFL: 101 (R: 28 + L: 26 + S: 23 + W: 24)
 
 <span class='anchor' id='press-media'></span>
 # 💬 Press/Media
