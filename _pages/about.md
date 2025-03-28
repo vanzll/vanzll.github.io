@@ -69,19 +69,7 @@ I have been an intern researcher at [Centre for Frontier AI Research](https://ww
   
   *Australasian Database Conference 2024* **(oral &amp; best paper runner-up)** (DOI: [https://doi.org/10.1007/978-981-96-1242-0_4](https://doi.org/10.1007/978-981-96-1242-0_4))
 
-## Manuscripts under Review
 
-- **Towards Diverse Robot Locomotion Behaviors with Extrinsic Behavioral Curiosity**  
-  Author: **<u>Zhenglin Wan</u>**, Xingrui Yu, David Bossens, Yueming Lyu, Qing Guo, Flint Xiaofeng Fan, Yew Soon Ong, Ivor Tsang\*  
-
-- **AsyncGuard: Secure Asynchronous Federated Learning**  
-  Author: Anjun Gao, Feng Wang, **<u>Zhenglin Wan</u>**, Zhuqing Liu, Minghong Fang\*  
-  
-- **Graph-based Reinforcement Learning Approach for Influential Node Detection in Airport Delay Networks**  
-  Author: Chi Li, **<u>Zhenglin Wan</u>**, Kaize Wang, Yuxuan Huang, Chengxi Li, Jianfeng Mao\*  
-  
-- **GESEN: Graph-Enhanced Self-Supervised Embedding Network for Next POI Recommendation**  
-  Author: Anjun Gao†, **<u>Zhenglin Wan</u>**†, Pingfu Chao\*, Jiajie Xu, Tao Gong, Jun Song\*
 
 ## Invention Patents
 As these works are patented in China, all these names are directly translated from Chinese.
