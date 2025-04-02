@@ -34,7 +34,7 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 # 😊 About me
 
-Greetings! I am Zhenglin Wan (万政霖 in Chinese), an undergraduate student at CUHK-Shenzhen, majoring in Data Science. You can find my most-updated CV at [CV](https://drive.google.com/file/d/1fYYlj0MhJGsPPDdWUMB9LHMTqUo3bL1s/view?usp=sharing).
+I am Zhenglin Wan (万政霖 in Chinese), an undergraduate student at CUHK-Shenzhen, majoring in Data Science. You can find my most-updated CV at [CV](https://drive.google.com/file/d/1fYYlj0MhJGsPPDdWUMB9LHMTqUo3bL1s/view?usp=sharing).
 My primary research interests lie in: **Decision-Making in Machine Learning**: How to embed the human's learning and decision-making patterns into machine's learning paradigm, such as Reinforcement Learning, Imitation Learning, Multi-agent systems? How to enable intelligent agent to perform high-level planning and strategic thinking? I am also interested in adopting statistics and optimization view to understand these problems.
 
 ---
