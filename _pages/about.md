@@ -271,7 +271,7 @@ When I'm not doing research, I’m an **music enthusiast**. I’ve been playing 
 
 
 
-I am also a **15-years chess player**, with the honor of "National Level-3 Athlete". I love the process of comprehensive planning, logical-thinking and inferring. Visit my [Lichess profile](https://lichess.org/@/Carlos1333860) and play chess with me!
+I am also a **15-years chess player**, with the honor of "National Level-3 Athlete". I love the process of comprehensive planning, logical-thinking and inferring. Visit my [Lichess profile](https://lichess.org/@/Carlos1333860).
 
 ---
 <!--
