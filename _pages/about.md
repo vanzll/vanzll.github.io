@@ -88,7 +88,7 @@ As these works are patented in China, all these names are directly translated fr
 - **An Atmospheric Pollutant Source Tracing Algorithm Based on Improved Swarm Optimization and Path Planning** (submitted)
 
 
-## While Paper
+## White Paper
 As these works are patented in China, all these names are directly translated from Chinese.
 
 - **White Paper on Cross-Border Economic Large Language Model**
