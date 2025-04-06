@@ -34,9 +34,9 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 # 😊 About me
 
-**Most updated resume**: [Resume](https://drive.google.com/file/d/1fYYlj0MhJGsPPDdWUMB9LHMTqUo3bL1s/view?usp=sharing)
+***Most updated resume***: [Resume](https://drive.google.com/file/d/1fYYlj0MhJGsPPDdWUMB9LHMTqUo3bL1s/view?usp=sharing)
 
-**Email**: vanzl3386@gmail.com (preferred), carlos@metaseq.ai, 121090525@link.cuhk.edu.cn
+***Email***: vanzl3386@gmail.com (preferred), carlos@metaseq.ai, 121090525@link.cuhk.edu.cn
 
 ---
 I am Zhenglin Wan (万政霖 in Chinese), an undergraduate student at [The Chinese University of Hong Kong (CUHK)-Shenzhen](https://www.cuhk.edu.cn/zh-hans), majoring in Data Science. 
