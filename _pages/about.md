@@ -89,7 +89,7 @@ As these works are patented in China, all these names are directly translated fr
 
 
 ## White Paper
-As these works are patented in China, all these names are directly translated from Chinese.
+As these works are presented in China, these names are directly translated from Chinese.
 
 - **White Paper on Cross-Border Economic Large Language Model**
 
