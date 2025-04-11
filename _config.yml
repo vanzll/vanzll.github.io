@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "Zhenglin Wan"
-description              : "Robustness is All You Need."
+description              : ""
 repository               : "vanzll/vanzll.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -57,6 +57,7 @@ author:
   xing             :
   youtube          :
   wikipedia        :
+  
 
 
 # Reading Files
