@@ -284,6 +284,8 @@ In my spare time, I’m an **music enthusiast**. I’ve been playing guitar for 
 I am also a **15-years chess player**, with the honor of "National Level-3 Athlete". I love the process of comprehensive planning, logical-thinking and inferring. Visit my [Lichess profile](https://lichess.org/@/Carlos1333860).
 
 ---
+
+I love play **basketball** 🏀. Sports makes me energetic.
 <!--
 <div>Several years ago, I was once diagnosised with Obsessive-Compulsive Disorder **(OCD, 强迫症 in Chinese)**, specifically Obsessive-Thinking, a mental illness as painful as depression. My mind would get stuck on meaningless details, both academic and personal, generating unrelentless ideas or questions and I couldn’t control it. Realizing that medicine doesn't work for me, I have to rescue myself through the wisdom in mind-philosophy books and exploring Buddhist and Taoist philosophies. The most inspiring part of this journey was learning to practice mindfulness ("正念" in Chinese）—observing what was happening inside my mind **without judging it** and finding inner peace, allowing my brain to become my tool rather than being controlled by it. This experience became a valuable treasure, shaping my attitude towards life and challenges afterwards. I'd like to recommend you the book *The Power of Now*, along with Buddhist classics like The Diamond Sutra and Taoist texts like Tao Te Ching and Zhuangzi, which are beneficial to all of us, especially who are facing similar difficulties.
 </div>
