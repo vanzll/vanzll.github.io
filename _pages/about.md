@@ -50,7 +50,7 @@ I have been an intern researcher at [Centre for Frontier AI Research](https://ww
 <span class='anchor' id='Publication-List'></span>
 # 📝 Selected Publication List
 ## Published (Accepted) Papers 
-(*: co-first author &amp; equal contribution, \†: corresponding author)
+(*: co-first author &amp; equal contribution, †: corresponding author)
 - **Imitation From Diverse Behaviors: Wasserstein Quality Diversity Imitation Learning with Single-Step Archive Exploration ([pdf](https://arxiv.org/pdf/2411.06965))**
 
   Author: Xingrui Yu *, **<u>Zhenglin Wan</u>** *, David Bossens, Yueming Lyu, Qing Guo, Ivor Tsang†    
