@@ -51,12 +51,12 @@ I have been an intern researcher at [Centre for Frontier AI Research](https://ww
 # 📝 Selected Publication List
 ## Published (Accepted) Papers 
 (†: co-first author &amp; equal contribution, \*: corresponding author)
-- **Imitation From Diverse Behaviors: Wasserstein Quality Diversity Imitation Learning with Single-Step Archive Exploration**
+- **Imitation From Diverse Behaviors: Wasserstein Quality Diversity Imitation Learning with Single-Step Archive Exploration ([pdf](https://arxiv.org/pdf/2411.06965))**
 
   Author: Xingrui Yu†, **<u>Zhenglin Wan</u>**†, David Bossens, Yueming Lyu, Qing Guo, Ivor Tsang\*    
   *The 24th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2025)* （**oral**）
 
-- **POI Recommendation via Multi-Objective Adversarial Imitation Learning**  
+- **POI Recommendation via Multi-Objective Adversarial Imitation Learning ([pdf](https://ojs.aaai.org/index.php/AAAI/article/download/33382/35537))**  
   Author: **<u>Zhenglin Wan</u>**, Anjun Gao, Xingrui Yu, Pingfu Chao\*, Jun Song, Maohao Ran  
   *The 39th Annual AAAI Conference on Artificial Intelligence (AAAI 2025)* (**oral**)
 
