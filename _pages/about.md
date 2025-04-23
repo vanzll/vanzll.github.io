@@ -41,11 +41,11 @@ redirect_from:
 ***Contact***: vanzl3386@gmail.com (preferred), carlos@metaseq.ai, 121090525@link.cuhk.edu.cn
 
 ---
-## 
+
 I am Zhenglin Wan (万政霖 in Chinese), an undergraduate student at [The Chinese University of Hong Kong (CUHK)-Shenzhen](https://www.cuhk.edu.cn/zh-hans), majoring in Data Science. During my undergraduate and to find my genuine interest, I have been exploring a wide-range of research areas, such as: (inverse) reinforcement learning, smart transportation, spatial-temporal data-mining (and applications like recommender systems), and their intersection. For my future research journey, I envision my research **focus** on 1)**Decision-Making in Machine Learning**: How to embed the human's learning and decision-making patterns into machine's learning paradigm, such as Reinforcement Learning, Imitation Learning, Multi-agent systems? How to enable intelligent agent to perform high-level planning and strategic thinking? I am also interested in adopting statistics and optimization view to understand these problems. 2)**Robot Learning and Embodied AI**: How to equip the real-world robot (or intelligent agent) with human's decision-making ability to solve complex real-world tasks?
 
 ---
-##
+
 I have been an intern researcher at [Centre for Frontier AI Research](https://www.a-star.edu.sg/cfar), [(A*STAR)](https://www.a-star.edu.sg/) at Singapore, under the supervision of [Dr. Xingrui Yu](https://www.a-star.edu.sg/cfar/about-cfar/our-team/yu-xingrui) and [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang). During my undergraduate, I am lucky to work with [Dr. Jun Song](https://scholars.hkbu.edu.hk/en/persons/JUNSONG) and co-found one company, as technical collaborator, named "Metasequoia Intelligence" with him. We have published serveral invention patents and academic papers together. Prior to that, I was the key member of the research group of Prof. [Jianfeng Mao](https://sds.cuhk.edu.cn/en/teacher/268), playing a key role in a project regarding decision-making systems in transportation network. Meanwhile, I also closely collaborated with Anjun Gao, [Prof. Pingfu Chao](https://www.researchgate.net/profile/Pingfu-Chao), and [Prof. Minghong Fang](https://minghongfang.com/).
 
 <mark style="background-color: yellow; color: black;">I am always open to academic collaborations, please drop me an email if you are interested (email: vanzl3386@gmail.com)</mark>
