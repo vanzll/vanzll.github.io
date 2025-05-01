@@ -19,7 +19,7 @@ redirect_from:
 # 🔥 News
 
 
-  
+- *2025.05*  &nbsp;🎉🎉 One first-author paper accepted by *Forty-Second International Conference on Machine Learning (ICML 2025)*.
 - *2025.03*  &nbsp;🎉🎉 One first-author paper accepted by *The Thirteenth International Conference on Learning Representations (ICLR 2025)* (workshop).
 - *2024.12*  &nbsp;🎉🎉 One co-first-author paper accepted by *The 24th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2025)* (**oral**).
 - *2024.12*  &nbsp;🎉🎉 One first-author paper accepted by *The 39th Annual AAAI Conference on Artificial Intelligence (AAAI 2025)* (**oral**, top 4.65%).
