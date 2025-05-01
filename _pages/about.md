@@ -54,6 +54,11 @@ I have been an intern researcher at [Centre for Frontier AI Research](https://ww
 # 📝 Selected Publication List
 ## Published (Accepted) Papers 
 (/*: co-first author &amp; equal contribution, †: corresponding author)
+
+- **Diversifying Robot Locomotion Behaviors with Extrinsic Behavioral Curiosity**
+  Author: **<u>Zhenglin Wan</u>** *, Xingrui Yu *, David Bossens, Yueming Lyu, Qing Guo, Flint Xiaofeng Fan, Yew Soon Ong, Ivor Tsang†  
+  *Forty-Second International Conference on Machine Learning (ICML 2025)*
+  
 - **Imitation From Diverse Behaviors: Wasserstein Quality Diversity Imitation Learning with Single-Step Archive Exploration ([pdf](https://arxiv.org/pdf/2411.06965))**
 
   Author: Xingrui Yu *, **<u>Zhenglin Wan</u>** *, David Bossens, Yueming Lyu, Qing Guo, Ivor Tsang†    
