@@ -56,7 +56,7 @@ I have been an intern researcher at [Centre for Frontier AI Research](https://ww
 (/*: co-first author &amp; equal contribution, †: corresponding author)
 
 - **Diversifying Robot Locomotion Behaviors with Extrinsic Behavioral Curiosity**
-- 
+
   Author: **<u>Zhenglin Wan</u>** *, Xingrui Yu *, David Bossens, Yueming Lyu, Qing Guo, Flint Xiaofeng Fan, Yew Soon Ong, Ivor Tsang†  
   *Forty-Second International Conference on Machine Learning (ICML 2025)*
   
