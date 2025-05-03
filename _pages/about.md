@@ -42,7 +42,7 @@ redirect_from:
 
 ---
 
-I am Zhenglin Wan (万政霖 in Chinese), an undergraduate student at [The Chinese University of Hong Kong (CUHK)-Shenzhen](https://www.cuhk.edu.cn/zh-hans), majoring in Data Science. During my undergraduate and to find my genuine interest, I have been exploring a wide-range of research areas, such as: (inverse) reinforcement learning, smart transportation, spatial-temporal data-mining (and applications like recommender systems), and their intersection. For my future research journey, I envision my research **focus** on 1)**Decision-Making in Machine Learning**: How to embed the human's learning and decision-making patterns into machine's learning paradigm, such as Reinforcement Learning, Imitation Learning, Multi-agent systems? How to enable intelligent agent to perform high-level planning and strategic thinking? I am also interested in adopting statistics and optimization view to understand these problems. 2)**Robot Learning and Embodied AI**: How to equip the real-world robot (or intelligent agent) with human's decision-making ability to solve complex real-world tasks?
+I am Zhenglin Wan (万政霖 in Chinese), an undergraduate student at [The Chinese University of Hong Kong (CUHK)-Shenzhen](https://www.cuhk.edu.cn/zh-hans), majoring in Data Science. During my undergraduate and to find my genuine interest, I have been exploring a wide-range of research areas, such as: (inverse) reinforcement learning, smart transportation, spatial-temporal data-mining (and applications like recommender systems), and their intersection. For my future research journey, I envision my research **focus** on 1)**Decision-Making in Machine Learning**: How to embed the human's learning and decision-making patterns into machine's learning paradigm? How to enable intelligent agent to perform high-level planning and strategic thinking? I am also interested in adopting statistics and optimization view to understand these problems. 2)**Robot Learning and Embodied AI**: How to equip the real-world robot (or intelligent agent) with human's decision-making ability to solve complex real-world tasks?
 
 ---
 
@@ -59,12 +59,12 @@ I have been an intern researcher at [Centre for Frontier AI Research](https://ww
   Author: **<u>Zhenglin Wan</u>**, Xingrui Yu, David Bossens, Yueming Lyu, Qing Guo, Flint Xiaofeng Fan, Yew Soon Ong, Ivor Tsang†  
   *Forty-Second International Conference on Machine Learning (ICML 2025)*
   
-- **Imitation From Diverse Behaviors: Wasserstein Quality Diversity Imitation Learning with Single-Step Archive Exploration ([pdf](https://arxiv.org/pdf/2411.06965))**
+- **Imitation From Diverse Behaviors: Wasserstein Quality Diversity Imitation Learning with Single-Step Archive Exploration**
 
   Author: Xingrui Yu, **<u>Zhenglin Wan</u>**, David Bossens, Yueming Lyu, Qing Guo, Ivor Tsang†    
   *The 24th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2025)* （**oral**）
 
-- **POI Recommendation via Multi-Objective Adversarial Imitation Learning ([pdf](https://ojs.aaai.org/index.php/AAAI/article/download/33382/35537))**  
+- **POI Recommendation via Multi-Objective Adversarial Imitation Learning**  
   Author: **<u>Zhenglin Wan</u>**, Anjun Gao, Xingrui Yu, Pingfu Chao†, Jun Song, Maohao Ran  
   *The 39th Annual AAAI Conference on Artificial Intelligence (AAAI 2025)* (**oral**)
 
@@ -72,14 +72,14 @@ I have been an intern researcher at [Centre for Frontier AI Research](https://ww
   Author: **<u>Zhenglin Wan</u>**, Xingrui Yu, David Bossens, Yueming Lyu, Qing Guo, Flint Xiaofeng Fan, Ivor Tsang†  
   *The Thirteenth International Conference on Learning Representations (ICLR 2025)* (workshop on **Generative Models for Robot Learning**)
 
-- **Machine Learning-Driven Spatiotemporal Analysis of Ozone Exposure and Health Risks in China**   [(AGU)](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JD041593)  
+- **Machine Learning-Driven Spatiotemporal Analysis of Ozone Exposure and Health Risks in China**
   Author: Chendong Ma, Jun Song†, Maohao Ran, **<u>Zhenglin Wan</u>**, Yike Guo, Meng Gao  
-  *Journal of Geophysical Research - Atmospheres* (DOI: [https://doi.org/10.1029/2024JD041593](https://doi.org/10.1029/2024JD041593))
-
-- **Hierarchical Spatial-Temporal Graph-Enhanced Model for Map-Matching**   [(Springer Nature)](https://link.springer.com/chapter/10.1007/978-981-96-1242-0_4)  
+  *Journal of Geophysical Research - Atmospheres*
+  
+- **Hierarchical Spatial-Temporal Graph-Enhanced Model for Map-Matching**
    Author: Anjun Gao, **<u>Zhenglin Wan</u>**, Pingfu Chao†, Shunyu Yao
   
-  *Australasian Database Conference 2024* **(oral &amp; best paper runner-up)** (DOI: [https://doi.org/10.1007/978-981-96-1242-0_4](https://doi.org/10.1007/978-981-96-1242-0_4))
+  *Australasian Database Conference 2024* **(oral &amp; best paper runner-up)**
 
 
 
