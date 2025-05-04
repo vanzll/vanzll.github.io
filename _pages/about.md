@@ -73,10 +73,12 @@ I have been an intern researcher at [Centre for Frontier AI Research](https://ww
   *The Thirteenth International Conference on Learning Representations (ICLR 2025)* (workshop on **Generative Models for Robot Learning**)
 
 - **Machine Learning-Driven Spatiotemporal Analysis of Ozone Exposure and Health Risks in China**
+  
   Author: Chendong Ma, Jun Song†, Maohao Ran, **<u>Zhenglin Wan</u>**, Yike Guo, Meng Gao  
   *Journal of Geophysical Research - Atmospheres*
   
 - **Hierarchical Spatial-Temporal Graph-Enhanced Model for Map-Matching**
+  
    Author: Anjun Gao, **<u>Zhenglin Wan</u>**, Pingfu Chao†, Shunyu Yao
   
   *Australasian Database Conference 2024* **(oral &amp; best paper runner-up)**
