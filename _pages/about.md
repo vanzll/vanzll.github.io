@@ -225,6 +225,7 @@ Author: Anjun Gao*, Zhenglin Wan*, Pingfu Chao*, Shunyu Yao (*: co-first author 
 <span class='anchor' id='honors-and-awards'></span>
 # 🎖 Honors and Awards
 - **1st-Prize in Chinese Mathematics Olympics (CMO)-1st Round (Chongqing Province)**
+  
   *September 2019*
   
 - **Zhejiang Guolong Inspirational Scholarship** (Undergraduate Admission Scholarship)  
