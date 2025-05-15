@@ -25,7 +25,7 @@ redirect_from:
 - *2024.12*  &nbsp;🎉🎉 One first-author paper accepted by *The 39th Annual AAAI Conference on Artificial Intelligence **(AAAI 2025)*** (**oral, top 4.65%**).
 - *2024.09*  &nbsp;🎉🎉 One invention patent is published.
 - *2024.05*  &nbsp;🎉🎉 One invention patent is officially granted. 
-- *2023.12*  &nbsp;🎉🎉 As technical co-founder, I co-founded one enterprise named "Metasequoia Intelligence".
+- *2023.12*  &nbsp;🎉🎉 As tech co-founder, I co-founded enterprise "Metasequoia Intelligence".
 
 
 
