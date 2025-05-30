@@ -18,7 +18,7 @@ redirect_from:
 <span class='anchor' id='news'></span>
 # 🔥 News
 
-
+- *2025.05*  &nbsp;🎉🎉 I graduated from CUHK,Shenzhen with 1st-class honor!
 - *2025.05*  &nbsp;🎉🎉 One first-author paper accepted by *Forty-Second International Conference on Machine Learning **(ICML 2025, Vancouver)**, see you in Vancouver on July!*.
 - *2025.03*  &nbsp;🎉🎉 One first-author paper accepted by *The Thirteenth International Conference on Learning Representations **(ICLR 2025, Singapore)*** (workshop).
 - *2024.12*  &nbsp;🎉🎉 One co-first-author paper accepted by *The 24th International Conference on Autonomous Agents and Multiagent Systems **(AAMAS 2025, Detroit)*** (**oral**).
