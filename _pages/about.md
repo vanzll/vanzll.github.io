@@ -44,7 +44,7 @@ I am Zhenglin Wan (万政霖 in Chinese). I received B.Sc from [The Chinese Univ
 
 ---
 
-I have been an intern researcher at [Centre for Frontier AI Research](https://www.a-star.edu.sg/cfar), [(A*STAR)](https://www.a-star.edu.sg/) at Singapore, under the supervision of [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) and closely collaborate with [Prof. Ong Yew Soon](https://www3.ntu.edu.sg/home/asysong/home.html) and [Dr. Xingrui Yu](https://xingruiyu.github.io/). In CUHK-Shenzhen campus, I was advised by Prof. [Jianfeng Mao](https://sds.cuhk.edu.cn/en/teacher/268) and [Prof. Ming Yan](https://mingyan08.github.io/).
+I have been an intern researcher at [Centre for Frontier AI Research](https://www.a-star.edu.sg/cfar), [(A*STAR)](https://www.a-star.edu.sg/) at Singapore, under the supervision of [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) and closely collaborated with [Prof. Ong Yew Soon](https://www3.ntu.edu.sg/home/asysong/home.html). In CUHK-Shenzhen campus, I was advised by [Prof. Jianfeng Mao](https://sds.cuhk.edu.cn/en/teacher/268) and [Prof. Ming Yan](https://mingyan08.github.io/).
 
 <mark style="background-color: yellow; color: black;">I am always open to collaborations, networking and potential intern/work opportunities, feel free to drop me an email! (vanzl3386@gmail.com)</mark>
 
