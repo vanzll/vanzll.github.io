@@ -18,7 +18,7 @@ redirect_from:
 <span class='anchor' id='news'></span>
 # 🔥 News
 
-- *2025.05*  &nbsp;🎉🎉 I graduated from CUHK,Shenzhen with 1st-class honor!
+- *2025.07*  &nbsp;🎉🎉 I received my B.Sc from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) with 1-st class honor!
 - *2025.05*  &nbsp;🎉🎉 One first-author paper accepted by *Forty-Second International Conference on Machine Learning **(ICML 2025, Vancouver)**, see you in Vancouver on July!*.
 - *2025.03*  &nbsp;🎉🎉 One first-author paper accepted by *The Thirteenth International Conference on Learning Representations **(ICLR 2025, Singapore)*** (workshop).
 - *2024.12*  &nbsp;🎉🎉 One co-first-author paper accepted by *The 24th International Conference on Autonomous Agents and Multiagent Systems **(AAMAS 2025, Detroit)*** (**oral**).
@@ -40,11 +40,11 @@ redirect_from:
 
 ---
 
-I am Zhenglin Wan (万政霖 in Chinese), an undergraduate student at [The Chinese University of Hong Kong (CUHK)-Shenzhen](https://www.cuhk.edu.cn/zh-hans), majoring in Data Science. During my undergraduate and to find my genuine interest, I have been exploring research areas such as: (inverse) reinforcement learning, spatial-temporal data-mining (and applications like recommender systems), and their intersection. For my future research journey, I envision my research **focus** on 1)**Decision-Making of intelligent agents**: How to embed the human's learning and decision-making patterns into machine's learning paradigm? How to enable intelligent agent to perform high-level planning and strategic thinking? I am particularly interested in adopting statistics and optimization view to understand these problems. 2)**Robot Learning and Embodied Intelligence**: How to equip the real-world intelligent agent with **human's decision-making ability** to solve complex real-world tasks?
+I am Zhenglin Wan (万政霖 in Chinese). I received B.Sc from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) on 2025. I envision my future research **focus** on 1)**Decision-Making of intelligent agents**: How to embed the human's learning and decision-making patterns into machine's learning paradigm? How to enable intelligent agent to perform high-level planning and strategic thinking? I am particularly interested in adopting statistics and optimization view to understand these problems. 2)**Robot Learning and Embodied Intelligence**: How to equip the real-world intelligent agent with **human's decision-making ability** to solve complex real-world tasks?
 
 ---
 
-I have been an intern researcher at [Centre for Frontier AI Research](https://www.a-star.edu.sg/cfar), [(A*STAR)](https://www.a-star.edu.sg/) at Singapore, under the supervision of [Dr. Xingrui Yu](https://www.a-star.edu.sg/cfar/about-cfar/our-team/yu-xingrui) and [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang). During my undergraduate, I am lucky to work with [Dr. Jun Song](https://scholars.hkbu.edu.hk/en/persons/JUNSONG) and co-founded company "Metasequoia Intelligence" as technical collaborator. Prior to that, I was the key member of the research group of Prof. [Jianfeng Mao](https://sds.cuhk.edu.cn/en/teacher/268). Meanwhile, I also closely collaborated with student Anjun Gao, [Prof. Pingfu Chao](https://www.researchgate.net/profile/Pingfu-Chao), and [Prof. Minghong Fang](https://minghongfang.com/).
+I have been an intern researcher at [Centre for Frontier AI Research](https://www.a-star.edu.sg/cfar), [(A*STAR)](https://www.a-star.edu.sg/) at Singapore, under the supervision of [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) and closely collaborate with [Prof. Ong Yew Soon](https://www3.ntu.edu.sg/home/asysong/home.html) and [Dr. Xingrui Yu](https://xingruiyu.github.io/). In CUHK-Shenzhen campus, I was advised by Prof. [Jianfeng Mao](https://sds.cuhk.edu.cn/en/teacher/268) and [Prof. Ming Yan](https://mingyan08.github.io/).
 
 <mark style="background-color: yellow; color: black;">I am always open to collaborations, networking and potential intern/work opportunities, feel free to drop me an email! (vanzl3386@gmail.com)</mark>
 
