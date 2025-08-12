@@ -40,7 +40,7 @@ redirect_from:
 
 ---
 
-I am Zhenglin Wan (万政霖 in Chinese). I received B.Sc from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) on 2025 Fall. My research focus lies in 1)**Decision-Making of intelligent agents**: How to embed the human's learning and decision-making patterns into agentic paradigm? How to enable intelligent agent to perform high-level planning and strategic thinking? 2)**Decision making in machine learning**: the algorithmic side of reinforcement learning, imitation learning, and their intersection with modern generative models. --Pursuing the genuine insight of machine learning as the foundation of AGI will be my long-term goal--.
+I am Zhenglin Wan (万政霖 in Chinese). I received B.Sc from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) on 2025 Fall. My research focus lies in 1)**Agentic AI**: How to embed the human's learning and decision-making patterns into agentic paradigm? How to enable intelligent agent to perform high-level planning and strategic thinking? 2)**Decision making in machine learning**: the algorithmic side of reinforcement learning, imitation learning, and their intersection with modern generative models. --Pursuing the genuine insight of machine learning as the foundation of AGI will be my long-term goal--.
 
 ---
 
