@@ -40,7 +40,7 @@ redirect_from:
 
 ---
 
-Greetings! I am Zhenglin Wan (万政霖 in Chinese), and I received my Bachelor of Science from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) on 2025 Fall. I will soon join Agent Mediated Intelligence (AMI) Research Group at College of Computing and Data Science (CCDS), [Nanyang Technological University](https://www.ntu.edu.sg/) (NTU, Singapore), advised by [Prof. Bo An](https://personal.ntu.edu.sg/boan/). My research focus lies in 1)**Agentic AI**: How to embed the human's learning and decision-making patterns into agentic paradigm? How to enable intelligent agent to perform high-level planning and strategic thinking? 2)**Decision-Making in Machine Learning**: the algorithmic side of reinforcement learning (RL), as well as its intersection with modern generative models and Agentic AI.
+Greetings! I am Zhenglin Wan (万政霖 in Chinese), and I received my Bachelor of Science from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) on 2025 Fall. I am currently a research assistant in Agent Mediated Intelligence (AMI) Research Group at College of Computing and Data Science (CCDS), [Nanyang Technological University](https://www.ntu.edu.sg/) (NTU, Singapore), advised by [Prof. Bo An](https://personal.ntu.edu.sg/boan/). My research focus lies in 1)**Agentic AI**: How to embed the human's learning and decision-making patterns into agentic (both virtual and embodied) paradigm? How to enable intelligent agent to perform high-level planning and strategic thinking? 2)**Decision-Making in Machine Learning**: the algorithmic side of reinforcement learning (RL), as well as its intersection with modern generative models and Agentic AI.
 
 ---
 
