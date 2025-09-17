@@ -245,6 +245,7 @@ Author: Anjun Gao*, Zhenglin Wan*, Pingfu Chao*, Shunyu Yao (*: co-first author 
   *Third Academic Year: September 2024*
 
 - **NUS Research Scholarship**
+  
   *Janurary 2026-*
 
 <span class='anchor' id='educations'></span>
