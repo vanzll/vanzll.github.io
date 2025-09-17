@@ -40,7 +40,7 @@ redirect_from:
 
 ---
 
-Greetings! I am Zhenglin Wan (万政霖 in Chinese), and I received my Bachelor of Science from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) on 2025 Fall. I am also an incoming Ph.D. student in National University of Singapore (NUS) with NUS research scholarship. My research focus lies in 1)**Embodied AI**: How to embed the human's learning and decision-making patterns into (embodied) agentic paradigm? How to enable intelligent agent to perform high-level planning and strategic thinking? 2)**Decision-Making in Machine Learning**: the algorithmic side of reinforcement learning (RL), as well as its intersection with modern generative models.
+Greetings! I am Zhenglin Wan (万政霖 in Chinese), and I received my Bachelor of Science from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) on 2025 Fall. I am also an incoming Ph.D. student in [School of Computing (SoC)](https://www.comp.nus.edu.sg/), [National University of Singapore (NUS)](https://nus.edu.sg/) with NUS research scholarship. My research focus lies in 1)**Embodied AI**: How to embed the human's learning and decision-making patterns into (embodied) agentic paradigm? How to enable intelligent agent to perform high-level planning and strategic thinking? 2)**Decision-Making in Machine Learning**: the algorithmic side of reinforcement learning (RL), as well as its intersection with modern generative models.
 
 ---
 
