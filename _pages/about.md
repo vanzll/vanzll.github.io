@@ -18,7 +18,7 @@ redirect_from:
 <span class='anchor' id='news'></span>
 # 🔥 News
 
-- *2025.07*  &nbsp;🎉🎉 I received my B.Sc from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) with 1-st class honor!
+- *2025.08*  &nbsp;🎉🎉 I received my B.Sc from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) with 1-st class honor!
 - *2025.05*  &nbsp;🎉🎉 One paper accepted by ICML 2025.
 - *2025.03*  &nbsp;🎉🎉 One paper accepted by ICLR 2025 (generative models for robot learning workshop).
 - *2024.12*  &nbsp;🎉🎉 One paper accepted by AAMAS 2025 (oral).
@@ -40,7 +40,7 @@ redirect_from:
 
 ---
 
-Greetings! I am Zhenglin Wan (万政霖 in Chinese), and I received my Bachelor of Science from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) on 2025 Fall. I am also an incoming Ph.D. student in [School of Computing (SoC)](https://www.comp.nus.edu.sg/), [National University of Singapore (NUS)](https://nus.edu.sg/) with NUS research scholarship. My research focus lies in 1)**Embodied AI**: How to embed the human's learning and decision-making patterns into (embodied) agentic paradigm? How to enable intelligent agent to perform high-level planning and strategic thinking? 2)**Decision-Making in Machine Learning**: the algorithmic side of reinforcement learning (RL), as well as its intersection with modern generative models.
+Greetings! I am Zhenglin Wan (万政霖 in Chinese), and I received my Bachelor of Science from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) on 2025 Fall. I am currently a visiting (research) student in Nanyang Technological University (NTU), working with [Prof. Bo An](https://personal.ntu.edu.sg/boan/), and I am also an incoming Ph.D. student in [School of Computing (SoC)](https://www.comp.nus.edu.sg/), [National University of Singapore (NUS)](https://nus.edu.sg/) with NUS research scholarship. My research focus lies in 1)**Embodied AI**: How to embed the human's learning and decision-making patterns into (both virtual and embodied) agentic paradigm? How to enable intelligent agent to perform high-level planning and strategic thinking? 2)**Decision-Making in Machine Learning**: the algorithmic side of reinforcement learning (RL), as well as its intersection with modern generative models.
 
 ---
 
