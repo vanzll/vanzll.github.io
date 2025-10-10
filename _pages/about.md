@@ -17,16 +17,18 @@ redirect_from:
 
 <span class='anchor' id='news'></span>
 # 🔥 News
-
+- *2025.09*  &nbsp;🎉🎉 Honored to be awarded *NUS Research Scholarship* to support my Ph.D studies in National University of Singapore. Look forward to join NUS on Jan, 2026!
 - *2025.08*  &nbsp;🎉🎉 I received my B.Sc from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) with 1-st class honor!
 - *2025.05*  &nbsp;🎉🎉 One paper accepted by ICML 2025.
 - *2025.03*  &nbsp;🎉🎉 One paper accepted by ICLR 2025 (generative models for robot learning workshop).
 - *2024.12*  &nbsp;🎉🎉 One paper accepted by AAMAS 2025 (oral).
 - *2024.12*  &nbsp;🎉🎉 One paper accepted by AAAI 2025 (oral).
 - *2024.09*  &nbsp;🎉🎉 One invention patent is published.
+- *2024.09*  &nbsp;🎉🎉 Happy to be awarded *Academic Performance Scholarship* (for top 5% students) for consecutive two years.
 - *2024.05*  &nbsp;🎉🎉 One invention patent is officially granted. 
 - *2023.12*  &nbsp;🎉🎉 As tech co-founder, I co-founded enterprise "Metasequoia Intelligence" based in Shenzhen, China.
-
+- *2021.09*  &nbsp;🎉🎉 Happy to be awarded *Zhejiang Guolong Inspirational Scholarship* and *Diligentia Bowen Scholarship* to support my undergraduate studies.
+- *2019.09*  &nbsp;🎉🎉 I am lucky to achieve the 1-st prize in *Chinese Mathematics Olympics (CMO) - province round* and really happy to have this challenging but exciting experience.
 
 
 <span class='anchor' id='about-me'></span>
@@ -34,9 +36,9 @@ redirect_from:
 
 ## **TL; DR**:
 
-***Resume***: [Resume](https://drive.google.com/file/d/1fYYlj0MhJGsPPDdWUMB9LHMTqUo3bL1s/view?usp=sharing) (Updated on 8 Jun, 2025)
+***Resume***: [Resume](https://drive.google.com/file/d/1fYYlj0MhJGsPPDdWUMB9LHMTqUo3bL1s/view?usp=sharing) (Updated on 8 Oct, 2025)
 
-***Contact***: vanzl3386@gmail.com (preferred), carlos@metaseq.ai, 121090525@link.cuhk.edu.cn
+***Contact***: vanzl3386 [at] gmail.com (preferred), carlos [at] metaseq.ai, 121090525 [at] link.cuhk.edu.cn
 
 ---
 
