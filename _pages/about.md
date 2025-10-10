@@ -17,7 +17,8 @@ redirect_from:
 
 <span class='anchor' id='news'></span>
 # 🔥 News
-- *2025.09*  &nbsp;🎉🎉 Honored to be awarded *NUS Research Scholarship* to support my Ph.D studies in National University of Singapore. Look forward to join NUS on Jan, 2026!
+- *2025.09*  &nbsp;🎉🎉 Honored to be awarded *NUS Research Scholarship* to support my Ph.D studies in National University of Singapore!
+- *2025.09*  &nbsp;🎉🎉 I am happy to join Nanyang Technological University as a research staff.
 - *2025.08*  &nbsp;🎉🎉 I received my B.Sc from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) with 1-st class honor!
 - *2025.05*  &nbsp;🎉🎉 One paper accepted by ICML 2025.
 - *2025.03*  &nbsp;🎉🎉 One paper accepted by ICLR 2025 (generative models for robot learning workshop).
@@ -25,6 +26,7 @@ redirect_from:
 - *2024.12*  &nbsp;🎉🎉 One paper accepted by AAAI 2025 (oral).
 - *2024.09*  &nbsp;🎉🎉 One invention patent is published.
 - *2024.09*  &nbsp;🎉🎉 Happy to be awarded *Academic Performance Scholarship* (for top 5% students) for consecutive two years.
+- *2024.07*  &nbsp;🎉🎉 I joined Centre for Frontier AI Research, A*STAR (Singapore) as a research intern. Looking forward to explore interesting topics!
 - *2024.05*  &nbsp;🎉🎉 One invention patent is officially granted. 
 - *2023.12*  &nbsp;🎉🎉 As tech co-founder, I co-founded enterprise "Metasequoia Intelligence" based in Shenzhen, China.
 - *2021.09*  &nbsp;🎉🎉 Happy to be awarded *Zhejiang Guolong Inspirational Scholarship* and *Diligentia Bowen Scholarship* to support my undergraduate studies.
