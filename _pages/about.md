@@ -83,9 +83,11 @@ I have been an intern researcher at [Centre for Frontier AI Research](https://ww
 
 ## Preprint
 - **FM-IRL: Flow-Matching for Reward Modeling and Policy Regularization in Reinforcement Learning**
+  
   Author: **<u>Zhenglin Wan</u>**, Jingxuan Wu, Xingrui Yu, Chubin Zhang, Mingcong Lei, Bo An, Ivor Tsang
 
 - **OSCAR: Orthogonal Stochastic Control for Alignment-Respecting Diversity in Flow Matching**
+  
   Author: Jingxuan Wu, **<u>Zhenglin Wan</u>**, Xingrui Yu, Yuzhe Yang, Bo An, Ivor Tsang
 
 
