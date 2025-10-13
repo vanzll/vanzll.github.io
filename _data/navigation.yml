@@ -5,12 +5,12 @@ main:
 
   - title: "News"
     url: "/#news"
+  
+  - title: "Honors and Awards"
+    url: "/#honors-and-awards"
 
   - title: "Publications"
     url: "/#Publication-List"
-
-  - title: "Honors and Awards"
-    url: "/#honors-and-awards"
 
   - title: "Educations"
     url: "/#educations"
@@ -21,6 +21,6 @@ main:
   - title: "Internships"
     url: "/#internships"
 
-  - title: "Personal-Life"
+  - title: "Miscellaneous"
     url: "/#person"
 
