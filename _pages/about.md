@@ -17,20 +17,20 @@ redirect_from:
 
 <span class='anchor' id='news'></span>
 # 🔥 News
-- *2025.09*  &nbsp;🎉🎉 Honored to be awarded *NUS Research Scholarship* to support my Ph.D studies in [National University of Singapore (NUS)](https://nus.edu.sg/) beginning from Jan, 2026!
-- *2025.09*  &nbsp;🎉🎉 I am happy to join Nanyang Technological University as a research staff.
-- *2025.08*  &nbsp;🎉🎉 I received my B.Sc from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) with 1-st class honor!
+- *2025.09*  &nbsp;🎉🎉 Awarded *NUS Research Scholarship* to support my Ph.D studies in [National University of Singapore (NUS)](https://nus.edu.sg/) beginning from Jan, 2026.
+- *2025.09*  &nbsp;🎉🎉 Joined Nanyang Technological University as a research staff.
+- *2025.08*  &nbsp;🎉🎉 Received my B.Sc from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) with 1-st class honor!
 - *2025.05*  &nbsp;🎉🎉 One paper accepted by ICML 2025.
 - *2025.03*  &nbsp;🎉🎉 One paper accepted by ICLR 2025 (generative models for robot learning workshop).
 - *2024.12*  &nbsp;🎉🎉 One paper accepted by AAMAS 2025 (oral).
 - *2024.12*  &nbsp;🎉🎉 One paper accepted by AAAI 2025 (oral).
 - *2024.09*  &nbsp;🎉🎉 One invention patent is published.
-- *2024.09*  &nbsp;🎉🎉 Happy to be awarded *Academic Performance Scholarship* (for top 5% students) for consecutive two years.
-- *2024.07*  &nbsp;🎉🎉 I joined Centre for Frontier AI Research, A*STAR (Singapore) as a research intern. Excited to explore interesting topics!
+- *2024.09*  &nbsp;🎉🎉 Awarded *Academic Performance Scholarship* (for top 5% students) for consecutive two years.
+- *2024.07*  &nbsp;🎉🎉 Joined Centre for Frontier AI Research, A*STAR (Singapore) as a research intern. Excited to explore interesting topics!
 - *2024.05*  &nbsp;🎉🎉 One invention patent is officially granted. 
 - *2023.12*  &nbsp;🎉🎉 As tech co-founder, I co-founded enterprise "Metasequoia Intelligence" based in Shenzhen, China.
-- *2021.09*  &nbsp;🎉🎉 Happy to be awarded *Zhejiang Guolong Inspirational Scholarship* and *Diligentia Bowen Scholarship* to support my undergraduate studies in CUHK(SZ).
-- *2019.09*  &nbsp;🎉🎉 I am lucky to achieve the 1-st prize in *Chinese Mathematics Olympics (CMO) - province round* and really happy to have this challenging but exciting experience.
+- *2021.09*  &nbsp;🎉🎉 Awarded *Zhejiang Guolong Inspirational Scholarship* and *Diligentia Bowen Scholarship* to support my undergraduate studies in CUHK(SZ).
+- *2019.09*  &nbsp;🎉🎉 Lucky to achieve the 1-st prize in *Chinese Mathematics Olympics (CMO) -1st round* and really happy to have this challenging but exciting experience.
 
 
 <span class='anchor' id='about-me'></span>
@@ -80,6 +80,13 @@ I have been an intern researcher at [Centre for Frontier AI Research](https://ww
    Author: Anjun Gao, **<u>Zhenglin Wan</u>**, Pingfu Chao†, Shunyu Yao
   
   *Australasian Database Conference 2024* **(oral &amp; best paper runner-up)**
+
+## Preprint
+- **FM-IRL: Flow-Matching for Reward Modeling and Policy Regularization in Reinforcement Learning**
+  Author: **<u>Zhenglin Wan</u>**, Jingxuan Wu, Xingrui Yu, Chubin Zhang, Mingcong Lei, Bo An, Ivor Tsang
+
+- **OSCAR: Orthogonal Stochastic Control for Alignment-Respecting Diversity in Flow Matching**
+  Author: Jingxuan Wu, **<u>Zhenglin Wan</u>**, Xingrui Yu, Yuzhe Yang, Bo An, Ivor Tsang
 
 
 
