@@ -53,6 +53,34 @@ My research focus lies in 1)**Agentic AI**: How to embed the human's learning an
 
 <mark style="background-color: yellow; color: black;">I am always open to collaborations, networking and potential intern opportunities, feel free to drop me an email! (vanzl3386@gmail.com)</mark>
 
+
+<span class='anchor' id='honors-and-awards'></span>
+# 🎖 Honors and Awards
+- **1st-Prize in Chinese Mathematics Olympics (CMO)-1st Round (Chongqing Province)**
+  
+  *September 2019*
+  
+- **Zhejiang Guolong Inspirational Scholarship** (Undergraduate Admission Scholarship, ￥30000/year, for 4 years)  
+  *September 2021*
+
+- **Diligentia Bowen II Scholarship** (Undergraduate Admission Scholarship, ￥30000/year, for 4 years)
+  
+  *September 2021*
+
+- **Yearly Dean List Award** (Outstanding 1-st class Performance)  
+  *Consecutive three years: September 2022 - September 2025*
+
+- **Yearly Academic Scholarship: C Class** (for Yearly GPA Top 5%, ￥20000)  
+  *Second Academic Year: September 2023*
+
+- **Yearly Academic Scholarship: B Class** (for Yearly GPA Top 3%, ￥40000)  
+  *Third Academic Year: September 2024*
+
+- **NUS Research Scholarship** (approx. ￥235000/year plus full tuition fee subsidy, for entire Ph.D studies in NUS)
+  
+  *Janurary 2026-*
+
+  
 <span class='anchor' id='Publication-List'></span>
 # 📝 Selected Publication List
 ## Published (Accepted) Papers 
@@ -236,31 +264,7 @@ Author: Anjun Gao*, Zhenglin Wan*, Pingfu Chao*, Shunyu Yao (*: co-first author 
 -->
 ---
 
-<span class='anchor' id='honors-and-awards'></span>
-# 🎖 Honors and Awards
-- **1st-Prize in Chinese Mathematics Olympics (CMO)-1st Round (Chongqing Province)**
-  
-  *September 2019*
-  
-- **Zhejiang Guolong Inspirational Scholarship** (Undergraduate Admission Scholarship: ￥30000/year, for 4 years)  
-  *September 2021*
 
-- **Diligentia Bowen II Scholarship** (Undergraduate Admission Scholarship: for **Top 0.5% in Chinese College Entrance Exam (671/750)**, ￥30000/year, for 4 years)
-  
-  *September 2021*
-
-- **Yearly Dean List Award** (Outstanding 1-st class Performance)  
-  *Consecutive three years: September 2022 - September 2025*
-
-- **Yearly Academic Scholarship: C Class** (for Yearly GPA Top 5%, ￥20000)  
-  *Second Academic Year: September 2023*
-
-- **Yearly Academic Scholarship: B Class** (for Yearly GPA Top 3%, ￥40000)  
-  *Third Academic Year: September 2024*
-
-- **NUS Research Scholarship** (approx. ￥235000/year plus full tuition fee subsidy, for entire Ph.D studies in NUS)
-  
-  *Janurary 2026-*
 
 # 🎈 Services
 - Reviewer of ICLR
