@@ -17,8 +17,8 @@ redirect_from:
 
 <span class='anchor' id='news'></span>
 # 🔥 News
-- *2025.09*  &nbsp;🎉🎉 Awarded *NUS Research Scholarship* to support my Ph.D studies in [National University of Singapore (NUS)](https://nus.edu.sg/) beginning from Jan, 2026.
-- *2025.09*  &nbsp;🎉🎉 Joined Nanyang Technological University as a research staff.
+- *2025.09*  &nbsp;🎉🎉 Awarded *NUS Research Scholarship* to support my Ph.D studies in [National University of Singapore](https://nus.edu.sg/) beginning from Jan, 2026.
+- *2025.09*  &nbsp;🎉🎉 Joined [Nanyang Technological University](https://www.ntu.edu.sg/) as a research staff.
 - *2025.08*  &nbsp;🎉🎉 Received my B.Sc from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) with 1-st class honor!
 - *2025.05*  &nbsp;🎉🎉 One paper accepted by ICML 2025.
 - *2025.03*  &nbsp;🎉🎉 One paper accepted by ICLR 2025 (generative models for robot learning workshop).
@@ -30,7 +30,7 @@ redirect_from:
 - *2024.05*  &nbsp;🎉🎉 One invention patent is officially granted. 
 - *2023.12*  &nbsp;🎉🎉 As tech co-founder, I co-founded enterprise "Metasequoia Intelligence" based in Shenzhen, China.
 - *2021.09*  &nbsp;🎉🎉 Awarded *Zhejiang Guolong Inspirational Scholarship* and *Diligentia Bowen Scholarship* to support my undergraduate studies in CUHK(SZ).
-- *2019.09*  &nbsp;🎉🎉 Lucky to achieve the 1-st prize in *Chinese Mathematics Olympics (CMO) -1st round* and really happy to have this challenging but exciting experience.
+- *2019.09*  &nbsp;🎉🎉 Lucky to achieve the 1-st prize in *Chinese Mathematics Olympics (CMO) -1st round* and happy to have this intellectually-rewarding experience.
 
 
 <span class='anchor' id='about-me'></span>
@@ -44,7 +44,7 @@ redirect_from:
 
 ---
 
-Greetings! I am Zhenglin Wan (万政霖 in Chinese), and I received my Bachelor of Science from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) on 2025 Fall. I am currently a visiting research staff in Nanyang Technological University (NTU), working with [Prof. Bo An](https://personal.ntu.edu.sg/boan/), and I am also an incoming Ph.D. student in [School of Computing (SoC)](https://www.comp.nus.edu.sg/), [National University of Singapore (NUS)](https://nus.edu.sg/). My research focus lies in 1)**Agentic AI**: How to embed the human's learning and decision-making patterns into (both virtual and embodied) agentic paradigm? How to enable intelligent agent to perform high-level, long-horizen planning and strategic thinking? 2)**Decision-Making in Machine Learning**: the algorithmic side of reinforcement learning (RL), as well as its intersection with modern generative models.
+Greetings! I am Zhenglin Wan (万政霖 in Chinese), and I received my Bachelor of Science from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) on 2025 Fall. I am currently a visiting research staff in [Nanyang Technological University](https://www.ntu.edu.sg/), working with [Prof. Bo An](https://personal.ntu.edu.sg/boan/), and I am also an incoming Ph.D. student in [School of Computing (SoC)](https://www.comp.nus.edu.sg/), [National University of Singapore (NUS)](https://nus.edu.sg/). My research focus lies in 1)**Agentic AI**: How to embed the human's learning and decision-making patterns into (both virtual and embodied) agentic paradigm? How to enable intelligent agent to perform high-level, long-horizen planning and strategic thinking? 2)**Decision-Making in Machine Learning**: the algorithmic side of reinforcement learning (RL), as well as its intersection with modern generative models.
 
 ---
 
