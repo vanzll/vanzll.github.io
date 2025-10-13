@@ -242,23 +242,23 @@ Author: Anjun Gao*, Zhenglin Wan*, Pingfu Chao*, Shunyu Yao (*: co-first author 
   
   *September 2019*
   
-- **Zhejiang Guolong Inspirational Scholarship** (Undergraduate Admission Scholarship)  
+- **Zhejiang Guolong Inspirational Scholarship** (Undergraduate Admission Scholarship: ￥35000/year, for 4 years)  
   *September 2021*
 
-- **Diligentia Bowen II Scholarship** (Undergraduate Admission Scholarship: for **Top 0.5% in Chinese College Entrance Exam (671/750)**)
+- **Diligentia Bowen II Scholarship** (Undergraduate Admission Scholarship: for **Top 0.5% in Chinese College Entrance Exam (671/750)**, ￥35000/year, for 4 years)
   
   *September 2021*
 
 - **Yearly Dean List Award** (Outstanding Academic Performance)  
   *Consecutive three years: September 2022 - September 2024*
 
-- **Yearly Academic Scholarship: C Class** (Year GPA Top 5%)  
+- **Yearly Academic Scholarship: C Class** (Year GPA Top 5%, ￥20000)  
   *Second Academic Year: September 2023*
 
-- **Yearly Academic Scholarship: B Class** (Year GPA Top 3%)  
+- **Yearly Academic Scholarship: B Class** (Year GPA Top 3%, ￥40000)  
   *Third Academic Year: September 2024*
 
-- **NUS Research Scholarship**
+- **NUS Research Scholarship** (approx. ￥235000/years plus full tuition fee subsidy, for entire Ph.D studies in NUS)
   
   *Janurary 2026-*
 
