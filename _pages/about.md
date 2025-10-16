@@ -76,7 +76,7 @@ My research focus lies in 1)**Agentic AI**: How to embed the human's learning an
 - **Yearly Academic Scholarship: B Class** (for GPA Top 3%, ￥40000)  
   *Third Academic Year: September 2024*
 
-- **NUS Research Scholarship** (approx. ￥235000/year plus full tuition fee subsidy, for entire Ph.D studies in NUS)
+- **NUS Research Scholarship** (approx. ￥250000/year plus full tuition fee subsidy, for entire Ph.D studies in NUS)
   
   *Janurary 2026-*
 
