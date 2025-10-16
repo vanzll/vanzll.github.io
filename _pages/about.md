@@ -29,8 +29,8 @@ redirect_from:
 - *2024.07*  &nbsp;🎉🎉 Joined Centre for Frontier AI Research, A*STAR (Singapore) as a research intern. Excited to explore interesting topics!
 - *2024.05*  &nbsp;🎉🎉 One invention patent is officially granted. 
 - *2023.12*  &nbsp;🎉🎉 As tech co-founder, I co-founded enterprise "Metasequoia Intelligence" based in Shenzhen, China.
-- *2021.09*  &nbsp;🎉🎉 Awarded *Zhejiang Guolong Inspirational Scholarship* and *Diligentia Bowen Scholarship* to support my undergraduate studies in CUHK(SZ).
-- *2019.09*  &nbsp;🎉🎉 Lucky to achieve the 1-st prize in *Chinese Mathematics Olympics (CMO)* (Chongqing Province) and happy to have this intellectually-rewarding experience.
+- *2021.09*  &nbsp;🎉🎉 Awarded *Zhejiang Guolong Inspirational* and *Diligentia Bowen* Scholarship to support my undergraduate studies in CUHK(SZ).
+- *2019.09*  &nbsp;🎉🎉 Lucky to achieve 1-st prize in *Chinese Mathematics Olympics (CMO)* (Chongqing Province) and happy to have this intellectually-rewarding experience.
 
 
 <span class='anchor' id='about-me'></span>
@@ -55,34 +55,47 @@ My research focus lies in 1)**Agentic AI**: How to embed the human's learning an
 
 
 <span class='anchor' id='honors-and-awards'></span>
-# 🎖 Honors and Awards
-- **1st-Prize in Chinese Mathematics Olympics (CMO)-1st Round (Chongqing Province)**
+# 🎖 Honors, Awards and Scholarships
+- **NUS Research Scholarship** (approx. ￥250000/year plus full tuition fee subsidy, for entire Ph.D studies in NUS)
   
-  *September 2019*
+  *Janurary 2026-*
   
-- **Zhejiang Guolong Inspirational Scholarship** (Undergraduate Admission Scholarship, ￥30000/year, for 4 years)  
-  *September 2021*
+- **1-st class honor undergraduate student** awarded by The Chinese University of Hong Kong
+  
+  *August 2025*
+
+- **Yearly Academic Scholarship: B Class** (for GPA Top 3%, ￥40000)  
+  *Third Academic Year: September 2024*
+
+- **Yearly Academic Scholarship: C Class** (for GPA Top 5%, ￥20000)  
+  *Second Academic Year: September 2023*
+
+- **Yearly Dean List Award** (Outstanding 1-st class Performance)  
+  *Consecutive three years: September 2022 - September 2025*
 
 - **Diligentia Bowen II Scholarship** (Undergraduate Admission Scholarship, ￥30000/year, for 4 years)
   
   *September 2021*
 
-- **Yearly Dean List Award** (Outstanding 1-st class Performance)  
-  *Consecutive three years: September 2022 - September 2025*
+- **Zhejiang Guolong Inspirational Scholarship** (Undergraduate Admission Scholarship, ￥30000/year, for 4 years)  
+  *September 2021*
 
-- **Yearly Academic Scholarship: C Class** (for GPA Top 5%, ￥20000)  
-  *Second Academic Year: September 2023*
+- **1st-Prize in Chinese Mathematics Olympics (CMO)-1st Round (Chongqing Province)**
+  
+  *September 2019*
+  
 
-- **Yearly Academic Scholarship: B Class** (for GPA Top 3%, ￥40000)  
-  *Third Academic Year: September 2024*
 
-- **1-st class honor undergraduate student** awarded by The Chinese University of Hong Kong
+
+
+
+
+
+
+
+
   
-  *August 2025*
-  
-- **NUS Research Scholarship** (approx. ￥250000/year plus full tuition fee subsidy, for entire Ph.D studies in NUS)
-  
-  *Janurary 2026-*
+
 
   
 <span class='anchor' id='Publication-List'></span>
