@@ -267,7 +267,7 @@ Author: Anjun Gao*, Zhenglin Wan*, Pingfu Chao*, Shunyu Yao (*: co-first author 
 
 
 # 🎈 Services
-- Reviewer of AAAI, ICLR, ICML
+- Reviewer of AAAI, ICLR, ICML, NeurIPS
 
 <span class='anchor' id='educations'></span>
 # 📖 Educations
