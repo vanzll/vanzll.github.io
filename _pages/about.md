@@ -267,12 +267,13 @@ Author: Anjun Gao*, Zhenglin Wan*, Pingfu Chao*, Shunyu Yao (*: co-first author 
 
 
 # 🎈 Services
-- Reviewer of ICLR
+- Reviewer of AAAI, ICLR, ICML
 
 <span class='anchor' id='educations'></span>
-# 📖 Educations and Standarlized Tests
-- Bachelor of Science, The Chinese University of Hong Kong (CUHK), 2021.09-2025.07
-- **GRE: 331** (Verbal: 161 + quant: 170 + writing: 3.5)
+# 📖 Educations
+- Bachelor of Science (B.Sc), The Chinese University of Hong Kong (CUHK), 2021.09-2025.08 
+  - (finished undergraduate studies in CUHK-Shenzhen campus)
+- Doctor of Philosophy (Ph.D), National University of Singapore, 2026.01-
 
 <span class='anchor' id='press-media'></span>
 # 💬 Press/Media
@@ -288,10 +289,11 @@ Author: Anjun Gao*, Zhenglin Wan*, Pingfu Chao*, Shunyu Yao (*: co-first author 
 
 ---
 <span class='anchor' id='internships'></span>
-# 💻 Internships
-- *2023.07 - 2024.01*, Machine Learning Algorithm Engineerer, [HUIYINTONG]([https://github.com/](http://www.hytii.cn/index.html)), China.  
-- *2024.07 - 2024.10*, Intern Researcher, Agency for Science, Technology and Research [A*STAR](https://www.a-star.edu.sg/), Singapore
-
+# 💻 Internships and Work experiences
+- *2023.07 - 2024.01*, Machine Learning Algorithm Engineerer (full-time), [HUIYINTONG]([https://github.com/](http://www.hytii.cn/index.html)), Shenzhen, China.  
+- *2024.07 - 2024.10*, Intern Researcher (full-time), Agency for Science, Technology and Research [A*STAR](https://www.a-star.edu.sg/), Singapore
+- *2024.10 - 2025.09*, Intern Researcher (part-time), Agency for Science, Technology and Research [A*STAR](https://www.a-star.edu.sg/), Singapore
+- *2025.09 - 2026.01*, Research Staff (full-time), Nanyang Technological University, Singapore
 <span class='anchor' id='person'></span>
 # Miscellaneous
 In my spare time, I’m an **music enthusiast**. I’ve been playing guitar for more than 10 years and began teaching myself the piano and electronic piano at the age of 15. Music has always been a significant part of my life. During my undergraduate, I had the incredible opportunity to play in two bands: "Minor Blue" and "Major Pink." These moments remain some of my most cherished memories. See our photos: 
