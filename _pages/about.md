@@ -73,11 +73,11 @@ My research focus lies in 1)**Agentic AI**: How to embed the human's learning an
 - **Yearly Dean List Award** (Outstanding 1-st class Performance)  
   *Consecutive three years: September 2022 - September 2025*
 
-- **Diligentia Bowen II Scholarship** (Undergraduate Admission Scholarship, ￥30000/year, for 4 years)
+- **Diligentia Bowen Scholarship** (Undergraduate Admission Scholarship, ￥120000)
   
   *September 2021*
 
-- **Zhejiang Guolong Inspirational Scholarship** (Undergraduate Admission Scholarship, ￥30000/year, for 4 years)  
+- **Zhejiang Guolong Inspirational Scholarship** (Undergraduate Admission Scholarship, ￥120000)  
   *September 2021*
 
 - **1st-Prize in Chinese Mathematics Olympics (CMO)-1st Round (Chongqing Province)**
