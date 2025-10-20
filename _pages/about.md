@@ -122,8 +122,8 @@ My research focus lies in 1)**Agentic AI**: How to embed the human's learning an
 }
 .publications .pub-row .abbr.pub-thumb {
   position: relative;
-  flex: 0 0 260px;
-  max-width: 260px;
+  flex: 0 0 320px;
+  max-width: 320px;
   padding: 0 15px; /* keep original padding intent */
 }
 .publications .pub-row .abbr.pub-thumb img {
@@ -154,16 +154,16 @@ My research focus lies in 1)**Agentic AI**: How to embed the human's learning an
   background: #fff;
   color: #333;
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 0;
   padding: 8px 14px;
   font-size: 1rem;
   text-decoration: none;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
   transition: transform .05s ease, box-shadow .2s ease, border-color .2s ease;
 }
 .publications .pub-button:hover {
   transform: translateY(-1px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.10);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.16);
   border-color: #bbb;
   text-decoration: none;
 }
