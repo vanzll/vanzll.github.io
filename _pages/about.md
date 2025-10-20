@@ -122,8 +122,8 @@ My research focus lies in 1)**Agentic AI**: How to embed the human's learning an
 }
 .publications .pub-row .abbr.pub-thumb {
   position: relative;
-  flex: 0 0 220px;
-  max-width: 220px;
+  flex: 0 0 260px;
+  max-width: 260px;
   padding: 0 15px; /* keep original padding intent */
 }
 .publications .pub-row .abbr.pub-thumb img {
@@ -148,6 +148,25 @@ My research focus lies in 1)**Agentic AI**: How to embed the human's learning an
 .publications .author { font-size: 1.06rem; }
 .publications .periodical { font-size: 1.02rem; }
 .publications .links a { font-size: 13px !important; }
+.publications .links { margin-top: 10px; display: flex; gap: 10px; flex-wrap: wrap; }
+.publications .pub-button {
+  font-family: "Times New Roman", Times, serif;
+  background: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  transition: transform .05s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.publications .pub-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.10);
+  border-color: #bbb;
+  text-decoration: none;
+}
 .publications .title a { color: inherit; text-decoration: none; }
 .publications .title a:hover { text-decoration: underline; }
 @media (max-width: 640px) {
@@ -172,35 +191,14 @@ My research focus lies in 1)**Agentic AI**: How to embed the human's learning an
     {% endif %}
   </div>
   <div class="col-sm-9 pub-content" style="position: relative;padding-right: 15px;padding-left: 20px;">
-      <div class="title"><a href="{{ link.arxiv }}">{{ link.title }}</a></div>
+      <div class="title"><a href="{{ link.paper | default: '/404.html' }}">{{ link.title }}</a></div>
       <div class="author">{{ link.authors }}</div>
       <div class="periodical"><em>{{ link.conference }}</em>
       </div>
     <div class="links">
-      {% if link.page %} 
-      <a href="{{ link.page }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Project Page</a>
-      {% endif %}
-      {% if link.pdf %} 
-      <a href="{{ link.pdf }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">PDF</a>
-      {% endif %}
-      {% if link.arxiv %} 
-      <a href="{{ link.arxiv }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">arXiv</a>
-      {% endif %}
-      {% if link.code %} 
-      <a href="{{ link.code }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Code</a>
-      {% endif %}
-      {% if link.demo %} 
-      <a href="{{ link.demo }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Demo</a>
-      {% endif %}
-      {% if link.bibtex %} 
-      <a href="{{ link.bibtex }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">BibTex</a>
-      {% endif %}
-      {% if link.notes %} 
-      <strong> <i style="color:#e74d3c">{{ link.notes }}</i></strong>
-      {% endif %}
-      {% if link.others %} 
-      {{ link.others }}
-      {% endif %}
+      <a href="{{ link.paper | default: '/404.html' }}" class="pub-button paper" role="button" target="_blank">Paper</a>
+      <a href="{{ link.code | default: '/404.html' }}" class="pub-button code" role="button" target="_blank">Code</a>
+      <a href="{{ link.website | default: '/404.html' }}" class="pub-button website" role="button" target="_blank">Website</a>
       {% if link.github_folks %} 
       <a target="_blank" href ="https://github.com/{{ link.github_stars }}"><img alt="GitHub forks" align="right" src="https://img.shields.io/github/forks/{{ link.github_folks }}?style=social"></a>
       {% endif %}
