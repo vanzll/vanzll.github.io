@@ -396,7 +396,8 @@ Author: Anjun Gao*, Zhenglin Wan*, Pingfu Chao*, Shunyu Yao (*: co-first author 
   <li class="edu-item">
     <div class="edu-text">
       <p class="edu-title">Bachelor of Science (B.Sc)</p>
-      <p class="edu-sub">The Chinese University of Hong Kong</p>
+      <p class="edu-sub">The Chinese University of Hong Kong (CUHK)</p>
+      <p style="font-size: 0.96em; color: #777; margin: 0 0 6px;">Finished my undergraduate in CUHK-Shenzhen campus.</p>
       <p class="edu-time">2021.09 - 2025.08</p>
     </div>
     <div class="edu-img"><img src="assets/institutions/cuhk.png" alt="CUHK(SZ)"></div>
