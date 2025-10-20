@@ -3,7 +3,7 @@ main:
     authors: "<strong> Zhenglin Wan </strong>, Xingrui Yu*, David Bossens, Yueming Lyu, Qing Guo"
     conference_short: ICML 2025
     conference: Forty-Second International Conference on Machine Learning
-    arxiv: https://arxiv.org/abs/2410.06151
+    paper: https://arxiv.org/abs/2410.06151
     code: https://github.com/vanzll/EBC
     github_stars: "vanzll/EBC"
     image: "./assets/papers/EBC.png"

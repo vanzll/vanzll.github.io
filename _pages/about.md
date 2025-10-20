@@ -99,7 +99,7 @@ My research focus lies in 1)**Agentic AI**: How to embed the human's learning an
 
   
 <span class='anchor' id='Publication-List'></span>
-# 📝 Selected Publication List
+# 📝 Selected Publications
 ## Published (Accepted) Papers 
 <h1 id="publications"></h1>
 
@@ -112,18 +112,18 @@ My research focus lies in 1)**Agentic AI**: How to embed the human's learning an
 .publications .bibliography li { margin: 18px 0; }
 .publications .pub-row {
   display: flex;
-  gap: 16px;
+  gap: 20px;
   align-items: flex-start;
   background: #fff;
   border: 1px solid #eee;
   border-radius: 12px;
-  padding: 16px;
+  padding: 20px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 .publications .pub-row .abbr.pub-thumb {
   position: relative;
-  flex: 0 0 160px;
-  max-width: 160px;
+  flex: 0 0 220px;
+  max-width: 220px;
   padding: 0 15px; /* keep original padding intent */
 }
 .publications .pub-row .abbr.pub-thumb img {
@@ -144,6 +144,10 @@ My research focus lies in 1)**Agentic AI**: How to embed the human's learning an
   font-weight: 700;
 }
 .publications .pub-content { flex: 1 1 auto; padding-left: 4px; }
+.publications .title { font-size: 1.22rem; font-weight: 700; line-height: 1.35; }
+.publications .author { font-size: 1.06rem; }
+.publications .periodical { font-size: 1.02rem; }
+.publications .links a { font-size: 13px !important; }
 .publications .title a { color: inherit; text-decoration: none; }
 .publications .title a:hover { text-decoration: underline; }
 @media (max-width: 640px) {
