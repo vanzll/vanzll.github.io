@@ -15,7 +15,7 @@ main:
     paper: https://arxiv.org/abs/2510.09222
     code: https://github.com/vanzll/FM_IRL
     github_stars: "vanzll/FM_IRL"
-    image: "./assets/papers/FM_IRL.png"
+    image: "./assets/papers/FMIRL.png"
 
   - title: "OSCAR: Orthogonal Stochastic Control for Alignment-Respecting Diversity in Flow Matching"
     authors: "Jingxuan Wu, <strong> Zhenglin Wan </strong>, Xingrui Yu, Yuzhe Yang, Bo An, Ivor Tsang"

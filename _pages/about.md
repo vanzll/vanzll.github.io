@@ -100,14 +100,12 @@ My research focus lies in 1)**Agentic AI**: How to embed the human's learning an
   
 <span class='anchor' id='Publication-List'></span>
 # 📝 Selected Publications
-## Published (Accepted) Papers 
+## Conference Papers
 <h1 id="publications"></h1>
-
-<h2 style="margin: 60px 0px -15px;">Selected Publications <temp style="font-size:15px;">[</temp><a href="https://scholar.google.com/citations?user=q4DIjckAAAAJ&hl=en" target="_blank" style="font-size:15px;">Google Scholar</a><temp style="font-size:15px;">]</temp></h2>
 
 <style>
 /* Publications section styles (scoped) */
-.publications { font-family: "Times New Roman", Times, serif; }
+.publications { font-family: "Times New Roman", Times, serif; font-size: 0.96em; }
 .publications .bibliography { list-style: none; margin: 0; padding: 0; }
 .publications .bibliography li { margin: 10px 0; }
 .publications .pub-row {
@@ -119,6 +117,9 @@ My research focus lies in 1)**Agentic AI**: How to embed the human's learning an
   border-radius: 12px;
   padding: 14px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .publications .pub-row .abbr.pub-thumb {
   position: relative;
@@ -144,10 +145,10 @@ My research focus lies in 1)**Agentic AI**: How to embed the human's learning an
   font-weight: 700;
 }
 .publications .pub-content { flex: 1 1 auto; padding-left: 4px; }
-.publications .title { font-size: 1.22rem; font-weight: 700; line-height: 1.35; }
-.publications .author { font-size: 1.06rem; }
-.publications .periodical { font-size: 1.02rem; }
-.publications .links a { font-size: 13px !important; }
+.publications .title { font-size: 1.14rem; font-weight: 700; line-height: 1.35; }
+.publications .author { font-size: 0.98rem; }
+.publications .periodical { font-size: 0.96rem; }
+.publications .links a { font-size: 12px !important; }
 .publications .links { margin-top: 10px; display: flex; gap: 10px; flex-wrap: wrap; }
 .publications .pub-button {
   font-family: "Times New Roman", Times, serif;
@@ -216,42 +217,6 @@ My research focus lies in 1)**Agentic AI**: How to embed the human's learning an
 
 </ul>
 </div>
-
-- **Diversifying Policy Behaviors with Extrinsic Behavioral Curiosity**
-
-  Author: **<u>Zhenglin Wan</u>**, Xingrui Yu, David Bossens, Yueming Lyu, Qing Guo, Flint Xiaofeng Fan, Yew Soon Ong, Ivor Tsang†  
-  *Forty-Second International Conference on Machine Learning (ICML 2025)*
-  
-- **Imitation From Diverse Behaviors: Wasserstein Quality Diversity Imitation Learning with Single-Step Archive Exploration**
-
-  Author: Xingrui Yu, **<u>Zhenglin Wan</u>**, David Bossens, Yueming Lyu, Qing Guo, Ivor Tsang†    
-  *The 24th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2025)* （**oral**）
-
-- **POI Recommendation via Multi-Objective Adversarial Imitation Learning**  
-  Author: **<u>Zhenglin Wan</u>**, Anjun Gao, Xingrui Yu, Pingfu Chao†, Jun Song, Maohao Ran  
-  *The 39th Annual AAAI Conference on Artificial Intelligence (AAAI 2025)* (**oral**)
-
-- **Generative Quality Diversity Imitation Learning for Robot Skill Acquisition**  
-  Author: **<u>Zhenglin Wan</u>**, Xingrui Yu, David Bossens, Yueming Lyu, Qing Guo, Flint Xiaofeng Fan, Ivor Tsang†  
-  *The Thirteenth International Conference on Learning Representations (ICLR 2025)* (workshop on **Generative Models for Robot Learning**)
-
-  
-- **Hierarchical Spatial-Temporal Graph-Enhanced Model for Map-Matching**
-  
-   Author: Anjun Gao, **<u>Zhenglin Wan</u>**, Pingfu Chao†, Shunyu Yao
-  
-  *Australasian Database Conference 2024* **(oral &amp; best paper runner-up)**
-
-## Preprint
-- **FM-IRL: Flow-Matching for Reward Modeling and Policy Regularization in Reinforcement Learning**
-  
-  Author: **<u>Zhenglin Wan</u>**, Jingxuan Wu, Xingrui Yu, Chubin Zhang, Mingcong Lei, Bo An, Ivor Tsang
-
-- **OSCAR: Orthogonal Stochastic Control for Alignment-Respecting Diversity in Flow Matching**
-  
-  Author: Jingxuan Wu, **<u>Zhenglin Wan</u>**, Xingrui Yu, Yuzhe Yang, Bo An, Ivor Tsang
-
-
 
 ## Invention Patents
 As these works are patented in China, all these names are directly translated from Chinese.
