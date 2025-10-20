@@ -1,9 +1,9 @@
 main:
   - title: "Diversifying Policy Behaviors via Extrinsic Behavioral Curiosity"
-    authors: <strong> Zhenglin Wan </strong>, Xingrui Yu*, David Bossens, Yueming Lyu, Qing Guo
+    authors: "<strong> Zhenglin Wan </strong>, Xingrui Yu*, David Bossens, Yueming Lyu, Qing Guo"
     conference_short: arxiv
     conference: arxiv preprint, 2025.
     arxiv: https://arxiv.org/pdf/2510.11701
     code: https://github.com/Gen-Verse/Open-AgentRL
-    github_stars: Gen-Verse/Open-AgentRL
-    image: ./assets/teaser/demystify.png
+    github_stars: "Gen-Verse/Open-AgentRL"
+    image: "./assets/teaser/demystify.png"

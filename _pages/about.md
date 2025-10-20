@@ -105,7 +105,7 @@ My research focus lies in 1)**Agentic AI**: How to embed the human's learning an
 
 <h2 style="margin: 60px 0px -15px;">Selected Publications <temp style="font-size:15px;">[</temp><a href="https://scholar.google.com/citations?user=9RNgZOIAAAAJ&hl=en" target="_blank" style="font-size:15px;">Google Scholar</a><temp style="font-size:15px;">]</temp></h2>
 
-<div class="publications">
+<div class="publications" markdown="1">
 <ol class="bibliography">
 
 {% for link in site.data.publications.main %}
