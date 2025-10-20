@@ -105,22 +105,69 @@ My research focus lies in 1)**Agentic AI**: How to embed the human's learning an
 
 <h2 style="margin: 60px 0px -15px;">Selected Publications <temp style="font-size:15px;">[</temp><a href="https://scholar.google.com/citations?user=q4DIjckAAAAJ&hl=en" target="_blank" style="font-size:15px;">Google Scholar</a><temp style="font-size:15px;">]</temp></h2>
 
+<style>
+/* Publications section styles (scoped) */
+.publications { font-family: "Times New Roman", Times, serif; }
+.publications .bibliography { list-style: none; margin: 0; padding: 0; }
+.publications .bibliography li { margin: 18px 0; }
+.publications .pub-row {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+.publications .pub-row .abbr.pub-thumb {
+  position: relative;
+  flex: 0 0 160px;
+  max-width: 160px;
+  padding: 0 15px; /* keep original padding intent */
+}
+.publications .pub-row .abbr.pub-thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 16px rgba(0,0,0,0.12);
+}
+.publications .pub-row .abbr.pub-thumb .badge {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  background: #e74d3c;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: 700;
+}
+.publications .pub-content { flex: 1 1 auto; padding-left: 4px; }
+.publications .title a { color: inherit; text-decoration: none; }
+.publications .title a:hover { text-decoration: underline; }
+@media (max-width: 640px) {
+  .publications .pub-row { flex-direction: column; }
+  .publications .pub-row .abbr.pub-thumb { max-width: 100%; flex-basis: auto; }
+}
+</style>
+
 <div class="publications" markdown="1">
-<ol class="bibliography">
+<ul class="bibliography">
 
 {% for link in site.data.publications.main %}
 
 <li>
 <div class="pub-row">
-  <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
+  <div class="col-sm-3 abbr pub-thumb" style="position: relative;padding-right: 15px;padding-left: 15px;">
     {% if link.image %} 
-    <img src="{{ link.image }}" class="teaser img-fluid z-depth-1" style="width: 35%; height: auto;">
+    <img src="{{ link.image }}" class="teaser img-fluid z-depth-1" style="width: 100%; height: auto;">
     {% endif %}
     {% if link.conference_short %} 
     <abbr class="badge">{{ link.conference_short }}</abbr>
     {% endif %}
   </div>
-  <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
+  <div class="col-sm-9 pub-content" style="position: relative;padding-right: 15px;padding-left: 20px;">
       <div class="title"><a href="{{ link.arxiv }}">{{ link.title }}</a></div>
       <div class="author">{{ link.authors }}</div>
       <div class="periodical"><em>{{ link.conference }}</em>
@@ -165,7 +212,7 @@ My research focus lies in 1)**Agentic AI**: How to embed the human's learning an
 
 {% endfor %}
 
-</ol>
+</ul>
 </div>
 
 - **Diversifying Policy Behaviors with Extrinsic Behavioral Curiosity**
