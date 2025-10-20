@@ -100,7 +100,6 @@ My research focus lies in 1)**Agentic AI**: How to embed the human's learning an
   
 <span class='anchor' id='Publication-List'></span>
 # 📝 Selected Publications
-## Conference Papers
 <h1 id="publications"></h1>
 
 <style>
@@ -392,7 +391,7 @@ Author: Anjun Gao*, Zhenglin Wan*, Pingfu Chao*, Shunyu Yao (*: co-first author 
       <p class="edu-sub">National University of Singapore (NUS), School of Computing</p>
       <p class="edu-time">2026.01 -</p>
     </div>
-    <div class="edu-img"><img src="assets/institutions/nus.jpg" alt="NUS"></div>
+    <div class="edu-img"><img src="assets/institutions/nus.png" alt="NUS"></div>
   </li>
   <li class="edu-item">
     <div class="edu-text">
@@ -400,7 +399,7 @@ Author: Anjun Gao*, Zhenglin Wan*, Pingfu Chao*, Shunyu Yao (*: co-first author 
       <p class="edu-sub">The Chinese University of Hong Kong</p>
       <p class="edu-time">2021.09 - 2025.08</p>
     </div>
-    <div class="edu-img"><img src="assets/institutions/cuhk.jpg" alt="CUHK(SZ)"></div>
+    <div class="edu-img"><img src="assets/institutions/cuhk.png" alt="CUHK(SZ)"></div>
   </li>
 </ul>
 
@@ -419,10 +418,56 @@ Author: Anjun Gao*, Zhenglin Wan*, Pingfu Chao*, Shunyu Yao (*: co-first author 
 ---
 <span class='anchor' id='internships'></span>
 # 💻 Internships and Work experiences
-- *2023.07 - 2024.01*, Machine Learning Algorithm Engineerer (full-time), [HUIYINTONG]([https://github.com/](http://www.hytii.cn/index.html)), Shenzhen, China.  
-- *2024.07 - 2024.10*, Intern Researcher (full-time), Agency for Science, Technology and Research [A*STAR](https://www.a-star.edu.sg/), Singapore
-- *2024.10 - 2025.09*, Intern Researcher (part-time), Agency for Science, Technology and Research [A*STAR](https://www.a-star.edu.sg/), Singapore
-- *2025.09 - 2026.01*, Research Staff (full-time), Nanyang Technological University, Singapore
+<style>
+.exp-list { list-style: none; margin: 0; padding: 0; }
+.exp-item { 
+  background: #fff; border: 1px solid #eee; border-radius: 12px; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06); padding: 14px; 
+  display: flex; gap: 16px; align-items: center; max-width: 900px; margin: 10px auto;
+}
+.exp-text { flex: 1 1 auto; font-family: "Times New Roman", Times, serif; }
+.exp-title { font-weight: 700; margin: 0 0 6px; }
+.exp-sub { color: #555; margin: 0 0 6px; }
+.exp-time { color: #777; font-size: 0.95em; }
+.exp-img { flex: 0 0 200px; max-width: 200px; }
+.exp-img img { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 6px 14px rgba(0,0,0,0.10); background: #fff; }
+@media (max-width: 640px) { .exp-item { flex-direction: column; } .exp-img { max-width: 100%; flex-basis: auto; } }
+</style>
+
+<ul class="exp-list">
+  <li class="exp-item">
+    <div class="exp-text">
+      <p class="exp-title">Research Staff (full-time)</p>
+      <p class="exp-sub">Nanyang Technological University, Singapore</p>
+      <p class="exp-time">2025.09 - 2026.01</p>
+    </div>
+    <div class="exp-img"><img src="assets/institutions/ntu.png" alt="NTU"></div>
+  </li>
+  <li class="exp-item">
+    <div class="exp-text">
+      <p class="exp-title">Intern Researcher (part-time)</p>
+      <p class="exp-sub">Agency for Science, Technology and Research (A*STAR), Singapore</p>
+      <p class="exp-time">2024.10 - 2025.09</p>
+    </div>
+    <div class="exp-img"><img src="assets/institutions/astar.png" alt="A*STAR"></div>
+  </li>
+  <li class="exp-item">
+    <div class="exp-text">
+      <p class="exp-title">Intern Researcher (full-time)</p>
+      <p class="exp-sub">Agency for Science, Technology and Research (A*STAR), Singapore</p>
+      <p class="exp-time">2024.07 - 2024.10</p>
+    </div>
+    <div class="exp-img"><img src="assets/institutions/astar.png" alt="A*STAR"></div>
+  </li>
+  <li class="exp-item">
+    <div class="exp-text">
+      <p class="exp-title">Machine Learning Algorithm Engineer (full-time)</p>
+      <p class="exp-sub">HUIYINTONG, Shenzhen, China</p>
+      <p class="exp-time">2023.07 - 2024.01</p>
+    </div>
+    <div class="exp-img"><img src="" alt="Company"></div>
+  </li>
+</ul>
 <span class='anchor' id='person'></span>
 # Miscellaneous
 In my spare time, I’m an **music enthusiast**. I’ve been playing guitar for more than 10 years and began teaching myself the piano and electronic piano at the age of 15. Music has always been a significant part of my life. During my undergraduate, I had the incredible opportunity to play in two bands: "Minor Blue" and "Major Pink." These moments remain some of my most cherished memories. See our photos: 
