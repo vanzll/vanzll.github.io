@@ -449,7 +449,7 @@ Author: Anjun Gao*, Zhenglin Wan*, Pingfu Chao*, Shunyu Yao (*: co-first author 
       </ul>
       <p class="exp-time">2024.07 - 2024.10</p>
     </div>
-    <div class="exp-img"><img src="assets/institution/astar.png" alt="A*STAR"></div>
+    <div class="exp-img"><img src="assets/institutions/astar.png" alt="A*STAR"></div>
   </li>
   <li class="exp-item">
     <div class="exp-text">
