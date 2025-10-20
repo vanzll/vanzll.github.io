@@ -15,11 +15,14 @@ main:
   - title: "Educations"
     url: "/#educations"
 
+  - title: "Internships"
+    url: "/#internships"
+
   - title: "Press/Media"
     url: "/#press-media"
 
-  - title: "Internships"
-    url: "/#internships"
+  - title: "Services"
+    url: "/#services"
 
   - title: "Miscellaneous"
     url: "/#person"
