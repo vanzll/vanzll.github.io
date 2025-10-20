@@ -368,9 +368,41 @@ Author: Anjun Gao*, Zhenglin Wan*, Pingfu Chao*, Shunyu Yao (*: co-first author 
 
 <span class='anchor' id='educations'></span>
 # 📖 Educations
-- Bachelor of Science (B.Sc), The Chinese University of Hong Kong (CUHK), 2021.09-2025.08 
-  - (finished undergraduate studies in CUHK-Shenzhen campus)
-- Doctor of Philosophy (Ph.D), National University of Singapore, 2026.01-
+
+<style>
+.edu-list { list-style: none; margin: 0; padding: 0; }
+.edu-item { 
+  background: #fff; border: 1px solid #eee; border-radius: 12px; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06); padding: 14px; 
+  display: flex; gap: 16px; align-items: center; max-width: 900px; margin: 10px auto;
+}
+.edu-text { flex: 1 1 auto; font-family: "Times New Roman", Times, serif; }
+.edu-title { font-weight: 700; margin: 0 0 6px; }
+.edu-sub { color: #555; margin: 0 0 6px; }
+.edu-time { color: #777; font-size: 0.95em; }
+.edu-img { flex: 0 0 240px; max-width: 240px; }
+.edu-img img { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 6px 14px rgba(0,0,0,0.10); }
+@media (max-width: 640px) { .edu-item { flex-direction: column; } .edu-img { max-width: 100%; flex-basis: auto; } }
+</style>
+
+<ul class="edu-list">
+  <li class="edu-item">
+    <div class="edu-text">
+      <p class="edu-title">Doctor of Philosophy (Ph.D)</p>
+      <p class="edu-sub">National University of Singapore (NUS), School of Computing</p>
+      <p class="edu-time">2026.01 -</p>
+    </div>
+    <div class="edu-img"><img src="assets/institutions/nus.jpg" alt="NUS"></div>
+  </li>
+  <li class="edu-item">
+    <div class="edu-text">
+      <p class="edu-title">Bachelor of Science (B.Sc)</p>
+      <p class="edu-sub">The Chinese University of Hong Kong</p>
+      <p class="edu-time">2021.09 - 2025.08</p>
+    </div>
+    <div class="edu-img"><img src="assets/institutions/cuhk.jpg" alt="CUHK(SZ)"></div>
+  </li>
+</ul>
 
 <span class='anchor' id='press-media'></span>
 # 💬 Press/Media
