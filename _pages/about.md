@@ -109,16 +109,16 @@ My research focus lies in 1)**Agentic AI**: How to embed the human's learning an
 /* Publications section styles (scoped) */
 .publications { font-family: "Times New Roman", Times, serif; }
 .publications .bibliography { list-style: none; margin: 0; padding: 0; }
-.publications .bibliography li { margin: 18px 0; }
+.publications .bibliography li { margin: 10px 0; }
 .publications .pub-row {
   display: flex;
-  gap: 20px;
+  gap: 12px;
   align-items: flex-start;
   background: #fff;
   border: 1px solid #eee;
   border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  padding: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
 }
 .publications .pub-row .abbr.pub-thumb {
   position: relative;
@@ -167,8 +167,8 @@ My research focus lies in 1)**Agentic AI**: How to embed the human's learning an
   border-color: #bbb;
   text-decoration: none;
 }
-.publications .title a { color: inherit; text-decoration: none; }
-.publications .title a:hover { text-decoration: underline; }
+.publications .title a { color: #2a72d4; text-decoration: none; }
+.publications .title a:hover { text-decoration: underline; color: #1e5bb8; }
 @media (max-width: 640px) {
   .publications .pub-row { flex-direction: column; }
   .publications .pub-row .abbr.pub-thumb { max-width: 100%; flex-basis: auto; }
@@ -210,7 +210,7 @@ My research focus lies in 1)**Agentic AI**: How to embed the human's learning an
 </div>
 </li>
 
-<br>
+
 
 {% endfor %}
 
