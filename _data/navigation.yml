@@ -18,11 +18,11 @@ main:
   - title: "Internships"
     url: "/#internships"
 
-  - title: "Press/Media"
-    url: "/#press-media"
-
   - title: "Services"
     url: "/#services"
+
+  - title: "Press/Media"
+    url: "/#press-media"
 
   - title: "Miscellaneous"
     url: "/#person"

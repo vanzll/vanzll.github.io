@@ -411,7 +411,7 @@ Author: Anjun Gao*, Zhenglin Wan*, Pingfu Chao*, Shunyu Yao (*: co-first author 
 
 ---
 <span class='anchor' id='internships'></span>
-# 💻 Internships and Work experiences
+# 💻 Internships and Work Experiences
 <style>
 .exp-list { list-style: none; margin: 0; padding: 0; }
 .exp-item { 
@@ -449,7 +449,7 @@ Author: Anjun Gao*, Zhenglin Wan*, Pingfu Chao*, Shunyu Yao (*: co-first author 
       </ul>
       <p class="exp-time">2024.07 - 2024.10</p>
     </div>
-
+    <div class="exp-img"><img src="assets/institution/astar.png" alt="A*STAR"></div>
   </li>
   <li class="exp-item">
     <div class="exp-text">
@@ -460,7 +460,7 @@ Author: Anjun Gao*, Zhenglin Wan*, Pingfu Chao*, Shunyu Yao (*: co-first author 
       </ul>
       <p class="exp-time">2023.07 - 2024.01</p>
     </div>
-    <div class="exp-img"><img src="" alt="Company"></div>
+
   </li>
 </ul>
 <span class='anchor' id='person'></span>
