@@ -397,7 +397,11 @@ Author: Anjun Gao*, Zhenglin Wan*, Pingfu Chao*, Shunyu Yao (*: co-first author 
     <div class="edu-text">
       <p class="edu-title">Bachelor of Science (B.Sc)</p>
       <p class="edu-sub">The Chinese University of Hong Kong (CUHK)</p>
-      <p style="font-size: 0.96em; color: #777; margin: 0 0 6px;">Finished my undergraduate in CUHK-Shenzhen campus.</p>
+      <ul style="margin: 6px 0 6px 18px; padding: 0; font-size: 0.96em; color: #555;">
+        <li>1-st class honor</li>
+        <li>Major GPA: 3.85/4.0, Rank: 7%</li>
+        <li>Finished my undergraduate in School of Data Science, CUHK-Shenzhen campus.</li>
+      </ul>
       <p class="edu-time">2021.09 - 2025.08</p>
     </div>
     <div class="edu-img"><img src="assets/institutions/cuhk.png" alt="CUHK(SZ)"></div>
