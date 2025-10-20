@@ -361,10 +361,6 @@ Author: Anjun Gao*, Zhenglin Wan*, Pingfu Chao*, Shunyu Yao (*: co-first author 
 ---
 
 
-
-# 🎈 Services
-- Reviewer of AAAI, ICLR, ICML, NeurIPS
-
 <span class='anchor' id='educations'></span>
 # 📖 Educations
 
@@ -408,17 +404,7 @@ Author: Anjun Gao*, Zhenglin Wan*, Pingfu Chao*, Shunyu Yao (*: co-first author 
   </li>
 </ul>
 
-<span class='anchor' id='press-media'></span>
-# 💬 Press/Media
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">White Paper</div><img src='personal_page_sources/white_paper.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
 
-
-- The co-author of the first White Paper on Cross-Border Economic Large Language Model in Shenzhen, China.
-[深圳卫视：深圳发布首个跨境经济大模型白皮书](https://www.sztv.com.cn/ysz/dsdb/szws/ssxw/80141762.shtml)
-
-</div>
-</div>
 
 ---
 <span class='anchor' id='internships'></span>
@@ -442,7 +428,7 @@ Author: Anjun Gao*, Zhenglin Wan*, Pingfu Chao*, Shunyu Yao (*: co-first author 
 <ul class="exp-list">
   <li class="exp-item">
     <div class="exp-text">
-      <p class="exp-title">Research Staff (full-time)</p>
+      <p class="exp-title">Full-time Research Staff</p>
       <p class="exp-sub">Nanyang Technological University, Singapore</p>
       <p class="exp-time">2025.09 - 2026.01</p>
     </div>
@@ -450,15 +436,7 @@ Author: Anjun Gao*, Zhenglin Wan*, Pingfu Chao*, Shunyu Yao (*: co-first author 
   </li>
   <li class="exp-item">
     <div class="exp-text">
-      <p class="exp-title">Intern Researcher (part-time)</p>
-      <p class="exp-sub">Agency for Science, Technology and Research (A*STAR), Singapore</p>
-      <p class="exp-time">2024.10 - 2025.09</p>
-    </div>
-    <div class="exp-img"><img src="assets/institutions/astar.png" alt="A*STAR"></div>
-  </li>
-  <li class="exp-item">
-    <div class="exp-text">
-      <p class="exp-title">Intern Researcher (full-time)</p>
+      <p class="exp-title">Intern Researcher</p>
       <p class="exp-sub">Agency for Science, Technology and Research (A*STAR), Singapore</p>
       <p class="exp-time">2024.07 - 2024.10</p>
     </div>
@@ -466,7 +444,7 @@ Author: Anjun Gao*, Zhenglin Wan*, Pingfu Chao*, Shunyu Yao (*: co-first author 
   </li>
   <li class="exp-item">
     <div class="exp-text">
-      <p class="exp-title">Machine Learning Algorithm Engineer (full-time)</p>
+      <p class="exp-title">Machine Learning Algorithm Engineer Intern</p>
       <p class="exp-sub">HUIYINTONG, Shenzhen, China</p>
       <p class="exp-time">2023.07 - 2024.01</p>
     </div>
@@ -474,6 +452,29 @@ Author: Anjun Gao*, Zhenglin Wan*, Pingfu Chao*, Shunyu Yao (*: co-first author 
   </li>
 </ul>
 <span class='anchor' id='person'></span>
+
+
+
+<span class='anchor' id='services'></span>
+# 🎈 Services
+- Reviewer of AAAI, ICLR, ICML, NeurIPS
+
+
+<span class='anchor' id='press-media'></span>
+
+
+# 💬 Press/Media
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">White Paper</div><img src='personal_page_sources/white_paper.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+
+- The co-author of the first White Paper on Cross-Border Economic Large Language Model in Shenzhen, China.
+[深圳卫视：深圳发布首个跨境经济大模型白皮书](https://www.sztv.com.cn/ysz/dsdb/szws/ssxw/80141762.shtml)
+
+</div>
+</div>
+
+
 # Miscellaneous
 In my spare time, I’m an **music enthusiast**. I’ve been playing guitar for more than 10 years and began teaching myself the piano and electronic piano at the age of 15. Music has always been a significant part of my life. During my undergraduate, I had the incredible opportunity to play in two bands: "Minor Blue" and "Major Pink." These moments remain some of my most cherished memories. See our photos: 
 
