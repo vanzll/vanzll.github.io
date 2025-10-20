@@ -10,7 +10,7 @@ main:
 
   - title: "FM-IRL: Flow-Matching for Reward Modeling and Policy Regularization in Reinforcement Learning"
     authors: "<strong> Zhenglin Wan </strong>, Jingxuan Wu, Xingrui Yu, Chubin Zhang, Mingcong Lei, Bo An, Ivor Tsang"
-    conference_short: arXiv
+    conference_short: preprint
     conference: preprint
     paper: https://arxiv.org/abs/2510.09222
     code: https://github.com/vanzll/FM_IRL
@@ -19,7 +19,7 @@ main:
 
   - title: "OSCAR: Orthogonal Stochastic Control for Alignment-Respecting Diversity in Flow Matching"
     authors: "Jingxuan Wu, <strong> Zhenglin Wan </strong>, Xingrui Yu, Yuzhe Yang, Bo An, Ivor Tsang"
-    conference_short: arXiv
+    conference_short: preprint
     conference: preprint
     paper: https://arxiv.org/abs/2510.09060
     code: https://github.com/Johnny221B/OSCAR
