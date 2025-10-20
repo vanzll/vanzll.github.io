@@ -385,6 +385,9 @@ Author: Anjun Gao*, Zhenglin Wan*, Pingfu Chao*, Shunyu Yao (*: co-first author 
     <div class="edu-text">
       <p class="edu-title">Doctor of Philosophy (Ph.D)</p>
       <p class="edu-sub">National University of Singapore (NUS), School of Computing</p>
+      <ul style="margin: 6px 0 6px 18px; padding: 0; font-size: 0.96em; color: #555;">
+        <li>Advisor: TBD</li>
+      </ul>
       <p class="edu-time">2026.01 -</p>
     </div>
     <div class="edu-img"><img src="assets/institutions/nus.png" alt="NUS"></div>
@@ -430,6 +433,9 @@ Author: Anjun Gao*, Zhenglin Wan*, Pingfu Chao*, Shunyu Yao (*: co-first author 
     <div class="exp-text">
       <p class="exp-title">Full-time Research Staff</p>
       <p class="exp-sub">Nanyang Technological University, Singapore</p>
+      <ul style="margin: 6px 0 6px 18px; padding: 0; font-size: 0.96em; color: #555;">
+        <li>Advisor: Prof. Bo An</li>
+      </ul>
       <p class="exp-time">2025.09 - 2026.01</p>
     </div>
     <div class="exp-img"><img src="assets/institutions/ntu.png" alt="NTU"></div>
@@ -438,14 +444,20 @@ Author: Anjun Gao*, Zhenglin Wan*, Pingfu Chao*, Shunyu Yao (*: co-first author 
     <div class="exp-text">
       <p class="exp-title">Intern Researcher</p>
       <p class="exp-sub">Agency for Science, Technology and Research (A*STAR), Singapore</p>
+      <ul style="margin: 6px 0 6px 18px; padding: 0; font-size: 0.96em; color: #555;">
+        <li>Advisor: Prof. Ivor Tsang</li>
+      </ul>
       <p class="exp-time">2024.07 - 2024.10</p>
     </div>
-    <div class="exp-img"><img src="assets/institutions/astar.png" alt="A*STAR"></div>
+
   </li>
   <li class="exp-item">
     <div class="exp-text">
       <p class="exp-title">Machine Learning Algorithm Engineer Intern</p>
       <p class="exp-sub">HUIYINTONG, Shenzhen, China</p>
+      <ul style="margin: 6px 0 6px 18px; padding: 0; font-size: 0.96em; color: #555;">
+        <li>Mentor: Dr. Jun Song</li>
+      </ul>
       <p class="exp-time">2023.07 - 2024.01</p>
     </div>
     <div class="exp-img"><img src="" alt="Company"></div>
