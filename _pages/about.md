@@ -134,7 +134,7 @@ Please scroll down to view all publications.
 .publications .title a { color: #2a72d4; text-decoration: none; }
 .publications .title a:hover { text-decoration: underline; color: #1e5bb8; }
 /* Scroll window to show only a few items initially */
-.publications .scroll-window { max-height: 640px; overflow-y: auto; padding-right: 6px; }
+.publications .scroll-window { max-height: 640px; overflow-y: auto; padding: 8px 6px; border: 1px solid #eaeaea; border-radius: 12px; background: #fff; box-shadow: inset 0 1px 0 rgba(255,255,255,0.6), 0 6px 14px rgba(0,0,0,0.04); }
 .publications .scroll-window::-webkit-scrollbar { width: 8px; }
 .publications .scroll-window::-webkit-scrollbar-thumb { background: #ddd; border-radius: 4px; }
 @media (max-width: 640px) {
