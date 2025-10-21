@@ -31,7 +31,7 @@ redirect_from:
 - *2021.09*  &nbsp;🎉🎉 Awarded *Zhejiang Guolong Inspirational* and *Diligentia Bowen* Scholarship to support my undergraduate studies in CUHK(SZ).
 - *2019.09*  &nbsp;🎉🎉 Lucky to win the 1-st prize in CMO 1-st round (Chongqing Province). Thanks for this intellectually-rewarding experience.
 
-<script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=uc46Usqtqu46611K0F3RqKvrq3w6VrhNaTbD2FUfoGo"></script>
+<script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=tkBnUKaVElndWBy0fM_TqdlCcJmadA7Kpyu4UtfRpnU"></script>
 
 <span class='anchor' id='about-me'></span>
 # 😊 About me
