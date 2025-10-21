@@ -230,12 +230,12 @@ As these works are presented in China, these names are directly translated from 
       <p class="edu-sub">The Chinese University of Hong Kong (CUHK)</p>
       <ul style="margin: 6px 0 6px 18px; padding: 0; font-size: 0.96em; color: #555;">
         <li>1-st class honor</li>
-        <li>Major GPA: 3.85/4.0, Rank: 7%</li>
-        <li>Finished my undergraduate in School of Data Science, CUHK-Shenzhen campus.</li>
+        <li>Major: Data Science, GPA: 3.85/4.0, Rank: 7%</li>
+        <li>Finished my undergraduate in School of Data Science, CUHK-Shenzhen campus, while the degree is offered by CUHK.</li>
       </ul>
       <p class="edu-time">2021.09 - 2025.08</p>
     </div>
-    <div class="edu-img"><img src="assets/institutions/cuhk.png" alt="CUHK(SZ)"></div>
+    <div class="edu-img"><img src="assets/institutions/cuhk_.png" alt="CUHK(SZ)"></div>
   </li>
 </ul>
 
@@ -277,9 +277,13 @@ As these works are presented in China, these names are directly translated from 
       <p class="exp-title">Intern Researcher</p>
       <p class="exp-sub">Agency for Science, Technology and Research (A*STAR), Singapore</p>
       <ul style="margin: 6px 0 6px 18px; padding: 0; font-size: 0.96em; color: #555;">
-        <li>Advisor: Prof. Ivor Tsang</li>
+        <li>Advisor: Prof. Ivor Tsang, Dr. Xingrui Yu</li>
       </ul>
-      <p class="exp-time">2024.07 - 2024.10</p>
+      <p class="exp-time">2024.07 - 2025.09</p>
+      <ul style="margin: 6px 0 6px 18px; padding: 0; font-size: 0.96em; color: #555;">
+        <li>2024.07 - 2024.10: Full time</li>
+        <li>2024.10 - 2025.09: Part time</li>
+      </ul>
     </div>
     <div class="exp-img"><img src="assets/institutions/astar.png" alt="A*STAR"></div>
   </li>
@@ -349,6 +353,7 @@ As these works are presented in China, these names are directly translated from 
 </div>
 
 <span class='anchor' id='person'></span>
+
 # Miscellaneous
 In my spare time, I’m an **music enthusiast**. I’ve been playing guitar for more than 10 years and began teaching myself the piano and electronic piano at the age of 15. Music has always been a significant part of my life. During my undergraduate, I had the incredible opportunity to play in two bands: "Minor Blue" and "Major Pink." These moments remain some of my most cherished memories. See our photos: 
 
