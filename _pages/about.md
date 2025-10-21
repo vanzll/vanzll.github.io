@@ -46,8 +46,12 @@ redirect_from:
 .page__content > h1:first-of-type { margin-top: 0.45em !important; }
 @media (max-width: 640px) { .page__content > h1 { margin-top: 1.4em !important; } }
 /* Use Times New Roman for body content and slightly smaller size */
-.page__content { font-family: "Times New Roman", Times, serif; font-size: 0.98em; }
+.page__content { font-family: "Times New Roman", Times, serif; font-size: 0.99em; }
 .page__content p, .page__content li, .page__content div { font-family: "Times New Roman", Times, serif; }
+/* Headings in Times New Roman and emphasized styling */
+.page__content h1, .page__content h2, .page__content h3 { font-family: "Times New Roman", Times, serif; font-weight: 700; color: #222; text-rendering: optimizeLegibility; }
+.page__content h1 { border-bottom: 2px solid #d0d6e6; padding-bottom: 4px; }
+.page__content h2, .page__content h3 { border-left: 4px solid #2a72d4; padding-left: 10px; background: linear-gradient(to right, rgba(42,114,212,0.06), rgba(42,114,212,0)); border-radius: 4px; }
 </style>
 
 Zhenglin Wan (万政霖 in Chinese) received his Bachelor of Science (B.Sc) from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) on 2025 Fall. He is currently a research staff in [Nanyang Technological University](https://www.ntu.edu.sg/), working with [Prof. Bo An](https://personal.ntu.edu.sg/boan/), and also an incoming Ph.D. student in [School of Computing (SoC)](https://www.comp.nus.edu.sg/), [National University of Singapore (NUS)](https://nus.edu.sg/). Previously, he has been an intern researcher at [Centre for Frontier AI Research](https://www.a-star.edu.sg/cfar), [(A*STAR)](https://www.a-star.edu.sg/) at Singapore, under the supervision of [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) and collaborated with [Prof. Ong Yew Soon](https://www3.ntu.edu.sg/home/asysong/home.html). In CUHK(SZ) campus, he was advised by [Prof. Jianfeng Mao](https://sds.cuhk.edu.cn/en/teacher/268) and [Prof. Ming Yan](https://mingyan08.github.io/). Besides, he also closely worked with [Prof. Pingfu Chao](https://scst.suda.edu.cn/10/47/c11250a528455/page.htm) and [Dr. Jun Song](https://scholars.hkbu.edu.hk/en/persons/JUNSONG) both academically and industrially. 
@@ -57,7 +61,7 @@ Zhenglin Wan (万政霖 in Chinese) received his Bachelor of Science (B.Sc) from
 My research focus lies in 1)**Agentic AI**: How to embed the human's learning and decision-making patterns into (both virtual and embodied) agentic paradigm? How to enable intelligent agent to perform high-level, long-horizen planning and strategic thinking? 2)**Decision-Making in Machine Learning**: the algorithmic side of reinforcement learning (RL), as well as its intersection with modern generative models.
 
 
-<mark style="background-color: yellow; color: black;">I am always open to collaborations, networking and potential intern opportunities, feel free to drop me an email! (vanzl3386@gmail.com)</mark>
+<mark style="background-color: yellow; color: black;">I am always open to collaborations, networking and potential intern opportunities, feel free to drop me an email! (vanzl3386 [at] gmail.com)</mark>
 
 
 
@@ -134,7 +138,8 @@ Please scroll down to view all publications.
 .publications .title a { color: #2a72d4; text-decoration: none; }
 .publications .title a:hover { text-decoration: underline; color: #1e5bb8; }
 /* Scroll window to show only a few items initially */
-.publications .scroll-window { max-height: 640px; overflow-y: auto; padding: 8px 6px; border: 1px solid #eaeaea; border-radius: 12px; background: #fff; box-shadow: inset 0 1px 0 rgba(255,255,255,0.6), 0 6px 14px rgba(0,0,0,0.04); }
+.publications .scroll-window { max-height: 640px; overflow-y: auto; padding: 10px 8px; border: 2px solid #cdd6f4; border-radius: 14px; background: #fff; box-shadow: 0 10px 20px rgba(42,114,212,0.08), 0 2px 6px rgba(0,0,0,0.05), inset 0 1px 0 rgba(255,255,255,0.7); }
+.publications .scroll-window:hover { box-shadow: 0 12px 24px rgba(42,114,212,0.10), 0 3px 8px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.8); border-color: #b7c6f0; }
 .publications .scroll-window::-webkit-scrollbar { width: 8px; }
 .publications .scroll-window::-webkit-scrollbar-thumb { background: #ddd; border-radius: 4px; }
 @media (max-width: 640px) {
