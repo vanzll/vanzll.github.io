@@ -20,13 +20,13 @@ redirect_from:
 # 🔥 News
 <style>
 /* News section scroll window styles (scoped) */
-.news .scroll-window { max-height: 0; overflow-y: auto; padding: 8px 6px; border: 1px solid #eaeaea; border-radius: 12px; background: #fff; box-shadow: inset 0 1px 0 rgba(255,255,255,0.6), 0 6px 14px rgba(0,0,0,0.04); }
+.news .scroll-window { max-height: 640px; overflow-y: auto; padding: 8px 6px; border: 1px solid #eaeaea; border-radius: 12px; background: #fff; box-shadow: inset 0 1px 0 rgba(255,255,255,0.6), 0 6px 14px rgba(0,0,0,0.04); }
 .news .scroll-window::-webkit-scrollbar { width: 8px; }
 .news .scroll-window::-webkit-scrollbar-thumb { background: #ddd; border-radius: 4px; }
 </style>
 
 <div class="news" markdown="1">
-<div class="scroll-window">
+<div class="scroll-window" markdown="1">
 
 - *2025.09*  &nbsp;🎉🎉 Awarded *NUS Research Scholarship* to support my Ph.D studies in [National University of Singapore](https://nus.edu.sg/) beginning from Jan, 2026.
 - *2025.09*  &nbsp;🎉🎉 Joined [Nanyang Technological University](https://www.ntu.edu.sg/) as a research staff.
@@ -50,8 +50,8 @@ redirect_from:
   function setNewsScrollWindowHeight() {
     var container = document.querySelector('.news .scroll-window');
     if (!container) return;
-    var firstLi = container.querySelector('ul > li');
-    if (!firstLi) return;
+    var firstLi = container.querySelector('li');
+    if (!firstLi) return; // fallback to CSS default max-height
     var liRect = firstLi.getBoundingClientRect();
     var liStyle = window.getComputedStyle(firstLi);
     var marginTop = parseFloat(liStyle.marginTop) || 0;
