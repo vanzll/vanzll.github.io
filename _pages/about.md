@@ -129,13 +129,19 @@ My research focus lies in 1)**Agentic AI**: How to embed the human's learning an
 }
 .publications .title a { color: #2a72d4; text-decoration: none; }
 .publications .title a:hover { text-decoration: underline; color: #1e5bb8; }
+/* Scroll window to show only a few items initially */
+.publications .scroll-window { max-height: 820px; overflow-y: auto; padding-right: 6px; }
+.publications .scroll-window::-webkit-scrollbar { width: 8px; }
+.publications .scroll-window::-webkit-scrollbar-thumb { background: #ddd; border-radius: 4px; }
 @media (max-width: 640px) {
   .publications .pub-row { flex-direction: column; }
   .publications .pub-row .abbr.pub-thumb { max-width: 100%; flex-basis: auto; }
+  .publications .scroll-window { max-height: 520px; }
 }
 </style>
 
 <div class="publications" markdown="1">
+<div class="scroll-window">
 <ul class="bibliography">
 
 {% for link in site.data.publications.main %}
@@ -175,6 +181,7 @@ My research focus lies in 1)**Agentic AI**: How to embed the human's learning an
 {% endfor %}
 
 </ul>
+</div>
 </div>
 
 ## Invention Patents
