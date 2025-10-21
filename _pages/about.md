@@ -46,7 +46,7 @@ redirect_from:
 .page__content > h1:first-of-type { margin-top: 0.45em !important; }
 @media (max-width: 640px) { .page__content > h1 { margin-top: 1.4em !important; } }
 /* Use Times New Roman for body content and slightly smaller size */
-.page__content { font-family: "Times New Roman", Times, serif; font-size: 0.96em; }
+.page__content { font-family: "Times New Roman", Times, serif; font-size: 0.98em; }
 .page__content p, .page__content li, .page__content div { font-family: "Times New Roman", Times, serif; }
 </style>
 
@@ -65,6 +65,7 @@ My research focus lies in 1)**Agentic AI**: How to embed the human's learning an
 # 📝 Selected Publications
 
 ## Conference papers and Preprints
+Please scroll down to view all publications.
 <style>
 /* Publications section styles (scoped) */
 .publications { font-family: "Times New Roman", Times, serif; font-size: 0.96em; }
