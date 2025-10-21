@@ -34,13 +34,15 @@ main:
     conference_short: AAMAS 2025 (oral)
     conference: The 24th International Conference on Autonomous Agents and Multiagent Systems
     paper: https://arxiv.org/abs/2411.06965
+    website: "https://arxiv.org/html/2411.06965v2"
     image: "./assets/papers/WQDI.png"
 
   - title: "POI Recommendation via Multi-Objective Adversarial Imitation Learning"
     authors: "<strong>Zhenglin Wan</strong>, Anjun Gao, Xingrui Yu, Pingfu Chao, Jun Song, Maohao Ran"
     conference_short: AAAI 2025 (oral)
     conference: The 39th Annual AAAI Conference on Artificial Intelligence
-    paper: https://ojs.aaai.org/index.php/AAAI/article/view/33382#:~:text=In%20this%20paper%2C%20we%20introduce%20Multi-Objective%20Adversarial%20Imitation,Imitation%20Learning%20with%20multi-objective%20to%20address%20this%20issue.
+    paper: "https://ojs.aaai.org/index.php/AAAI/article/view/33382/35537"
+    website: https://ojs.aaai.org/index.php/AAAI/article/view/33382#:~:text=In%20this%20paper%2C%20we%20introduce%20Multi-Objective%20Adversarial%20Imitation,Imitation%20Learning%20with%20multi-objective%20to%20address%20this%20issue.
     image: "./assets/papers/POI.png"
 
   - title: "Generative Quality Diversity Imitation Learning for Robot Skill Acquisition"
@@ -54,4 +56,5 @@ main:
     conference_short: ADC 2024 (oral & best paper runner-up)
     conference: Australasian Database Conference
     paper: https://link.springer.com/chapter/10.1007/978-981-96-1242-0_4
+    website: https://link.springer.com/chapter/10.1007/978-981-96-1242-0_4
     image: "./assets/papers/HSTGEM.png"
