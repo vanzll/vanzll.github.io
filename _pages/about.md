@@ -235,7 +235,7 @@ As these works are presented in China, these names are directly translated from 
       </ul>
       <p class="edu-time">2021.09 - 2025.08</p>
     </div>
-    <div class="edu-img"><img src="assets/institutions/cuhk_.png" alt="CUHK(SZ)"></div>
+    <div class="edu-img"><img src="assets/institutions/cuhk.png" alt="CUHK(SZ)"></div>
   </li>
 </ul>
 
@@ -277,6 +277,7 @@ As these works are presented in China, these names are directly translated from 
       <p class="exp-title">Intern Researcher</p>
       <p class="exp-sub">Agency for Science, Technology and Research (A*STAR), Singapore</p>
       <ul style="margin: 6px 0 6px 18px; padding: 0; font-size: 0.96em; color: #555;">
+        <li>Sub-institution: Centre for Frontier AI Research (CFAR), Institute of High Performance Computing (IHPC)</li>
         <li>Advisor: Prof. Ivor Tsang, Dr. Xingrui Yu</li>
       </ul>
       <p class="exp-time">2024.07 - 2025.09</p>
