@@ -29,7 +29,7 @@ redirect_from:
 - *2024.05*  &nbsp;🎉🎉 One invention patent is officially granted. 
 - *2023.12*  &nbsp;🎉🎉 As tech co-founder, I co-founded enterprise "Metasequoia Intelligence" based in Shenzhen, China.
 - *2021.09*  &nbsp;🎉🎉 Awarded *Zhejiang Guolong Inspirational* and *Diligentia Bowen* Scholarship to support my undergraduate studies in CUHK(SZ).
-
+- *2019.09*  &nbsp;🎉🎉 Lucky to win the 1-st prize in CMO 1-st round (Chongqing Province). Thanks for this intellectually-rewarding experience.
 
 <span class='anchor' id='about-me'></span>
 # 😊 About me
@@ -52,50 +52,7 @@ My research focus lies in 1)**Agentic AI**: How to embed the human's learning an
 <mark style="background-color: yellow; color: black;">I am always open to collaborations, networking and potential intern opportunities, feel free to drop me an email! (vanzl3386@gmail.com)</mark>
 
 
-<span class='anchor' id='honors-and-awards'></span>
-# 🎖 Honors, Awards and Scholarships
-- **NUS Research Scholarship** (approx. ￥250000/year plus full tuition fee subsidy, for entire Ph.D studies in NUS)
-  
-  *Janurary 2026-*
-  
-- **1-st class honor undergraduate student** awarded by The Chinese University of Hong Kong
-  
-  *August 2025*
 
-- **Yearly Academic Scholarship: B Class** (for GPA Top 3%, ￥40000)  
-  *September 2024*
-
-- **Yearly Academic Scholarship: C Class** (for GPA Top 5%, ￥20000)  
-  *September 2023*
-
-- **Yearly Dean List Award** (Outstanding 1-st class Performance)  
-  *Consecutive three years: September 2022 - September 2025*
-
-- **Diligentia Bowen Scholarship** (Undergraduate Admission Scholarship, ￥120000)
-  
-  *September 2021*
-
-- **Zhejiang Guolong Inspirational Scholarship** (Undergraduate Admission Scholarship, ￥120000)  
-  *September 2021*
-
-- **1st-Prize in Chinese Mathematics Olympics (CMO)-1st Round (Chongqing Province)**
-  
-  *September 2019*
-  
-
-
-
-
-
-
-
-
-
-
-  
-
-
-  
 <span class='anchor' id='Publication-List'></span>
 # 📝 Selected Publications
 <h1 id="publications"></h1>
@@ -230,134 +187,6 @@ As these works are presented in China, these names are directly translated from 
 - **White Paper on Cross-Border Economic Large Language Model**
 
 
-<!--
-<span class='anchor' id='academic-results'></span>
-# 📝 Selected Academic Results
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAMAS 2025 Accepted (oral presentation)</div><img src='personal_page_sources/QD-IL/show.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[Imitation From Diverse Behaviors](https://arxiv.org/abs/2411.06965)
-
-Author: Xingrui Yu <sup>1</sup>, **Zhenglin Wan <sup>1</sup>**, David Bossens, Yueming Lyu, Qing Guo, Ivor Tsang (1:Co-first author &amp; Equal Contribution)
-
-**Supervisor:** [Xingrui Yu](https://www.a-star.edu.sg/cfar/about-cfar/our-team/yu-xingrui), [David Bossens](https://www.a-star.edu.sg/cfar/about-cfar/our-team/david-bossens), [Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang).
-
-**Host:** [Centre for Frontier AI Research](https://www.a-star.edu.sg/cfar), [A*STAR](https://www.a-star.edu.sg/), Singapore  
-
-**Duration:** Jun. 2024 - Oct. 2024  
-
-
-- Imitation learning (IL) approaches succeed in fast adaptation for dozens of applications. However, traditional IL assumes the demonstrations comes from one specific expert policy, thus containing only one behavior pattern. This way may result in the lack of robustness of agent to deal with various and unpredicatable real-world situations.
-- To address above issue, this work pioneers a new paradigm- learning from diverse behaviors. We proposed a novel quality-diversity imitation learning model to enable the agent to learn a broad set of skills from limited but diverse demonstrations. With multiple viable and high-performing skills equipped, the agent can robustly deal with unseen and stochastic environment.
-
-</div>
-</div>
-
----
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2025 Accepted(oral presentation)</div><img src='personal_page_sources/POI/show.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-Next-POI Recommendation via Multi-Objective Adversarial Imitation Learning
-
-**Supervisor:** [Pingfu Chao](https://www.researchgate.net/profile/Pingfu-Chao), [Xingrui Yu](https://www.a-star.edu.sg/cfar/about-cfar/our-team/yu-xingrui)  
-
-**Duration:** Feb. 2024 - Aug. 2024  
-
-**Author:** **Zhenglin Wan**, Anjun Gao, Xingrui Yu, Pingfu Chao*, Jun Song, Maohao Ran
-
-- We proposed a multi-objective imitation learning architecture with variational inference to address the notorious data sparsity and data noise issue in POI data, and we utilize a novel adaptive graphs to capture spatial-temporal dependencies of POI sequences and user patterns.
-- Demonstrated that the proposed architecture outperformed the current state-of-the-art by 8%, and by 31% in extremely sparse data scenarios.
-
-</div>
-</div>
-
----
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Journal Under Review</div><img src='personal_page_sources/GRAND/show.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-Graph-based Reinforcement learning Approach for influential Node Detection in airport delay networks
-
-**Supervisor:** [Jianfeng Mao](https://sds.cuhk.edu.cn/en/teacher/268)  
-**Host:** School of Data Science, CUHK (Shenzhen)  
-**Duration:** Jun. 2023 - Aug. 2024  
-**Author:** Chi Li, **Zhenglin Wan**, Kaize Wang, Yuxuan Huang, Chengxi Li, Jianfeng Mao*
-
-- We developed a data-driven method combining graph representation learning with value-based reinforcement learning to identify key airports in delay networks, addressing the issue of low inference efficiency and cost-unaware management.
-- Empirically, we achieved a 32% performance increase on the US airport delay dataset. Submitted a paper to *Transportation Research Part E: Logistics and Transportation Review*.
-
-</div>
-</div>
-
----
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Project</div><img src='personal_page_sources/Deep View/show2.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[DEEP VIEW: Mobile Inspection and Environmental Digital AI Supervision Service Project]()
-
-**Project Consultant:** [Yike Guo](https://cse.hkust.edu.hk/admin/people/faculty/profile/yikeguo), Provost of HKUST  
-**Supervisor:** [Jun Song](https://scholars.hkbu.edu.hk/en/persons/JUNSONG), HKBU  
-**Duration:** Nov. 2023 - May. 2024  
-
-- We developed an automated environmental monitoring system using LLM agents and drones for comprehensive air quality monitoring.
-- We integrated multi-source data fusion, drone scheduling, and deep learning-based analysis into a unified system for real-time environmental oversight.
-
-</div>
-</div>
-
----
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Journal Under Review</div><img src='personal_page_sources/AlphaAir/show.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[LLM-Based Air Quality Analysis and Decision-Making Agent]()
-
-**Supervisor:** [Jun Song](https://scholars.hkbu.edu.hk/en/persons/JUNSONG), HKBU  
-**Duration:** Nov. 2023 - Jan. 2024  
-**Author:** Jun Song*, Chendong Ma, Maohao Ran, **Zhenglin Wan**
-
-- We integrated air quality assessment into tools for an LLM-based agent using LangChain, enabling real-time interaction for efficient data analysis.
-- Submitted to *Science Advances*.
-
-</div>
-</div>
-
----
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Journal of Geophysical Research - Atmospheres</div><img src='personal_page_sources/NetGBM/show.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[Machine Learning-Driven Spatiotemporal Analysis of Ozone Exposure and Health Risks in China](https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2024JD041593)
-
-**Institution:** Metasequoia Intelligence  
-**Duration:** Feb. 2023 - May. 2023  
-
-</div>
-</div>
-
----
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Australian Database Conference (Best Paper Runner-Up)</div><img src='personal_page_sources/ADC/figure.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[Hierarchical Spatial-Temporal Graph-Enhanced Model for Map-Matching](https://link.springer.com/chapter/10.1007/978-981-96-1242-0_4)
-
-Author: Anjun Gao*, Zhenglin Wan*, Pingfu Chao*, Shunyu Yao (*: co-first author &amp; equal contribution)
-
-**Institution:** Soochow University, Metasequoia Intelligence 
-
-**Duration:** Jun. 2024 - Oct. 2024
-
-
-
-</div>
-</div>
--->
----
-
 
 <span class='anchor' id='educations'></span>
 # 📖 Educations
@@ -469,7 +298,37 @@ Author: Anjun Gao*, Zhenglin Wan*, Pingfu Chao*, Shunyu Yao (*: co-first author 
 # 🎈 Services
 - Reviewer of AAAI, ICLR, ICML, NeurIPS
 
+<span class='anchor' id='honors-and-awards'></span>
+# 🎖 Honors, Awards and Scholarships
+- **NUS Research Scholarship** (approx. ￥250000/year plus full tuition fee subsidy, for entire Ph.D studies in NUS)
+  
+  *Janurary 2026-*
+  
+- **1-st class honor undergraduate student** awarded by The Chinese University of Hong Kong
+  
+  *August 2025*
 
+- **Yearly Academic Scholarship: B Class** (for GPA Top 3%, ￥40000)  
+  *September 2024*
+
+- **Yearly Academic Scholarship: C Class** (for GPA Top 5%, ￥20000)  
+  *September 2023*
+
+- **Yearly Dean List Award** (Outstanding 1-st class Performance)  
+  *Consecutive three years: September 2022 - September 2025*
+
+- **Diligentia Bowen Scholarship** (Undergraduate Admission Scholarship, ￥120000)
+  
+  *September 2021*
+
+- **Zhejiang Guolong Inspirational Scholarship** (Undergraduate Admission Scholarship, ￥120000)  
+  *September 2021*
+
+- **1st-Prize in Chinese Mathematics Olympics (CMO)-1st Round (Chongqing Province)**
+  
+  *September 2019*
+
+  
 <span class='anchor' id='press-media'></span>
 
 
