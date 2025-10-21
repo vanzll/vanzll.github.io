@@ -45,6 +45,9 @@ redirect_from:
 .page__content > h1 { margin-top: 1.7em !important; margin-bottom: 0.45em; }
 .page__content > h1:first-of-type { margin-top: 0.45em !important; }
 @media (max-width: 640px) { .page__content > h1 { margin-top: 1.4em !important; } }
+/* Use Times New Roman for body content and slightly smaller size */
+.page__content { font-family: "Times New Roman", Times, serif; font-size: 0.96em; }
+.page__content p, .page__content li, .page__content div { font-family: "Times New Roman", Times, serif; }
 </style>
 
 Zhenglin Wan (万政霖 in Chinese) received his Bachelor of Science (B.Sc) from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) on 2025 Fall. He is currently a research staff in [Nanyang Technological University](https://www.ntu.edu.sg/), working with [Prof. Bo An](https://personal.ntu.edu.sg/boan/), and also an incoming Ph.D. student in [School of Computing (SoC)](https://www.comp.nus.edu.sg/), [National University of Singapore (NUS)](https://nus.edu.sg/). Previously, he has been an intern researcher at [Centre for Frontier AI Research](https://www.a-star.edu.sg/cfar), [(A*STAR)](https://www.a-star.edu.sg/) at Singapore, under the supervision of [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) and collaborated with [Prof. Ong Yew Soon](https://www3.ntu.edu.sg/home/asysong/home.html). In CUHK(SZ) campus, he was advised by [Prof. Jianfeng Mao](https://sds.cuhk.edu.cn/en/teacher/268) and [Prof. Ming Yan](https://mingyan08.github.io/). Besides, he also closely worked with [Prof. Pingfu Chao](https://scst.suda.edu.cn/10/47/c11250a528455/page.htm) and [Dr. Jun Song](https://scholars.hkbu.edu.hk/en/persons/JUNSONG) both academically and industrially. 
@@ -130,13 +133,13 @@ My research focus lies in 1)**Agentic AI**: How to embed the human's learning an
 .publications .title a { color: #2a72d4; text-decoration: none; }
 .publications .title a:hover { text-decoration: underline; color: #1e5bb8; }
 /* Scroll window to show only a few items initially */
-.publications .scroll-window { max-height: 820px; overflow-y: auto; padding-right: 6px; }
+.publications .scroll-window { max-height: 640px; overflow-y: auto; padding-right: 6px; }
 .publications .scroll-window::-webkit-scrollbar { width: 8px; }
 .publications .scroll-window::-webkit-scrollbar-thumb { background: #ddd; border-radius: 4px; }
 @media (max-width: 640px) {
   .publications .pub-row { flex-direction: column; }
   .publications .pub-row .abbr.pub-thumb { max-width: 100%; flex-basis: auto; }
-  .publications .scroll-window { max-height: 520px; }
+  .publications .scroll-window { max-height: 420px; }
 }
 </style>
 
@@ -183,6 +186,36 @@ My research focus lies in 1)**Agentic AI**: How to embed the human's learning an
 </ul>
 </div>
 </div>
+
+<script>
+(function() {
+  function setScrollWindowHeight() {
+    var container = document.querySelector('.publications .scroll-window');
+    if (!container) return;
+    var firstLi = container.querySelector('.bibliography > li');
+    var firstRow = container.querySelector('.pub-row');
+    if (!firstRow || !firstLi) return;
+    var rowRect = firstRow.getBoundingClientRect();
+    var liStyle = window.getComputedStyle(firstLi);
+    var marginTop = parseFloat(liStyle.marginTop) || 0;
+    var marginBottom = parseFloat(liStyle.marginBottom) || 0;
+    var perItem = rowRect.height + (marginTop + marginBottom);
+    var target = perItem * 3.5; // show ~3.5 items
+    container.style.maxHeight = target + 'px';
+  }
+  function onReady(fn) {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', fn, { once: true });
+    } else { fn(); }
+  }
+  onReady(setScrollWindowHeight);
+  var resizeTimeout;
+  window.addEventListener('resize', function() {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(setScrollWindowHeight, 150);
+  });
+})();
+</script>
 
 ## Invention Patents
 As these works are patented in China, all these names are directly translated from Chinese.
