@@ -34,23 +34,22 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 # 😊 About me
 
-## **TL; DR**:
-
 ***Resume***: [Resume](https://drive.google.com/file/d/1fYYlj0MhJGsPPDdWUMB9LHMTqUo3bL1s/view?usp=sharing) (Updated on 8 Oct, 2025)
 
 ***Contact***: vanzl3386 [at] gmail.com (preferred), carlos [at] metaseq.ai, 121090525 [at] link.cuhk.edu.cn
 
+---
 <style>
 /* Slightly reduce spacing between top-level headings on the home page */
 .page__content > h1 { margin-top: 1.7em !important; margin-bottom: 0.45em; }
 .page__content > h1:first-of-type { margin-top: 0.45em !important; }
 @media (max-width: 640px) { .page__content > h1 { margin-top: 1.4em !important; } }
 /* Use Times New Roman for body content and slightly smaller size */
-.page__content { font-family: "Times New Roman", Times, serif; font-size: 0.99em; }
+.page__content { font-family: "Times New Roman", Times, serif; font-size: 1.00em; }
 .page__content p, .page__content li, .page__content div { font-family: "Times New Roman", Times, serif; }
 /* Headings in Times New Roman and emphasized styling */
 .page__content h1, .page__content h2, .page__content h3 { font-family: "Times New Roman", Times, serif; font-weight: 700; color: #222; text-rendering: optimizeLegibility; }
-.page__content h1 { border-bottom: 2px solid #d0d6e6; padding-bottom: 4px; }
+.page__content h1 { border-bottom: 2px solid #e5e5e5; padding-bottom: 4px; }
 .page__content h2, .page__content h3 { border-left: 4px solid #2a72d4; padding-left: 10px; background: linear-gradient(to right, rgba(42,114,212,0.06), rgba(42,114,212,0)); border-radius: 4px; }
 </style>
 
@@ -138,8 +137,7 @@ Please scroll down to view all publications.
 .publications .title a { color: #2a72d4; text-decoration: none; }
 .publications .title a:hover { text-decoration: underline; color: #1e5bb8; }
 /* Scroll window to show only a few items initially */
-.publications .scroll-window { max-height: 640px; overflow-y: auto; padding: 10px 8px; border: 2px solid #cdd6f4; border-radius: 14px; background: #fff; box-shadow: 0 10px 20px rgba(42,114,212,0.08), 0 2px 6px rgba(0,0,0,0.05), inset 0 1px 0 rgba(255,255,255,0.7); }
-.publications .scroll-window:hover { box-shadow: 0 12px 24px rgba(42,114,212,0.10), 0 3px 8px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.8); border-color: #b7c6f0; }
+.publications .scroll-window { max-height: 640px; overflow-y: auto; padding: 8px 6px; border: 1px solid #eaeaea; border-radius: 12px; background: #fff; box-shadow: inset 0 1px 0 rgba(255,255,255,0.6), 0 6px 14px rgba(0,0,0,0.04); }
 .publications .scroll-window::-webkit-scrollbar { width: 8px; }
 .publications .scroll-window::-webkit-scrollbar-thumb { background: #ddd; border-radius: 4px; }
 @media (max-width: 640px) {
