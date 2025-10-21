@@ -16,6 +16,7 @@ main:
     paper: https://arxiv.org/abs/2510.09222
     code: https://github.com/vanzll/FM_IRL
     github_stars: "vanzll/FM_IRL"
+    website: "https://arxiv.org/html/2510.09222v2"
     image: "./assets/papers/FMIRL.png"
 
   - title: "OSCAR: Orthogonal Stochastic Control for Alignment-Respecting Diversity in Flow Matching"
@@ -25,6 +26,7 @@ main:
     paper: https://arxiv.org/abs/2510.09060
     code: https://github.com/Johnny221B/OSCAR
     github_stars: "Johnny221B/OSCAR"
+    website: ""
     image: "./assets/papers/OSCAR.png"
 
   - title: "Imitation From Diverse Behaviors: Wasserstein Quality Diversity Imitation Learning with Single-Step Archive Exploration"
