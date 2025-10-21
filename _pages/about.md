@@ -3,6 +3,7 @@ permalink: /
 title: ""
 excerpt: ""
 author_profile: true
+mmv_globe_d: tkBnUKaVElndWBy0fM_TqdlCcJmadA7Kpyu4UtfRpnU
 redirect_from: 
   - /about/
   - /about.html
