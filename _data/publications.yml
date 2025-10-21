@@ -6,6 +6,7 @@ main:
     paper: https://arxiv.org/abs/2410.06151
     code: https://github.com/vanzll/EBC
     github_stars: "vanzll/EBC"
+    website: "https://arxiv.org/html/2410.06151v4#S2"
     image: "./assets/papers/EBC.png"
 
   - title: "FM-IRL: Flow-Matching for Reward Modeling and Policy Regularization in Reinforcement Learning"
