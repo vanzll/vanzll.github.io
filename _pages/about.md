@@ -41,10 +41,10 @@ redirect_from:
 ***Contact***: vanzl3386 [at] gmail.com (preferred), carlos [at] metaseq.ai, 121090525 [at] link.cuhk.edu.cn
 
 <style>
-/* Increase spacing between top-level headings on the home page */
-.page__content > h1 { margin-top: 2.4em !important; margin-bottom: 0.6em; }
-.page__content > h1:first-of-type { margin-top: 0.6em !important; }
-@media (max-width: 640px) { .page__content > h1 { margin-top: 2em !important; } }
+/* Slightly reduce spacing between top-level headings on the home page */
+.page__content > h1 { margin-top: 1.7em !important; margin-bottom: 0.45em; }
+.page__content > h1:first-of-type { margin-top: 0.45em !important; }
+@media (max-width: 640px) { .page__content > h1 { margin-top: 1.4em !important; } }
 </style>
 
 Zhenglin Wan (万政霖 in Chinese) received his Bachelor of Science (B.Sc) from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) on 2025 Fall. He is currently a research staff in [Nanyang Technological University](https://www.ntu.edu.sg/), working with [Prof. Bo An](https://personal.ntu.edu.sg/boan/), and also an incoming Ph.D. student in [School of Computing (SoC)](https://www.comp.nus.edu.sg/), [National University of Singapore (NUS)](https://nus.edu.sg/). Previously, he have been an intern researcher at [Centre for Frontier AI Research](https://www.a-star.edu.sg/cfar), [(A*STAR)](https://www.a-star.edu.sg/) at Singapore, under the supervision of [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) and collaborated with [Prof. Ong Yew Soon](https://www3.ntu.edu.sg/home/asysong/home.html). In CUHK(SZ) campus, he was advised by [Prof. Jianfeng Mao](https://sds.cuhk.edu.cn/en/teacher/268) and [Prof. Ming Yan](https://mingyan08.github.io/). Besides, he also closely worked with [Prof. Pingfu Chao](https://scst.suda.edu.cn/10/47/c11250a528455/page.htm) and [Dr. Jun Song](https://scholars.hkbu.edu.hk/en/persons/JUNSONG) both academically and industrially. 
@@ -62,7 +62,7 @@ My research focus lies in 1)**Agentic AI**: How to embed the human's learning an
 # 📝 Selected Publications
 
 ## Conference papers and Preprints
-
+<h1 id="publications"></h1>
 
 <style>
 /* Publications section styles (scoped) */
