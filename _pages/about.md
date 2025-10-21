@@ -57,7 +57,7 @@ redirect_from:
     var marginTop = parseFloat(liStyle.marginTop) || 0;
     var marginBottom = parseFloat(liStyle.marginBottom) || 0;
     var perItem = liRect.height + (marginTop + marginBottom);
-    var target = perItem * 7; // show ~7 items
+    var target = perItem * 9; // show ~9 items
     container.style.maxHeight = target + 'px';
   }
   function onReady(fn) {
