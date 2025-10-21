@@ -62,8 +62,6 @@ My research focus lies in 1)**Agentic AI**: How to embed the human's learning an
 # 📝 Selected Publications
 
 ## Conference papers and Preprints
-<h1 id="publications"></h1>
-
 <style>
 /* Publications section styles (scoped) */
 .publications { font-family: "Times New Roman", Times, serif; font-size: 0.96em; }
