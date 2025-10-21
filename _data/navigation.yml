@@ -5,9 +5,6 @@ main:
 
   - title: "News"
     url: "/#news"
-  
-  - title: "Honors and Awards"
-    url: "/#honors-and-awards"
 
   - title: "Publications"
     url: "/#Publication-List"
@@ -20,6 +17,9 @@ main:
 
   - title: "Services"
     url: "/#services"
+
+  - title: "Honors and Awards"
+    url: "/#honors-and-awards"
 
   - title: "Press/Media"
     url: "/#press-media"
