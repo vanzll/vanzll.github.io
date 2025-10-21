@@ -60,7 +60,9 @@ My research focus lies in 1)**Agentic AI**: How to embed the human's learning an
 
 <span class='anchor' id='Publication-List'></span>
 # 📝 Selected Publications
-<h1 id="publications"></h1>
+
+## Conference papers and Preprints
+
 
 <style>
 /* Publications section styles (scoped) */
