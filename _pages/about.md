@@ -40,8 +40,6 @@ redirect_from:
 
 ***Contact***: vanzl3386 [at] gmail.com (preferred), carlos [at] metaseq.ai, 121090525 [at] link.cuhk.edu.cn
 
----
-
 Zhenglin Wan (万政霖 in Chinese) received his Bachelor of Science (B.Sc) from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) on 2025 Fall. He is currently a research staff in [Nanyang Technological University](https://www.ntu.edu.sg/), working with [Prof. Bo An](https://personal.ntu.edu.sg/boan/), and also an incoming Ph.D. student in [School of Computing (SoC)](https://www.comp.nus.edu.sg/), [National University of Singapore (NUS)](https://nus.edu.sg/). Previously, he have been an intern researcher at [Centre for Frontier AI Research](https://www.a-star.edu.sg/cfar), [(A*STAR)](https://www.a-star.edu.sg/) at Singapore, under the supervision of [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) and collaborated with [Prof. Ong Yew Soon](https://www3.ntu.edu.sg/home/asysong/home.html). In CUHK(SZ) campus, he was advised by [Prof. Jianfeng Mao](https://sds.cuhk.edu.cn/en/teacher/268) and [Prof. Ming Yan](https://mingyan08.github.io/). Besides, he also closely worked with [Prof. Pingfu Chao](https://scst.suda.edu.cn/10/47/c11250a528455/page.htm) and [Dr. Jun Song](https://scholars.hkbu.edu.hk/en/persons/JUNSONG) both academically and industrially. 
 
 ---
@@ -343,7 +341,7 @@ As these works are presented in China, these names are directly translated from 
 </div>
 </div>
 
-
+<span class='anchor' id='person'></span>
 # Miscellaneous
 In my spare time, I’m an **music enthusiast**. I’ve been playing guitar for more than 10 years and began teaching myself the piano and electronic piano at the age of 15. Music has always been a significant part of my life. During my undergraduate, I had the incredible opportunity to play in two bands: "Minor Blue" and "Major Pink." These moments remain some of my most cherished memories. See our photos: 
 
@@ -370,11 +368,9 @@ I love play **basketball** 🏀. Sports makes me energetic.
 I play video games like **League of Legends**, where I achieved the "diamond" level as my historically highest honor. I also play 3A games like Elden Ring, Dark Souls, Nier Automata, and elder scrolls.
 
 ---
-<!--
-<div>Several years ago, I was once diagnosised with Obsessive-Compulsive Disorder **(OCD, 强迫症 in Chinese)**, specifically Obsessive-Thinking, a mental illness as painful as depression. My mind would get stuck on meaningless details, both academic and personal, generating unrelentless ideas or questions and I couldn’t control it. Realizing that medicine doesn't work for me, I have to rescue myself through the wisdom in mind-philosophy books and exploring Buddhist and Taoist philosophies. The most inspiring part of this journey was learning to practice mindfulness ("正念" in Chinese）—observing what was happening inside my mind **without judging it** and finding inner peace, allowing my brain to become my tool rather than being controlled by it. This experience became a valuable treasure, shaping my attitude towards life and challenges afterwards. I'd like to recommend you the book *The Power of Now*, along with Buddhist classics like The Diamond Sutra and Taoist texts like Tao Te Ching and Zhuangzi, which are beneficial to all of us, especially who are facing similar difficulties.
-</div>
-<p></p>
--->
+
+I have a deep interest in **philosophy of mind**, particularly Buddhism and Taoism, as paths to explore the fundamental nature of human existence. I am also intrigued by the potential integration of these philosophical insights with modern artificial intelligence.
+
 
 
 
