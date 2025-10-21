@@ -18,6 +18,16 @@ redirect_from:
 
 <span class='anchor' id='news'></span>
 # 🔥 News
+<style>
+/* News section scroll window styles (scoped) */
+.news .scroll-window { max-height: 0; overflow-y: auto; padding: 8px 6px; border: 1px solid #eaeaea; border-radius: 12px; background: #fff; box-shadow: inset 0 1px 0 rgba(255,255,255,0.6), 0 6px 14px rgba(0,0,0,0.04); }
+.news .scroll-window::-webkit-scrollbar { width: 8px; }
+.news .scroll-window::-webkit-scrollbar-thumb { background: #ddd; border-radius: 4px; }
+</style>
+
+<div class="news" markdown="1">
+<div class="scroll-window">
+
 - *2025.09*  &nbsp;🎉🎉 Awarded *NUS Research Scholarship* to support my Ph.D studies in [National University of Singapore](https://nus.edu.sg/) beginning from Jan, 2026.
 - *2025.09*  &nbsp;🎉🎉 Joined [Nanyang Technological University](https://www.ntu.edu.sg/) as a research staff.
 - *2025.08*  &nbsp;🎉🎉 Received my B.Sc from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) with 1-st class honor, looking forward to new jouney!
@@ -31,6 +41,38 @@ redirect_from:
 - *2023.12*  &nbsp;🎉🎉 As tech co-founder, I co-founded enterprise "Metasequoia Intelligence" based in Shenzhen, China.
 - *2021.09*  &nbsp;🎉🎉 Awarded *Zhejiang Guolong Inspirational* and *Diligentia Bowen* Scholarship to support my undergraduate studies in CUHK(SZ).
 - *2019.09*  &nbsp;🎉🎉 Lucky to win the 1-st prize in CMO 1-st round (Chongqing Province). Thanks for this intellectually-rewarding experience.
+
+</div>
+</div>
+
+<script>
+(function() {
+  function setNewsScrollWindowHeight() {
+    var container = document.querySelector('.news .scroll-window');
+    if (!container) return;
+    var firstLi = container.querySelector('ul > li');
+    if (!firstLi) return;
+    var liRect = firstLi.getBoundingClientRect();
+    var liStyle = window.getComputedStyle(firstLi);
+    var marginTop = parseFloat(liStyle.marginTop) || 0;
+    var marginBottom = parseFloat(liStyle.marginBottom) || 0;
+    var perItem = liRect.height + (marginTop + marginBottom);
+    var target = perItem * 7; // show ~7 items
+    container.style.maxHeight = target + 'px';
+  }
+  function onReady(fn) {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', fn, { once: true });
+    } else { fn(); }
+  }
+  onReady(setNewsScrollWindowHeight);
+  var resizeTimeout;
+  window.addEventListener('resize', function() {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(setNewsScrollWindowHeight, 150);
+  });
+})();
+</script>
 
 
 
@@ -207,7 +249,7 @@ Please scroll down to view all publications.
     var marginTop = parseFloat(liStyle.marginTop) || 0;
     var marginBottom = parseFloat(liStyle.marginBottom) || 0;
     var perItem = rowRect.height + (marginTop + marginBottom);
-    var target = perItem * 3.5; // show ~3.5 items
+  var target = perItem * 2.5; // show ~2.5 items
     container.style.maxHeight = target + 'px';
   }
   function onReady(fn) {
