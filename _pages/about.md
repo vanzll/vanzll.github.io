@@ -32,7 +32,7 @@ redirect_from:
 - *2025.09*  &nbsp;🎉🎉 Awarded *NUS Research Scholarship* to support my Ph.D studies in [National University of Singapore](https://nus.edu.sg/) beginning from Jan, 2026.
 - *2025.09*  &nbsp;🎉🎉 Joined [Nanyang Technological University](https://www.ntu.edu.sg/) as a research staff.
 - *2025.08*  &nbsp;🎉🎉 Received my B.Sc from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) with 1-st class honor, looking forward to new jouney!
-- *2025.05*  &nbsp;🎉🎉 [**EBC**](https://arxiv.org/abs/2410.06151) is accepted by ICML 2025. [Code](https://github.com/vanzll/EBC) available.
+- *2025.05*  &nbsp;🎉🎉 [**EBC**](https://arxiv.org/abs/2410.06151) is accepted by ICML 2025 ([Code](https://github.com/vanzll/EBC) available).
 - *2025.03*  &nbsp;🎉🎉 One paper accepted by ICLR 2025 (generative models for robot learning workshop).
 - *2024.12*  &nbsp;🎉🎉 One paper accepted by AAMAS 2025 (oral).
 - *2024.12*  &nbsp;🎉🎉 One paper accepted by AAAI 2025 (oral).
@@ -97,6 +97,19 @@ redirect_from:
 .page__content h1, .page__content h2, .page__content h3 { font-family: "Times New Roman", Times, serif; font-weight: 700; color: #222; text-rendering: optimizeLegibility; }
 .page__content h1 { border-bottom: 2px solid #e5e5e5; padding-bottom: 4px; }
 .page__content h2, .page__content h3 { border-left: 4px solid #2a72d4; padding-left: 10px; background: linear-gradient(to right, rgba(42,114,212,0.06), rgba(42,114,212,0)); border-radius: 4px; }
+</style>
+
+<style>
+/* Widen reading width on desktop without affecting mobile */
+@media (min-width: 1200px) {
+  .page { max-width: 1400px !important; }
+  .page__inner-wrap { max-width: 1120px; margin-left: auto; margin-right: auto; }
+  .page__content { max-width: 1120px !important; }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .page__inner-wrap { max-width: 1040px; margin-left: auto; margin-right: auto; }
+  .page__content { max-width: 1040px !important; }
+}
 </style>
 
 Zhenglin Wan (万政霖 in Chinese) received his Bachelor of Science (B.Sc) from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) on 2025 Fall. He is currently a research staff in [Nanyang Technological University](https://www.ntu.edu.sg/), working with [Prof. Bo An](https://personal.ntu.edu.sg/boan/), and also an incoming Ph.D. student in [School of Computing (SoC)](https://www.comp.nus.edu.sg/), [National University of Singapore (NUS)](https://nus.edu.sg/). Previously, he has been an intern researcher at [Centre for Frontier AI Research](https://www.a-star.edu.sg/cfar), [(A*STAR)](https://www.a-star.edu.sg/) at Singapore, under the supervision of [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) and collaborated with [Prof. Ong Yew Soon](https://www3.ntu.edu.sg/home/asysong/home.html). In CUHK(SZ) campus, he was advised by [Prof. Jianfeng Mao](https://sds.cuhk.edu.cn/en/teacher/268) and [Prof. Ming Yan](https://mingyan08.github.io/). Besides, he also closely worked with [Prof. Pingfu Chao](https://scst.suda.edu.cn/10/47/c11250a528455/page.htm) and [Dr. Jun Song](https://scholars.hkbu.edu.hk/en/persons/JUNSONG) both academically and industrially. 
