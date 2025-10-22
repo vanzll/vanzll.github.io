@@ -25,6 +25,42 @@ redirect_from:
 .news .scroll-window::-webkit-scrollbar-thumb { background: #ddd; border-radius: 4px; }
 </style>
 
+
+
+
+
+<span class='anchor' id='about-me'></span>
+# 😊 About me
+
+***Resume***: [Resume](https://drive.google.com/file/d/1fYYlj0MhJGsPPDdWUMB9LHMTqUo3bL1s/view?usp=sharing) (Updated on 8 Oct, 2025)
+
+***Contact***: vanzl3386 [at] gmail.com (preferred), carlos [at] metaseq.ai, 121090525 [at] link.cuhk.edu.cn
+
+---
+<style>
+/* Slightly reduce spacing between top-level headings on the home page */
+.page__content > h1 { margin-top: 1.7em !important; margin-bottom: 0.45em; }
+.page__content > h1:first-of-type { margin-top: 0.45em !important; }
+@media (max-width: 640px) { .page__content > h1 { margin-top: 1.4em !important; } }
+/* Use Times New Roman for body content and slightly smaller size */
+.page__content { font-family: "Times New Roman", Times, serif; font-size: 1.00em; }
+.page__content p, .page__content li, .page__content div { font-family: "Times New Roman", Times, serif; }
+/* Headings in Times New Roman and emphasized styling */
+.page__content h1, .page__content h2, .page__content h3 { font-family: "Times New Roman", Times, serif; font-weight: 700; color: #222; text-rendering: optimizeLegibility; }
+.page__content h1 { border-bottom: 2px solid #e5e5e5; padding-bottom: 4px; }
+.page__content h2, .page__content h3 { border-left: 4px solid #2a72d4; padding-left: 10px; background: linear-gradient(to right, rgba(42,114,212,0.06), rgba(42,114,212,0)); border-radius: 4px; }
+</style>
+
+
+Zhenglin Wan (万政霖 in Chinese) received his Bachelor of Science (B.Sc) from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) on 2025 Fall. He is currently a research staff in [Nanyang Technological University](https://www.ntu.edu.sg/), working with [Prof. Bo An](https://personal.ntu.edu.sg/boan/), and also an incoming Ph.D. student in [School of Computing (SoC)](https://www.comp.nus.edu.sg/), [National University of Singapore (NUS)](https://nus.edu.sg/). Previously, he has been an intern researcher at [Centre for Frontier AI Research](https://www.a-star.edu.sg/cfar), [(A*STAR)](https://www.a-star.edu.sg/) at Singapore, under the supervision of [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) and collaborated with [Prof. Ong Yew Soon](https://www3.ntu.edu.sg/home/asysong/home.html). In CUHK(SZ) campus, he was advised by [Prof. Jianfeng Mao](https://sds.cuhk.edu.cn/en/teacher/268) and [Prof. Ming Yan](https://mingyan08.github.io/). Besides, he also closely worked with [Prof. Pingfu Chao](https://scst.suda.edu.cn/10/47/c11250a528455/page.htm) and [Dr. Jun Song](https://scholars.hkbu.edu.hk/en/persons/JUNSONG) both academically and industrially. 
+
+---
+
+My research focus lies in 1)**Agentic AI**: How to embed the human's learning and decision-making patterns into (both virtual and embodied) agentic paradigm? How to enable intelligent agent to perform high-level, long-horizen planning and strategic thinking? 2)**Decision-Making in Machine Learning**: the algorithmic side of reinforcement learning (RL), as well as its intersection with modern generative models.
+
+
+<mark style="background-color: yellow; color: black;">I am always open to collaborations, networking and potential intern opportunities, feel free to drop me an email! (vanzl3386 [at] gmail.com)</mark>
+
 <div class="news" markdown="1">
 <div class="scroll-window" markdown="1">
 - *2025.10*     **FM-IRL** is available on [arxiv](https://arxiv.org/abs/2510.09222) and [github](https://github.com/vanzll/FM_IRL).
@@ -74,54 +110,6 @@ redirect_from:
   });
 })();
 </script>
-
-
-
-<span class='anchor' id='about-me'></span>
-# 😊 About me
-
-***Resume***: [Resume](https://drive.google.com/file/d/1fYYlj0MhJGsPPDdWUMB9LHMTqUo3bL1s/view?usp=sharing) (Updated on 8 Oct, 2025)
-
-***Contact***: vanzl3386 [at] gmail.com (preferred), carlos [at] metaseq.ai, 121090525 [at] link.cuhk.edu.cn
-
----
-<style>
-/* Slightly reduce spacing between top-level headings on the home page */
-.page__content > h1 { margin-top: 1.7em !important; margin-bottom: 0.45em; }
-.page__content > h1:first-of-type { margin-top: 0.45em !important; }
-@media (max-width: 640px) { .page__content > h1 { margin-top: 1.4em !important; } }
-/* Use Times New Roman for body content and slightly smaller size */
-.page__content { font-family: "Times New Roman", Times, serif; font-size: 1.00em; }
-.page__content p, .page__content li, .page__content div { font-family: "Times New Roman", Times, serif; }
-/* Headings in Times New Roman and emphasized styling */
-.page__content h1, .page__content h2, .page__content h3 { font-family: "Times New Roman", Times, serif; font-weight: 700; color: #222; text-rendering: optimizeLegibility; }
-.page__content h1 { border-bottom: 2px solid #e5e5e5; padding-bottom: 4px; }
-.page__content h2, .page__content h3 { border-left: 4px solid #2a72d4; padding-left: 10px; background: linear-gradient(to right, rgba(42,114,212,0.06), rgba(42,114,212,0)); border-radius: 4px; }
-</style>
-
-<style>
-/* Widen reading width on desktop without affecting mobile */
-@media (min-width: 1200px) {
-  .page { max-width: 1400px !important; }
-  .page__inner-wrap { max-width: 1120px; margin-left: auto; margin-right: auto; }
-  .page__content { max-width: 1120px !important; }
-}
-@media (min-width: 992px) and (max-width: 1199px) {
-  .page__inner-wrap { max-width: 1040px; margin-left: auto; margin-right: auto; }
-  .page__content { max-width: 1040px !important; }
-}
-</style>
-
-Zhenglin Wan (万政霖 in Chinese) received his Bachelor of Science (B.Sc) from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) on 2025 Fall. He is currently a research staff in [Nanyang Technological University](https://www.ntu.edu.sg/), working with [Prof. Bo An](https://personal.ntu.edu.sg/boan/), and also an incoming Ph.D. student in [School of Computing (SoC)](https://www.comp.nus.edu.sg/), [National University of Singapore (NUS)](https://nus.edu.sg/). Previously, he has been an intern researcher at [Centre for Frontier AI Research](https://www.a-star.edu.sg/cfar), [(A*STAR)](https://www.a-star.edu.sg/) at Singapore, under the supervision of [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) and collaborated with [Prof. Ong Yew Soon](https://www3.ntu.edu.sg/home/asysong/home.html). In CUHK(SZ) campus, he was advised by [Prof. Jianfeng Mao](https://sds.cuhk.edu.cn/en/teacher/268) and [Prof. Ming Yan](https://mingyan08.github.io/). Besides, he also closely worked with [Prof. Pingfu Chao](https://scst.suda.edu.cn/10/47/c11250a528455/page.htm) and [Dr. Jun Song](https://scholars.hkbu.edu.hk/en/persons/JUNSONG) both academically and industrially. 
-
----
-
-My research focus lies in 1)**Agentic AI**: How to embed the human's learning and decision-making patterns into (both virtual and embodied) agentic paradigm? How to enable intelligent agent to perform high-level, long-horizen planning and strategic thinking? 2)**Decision-Making in Machine Learning**: the algorithmic side of reinforcement learning (RL), as well as its intersection with modern generative models.
-
-
-<mark style="background-color: yellow; color: black;">I am always open to collaborations, networking and potential intern opportunities, feel free to drop me an email! (vanzl3386 [at] gmail.com)</mark>
-
-
 
 <span class='anchor' id='Publication-List'></span>
 # 📝 Selected Publications
