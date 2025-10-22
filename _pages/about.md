@@ -42,6 +42,61 @@ redirect_from:
 .page__content h2, .page__content h3 { border-left: 4px solid #2a72d4; padding-left: 10px; background: linear-gradient(to right, rgba(42,114,212,0.06), rgba(42,114,212,0)); border-radius: 4px; }
 </style>
 
+<style>
+/* Dark mode toggle button */
+.dark-toggle { position: fixed; top: 12px; right: 16px; z-index: 9999; width: 36px; height: 36px; border-radius: 50%; border: 1px solid #e0e0e0; background: #ffffffcc; backdrop-filter: blur(4px); display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+.dark-toggle:hover { box-shadow: 0 8px 16px rgba(0,0,0,0.16); }
+.dark-toggle svg { width: 18px; height: 18px; fill: #333; }
+@media (max-width: 640px) { .dark-toggle { top: 10px; right: 10px; width: 34px; height: 34px; } }
+
+/* Dark mode palette */
+.dark-mode { color-scheme: dark; }
+.dark-mode body { background: #0f1115 !important; }
+.dark-mode .page__content { color: #e5e7eb; }
+.dark-mode .page__content a { color: #8ab4f8; }
+.dark-mode .page__content h1 { border-bottom-color: #2a2f3a; }
+.dark-mode .publications .pub-row,
+.dark-mode .edu-item,
+.dark-mode .exp-item { background: #111827; border-color: #2a2f3a; box-shadow: 0 4px 10px rgba(0,0,0,0.35); }
+.dark-mode .publications .scroll-window,
+.dark-mode .news .scroll-window { background: #0f141b; border-color: #2a2f3a; box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), 0 6px 14px rgba(0,0,0,0.35); }
+.dark-mode .publications .title a { color: #93c5fd; }
+.dark-mode .publications .title a:hover { color: #bfdbfe; }
+.dark-mode .publications .pub-button { background: #0f141b; color: #e5e7eb; border-color: #374151; }
+.dark-mode .publications .pub-button:hover { border-color: #4b5563; }
+.dark-mode .section-tabs .tab { background: #1f2937; border-color: #374151; color: #e5e7eb; }
+.dark-mode .section-tabs .tab.active { background: #111827; border-color: #4b5563; }
+</style>
+
+<button id="dark-toggle" class="dark-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.64 13.03A9 9 0 0 1 11 2a1 1 0 0 0-.92 1.39A7 7 0 0 0 12 21a7 7 0 0 0 9.61-6.39 1 1 0 0 0-1.97-.58Z"></path></svg>
+  <span class="sr-only">Toggle dark mode</span>
+</button>
+
+<script>
+(function(){
+  var KEY = 'prefers-dark';
+  var root = document.documentElement;
+  function applyDark(enabled){
+    if(enabled){ root.classList.add('dark-mode'); }
+    else { root.classList.remove('dark-mode'); }
+  }
+  try {
+    var saved = localStorage.getItem(KEY);
+    if(saved === '1') applyDark(true);
+    if(saved === '0') applyDark(false);
+  } catch(e) {}
+  var btn = document.getElementById('dark-toggle');
+  if(btn){
+    btn.addEventListener('click', function(){
+      var next = !root.classList.contains('dark-mode');
+      applyDark(next);
+      try { localStorage.setItem(KEY, next ? '1' : '0'); } catch(e) {}
+    });
+  }
+})();
+</script>
+
 
 Zhenglin Wan (万政霖 in Chinese) received his Bachelor of Science (B.Sc) from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) on 2025 Fall. He is currently a research staff in [Nanyang Technological University](https://www.ntu.edu.sg/), working with [Prof. Bo An](https://personal.ntu.edu.sg/boan/), and also an incoming Ph.D. student in [School of Computing (SoC)](https://www.comp.nus.edu.sg/), [National University of Singapore (NUS)](https://nus.edu.sg/). Previously, he has been an intern researcher at [Centre for Frontier AI Research](https://www.a-star.edu.sg/cfar), [(A*STAR)](https://www.a-star.edu.sg/) at Singapore, under the supervision of [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) and collaborated with [Prof. Ong Yew Soon](https://www3.ntu.edu.sg/home/asysong/home.html). In CUHK(SZ) campus, he was advised by [Prof. Jianfeng Mao](https://sds.cuhk.edu.cn/en/teacher/268) and [Prof. Ming Yan](https://mingyan08.github.io/). Besides, he also closely worked with [Prof. Pingfu Chao](https://scst.suda.edu.cn/10/47/c11250a528455/page.htm) and [Dr. Jun Song](https://scholars.hkbu.edu.hk/en/persons/JUNSONG) both academically and industrially. 
 
@@ -446,7 +501,6 @@ As these works are presented in China, these names are directly translated from 
 </div>
 
 <span class='anchor' id='person'></span>
-
 # Miscellaneous
 In my spare time, I’m an **music enthusiast**. I’ve been playing guitar for more than 10 years and began teaching myself the piano and electronic piano at the age of 15. Music has always been a significant part of my life. During my undergraduate, I had the incredible opportunity to play in two bands: "Minor Blue" and "Major Pink." These moments remain some of my most cherished memories. See our photos: 
 
