@@ -369,6 +369,27 @@ As these works are presented in China, these names are directly translated from 
 }
 </style>
 
+<style>
+/* Dark mode overrides (class/data-attribute toggles) for Internships section */
+html.dark .experiences .scroll-window,
+body.dark .experiences .scroll-window,
+html[data-theme="dark"] .experiences .scroll-window,
+:root[data-theme="dark"] .experiences .scroll-window,
+[data-scheme="dark"] .experiences .scroll-window { background: #111 !important; border-color: #333 !important; box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), 0 6px 14px rgba(0,0,0,0.6) !important; }
+
+html.dark .exp-item,
+body.dark .exp-item,
+html[data-theme="dark"] .exp-item,
+:root[data-theme="dark"] .exp-item,
+[data-scheme="dark"] .exp-item { background: #111 !important; border-color: #333 !important; box-shadow: 0 4px 12px rgba(0,0,0,0.5) !important; }
+
+html.dark .exp-img img,
+body.dark .exp-img img,
+html[data-theme="dark"] .exp-img img,
+:root[data-theme="dark"] .exp-img img,
+[data-scheme="dark"] .exp-img img { background: transparent !important; }
+</style>
+
 <div class="experiences">
 <div class="scroll-window">
 <ul class="exp-list">
