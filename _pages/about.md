@@ -361,6 +361,14 @@ As these works are presented in China, these names are directly translated from 
 .experiences .scroll-window::-webkit-scrollbar-thumb { background: #ddd; border-radius: 4px; }
 </style>
 
+<style>
+/* Dark mode overrides for Internships section */
+@media (prefers-color-scheme: dark) {
+  .experiences .scroll-window { background: #111; border-color: #333; box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), 0 6px 14px rgba(0,0,0,0.6); }
+  .exp-item { background: #111; border-color: #333; box-shadow: 0 4px 12px rgba(0,0,0,0.5); }
+}
+</style>
+
 <div class="experiences">
 <div class="scroll-window">
 <ul class="exp-list">
