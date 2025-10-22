@@ -27,12 +27,12 @@ redirect_from:
 
 <div class="news" markdown="1">
 <div class="scroll-window" markdown="1">
-- *2025.10*  **FM-IRL** is available on [arxiv](https://arxiv.org/abs/2510.09222) and [github](https://github.com/vanzll/FM_IRL).
-- *2025.10*  **OSCAR** is available on [arxiv](https://arxiv.org/abs/2510.09060) and [github](https://github.com/Johnny221B/OSCAR).
+- *2025.10*     **FM-IRL** is available on [arxiv](https://arxiv.org/abs/2510.09222) and [github](https://github.com/vanzll/FM_IRL).
+- *2025.10*     **OSCAR** is available on [arxiv](https://arxiv.org/abs/2510.09060) and [github](https://github.com/Johnny221B/OSCAR).
 - *2025.09*  &nbsp;🎉🎉 Awarded *NUS Research Scholarship* to support my Ph.D studies in [National University of Singapore](https://nus.edu.sg/) beginning from Jan, 2026.
 - *2025.09*  &nbsp;🎉🎉 Joined [Nanyang Technological University](https://www.ntu.edu.sg/) as a research staff.
 - *2025.08*  &nbsp;🎉🎉 Received my B.Sc from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) with 1-st class honor, looking forward to new jouney!
-- *2025.05*  &nbsp;🎉🎉 [EBC](https://arxiv.org/abs/2410.06151) accepted by ICML 2025. [Code](https://github.com/vanzll/EBC) available.
+- *2025.05*  &nbsp;🎉🎉 [**EBC**](https://arxiv.org/abs/2410.06151) is accepted by ICML 2025. [Code](https://github.com/vanzll/EBC) available.
 - *2025.03*  &nbsp;🎉🎉 One paper accepted by ICLR 2025 (generative models for robot learning workshop).
 - *2024.12*  &nbsp;🎉🎉 One paper accepted by AAMAS 2025 (oral).
 - *2024.12*  &nbsp;🎉🎉 One paper accepted by AAAI 2025 (oral).
