@@ -427,7 +427,7 @@ html[data-theme="dark"] .exp-img img,
         <li>Affliation: School of Data Science</li>
         <li>Advisor: Prof. Jianfeng Mao</li>
       </ul>
-      <p class="exp-time">2023.06 - 2024.09</p>
+      <p class="exp-time">2023.06 - 2024.06</p>
     </div>
     <div class="exp-img"><img src="assets/institutions/cuhksz.png" alt="CUHK(SZ)"></div>
   </li>
