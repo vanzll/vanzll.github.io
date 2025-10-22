@@ -4,6 +4,7 @@ title: ""
 excerpt: ""
 author_profile: true
 mmv_globe_d: uc46Usqtqu46611K0F3RqKvrq3w6VrhNaTbD2FUfoGo
+lang: en
 redirect_from: 
   - /about/
   - /about.html
