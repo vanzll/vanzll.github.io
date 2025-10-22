@@ -13,6 +13,10 @@ layout: compress
 
     {% include browser-upgrade.html %}
     {% include masthead.html %}
+    <button id="dark-toggle" class="dark-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.64 13.03A9 9 0 0 1 11 2a1 1 0 0 0-.92 1.39A7 7 0 0 0 12 21a7 7 0 0 0 9.61-6.39 1 1 0 0 0-1.97-.58Z"></path></svg>
+      <span class="sr-only">Toggle dark mode</span>
+    </button>
 
     <div id="main" role="main">
       {% include sidebar.html %}
@@ -28,6 +32,15 @@ layout: compress
     </div>
 
     {% include scripts.html %}
+    <script>
+    (function(){
+      var KEY='prefers-dark';
+      var root=document.documentElement;
+      function applyDark(on){ if(on){ root.classList.add('dark-mode'); } else { root.classList.remove('dark-mode'); } }
+      var btn=document.getElementById('dark-toggle');
+      if(btn){ btn.addEventListener('click', function(){ var next=!root.classList.contains('dark-mode'); applyDark(next); try{ localStorage.setItem(KEY, next?'1':'0'); }catch(e){} }); }
+    })();
+    </script>
 
   </body>
 </html>

@@ -21,3 +21,36 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
 
 <!-- end custom head snippets -->
+
+<!-- Dark mode early apply to avoid flash -->
+<script>
+  (function(){
+    try { if(localStorage.getItem('prefers-dark') === '1') { document.documentElement.classList.add('dark-mode'); } } catch(e) {}
+  })();
+  </script>
+
+<style>
+/* Dark mode toggle button (globally available) */
+.dark-toggle { position: fixed; top: 12px; right: 16px; z-index: 9999; width: 36px; height: 36px; border-radius: 50%; border: 1px solid #e0e0e0; background: #ffffffcc; backdrop-filter: blur(4px); display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+.dark-toggle:hover { box-shadow: 0 8px 16px rgba(0,0,0,0.16); }
+.dark-toggle svg { width: 18px; height: 18px; display: block; fill: #333; }
+@media (max-width: 640px) { .dark-toggle { top: 10px; right: 10px; width: 34px; height: 34px; } }
+
+/* Dark mode palette */
+.dark-mode { color-scheme: dark; }
+.dark-mode body { background: #0f1115 !important; }
+.dark-mode .page__content { color: #e5e7eb; }
+.dark-mode .page__content a { color: #8ab4f8; }
+.dark-mode .page__content h1 { border-bottom-color: #2a2f3a; }
+.dark-mode .publications .pub-row,
+.dark-mode .edu-item,
+.dark-mode .exp-item { background: #111827; border-color: #2a2f3a; box-shadow: 0 4px 10px rgba(0,0,0,0.35); }
+.dark-mode .publications .scroll-window,
+.dark-mode .news .scroll-window { background: #0f141b; border-color: #2a2f3a; box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), 0 6px 14px rgba(0,0,0,0.35); }
+.dark-mode .publications .title a { color: #93c5fd; }
+.dark-mode .publications .title a:hover { color: #bfdbfe; }
+.dark-mode .publications .pub-button { background: #0f141b; color: #e5e7eb; border-color: #374151; }
+.dark-mode .publications .pub-button:hover { border-color: #4b5563; }
+.dark-mode .section-tabs .tab { background: #1f2937; border-color: #374151; color: #e5e7eb; }
+.dark-mode .section-tabs .tab.active { background: #111827; border-color: #4b5563; }
+</style>
