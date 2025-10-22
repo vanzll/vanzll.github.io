@@ -16,15 +16,6 @@ redirect_from:
 {% endif %}
 {% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
 
-<span class='anchor' id='news'></span>
-# 🔥 News
-<style>
-/* News section scroll window styles (scoped) */
-.news .scroll-window { max-height: 640px; overflow-y: auto; padding: 8px 6px; border: 1px solid #eaeaea; border-radius: 12px; background: #fff; box-shadow: inset 0 1px 0 rgba(255,255,255,0.6), 0 6px 14px rgba(0,0,0,0.04); }
-.news .scroll-window::-webkit-scrollbar { width: 8px; }
-.news .scroll-window::-webkit-scrollbar-thumb { background: #ddd; border-radius: 4px; }
-</style>
-
 
 
 
@@ -60,6 +51,15 @@ My research focus lies in 1)**Agentic AI**: How to embed the human's learning an
 
 
 <mark style="background-color: yellow; color: black;">I am always open to collaborations, networking and potential intern opportunities, feel free to drop me an email! (vanzl3386 [at] gmail.com)</mark>
+
+<span class='anchor' id='news'></span>
+# 🔥 News
+<style>
+/* News section scroll window styles (scoped) */
+.news .scroll-window { max-height: 640px; overflow-y: auto; padding: 8px 6px; border: 1px solid #eaeaea; border-radius: 12px; background: #fff; box-shadow: inset 0 1px 0 rgba(255,255,255,0.6), 0 6px 14px rgba(0,0,0,0.04); }
+.news .scroll-window::-webkit-scrollbar { width: 8px; }
+.news .scroll-window::-webkit-scrollbar-thumb { background: #ddd; border-radius: 4px; }
+</style>
 
 <div class="news" markdown="1">
 <div class="scroll-window" markdown="1">
