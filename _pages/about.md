@@ -383,6 +383,21 @@ As these works are presented in China, these names are directly translated from 
     </div>
     <div class="exp-img"><img src="assets/institutions/astar.png" alt="A*STAR"></div>
   </li>
+
+
+  <li class="exp-item">
+    <div class="exp-text">
+      <p class="exp-title">Research Assistant</p>
+      <p class="exp-sub">The Chinese University of Hong Kong, Shenzhen</p>
+      <ul style="margin: 6px 0 6px 18px; padding: 0; font-size: 0.96em; color: #555;">
+        <li>Affliation: School of Data Science</li>
+        <li>Advisor: Prof. Jianfeng Mao</li>
+      </ul>
+      <p class="exp-time">2023.06 - 2024.09</p>
+    </div>
+    <div class="exp-img"><img src="assets/institutions/cuhksz.png" alt="CUHK(SZ)"></div>
+  </li>
+
   <li class="exp-item">
     <div class="exp-text">
       <p class="exp-title">Machine Learning Algorithm Engineer Intern</p>
@@ -394,6 +409,9 @@ As these works are presented in China, these names are directly translated from 
     </div>
 
   </li>
+
+
+
 </ul>
 <span class='anchor' id='person'></span>
 
