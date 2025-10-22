@@ -74,15 +74,22 @@
 /* Masthead background/borders in dark mode */
 .dark-mode .masthead,
 .dark-mode .masthead__inner-wrap,
-.dark-mode .greedy-nav { background: #0f1115 !important; border-color: #2a2f3a !important; }
+.dark-mode .masthead__menu,
+.dark-mode .greedy-nav,
+.dark-mode .greedy-nav .visible-links,
+.dark-mode .greedy-nav .hidden-links { background: #0f1115 !important; border-color: #2a2f3a !important; }
 .dark-mode .greedy-nav .visible-links > li > a,
 .dark-mode .greedy-nav .hidden-links a,
-.dark-mode .masthead__menu-item a { color: #e5e7eb !important; }
+.dark-mode .masthead__menu-item a,
+.dark-mode .masthead a { color: #e5e7eb !important; }
 .dark-mode .greedy-nav .visible-links > li > a:hover,
 .dark-mode .greedy-nav .hidden-links a:hover,
-.dark-mode .masthead__menu-item a:hover { color: #bfdbfe !important; }
+.dark-mode .masthead__menu-item a:hover,
+.dark-mode .masthead a:hover { color: #bfdbfe !important; }
 .dark-mode .greedy-nav .navicon,
 .dark-mode .greedy-nav button { color: #e5e7eb !important; fill: #e5e7eb !important; border-color: #2a2f3a !important; background: transparent !important; }
+.dark-mode .masthead,
+.dark-mode .masthead__inner-wrap { box-shadow: none !important; }
 
 /* Language toggle button */
 .lang-toggle { position: fixed; top: 12px; right: 60px; z-index: 9999; padding: 6px 10px; border: 1px solid #e0e0e0; border-radius: 18px; background: #ffffffcc; backdrop-filter: blur(4px); color: #333; text-decoration: none; font-family: "Times New Roman", Times, serif; font-size: 0.92em; box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
@@ -98,7 +105,9 @@
 
 /* Education & Internship text colors */
 .dark-mode .edu-text, .dark-mode .edu-text p, .dark-mode .edu-text li { color: #e5e7eb !important; }
+.dark-mode .edu-title { color: #e5e7eb !important; }
 .dark-mode .edu-sub, .dark-mode .edu-time { color: #cbd5e1; }
 .dark-mode .exp-text, .dark-mode .exp-text p, .dark-mode .exp-text li { color: #e5e7eb !important; }
+.dark-mode .exp-title { color: #e5e7eb !important; }
 .dark-mode .exp-sub, .dark-mode .exp-time { color: #cbd5e1; }
 </style>
