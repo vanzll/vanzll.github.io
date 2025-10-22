@@ -325,7 +325,7 @@ As these works are presented in China, these names are directly translated from 
       <ul style="margin: 6px 0 6px 18px; padding: 0; font-size: 0.96em; color: #555;">
         <li>1-st class honor</li>
         <li>Major: Data Science, GPA: 3.85/4.0, Rank: 7%</li>
-        <li>Finished my undergraduate in School of Data Science, CUHK-Shenzhen campus, while the degree is offered by CUHK.</li>
+        <li>Finished my undergraduate in, CUHK-Shenzhen campus, while the degree is offered by CUHK.</li>
       </ul>
       <p class="edu-time">2021.09 - 2025.08</p>
     </div>
