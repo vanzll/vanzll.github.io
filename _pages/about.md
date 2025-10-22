@@ -356,6 +356,7 @@ As these works are presented in China, these names are directly translated from 
       <p class="exp-title">Full-time Research Staff</p>
       <p class="exp-sub">Nanyang Technological University, Singapore</p>
       <ul style="margin: 6px 0 6px 18px; padding: 0; font-size: 0.96em; color: #555;">
+        <li>Affliation: College of Computing and Data Science (CCDS)</li>
         <li>Advisor: Prof. Bo An</li>
       </ul>
       <p class="exp-time">2025.09 - 2026.01</p>
@@ -367,13 +368,13 @@ As these works are presented in China, these names are directly translated from 
       <p class="exp-title">Intern Researcher</p>
       <p class="exp-sub">Agency for Science, Technology and Research (A*STAR), Singapore</p>
       <ul style="margin: 6px 0 6px 18px; padding: 0; font-size: 0.96em; color: #555;">
-        <li>Sub-institution: Centre for Frontier AI Research (CFAR), Institute of High Performance Computing (IHPC)</li>
+        <li>Affliation: Centre for Frontier AI Research (CFAR), Institute of High Performance Computing (IHPC)</li>
         <li>Advisor: Prof. Ivor Tsang, Dr. Xingrui Yu</li>
       </ul>
       <p class="exp-time">2024.07 - 2025.09</p>
       <ul style="margin: 6px 0 6px 18px; padding: 0; font-size: 0.96em; color: #555;">
-        <li>2024.07 - 2024.10: Full time</li>
-        <li>2024.10 - 2025.09: Part time</li>
+        <li>2024.07 - 2024.10: Full time (onsite)</li>
+        <li>2024.10 - 2025.09: Part time (remote)</li>
       </ul>
     </div>
     <div class="exp-img"><img src="assets/institutions/astar.png" alt="A*STAR"></div>
