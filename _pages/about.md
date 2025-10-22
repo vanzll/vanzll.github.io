@@ -354,6 +354,15 @@ As these works are presented in China, these names are directly translated from 
 @media (max-width: 640px) { .exp-item { flex-direction: column; } .exp-img { max-width: 100%; flex-basis: auto; } }
 </style>
 
+<style>
+/* Experiences section scroll window styles (scoped) */
+.experiences .scroll-window { max-height: 640px; overflow-y: auto; padding: 8px 6px; border: 1px solid #eaeaea; border-radius: 12px; background: #fff; box-shadow: inset 0 1px 0 rgba(255,255,255,0.6), 0 6px 14px rgba(0,0,0,0.04); }
+.experiences .scroll-window::-webkit-scrollbar { width: 8px; }
+.experiences .scroll-window::-webkit-scrollbar-thumb { background: #ddd; border-radius: 4px; }
+</style>
+
+<div class="experiences">
+<div class="scroll-window">
 <ul class="exp-list">
   <li class="exp-item">
     <div class="exp-text">
@@ -375,11 +384,7 @@ As these works are presented in China, these names are directly translated from 
         <li>Affliation: Centre for Frontier AI Research (CFAR), Institute of High Performance Computing (IHPC)</li>
         <li>Advisor: Prof. Ivor Tsang, Dr. Xingrui Yu</li>
       </ul>
-      <p class="exp-time">2024.07 - 2025.09</p>
-      <ul style="margin: 6px 0 6px 18px; padding: 0; font-size: 0.96em; color: #555;">
-        <li>2024.07 - 2024.10: Full time (onsite)</li>
-        <li>2024.10 - 2025.09: Part time (remote)</li>
-      </ul>
+      <p class="exp-time">2024.07 - 2025.09  (3 months full-time + 11 months part-time)</p>
     </div>
     <div class="exp-img"><img src="assets/institutions/astar.png" alt="A*STAR"></div>
   </li>
@@ -412,8 +417,39 @@ As these works are presented in China, these names are directly translated from 
 
 
 
-</ul>
+ </ul>
+</div>
+</div>
 <span class='anchor' id='person'></span>
+
+<script>
+(function() {
+  function setExpScrollWindowHeight() {
+    var container = document.querySelector('.experiences .scroll-window');
+    if (!container) return;
+    var firstLi = container.querySelector('.exp-list > li');
+    if (!firstLi) return; // fallback to CSS default max-height
+    var rowRect = firstLi.getBoundingClientRect();
+    var liStyle = window.getComputedStyle(firstLi);
+    var marginTop = parseFloat(liStyle.marginTop) || 0;
+    var marginBottom = parseFloat(liStyle.marginBottom) || 0;
+    var perItem = rowRect.height + (marginTop + marginBottom);
+    var target = perItem * 3; // show ~3 items
+    container.style.maxHeight = target + 'px';
+  }
+  function onReady(fn) {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', fn, { once: true });
+    } else { fn(); }
+  }
+  onReady(setExpScrollWindowHeight);
+  var resizeTimeout;
+  window.addEventListener('resize', function() {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(setExpScrollWindowHeight, 150);
+  });
+})();
+</script>
 
 
 
