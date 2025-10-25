@@ -69,7 +69,7 @@ My research focus lies in 1)**Agentic AI**: How to embed the human's learning an
 - *2025.10*     **OSCAR** is available on [arxiv](https://arxiv.org/abs/2510.09060) and [github](https://github.com/Johnny221B/OSCAR).
 - *2025.09*  &nbsp;🎉🎉 Awarded *NUS Research Scholarship* to support my Ph.D studies in [National University of Singapore](https://nus.edu.sg/) beginning from Jan, 2026.
 - *2025.09*  &nbsp;🎉🎉 Joined [Nanyang Technological University](https://www.ntu.edu.sg/) as a research staff.
-- *2025.08*  &nbsp;🎉🎉 Received my B.Sc from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) with 1-st class honor, looking forward to new jouney!
+- *2025.08*  &nbsp;🎉🎉 Received my B.Sc from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) with 1-st class honor, looking forward to new journey!
 - *2025.05*  &nbsp;🎉🎉 [**EBC**](https://arxiv.org/abs/2410.06151) is accepted by ICML 2025 ([Code](https://github.com/vanzll/EBC) available).
 - *2025.03*  &nbsp;🎉🎉 One paper accepted by ICLR 2025 (generative models for robot learning workshop).
 - *2024.12*  &nbsp;🎉🎉 One paper accepted by AAMAS 2025 (oral).
@@ -163,6 +163,7 @@ Please scroll down to view all publications.
 .publications .title { font-size: 1.14rem; font-weight: 700; line-height: 1.35; }
 .publications .author { font-size: 0.98rem; }
 .publications .periodical { font-size: 0.96rem; }
+.publications .intro { font-size: 0.96rem; color: #555; margin: 4px 0; }
 .publications .links a { font-size: 12px !important; }
 .publications .links { margin-top: 10px; display: flex; gap: 10px; flex-wrap: wrap; }
 .publications .pub-button {
@@ -215,6 +216,9 @@ Please scroll down to view all publications.
   <div class="col-sm-9 pub-content" style="position: relative;padding-right: 15px;padding-left: 20px;">
       <div class="title"><a href="{{ link.paper | default: '/404.html' }}">{{ link.title }}</a></div>
       <div class="author">{{ link.authors }}</div>
+      {% if link.intro %}
+      <div class="intro">{{ link.intro }}</div>
+      {% endif %}
       <div class="periodical"><em>{{ link.conference }}</em>
       </div>
     <div class="links">
@@ -324,7 +328,7 @@ As these works are presented in China, these names are directly translated from 
       <ul style="margin: 6px 0 6px 18px; padding: 0; font-size: 0.96em; color: #555;">
         <li>1-st class honor</li>
         <li>Major: Data Science, GPA: 3.85/4.0, Rank: 7%</li>
-        <li>Finished my undergraduate in, CUHK-Shenzhen campus, while the degree is offered by CUHK.</li>
+        <li>Finished my undergraduate in CUHK-Shenzhen campus, while the degree is offered by CUHK.</li>
       </ul>
       <p class="edu-time">2021.09 - 2025.08</p>
     </div>

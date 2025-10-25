@@ -8,6 +8,7 @@ main:
     github_stars: "vanzll/EBC"
     website: "https://arxiv.org/html/2410.06151v4#S2"
     image: "./assets/papers/EBC.png"
+    intro: "Enables agent to efficientlylearn diverse and high-performing policies via Quality Diversity (Inverse) Reinforcement Learning."
 
   - title: "FM-IRL: Flow-Matching for Reward Modeling and Policy Regularization in Reinforcement Learning"
     authors: "<strong>Zhenglin Wan</strong>, Jingxuan Wu, Xingrui Yu, Chubin Zhang, Mingcong Lei, Bo An, Ivor Tsang"
@@ -18,6 +19,7 @@ main:
     github_stars: "vanzll/FM_IRL"
     website: "https://arxiv.org/html/2510.09222v2"
     image: "./assets/papers/FMIRL.png"
+    intro: "Equips Flow-Matching policies with exploratory strength when learning from demonstrations."
 
   - title: "OSCAR: Orthogonal Stochastic Control for Alignment-Respecting Diversity in Flow Matching"
     authors: "Jingxuan Wu, <strong>Zhenglin Wan</strong>, Xingrui Yu, Yuzhe Yang, Bo An, Ivor Tsang"
@@ -28,6 +30,7 @@ main:
     github_stars: "Johnny221B/OSCAR"
     website: ""
     image: "./assets/papers/OSCAR.png"
+    intro: "Enables Flow-Matching model to generate diverse but alignment-respecting images in training-free manner."
 
   - title: "Imitation From Diverse Behaviors: Wasserstein Quality Diversity Imitation Learning with Single-Step Archive Exploration"
     authors: "Xingrui Yu, <strong>Zhenglin Wan</strong>, David Bossens, Yueming Lyu, Qing Guo, Ivor Tsang"
@@ -36,6 +39,7 @@ main:
     paper: https://arxiv.org/abs/2411.06965
     website: "https://arxiv.org/html/2411.06965v2"
     image: "./assets/papers/WQDI.png"
+    intro: "A new paradigm for imitation learning"
 
   - title: "POI Recommendation via Multi-Objective Adversarial Imitation Learning"
     authors: "<strong>Zhenglin Wan</strong>, Anjun Gao, Xingrui Yu, Pingfu Chao, Jun Song, Maohao Ran"
@@ -44,12 +48,14 @@ main:
     paper: "https://ojs.aaai.org/index.php/AAAI/article/view/33382/35537"
     website: https://ojs.aaai.org/index.php/AAAI/article/view/33382#:~:text=In%20this%20paper%2C%20we%20introduce%20Multi-Objective%20Adversarial%20Imitation,Imitation%20Learning%20with%20multi-objective%20to%20address%20this%20issue.
     image: "./assets/papers/POI.png"
+    intro: "Recommendate next Point-of-interest with sparse and noisy data"
 
   - title: "Generative Quality Diversity Imitation Learning for Robot Skill Acquisition"
     authors: "<strong>Zhenglin Wan</strong>, Xingrui Yu, David Bossens, Yueming Lyu, Qing Guo, Flint Xiaofeng Fan, Ivor Tsang"
     conference_short: ICLR 2025 (workshop)
     conference: The Thirteenth International Conference on Learning Representations
     image: "./assets/papers/GQDI.png"
+    intro: "Quality Diversity Imitation Learning techniques for robot to acquire variety of skills"
 
   - title: "Hierarchical Spatial-Temporal Graph-Enhanced Model for Map-Matching"
     authors: "Anjun Gao, <strong>Zhenglin Wan</strong>, Pingfu Chao, Shunyu Yao"
@@ -58,3 +64,4 @@ main:
     paper: https://link.springer.com/chapter/10.1007/978-981-96-1242-0_4
     website: https://link.springer.com/chapter/10.1007/978-981-96-1242-0_4
     image: "./assets/papers/ADC.jpg"
+    intro: "Map-Matching techniques with strong aware of spatial-temporal information"
