@@ -74,7 +74,6 @@ I feel truly fortunate to have received help and guidance from so many people ab
   <li>Kailin Lyu (Ph.D. student @ CASIA)</li>
   <li>Xin Yan (Undergrad @ Beijing Normal University)</li>
   <li>Dongchu Xie (Undergrad @ CUHK(SZ))</li>
-  <li>Yuan Xu (Undergrad @ Naikai University)</li>
 </ul>
 
 
