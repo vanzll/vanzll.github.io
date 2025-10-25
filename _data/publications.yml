@@ -39,7 +39,8 @@ main:
     paper: https://arxiv.org/abs/2411.06965
     website: "https://arxiv.org/html/2411.06965v2"
     image: "./assets/papers/WQDI.png"
-    intro: "A new paradigm for imitation learning"
+    intro: "A new paradigm for imitation learning."
+    honor: "Oral presentation"
 
   - title: "POI Recommendation via Multi-Objective Adversarial Imitation Learning"
     authors: "<strong>Zhenglin Wan</strong>, Anjun Gao, Xingrui Yu, Pingfu Chao, Jun Song, Maohao Ran"
@@ -48,14 +49,15 @@ main:
     paper: "https://ojs.aaai.org/index.php/AAAI/article/view/33382/35537"
     website: https://ojs.aaai.org/index.php/AAAI/article/view/33382#:~:text=In%20this%20paper%2C%20we%20introduce%20Multi-Objective%20Adversarial%20Imitation,Imitation%20Learning%20with%20multi-objective%20to%20address%20this%20issue.
     image: "./assets/papers/POI.png"
-    intro: "Recommendate next Point-of-interest with sparse and noisy data"
+    intro: "Recommendate next Point-of-interest with sparse and noisy data."
+    honor: "Oral presentation (4.65%)"
 
   - title: "Generative Quality Diversity Imitation Learning for Robot Skill Acquisition"
     authors: "<strong>Zhenglin Wan</strong>, Xingrui Yu, David Bossens, Yueming Lyu, Qing Guo, Flint Xiaofeng Fan, Ivor Tsang"
     conference_short: ICLR 2025 (workshop)
     conference: The Thirteenth International Conference on Learning Representations
     image: "./assets/papers/GQDI.png"
-    intro: "Quality Diversity Imitation Learning techniques for robot to acquire variety of skills"
+    intro: "Quality Diversity Imitation Learning techniques for robot to acquire variety of skills."
 
   - title: "Hierarchical Spatial-Temporal Graph-Enhanced Model for Map-Matching"
     authors: "Anjun Gao, <strong>Zhenglin Wan</strong>, Pingfu Chao, Shunyu Yao"
@@ -64,4 +66,5 @@ main:
     paper: https://link.springer.com/chapter/10.1007/978-981-96-1242-0_4
     website: https://link.springer.com/chapter/10.1007/978-981-96-1242-0_4
     image: "./assets/papers/ADC.jpg"
-    intro: "Map-Matching techniques with strong aware of spatial-temporal information"
+    intro: "Map-Matching techniques with strong aware of spatial-temporal information."
+    honor: "Oral presentation & Best Paper Runner-up"
