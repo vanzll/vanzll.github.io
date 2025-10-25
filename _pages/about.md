@@ -54,14 +54,27 @@ My research focus lies in 1)**Agentic AI**: How to embed the human's learning an
 ---
 I feel truly fortunate to have received support and guidance from so many people throughout my career—such as Yueming, David, Zhenghai, Lang Feng, Ivor, Xingrui, and many others. I also deeply understand that many talented students may not always have the opportunities to reach their full potential. Therefore, if you are an undergraduate or master's student and believe I can offer advice, information, or opportunities that might help your career development, please feel free to reach out to me by email for a chat.
 
+<style>
+.mentees-list {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  padding-left: 20px;
+}
+.mentees-list li {
+  margin-bottom: 2px;
+  padding-bottom: 0;
+}
+</style>
 **Mentees (mainly co-mentored with scientists at A*STAR, Singapore):**
-- Xu Pan (Master’s student, Wuhan University)
-- Chubin Zhang (Master’s student, Beijing University of Posts and Telecommunications)
-- Jingxuan Wu (Master’s student, UNC, USA; previously undergrad at CUHKSZ)
-- Dawei Wang (Master’s student, Leiden University)
-- Kailin Lyu (Ph.D. student, CASIA)
-- Xin Yan (Undergrad, Beijing Normal University)
-- Dongchu Xie (Undergrad, CUHKSZ)
+<ul class="mentees-list">
+  <li>Xu Pan (Master’s student @ Wuhan University)</li>
+  <li>Chubin Zhang (Master’s student @ Beijing University of Posts and Telecommunications)</li>
+  <li>Jingxuan Wu (Master’s student @ UNC, America; previously undergrad @ CUHK(SZ))</li>
+  <li>Dawei Wang (Master’s student @ Leiden University)</li>
+  <li>Kailin Lyu (Ph.D. student @ CASIA)</li>
+  <li>Xin Yan (Undergrad @ Beijing Normal University)</li>
+  <li>Dongchu Xie (Undergrad @ CUHK(SZ))</li>
+</ul>
 
 
 <mark style="background-color: yellow; color: black;">Besides, I am open to collaborations, networking and potential intern opportunities, feel free to drop me an email! (vanzl3386 [at] gmail.com)</mark>
