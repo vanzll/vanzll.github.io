@@ -164,39 +164,25 @@ Please scroll down to view all publications.
 .publications .author { font-size: 0.98rem; }
 .publications .periodical { font-size: 0.96rem; }
 .publications .honor { font-size: 0.96rem; color: #e74d3c; font-weight: 700; margin: 4px 0; }
-.publications .intro { font-size: 0.96rem; color: #666; margin: 4px 0; }
+.publications .intro { font-size: 0.90rem; color: #2a72d4; font-weight: 600; font-style: italic; margin: 4px 0; }
 .publications .links a { font-size: 12px !important; }
-.publications .links { margin-top: 10px; display: flex; gap: 16px; flex-wrap: wrap; }
+.publications .links { margin-top: 10px; display: flex; gap: 10px; flex-wrap: wrap; }
 .publications .pub-button {
   font-family: "Times New Roman", Times, serif;
   background: #fff;
   color: #333;
-  border: 1px solid #bbb;
+  border: 1px solid #ddd;
   border-radius: 0;
-  padding: 6px 10px; /* smaller */
-  font-size: 0.92rem; /* smaller */
+  padding: 8px 14px;
+  font-size: 1rem;
   text-decoration: none;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
   transition: transform .05s ease, box-shadow .2s ease, border-color .2s ease;
-  position: relative;
-  overflow: visible; /* allow diamond to extend */
-}
-.publications .pub-button::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: calc(100% + 14px);
-  height: calc(100% + 14px);
-  transform: translate(-50%, -50%) rotate(45deg);
-  border: 1px solid #bbb;
-  background: transparent;
-  pointer-events: none;
 }
 .publications .pub-button:hover {
   transform: translateY(-1px);
   box-shadow: 0 10px 18px rgba(0,0,0,0.16);
-  border-color: #999;
+  border-color: #bbb;
   text-decoration: none;
 }
 .publications .title a { color: #2a72d4; text-decoration: none; }
