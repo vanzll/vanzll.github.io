@@ -52,7 +52,7 @@ Zhenglin Wan (万政霖 in Chinese) spent 4 years as an undergraduate in [CUHK(S
 My research focus lies in 1)**Agentic AI**: How to embed the human's learning and decision-making patterns into (both virtual and embodied) agentic paradigm? How to enable intelligent agent to perform high-level, long-horizen planning and strategic thinking? 2)**Decision-Making in Machine Learning**: the algorithmic side of reinforcement learning (RL), as well as its intersection with modern generative models.
 
 ---
-I feel truly fortunate to have received help and guidance from so many people about my career—such as Flint, David, Zhenghai, Lang Feng, Ivor, Bo, Xingrui, and many others. I also deeply understand that many students may not always have the opportunities to reach their full potential even if they are truly talented. Therefore, if you are an undergraduate or master's student and believe I can offer advice, information, or opportunities that might help with your career, feel free to reach out to me by email (vanzl3386 [at] gmail.com) for a chat. I am always glad to provide help within my capabilities.
+I feel truly fortunate to have received help and guidance from so many people about my career—such as Flint, David, Zhenghai, Lang Feng, Ivor, Bo, Xingrui, and many others. I also deeply understand that many students may not always have the opportunities to reach their full potential even if they are truly talented. Therefore, if you are an undergraduate or master's student and believe I can offer advice, information, or opportunities that might help with your career, feel free to reach out to me by email for a chat. I am always glad to provide help within my capabilities.
 
 <style>
 .mentees-list {
@@ -77,7 +77,7 @@ I feel truly fortunate to have received help and guidance from so many people ab
 </ul>
 
 
-<mark style="background-color: yellow; color: black;">Besides, I am open to collaborations, networking and potential intern opportunities, feel free to drop me an email! (vanzl3386 [at] gmail.com)</mark>
+<mark style="background-color: yellow; color: black;">Besides, I am open to collaborations, networking and potential intern opportunities, please drop me an email! (vanzl3386 [at] gmail.com)</mark>
 
 <span class='anchor' id='news'></span>
 # 🔥 News
