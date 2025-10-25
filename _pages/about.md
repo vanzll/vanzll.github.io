@@ -126,7 +126,7 @@ Please scroll down to view all publications.
 .publications .pub-row {
   display: flex;
   gap: 12px;
-  align-items: flex-start;
+  align-items: center;
   background: #fff;
   border: 1px solid #eee;
   border-radius: 12px;
@@ -163,7 +163,7 @@ Please scroll down to view all publications.
 .publications .title { font-size: 1.14rem; font-weight: 700; line-height: 1.35; }
 .publications .author { font-size: 0.98rem; }
 .publications .periodical { font-size: 0.96rem; }
-.publications .intro { font-size: 0.96rem; color: #555; margin: 4px 0; }
+.publications .intro { font-size: 0.96rem; color: #666; margin: 4px 0; }
 .publications .links a { font-size: 12px !important; }
 .publications .links { margin-top: 10px; display: flex; gap: 10px; flex-wrap: wrap; }
 .publications .pub-button {
