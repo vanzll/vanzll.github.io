@@ -51,8 +51,20 @@ Zhenglin Wan (万政霖 in Chinese) received his Bachelor of Science (B.Sc) from
 
 My research focus lies in 1)**Agentic AI**: How to embed the human's learning and decision-making patterns into (both virtual and embodied) agentic paradigm? How to enable intelligent agent to perform high-level, long-horizen planning and strategic thinking? 2)**Decision-Making in Machine Learning**: the algorithmic side of reinforcement learning (RL), as well as its intersection with modern generative models.
 
+---
+I feel truly fortunate to have received support and guidance from so many people throughout my career—such as Yueming, David, Zhenghai, Lang Feng, Ivor, Xingrui, and many others. I also deeply understand that many talented students may not always have the opportunities to reach their full potential. Therefore, if you are an undergraduate or master's student and believe I can offer advice, information, or opportunities that might help your career development, please feel free to reach out to me by email for a chat.
 
-<mark style="background-color: yellow; color: black;">I am always open to collaborations, networking and potential intern opportunities, feel free to drop me an email! (vanzl3386 [at] gmail.com)</mark>
+**Mentees (mainly co-mentored with scientists at A*STAR, Singapore):**
+- Xu Pan (Master’s student, Wuhan University)
+- Chubin Zhang (Master’s student, Beijing University of Posts and Telecommunications)
+- Jingxuan Wu (Master’s student, UNC, USA; previously undergrad at CUHKSZ)
+- Dawei Wang (Master’s student, Leiden University)
+- Kailin Lyu (Ph.D. student, CASIA)
+- Xin Yan (Undergrad, Beijing Normal University)
+- Dongchu Xie (Undergrad, CUHKSZ)
+
+
+<mark style="background-color: yellow; color: black;">Besides, I am open to collaborations, networking and potential intern opportunities, feel free to drop me an email! (vanzl3386 [at] gmail.com)</mark>
 
 <span class='anchor' id='news'></span>
 # 🔥 News
