@@ -166,7 +166,7 @@ Please scroll down to view all publications.
 .publications .honor { font-size: 0.96rem; color: #e74d3c; font-weight: 700; margin: 4px 0; }
 .publications .intro { font-size: 0.96rem; color: #666; margin: 4px 0; }
 .publications .links a { font-size: 12px !important; }
-.publications .links { margin-top: 10px; display: flex; gap: 10px; flex-wrap: wrap; }
+.publications .links { margin-top: 10px; display: flex; gap: 16px; flex-wrap: wrap; }
 .publications .pub-button {
   font-family: "Times New Roman", Times, serif;
   background: #fff;
@@ -179,13 +179,18 @@ Please scroll down to view all publications.
   box-shadow: 0 4px 12px rgba(0,0,0,0.10);
   transition: transform .05s ease, box-shadow .2s ease, border-color .2s ease;
   position: relative;
+  overflow: visible; /* allow diamond to extend */
 }
 .publications .pub-button::before {
   content: "";
   position: absolute;
-  inset: -2px; /* diamond border spread */
+  top: 50%;
+  left: 50%;
+  width: calc(100% + 14px);
+  height: calc(100% + 14px);
+  transform: translate(-50%, -50%) rotate(45deg);
   border: 1px solid #bbb;
-  transform: rotate(45deg);
+  background: transparent;
   pointer-events: none;
 }
 .publications .pub-button:hover {
