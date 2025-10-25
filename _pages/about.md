@@ -163,6 +163,7 @@ Please scroll down to view all publications.
 .publications .title { font-size: 1.14rem; font-weight: 700; line-height: 1.35; }
 .publications .author { font-size: 0.98rem; }
 .publications .periodical { font-size: 0.96rem; }
+.publications .honor { font-size: 0.96rem; color: #e74d3c; font-weight: 700; margin: 4px 0; }
 .publications .intro { font-size: 0.96rem; color: #666; margin: 4px 0; }
 .publications .links a { font-size: 12px !important; }
 .publications .links { margin-top: 10px; display: flex; gap: 10px; flex-wrap: wrap; }
@@ -170,18 +171,27 @@ Please scroll down to view all publications.
   font-family: "Times New Roman", Times, serif;
   background: #fff;
   color: #333;
-  border: 1px solid #ddd;
+  border: 1px solid #bbb;
   border-radius: 0;
-  padding: 8px 14px;
-  font-size: 1rem;
+  padding: 6px 10px; /* smaller */
+  font-size: 0.92rem; /* smaller */
   text-decoration: none;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.10);
   transition: transform .05s ease, box-shadow .2s ease, border-color .2s ease;
+  position: relative;
+}
+.publications .pub-button::before {
+  content: "";
+  position: absolute;
+  inset: -2px; /* diamond border spread */
+  border: 1px solid #bbb;
+  transform: rotate(45deg);
+  pointer-events: none;
 }
 .publications .pub-button:hover {
   transform: translateY(-1px);
   box-shadow: 0 10px 18px rgba(0,0,0,0.16);
-  border-color: #bbb;
+  border-color: #999;
   text-decoration: none;
 }
 .publications .title a { color: #2a72d4; text-decoration: none; }
@@ -216,11 +226,14 @@ Please scroll down to view all publications.
   <div class="col-sm-9 pub-content" style="position: relative;padding-right: 15px;padding-left: 20px;">
       <div class="title"><a href="{{ link.paper | default: '/404.html' }}">{{ link.title }}</a></div>
       <div class="author">{{ link.authors }}</div>
+      <div class="periodical"><em>{{ link.conference }}</em>
+      </div>
+      {% if link.honor %}
+      <div class="honor">{{ link.honor }}</div>
+      {% endif %}
       {% if link.intro %}
       <div class="intro">{{ link.intro }}</div>
       {% endif %}
-      <div class="periodical"><em>{{ link.conference }}</em>
-      </div>
     <div class="links">
       <a href="{{ link.paper | default: '/404.html' }}" class="pub-button paper" role="button" target="_blank">Paper</a>
       <a href="{{ link.code | default: '/404.html' }}" class="pub-button code" role="button" target="_blank">Code</a>
