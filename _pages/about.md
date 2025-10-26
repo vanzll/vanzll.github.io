@@ -45,14 +45,16 @@ redirect_from:
 <!-- Dark mode is handled globally in layout/head; local button/styles removed -->
 
 
-Zhenglin Wan (万政霖 in Chinese) spent 4 years as an undergraduate in [CUHK(SZ)](https://www.cuhk.edu.cn/zh-hans) and received his B.Sc from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) on 2025 Fall. He is currently a research staff in [Nanyang Technological University](https://www.ntu.edu.sg/), working with [Prof. Bo An](https://personal.ntu.edu.sg/boan/), and also an incoming Ph.D. student in [School of Computing (SoC)](https://www.comp.nus.edu.sg/), [National University of Singapore (NUS)](https://nus.edu.sg/). Previously, he was an intern researcher at [Centre for Frontier AI Research](https://www.a-star.edu.sg/cfar), [(A*STAR)](https://www.a-star.edu.sg/) at Singapore, advised by [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) and collaborated with [Prof. Ong Yew Soon](https://www3.ntu.edu.sg/home/asysong/home.html). In CUHK(SZ) campus, he was advised by [Prof. Jianfeng Mao](https://sds.cuhk.edu.cn/en/teacher/268) and [Prof. Ming Yan](https://mingyan08.github.io/). Besides, he also closely worked with [Prof. Pingfu Chao](https://scst.suda.edu.cn/10/47/c11250a528455/page.htm) and [Dr. Jun Song](https://scholars.hkbu.edu.hk/en/persons/JUNSONG) both academically and industrially. 
+Zhenglin Wan (万政霖 in Chinese) received his B.Sc from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) on 2025 Fall. He is currently a research staff in [Nanyang Technological University](https://www.ntu.edu.sg/), working with [Prof. Bo An](https://personal.ntu.edu.sg/boan/), and also an incoming Ph.D. student in [School of Computing (SoC)](https://www.comp.nus.edu.sg/), [National University of Singapore (NUS)](https://nus.edu.sg/). Previously, he was an intern researcher at [Centre for Frontier AI Research](https://www.a-star.edu.sg/cfar), [(A*STAR)](https://www.a-star.edu.sg/) at Singapore, advised by [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) and collaborated with [Prof. Ong Yew Soon](https://www3.ntu.edu.sg/home/asysong/home.html). In CUHK(SZ) campus, he was advised by [Prof. Jianfeng Mao](https://sds.cuhk.edu.cn/en/teacher/268) and [Prof. Ming Yan](https://mingyan08.github.io/). Besides, he also closely worked with [Prof. Pingfu Chao](https://scst.suda.edu.cn/10/47/c11250a528455/page.htm) and [Dr. Jun Song](https://scholars.hkbu.edu.hk/en/persons/JUNSONG) both academically and industrially. 
 
 ---
 
 My research focus lies in 1)**Agentic AI**: How to embed the human's learning and decision-making patterns into (both virtual and embodied) agentic paradigm? How to enable intelligent agent to perform high-level, long-horizen planning and strategic thinking? 2)**Decision-Making in Machine Learning**: the algorithmic side of reinforcement learning (RL), as well as its intersection with modern generative models.
 
 ---
-I feel truly fortunate to have received help and guidance from so many people about my career—such as Flint, David, Zhenghai, Lang Feng, Ivor, Bo, Xingrui, and many others. I also deeply understand that many students may not have the opportunities to reach their full potential even if they are truly talented. So, if you are an undergraduate or master's student and believe I could offer advice, information, or opportunities that might be helpful with your career, feel free to reach out to me by email for a chat. I am always glad to provide help within my capabilities.
+I always feel truly fortunate to have received help which is essential for my career development, from so many people—such as Flint, David, Ivor, Bo, Xingrui, and many others. I also deeply understand that many students may not have the opportunities to reach their full potential even if they are truly talented. So, if you are an undergraduate or master's student and believe I could offer advice, information, or opportunities that might be helpful with your career, feel free to reach out to me by email for a chat. I am always glad to provide help within my capabilities.
+
+Meanwhile, I am currently a student mentor in CFAR, A\*STAR, Singapore. If you are interested in internship opportunities, please drop me an email.
 
 <style>
 .mentees-list {
@@ -65,7 +67,7 @@ I feel truly fortunate to have received help and guidance from so many people ab
   padding-bottom: 0;
 }
 </style>
-**Mentees (mainly co-mentored with scientists at A*STAR, Singapore):**
+**Mentees (majority of them are co-mentored with scientists at A*STAR):**
 <ul class="mentees-list">
   <li>Xu Pan (Master’s student @ Wuhan University)</li>
   <li>Chubin Zhang (Master’s student @ Beijing University of Posts and Telecommunications)</li>
@@ -73,6 +75,7 @@ I feel truly fortunate to have received help and guidance from so many people ab
   <li>Xin Yan (Undergrad @ Beijing Normal University)</li>
   <li>Dongchu Xie (Undergrad @ CUHK(SZ))</li>
   <li>Yuan Xu (Undergrad @ Nankai University)</li>
+  <li>Jingxuan Wu (Undergrad @ CUHK(SZ), now M.phil @ UNC, America)</li>
 </ul>
 
 
