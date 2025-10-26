@@ -54,7 +54,7 @@ My research focus lies in 1)**Agentic AI**: How to embed the human's learning an
 ---
 I always feel truly fortunate to have received help which is essential for my career development, from so many people—such as Flint, David, Ivor, Bo, Xingrui, and many others. I also deeply understand that many students may not have the opportunities to reach their full potential even if they are truly talented. So, if you are an undergraduate or master's student and believe I could offer advice, information, or opportunities that might be helpful with your career, feel free to reach out to me by email for a chat. I am always glad to provide help within my capabilities.
 
-Meanwhile, I am currently a student mentor in CFAR, A\*STAR, Singapore. If you are interested in internship opportunities, please drop me an email.
+Meanwhile, I am also a student mentor in [CFAR](https://www.a-star.edu.sg/cfar), [(A*STAR)](https://www.a-star.edu.sg/). If you are interested in visiting or internship opportunities to conduct cutting-edge AI research, please drop me an email.
 
 <style>
 .mentees-list {
