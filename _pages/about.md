@@ -67,6 +67,7 @@ I always feel grateful to have received help which is essential for my career, f
 </style>
 **Mentees (majority of them are co-mentored with scientists at CFAR, A*STAR):**
 <ul class="mentees-list">
+  <li>Yaxin Zhou (Master's student @ CMU, America)</li>
   <li>Xu Pan (Master’s student @ Wuhan University)</li>
   <li>Chubin Zhang (Master’s student @ Beijing University of Posts and Telecommunications)</li>
   <li>Dawei Wang (Master’s student @ Leiden University)</li>
