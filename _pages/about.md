@@ -594,6 +594,9 @@ I play video games like **League of Legends**, where I achieved the "diamond" le
 
 I have a deep interest in **philosophy of mind**, particularly Buddhism and Taoism, as paths to explore the fundamental nature of human existence. I am also intrigued by the potential integration of these philosophical insights with modern artificial intelligence.
 
+---
+I sometimes share my inspiration and understanding of a variety of topics, including cutting-edge AI technology and research papers, philosophy of mind, and others in my [Xiaohongshu(小红书)](https://www.xiaohongshu.com/user/profile/5bb5a7604eacab46bb0dbdb1) (plan to extend these activities to [Zhihu] and [Bilibili] recently).
+
 
 
 
