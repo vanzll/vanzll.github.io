@@ -45,14 +45,14 @@ redirect_from:
 <!-- Dark mode is handled globally in layout/head; local button/styles removed -->
 
 
-Zhenglin Wan (万政霖 in Chinese) received his B.Sc from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) on 2025 Fall. He is currently a research staff in [Nanyang Technological University](https://www.ntu.edu.sg/), working with [Prof. Bo An](https://personal.ntu.edu.sg/boan/), and also an incoming Ph.D student in [School of Computing (SoC)](https://www.comp.nus.edu.sg/), [National University of Singapore (NUS)](https://nus.edu.sg/). Previously, he was an intern researcher at [Centre for Frontier AI Research](https://www.a-star.edu.sg/cfar), [(A*STAR)](https://www.a-star.edu.sg/) at Singapore, advised by [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) and collaborated with [Prof. Ong Yew Soon](https://www3.ntu.edu.sg/home/asysong/home.html). During his undergraduate, he was advised by [Prof. Jianfeng Mao](https://sds.cuhk.edu.cn/en/teacher/268) and [Prof. Ming Yan](https://mingyan08.github.io/). Besides, he also closely worked with [Prof. Pingfu Chao](https://scst.suda.edu.cn/10/47/c11250a528455/page.htm) and [Dr. Jun Song](https://scholars.hkbu.edu.hk/en/persons/JUNSONG) both academically and industrially. 
+Zhenglin Wan (万政霖) received his B.Sc from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) on 2025 Fall. He is currently a research staff in [Nanyang Technological University](https://www.ntu.edu.sg/), working with [Prof. Bo An](https://personal.ntu.edu.sg/boan/), and also an incoming CS Ph.D student in [School of Computing (SoC)](https://www.comp.nus.edu.sg/), [National University of Singapore (NUS)](https://nus.edu.sg/). Previously, he was an intern researcher at [Centre for Frontier AI Research](https://www.a-star.edu.sg/cfar), [(A*STAR)](https://www.a-star.edu.sg/) at Singapore, advised by [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) and collaborated with [Prof. Ong Yew Soon](https://www3.ntu.edu.sg/home/asysong/home.html). Besides, he also closely worked with [Prof. Pingfu Chao](https://scst.suda.edu.cn/10/47/c11250a528455/page.htm) and [Dr. Jun Song](https://scholars.hkbu.edu.hk/en/persons/JUNSONG) both academically and industrially. 
 
 ---
 
-My research focus lies in 1)**Agentic AI**: How to embed the human's learning and decision-making patterns into (both virtual and embodied) agentic paradigm? How to enable intelligent agent to perform high-level, long-horizen planning and strategic thinking? 2)**Decision-Making in Machine Learning**: the algorithmic side of reinforcement learning (RL), as well as its intersection with modern generative models.
+I am a RL believer. My research mainly focus on 1) Agentic RL: ultilizing RL to empower LLM agents with long-horizon problem-solving skills, 2) improving RL or inverse RL from the algorithmic side: such as improving the policy diversity (like [EBC](https://arxiv.org/abs/2410.06151)) and policy expressiveness (like [FM-IRL](https://arxiv.org/abs/2510.09222)).
 
 ---
-I always feel grateful to have received help which is essential for my career, from so many people—such as Flint, David, Lang, Zhenghai, Ivor, Bo, Xingrui, and many others. I also understand that many students may not have the opportunities to reach their full potential even if they are truly talented. So, if you are an undergraduate or master's student and believe I could offer advice, information, or opportunities that might be helpful with your career, feel free to reach out to me by email. I am always glad to provide help within my capabilities. Meanwhile, I am also a student mentor in [CFAR](https://www.a-star.edu.sg/cfar), [A*STAR](https://www.a-star.edu.sg/), Singapore. If you are interested in visiting or internship opportunities to conduct cutting-edge AI research in A\*STAR (e.g. [ARAP program](https://www.a-star.edu.sg/Scholarships/for-graduate-studies/a-star-research-attachment-programme)), please drop me an email for a chat.
+I always feel grateful to have received help and guidance which is essential for my career, from so many people—such as Flint, David, Lang, Zhenghai, Ivor, Bo, Xingrui, and many others. I also understand that many students may not have the opportunities to reach their full potential even if they are truly talented. So, if you are an undergraduate or master's student and believe I could offer advice, information, or opportunities that might be helpful with your career, feel free to reach out to me by email. I am always glad to provide help within my capabilities. Meanwhile, I am also a student mentor in [CFAR](https://www.a-star.edu.sg/cfar), [A*STAR](https://www.a-star.edu.sg/), Singapore. If you are interested in visiting or internship opportunities to conduct cutting-edge AI research in A\*STAR (e.g. [ARAP program](https://www.a-star.edu.sg/Scholarships/for-graduate-studies/a-star-research-attachment-programme)), please drop me an email for a chat.
 
 <style>
 .mentees-list {
@@ -357,7 +357,7 @@ As these works are presented in China, these names are directly translated from 
       <p class="edu-sub">The Chinese University of Hong Kong (CUHK)</p>
       <ul style="margin: 6px 0 6px 18px; padding: 0; font-size: 0.96em; color: #555;">
         <li>1-st class honor</li>
-        <li>Major: Data Science, GPA: 3.85/4.0, Rank: 7%</li>
+        <li>Major: Statistics & Data Science, GPA: 3.85/4.0, Rank: 7%</li>
         <li>Finished my undergraduate in CUHK-Shenzhen campus, while the degree is offered by CUHK.</li>
       </ul>
       <p class="edu-time">2021.09 - 2025.08</p>
@@ -566,7 +566,7 @@ html[data-theme="dark"] .exp-img img,
 
 <span class='anchor' id='person'></span>
 # Miscellaneous
-In my spare time, I’m an **music enthusiast**. I’ve been playing guitar for more than 10 years and began teaching myself the piano and electronic piano at the age of 15. Music has always been a significant part of my life. During my undergraduate, I had the incredible opportunity to play in two bands: "Minor Blue" and "Major Pink." These moments remain some of my most cherished memories. See our photos: 
+In my spare time, I’m an **music enthusiast**. I’ve been playing guitar for more than 10 years and began teaching myself the piano when I was 15. During my undergraduate, I played music in two bands: "Minor Blue" and "Major Pink." See our photos: 
 
 <div style="display: flex; justify-content: space-between;">
   <img src='images/Major pink.jpg' alt="sym" width="33%" style="display: inline-block;">
@@ -580,7 +580,7 @@ In my spare time, I’m an **music enthusiast**. I’ve been playing guitar for 
 
 
 
-I am also a **15-years chess player**, with the honor of "National Level-3 Athlete". I love the process of comprehensive planning, logical-thinking and inferring. Visit my [Lichess profile](https://lichess.org/@/Carlos1333860).
+I am also a **15-years chess player**, with the honor of "National Level-3 Athlete". I love the process of comprehensive planning, logical-thinking and reasoning. Visit my [Lichess profile](https://lichess.org/@/Carlos1333860).
 
 ---
 
