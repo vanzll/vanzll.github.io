@@ -566,7 +566,8 @@ html[data-theme="dark"] .exp-img img,
 
 <span class='anchor' id='person'></span>
 # Miscellaneous
-In my spare time, I’m an **music enthusiast**. I’ve been playing guitar for more than 10 years and began teaching myself the piano when I was 15. During my undergraduate, I played music in two bands: "Minor Blue" and "Major Pink." See our photos: 
+
+- In my spare time, I’m an **music enthusiast**. I’ve been playing guitar for more than 10 years and began teaching myself the piano when I was 15. During my undergraduate, I played music in two bands: "Minor Blue" and "Major Pink." See our photos: 
 
 <div style="display: flex; justify-content: space-between;">
   <img src='images/Major pink.jpg' alt="sym" width="33%" style="display: inline-block;">
@@ -576,26 +577,19 @@ In my spare time, I’m an **music enthusiast**. I’ve been playing guitar for 
 
 
 
----
 
 
 
-I am also a **15-years chess player**, with the honor of "National Level-3 Athlete". I love the process of comprehensive planning, logical-thinking and reasoning. Visit my [Lichess profile](https://lichess.org/@/Carlos1333860).
 
----
+- I am also a **15-years chess player**, with the honor of "National Level-3 Athlete". I love the process of comprehensive planning, logical-thinking and reasoning. Visit my [Lichess profile](https://lichess.org/@/Carlos1333860).
 
-I love play **basketball** 🏀. Sports makes me energetic.
+- I love play **basketball** 🏀. Sports makes me energetic.
 
----
+- I play video games like **League of Legends**, where I achieved the "diamond" level as my historically highest honor. I also play 3A games like Elden Ring, Dark Souls, Nier Automata, and elder scrolls.
 
-I play video games like **League of Legends**, where I achieved the "diamond" level as my historically highest honor. I also play 3A games like Elden Ring, Dark Souls, Nier Automata, and elder scrolls.
+- I have a deep interest in **philosophy of mind**, particularly Buddhism and Taoism, as paths to explore the fundamental nature of human existence. I am also intrigued by the potential integration of these philosophical insights with modern artificial intelligence.
 
----
-
-I have a deep interest in **philosophy of mind**, particularly Buddhism and Taoism, as paths to explore the fundamental nature of human existence. I am also intrigued by the potential integration of these philosophical insights with modern artificial intelligence.
-
----
-I sometimes share my inspiration and understanding of a variety of topics, including cutting-edge AI technology and research papers, philosophy of mind, and others in my [Xiaohongshu(小红书)](https://www.xiaohongshu.com/user/profile/5bb5a7604eacab46bb0dbdb1) (plan to extend these activities to [Zhihu] and [Bilibili] recently).
+- I sometimes share my inspiration and understanding of a variety of topics, including cutting-edge AI technology and research papers, philosophy of mind, and others in my [Xiaohongshu(小红书)](https://www.xiaohongshu.com/user/profile/5bb5a7604eacab46bb0dbdb1) (plan to extend these activities to [Zhihu] and [Bilibili] recently).
 
 
 
