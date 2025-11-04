@@ -559,7 +559,7 @@ html[data-theme="dark"] .exp-img img,
 
 
 - The co-author of the first White Paper on Cross-Border Economic Large Language Model in Shenzhen, China.
-[深圳卫视：深圳发布首个跨境经济大模型白皮书](https://www.sztv.com.cn/ysz/dsdb/szws/ssxw/80141762.shtml)
+[深圳卫视：深圳发布首个跨境经济大模型白皮书](https://www.sohu.com/a/786227332_121123831)
 
 </div>
 </div>
