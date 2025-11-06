@@ -49,10 +49,10 @@ Zhenglin Wan (万政霖) received his B.Sc from [The Chinese University of Hong 
 
 ---
 
-I am a RL (Reinforcement Learning) believer. My research mainly focus on 1) Agentic RL: ultilizing RL to empower LLM agents with long-horizon problem-solving skills, 2) improving RL or inverse RL from the algorithmic side: such as improving the policy diversity (like [EBC](https://arxiv.org/abs/2410.06151)) and policy expressiveness (like [FM-IRL](https://arxiv.org/abs/2510.09222)).
+I am a RL (Reinforcement Learning) believer. My research mainly focus on 1) Agentic RL: RL to empower LLM agents with long-horizon problem-solving skills, 2) improving RL or inverse RL from algorithmic side: such as improving the policy diversity (like [EBC](https://arxiv.org/abs/2410.06151)) and policy expressiveness (like [FM-IRL](https://arxiv.org/abs/2510.09222)).
 
 ---
-I am grateful to received essential help and guidance for my career from so many people—such as Flint, David, Lang, Zhenghai, Ivor, Bo, Xingrui, and many others. I know that many talented students may not have the opportunities to reach their full potential. So, if you are an undergraduate or master's student and believe I could offer advice, information, or opportunities that might be helpful with your career, feel free to reach out to me by email. I am always glad to help. Meanwhile, I am also a student mentor in [CFAR](https://www.a-star.edu.sg/cfar), [A*STAR](https://www.a-star.edu.sg/), Singapore. If you are interested in visiting or internship opportunities to conduct cutting-edge research in A\*STAR (e.g. [ARAP program](https://www.a-star.edu.sg/Scholarships/for-graduate-studies/a-star-research-attachment-programme)), please drop me an email for a chat.
+I am grateful to received help and guidance for my career from so many people—such as Flint, David, Ivor, Bo, Xingrui, and many others. I also understand many talented students may not have the opportunities to reach their full potential. So, if you are an undergraduate or master's student and believe I could offer advice, information, or opportunities that might help with your career, feel free to reach out to me by email. Meanwhile, I am also a student mentor in [CFAR](https://www.a-star.edu.sg/cfar), [A*STAR](https://www.a-star.edu.sg/), Singapore. If you are interested in visiting or internship opportunities to conduct cutting-edge research in A\*STAR (e.g. [ARAP program](https://www.a-star.edu.sg/Scholarships/for-graduate-studies/a-star-research-attachment-programme)), please drop me an email for a chat.
 
 <style>
 .mentees-list {
