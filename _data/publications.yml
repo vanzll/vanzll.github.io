@@ -64,8 +64,6 @@ main:
     conference_short: preprint
     conference: preprint
     paper: https://arxiv.org/abs/2508.01415
-    code: ''
-    github_stars: ""
     website: "https://sp4595.github.io/robomemory/"
     image: "./assets/papers/robo_memory.png"
     intro: "A brain-inspired framework for embodied agentic learning."
