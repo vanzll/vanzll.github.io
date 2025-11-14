@@ -45,12 +45,12 @@ redirect_from:
 <!-- Dark mode is handled globally in layout/head; local button/styles removed -->
 
 
-Zhenglin Wan (万政霖) received his B.Sc from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) on 2025 Fall. He is currently a research staff in [Nanyang Technological University](https://www.ntu.edu.sg/), advised by [Prof. Bo An](https://personal.ntu.edu.sg/boan/), and also an incoming CS Ph.D student in [School of Computing (SoC)](https://www.comp.nus.edu.sg/), [National University of Singapore (NUS)](https://nus.edu.sg/). Previously, he was an intern researcher at [Centre for Frontier AI Research (CFAR)](https://www.a-star.edu.sg/cfar), [A*STAR](https://www.a-star.edu.sg/) at Singapore, advised by [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) and collaborated with [Prof. Ong Yew Soon](https://www3.ntu.edu.sg/home/asysong/home.html). Besides, he also closely worked with [Prof. Pingfu Chao](https://scst.suda.edu.cn/10/47/c11250a528455/page.htm) and [Dr. Jun Song](https://scholars.hkbu.edu.hk/en/persons/JUNSONG) both academically and industrially. 
+Zhenglin Wan (万政霖) received his B.Sc from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) on 2025 Fall. He is currently a research staff in [Nanyang Technological University](https://www.ntu.edu.sg/), advised by [Prof. Bo An](https://personal.ntu.edu.sg/boan/), and also an incoming CS Ph.D student in [School of Computing (SoC)](https://www.comp.nus.edu.sg/), [National University of Singapore (NUS)](https://nus.edu.sg/). Previously, he was an intern researcher at [Centre for Frontier AI Research (CFAR)](https://www.a-star.edu.sg/cfar), [IHPC](https://www.a-star.edu.sg/ihpc/), [A*STAR](https://www.a-star.edu.sg/) at Singapore, working with [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) and collaborated with [Prof. Ong Yew Soon](https://www3.ntu.edu.sg/home/asysong/home.html). Besides, he also closely worked with [Prof. Pingfu Chao](https://scst.suda.edu.cn/10/47/c11250a528455/page.htm) and [Dr. Jun Song](https://scholars.hkbu.edu.hk/en/persons/JUNSONG) both academically and industrially. 
 
 I am a RL (Reinforcement Learning) believer. Previously I mainly study improving RL or inverse RL from algorithmic side: such as improving the policy diversity (like [EBC](https://arxiv.org/abs/2410.06151)) and policy expressiveness (like [FM-IRL](https://arxiv.org/abs/2510.09222)). Recently, I am focusing on Agentic RL: RL to empower LLM agents with long-horizon human-like reasoning, planning and decision-making skills.
 
 ---
-I am grateful to received help and guidance for my career from so many people—such as Flint, David, Ivor, Bo, Xingrui, and many others. I also understand many talented students may not have the opportunities to reach their full potential. So, if you are an undergrad or master student and believe I could offer advice, information, or opportunities that might help with your career, feel free to reach out to me by email. Meanwhile, I am also a student mentor in [CFAR](https://www.a-star.edu.sg/cfar), [A*STAR](https://www.a-star.edu.sg/), Singapore. If you are interested in visiting or intern opportunities, you are welcomed to drop me an email for a chat.
+I am grateful to received help and guidance for my career from so many people—such as Flint, David, Ivor, Bo, Xingrui, and many others. I also understand many talented students may not have the opportunities to reach their full potential. So, if you are an undergrad or master student and believe I could offer advice, information, or opportunities that might help with your career, feel free to reach out to me by email. Meanwhile, I am also a student mentor in [CFAR](https://www.a-star.edu.sg/cfar), [IHPC](https://www.a-star.edu.sg/ihpc/), [A*STAR](https://www.a-star.edu.sg/) at Singapore. If you are interested in visiting or intern opportunities, you are welcomed to drop me an email for a chat.
 
 <style>
 .mentees-list {
@@ -63,7 +63,7 @@ I am grateful to received help and guidance for my career from so many people—
   padding-bottom: 0;
 }
 </style>
-**Mentees (research-based, majority of them are co-mentored with scientists at CFAR, A*STAR):**
+**Mentees (research-based, majority of them are co-mentored with scientists at CFAR, IHPC, A*STAR):**
 <ul class="mentees-list">
   <li>Yaxin Zhou (Master's student @ CMU, America)</li>
   <li>Xu Pan (Master’s student @ Wuhan University)</li>
