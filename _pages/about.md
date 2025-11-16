@@ -104,7 +104,7 @@ I am grateful to have received help and guidance for my career from so many peop
 - *2024.05*  &nbsp;🎉🎉 One invention patent is officially granted. 
 - *2023.12*  &nbsp;🎉🎉 As tech co-founder, I co-founded enterprise "Metasequoia Intelligence" based in Shenzhen, China.
 - *2021.09*  &nbsp;🎉🎉 Awarded *Zhejiang Guolong Inspirational* and *Diligentia Bowen* Scholarship to support my undergraduate studies in CUHK(SZ).
-- *2019.09*  &nbsp;🎉🎉 Lucky to win the 1-st prize in CMO 1-st round (Chongqing Province). Thanks for this intellectually-rewarding experience.
+- *2019.09*  &nbsp;🎉🎉 Lucky to win the 1-st prize in Provincial Chinese Mathematics Olympiad (CMO). Thanks for this intellectually-rewarding experience.
 
 </div>
 </div>
@@ -544,7 +544,7 @@ html[data-theme="dark"] .exp-img img,
 - **Zhejiang Guolong Inspirational Scholarship** (Undergraduate Admission Scholarship, ￥120000)  
   *September 2021*
 
-- **1st-Prize in Chinese Mathematics Olympics (CMO)-1st Round (Chongqing Province)**
+- **1st-Prize in Chinese Mathematics Olympiad (CMO)-Chongqing Province**
   
   *September 2019*
 
