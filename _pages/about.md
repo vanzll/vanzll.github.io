@@ -68,12 +68,13 @@ I am grateful to have received help and guidance for my career from so many peop
 **Mentees (research-based, majority of them are co-mentored with scientists at CFAR, IHPC, A*STAR):**
 <ul class="mentees-list">
   <li>Yaxin Zhou (Master's student @ CMU, America)</li>
+  <li>Jingxuan Wu (Master's student @ UNC, America)</li>
   <li>Xu Pan (Master’s student @ Wuhan University)</li>
   <li>Chubin Zhang (Master’s student @ Beijing University of Posts and Telecommunications)</li>
-  <li>Dawei Wang (Master’s student @ Leiden University)</li>
-  <li>Xin Yan (Undergrad @ Beijing Normal University)</li>
   <li>Dongchu Xie (Undergrad @ CUHK(SZ))</li>
-  <li>Jingxuan Wu (Undergrad @ CUHK(SZ), now Master's student @ UNC, America)</li>
+  <li>Xin Yan (Undergrad @ Beijing Normal University)</li>
+  <li>He Ma (Undergrad @ CUHK(SZ))</li>
+  
 </ul>
 
 
