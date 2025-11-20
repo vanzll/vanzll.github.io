@@ -345,7 +345,7 @@ As these works are presented in China, these names are directly translated from 
       <p class="edu-title">Doctor of Philosophy (Ph.D)</p>
       <p class="edu-sub">National University of Singapore (NUS)</p>
       <ul style="margin: 6px 0 6px 18px; padding: 0; font-size: 0.96em; color: #555;">
-        <li>Affliation: Department of Computer Science, School of Computing</li>
+        <li>Affiliation: Department of Computer Science, School of Computing</li>
         <li>Advisor: TBD</li>
       </ul>
       <p class="edu-time">2026.01 -</p>
@@ -432,7 +432,7 @@ html[data-theme="dark"] .exp-img img,
       <p class="exp-title">Full-time Research Staff</p>
       <p class="exp-sub">Nanyang Technological University, Singapore</p>
       <ul style="margin: 6px 0 6px 18px; padding: 0; font-size: 0.96em; color: #555;">
-        <li>Affliation: College of Computing and Data Science (CCDS)</li>
+        <li>Affiliation: College of Computing and Data Science (CCDS)</li>
         <li>Advisor: Prof. Bo An</li>
       </ul>
       <p class="exp-time">2025.09 - 2026.01</p>
@@ -444,7 +444,7 @@ html[data-theme="dark"] .exp-img img,
       <p class="exp-title">Intern Researcher</p>
       <p class="exp-sub">Agency for Science, Technology and Research (A*STAR), Singapore</p>
       <ul style="margin: 6px 0 6px 18px; padding: 0; font-size: 0.96em; color: #555;">
-        <li>Affliation: Centre for Frontier AI Research (CFAR), Institute of High Performance Computing (IHPC)</li>
+        <li>Affiliation: Centre for Frontier AI Research (CFAR), Institute of High Performance Computing (IHPC)</li>
         <li>Advisor: Prof. Ivor Tsang, Dr. Xingrui Yu</li>
       </ul>
       <p class="exp-time">2024.07 - 2025.09  (3 months full-time + 11 months part-time)</p>
@@ -458,7 +458,7 @@ html[data-theme="dark"] .exp-img img,
       <p class="exp-title">Research Assistant</p>
       <p class="exp-sub">The Chinese University of Hong Kong, Shenzhen</p>
       <ul style="margin: 6px 0 6px 18px; padding: 0; font-size: 0.96em; color: #555;">
-        <li>Affliation: School of Data Science</li>
+        <li>Affiliation: School of Data Science</li>
         <li>Advisor: Prof. Jianfeng Mao</li>
       </ul>
       <p class="exp-time">2023.06 - 2024.06</p>
