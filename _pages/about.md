@@ -45,7 +45,7 @@ redirect_from:
 <!-- Dark mode is handled globally in layout/head; local button/styles removed -->
 
 
-Zhenglin Wan (万政霖) received his B.Sc from [Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) on 2025 Fall. He is currently a research staff in [Nanyang Technological University](https://www.ntu.edu.sg/), advised by [Prof. Bo An](https://personal.ntu.edu.sg/boan/), and an incoming CS Ph.D student in [School of Computing (SoC)](https://www.comp.nus.edu.sg/), [National University of Singapore (NUS)](https://nus.edu.sg/). Previously, he spent a long time working with [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) and collaborated with [Prof. Ong Yew Soon](https://www3.ntu.edu.sg/home/asysong/home.html) at [Centre for Frontier AI Research (CFAR)](https://www.a-star.edu.sg/cfar), [IHPC](https://www.a-star.edu.sg/ihpc/), [A*STAR](https://www.a-star.edu.sg/) in Singapore. 
+Zhenglin Wan (万政霖) received his B.Sc from [Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) on 2025 Fall. He is currently a research staff in [Nanyang Technological University](https://www.ntu.edu.sg/), advised by [Prof. Bo An](https://personal.ntu.edu.sg/boan/), and an incoming CS Ph.D student in [Department of Computer Science](https://www.comp.nus.edu.sg/), [National University of Singapore (NUS)](https://nus.edu.sg/). Previously, he spent a long time working with [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) and collaborated with [Prof. Ong Yew Soon](https://www3.ntu.edu.sg/home/asysong/home.html) at [Centre for Frontier AI Research (CFAR)](https://www.a-star.edu.sg/cfar), [IHPC](https://www.a-star.edu.sg/ihpc/), [A*STAR](https://www.a-star.edu.sg/) in Singapore. 
 
 ---
 
@@ -343,8 +343,9 @@ As these works are presented in China, these names are directly translated from 
   <li class="edu-item">
     <div class="edu-text">
       <p class="edu-title">Doctor of Philosophy (Ph.D)</p>
-      <p class="edu-sub">National University of Singapore (NUS), School of Computing</p>
+      <p class="edu-sub">National University of Singapore (NUS)</p>
       <ul style="margin: 6px 0 6px 18px; padding: 0; font-size: 0.96em; color: #555;">
+        <li>Affliation: Department of Computer Science, School of Computing</li>
         <li>Advisor: TBD</li>
       </ul>
       <p class="edu-time">2026.01 -</p>
