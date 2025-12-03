@@ -80,7 +80,7 @@ main:
     intro: "A brain-inspired framework for embodied agentic learning."
 
   - title: "Graph-based Reinforcement learning Approach for influential Node Detection in airport delay networks"
-    authors: "Chi Li, Zhenglin Wan, Kaize Wang, Yuxuan Huang, Chengxi Li, Lianmin Zhang, Xiongwen Qian, Jianfeng Mao"
+    authors: "Chi Li, <strong>Zhenglin Wan</strong>, Kaize Wang, Yuxuan Huang, Chengxi Li, Lianmin Zhang, Xiongwen Qian, Jianfeng Mao"
     conference_short: preprint
     conference: preprint
     paper: https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=5819545
