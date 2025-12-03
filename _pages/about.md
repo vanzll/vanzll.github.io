@@ -91,7 +91,7 @@ I am grateful to have received help and guidance for my career from so many peop
 
 <div class="news" markdown="1">
 <div class="scroll-window" markdown="1">
-- *2025.12*     **GoRL** (Online RL for Generative Policies) is on [arxiv](https://arxiv.org/abs/2512.02581) and [github](https://github.com/bennidict23/GoRL)!
+- *2025.12*     **GoRL** (Generative online Reinforcement Learning) is on [arxiv](https://arxiv.org/abs/2512.02581) and [github](https://github.com/bennidict23/GoRL)!
 - *2025.10*     **FM-IRL** is available on [arxiv](https://arxiv.org/abs/2510.09222) and [github](https://github.com/vanzll/FM_IRL).
 - *2025.10*     **OSCAR** is available on [arxiv](https://arxiv.org/abs/2510.09060) and [github](https://github.com/Johnny221B/OSCAR).
 - *2025.09*  &nbsp;🎉🎉 Awarded *NUS Research Scholarship* to support my Ph.D studies in [National University of Singapore](https://nus.edu.sg/) beginning from Jan, 2026.
