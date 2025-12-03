@@ -49,7 +49,7 @@ Zhenglin Wan (万政霖) received his B.Sc from [Chinese University of Hong Kong
 
 ---
 
-I am a RL (Reinforcement Learning) believer. Previously I mainly studied improving RL or inverse RL from algorithmic side: such as improving the policy diversity (like [EBC](https://arxiv.org/abs/2410.06151)) and policy expressiveness (like [FM-IRL](https://arxiv.org/abs/2510.09222)). Recently, I am focusing on Agentic RL: RL to empower LLM agents with long-horizon human-like reasoning, planning and decision-making skills.
+I am a RL (Reinforcement Learning) believer. Previously I mainly studied improving RL or inverse RL from algorithmic side: such as improving the policy diversity (like [EBC](https://arxiv.org/abs/2410.06151)) and policy expressiveness (like [GoRL](https://arxiv.org/abs/2512.02581)). Recently, I am focusing on Agentic RL: RL to empower LLM agents with long-horizon human-like reasoning, planning and decision-making skills.
 
 ---
 I am grateful to have received help and guidance for my career from so many people—such as Flint, David, Ivor, Bo, Xingrui, and many others. I also understand many truly talented students may not have the opportunities to reach their full potential. So, if you are an undergrad or master student and believe I could offer advice, information, or opportunities that might help with your career, feel free to reach out to me by email. Meanwhile, I am also a student mentor in [CFAR](https://www.a-star.edu.sg/cfar), [IHPC](https://www.a-star.edu.sg/ihpc/), [A*STAR](https://www.a-star.edu.sg/) at Singapore. If you are interested in visiting or intern opportunities, you are welcomed to drop me an email for a chat.
