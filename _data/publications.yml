@@ -84,9 +84,6 @@ main:
     conference_short: preprint
     conference: preprint
     paper: https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=5819545
-    code: ""
-    github_stars: ""
-    website: ""
     image: "./assets/papers/GRAND.png"
     intro: "RL to solve combinatorial optimization problems in transportation systems." 
 
