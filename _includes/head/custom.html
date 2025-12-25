@@ -1,0 +1,113 @@
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="manifest" href="images/site.webmanifest">
+
+<meta name="msapplication-TileColor" content="#000000">
+<meta name="msapplication-TileImage" content="images/mstile-144x144.png?v=M44lzPylqQ">
+<meta name="msapplication-config" content="images/browserconfig.xml?v=M44lzPylqQ">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="assets/css/academicons.css"/>
+
+<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
+
+<!-- end custom head snippets -->
+
+<!-- Dark mode early apply to avoid flash -->
+<script>
+  (function(){
+    try { if(localStorage.getItem('prefers-dark') === '1') { document.documentElement.classList.add('dark-mode'); } } catch(e) {}
+  })();
+  </script>
+
+<style>
+/* Dark mode toggle button (globally available) */
+.dark-toggle { position: fixed; top: 12px; right: 16px; z-index: 9999; width: 36px; height: 36px; border-radius: 50%; border: 1px solid #e0e0e0; background: #ffffffcc; backdrop-filter: blur(4px); display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+.dark-toggle:hover { box-shadow: 0 8px 16px rgba(0,0,0,0.16); }
+.dark-toggle svg { width: 18px; height: 18px; display: block; fill: #333; }
+@media (max-width: 640px) { .dark-toggle { top: 10px; right: 10px; width: 34px; height: 34px; } }
+
+/* Dark mode palette */
+.dark-mode { color-scheme: dark; }
+.dark-mode body { background: #0f1115 !important; }
+.dark-mode .page__content { color: #e5e7eb; }
+.dark-mode .page__content a { color: #8ab4f8; }
+.dark-mode .page__content h1 { border-bottom-color: #2a2f3a; }
+.dark-mode .page__content h1,
+.dark-mode .page__content h2,
+.dark-mode .page__content h3 { color: #e5e7eb; }
+.dark-mode .publications .pub-row,
+.dark-mode .edu-item,
+.dark-mode .exp-item { background: #111827; border-color: #2a2f3a; box-shadow: 0 4px 10px rgba(0,0,0,0.35); }
+.dark-mode .publications .scroll-window,
+.dark-mode .news .scroll-window { background: #0f141b; border-color: #2a2f3a; box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), 0 6px 14px rgba(0,0,0,0.35); }
+.dark-mode .publications .title a { color: #93c5fd; }
+.dark-mode .publications .title a:hover { color: #bfdbfe; }
+.dark-mode .publications .pub-button { background: #0f141b; color: #e5e7eb; border-color: #374151; }
+.dark-mode .publications .pub-button:hover { border-color: #4b5563; }
+.dark-mode .section-tabs .tab { background: #1f2937; border-color: #374151; color: #e5e7eb; }
+.dark-mode .section-tabs .tab.active { background: #111827; border-color: #4b5563; }
+
+/* Sidebar (author profile) text colors */
+.dark-mode .sidebar, 
+.dark-mode .sidebar p,
+.dark-mode .sidebar li,
+.dark-mode .sidebar a,
+.dark-mode .author__name,
+.dark-mode .author__bio,
+.dark-mode .author__urls li a { color: #e5e7eb; }
+
+/* Masthead/top nav links */
+.dark-mode .masthead,
+.dark-mode .masthead a,
+.dark-mode .masthead .masthead__menu-item a { color: #e5e7eb; }
+.dark-mode .masthead .masthead__menu-item a:hover { color: #bfdbfe; }
+/* Masthead background/borders in dark mode */
+.dark-mode .masthead,
+.dark-mode .masthead__inner-wrap,
+.dark-mode .masthead__menu,
+.dark-mode .greedy-nav,
+.dark-mode .greedy-nav .visible-links,
+.dark-mode .greedy-nav .hidden-links { background: #0f1115 !important; border-color: #2a2f3a !important; }
+.dark-mode .greedy-nav .visible-links > li > a,
+.dark-mode .greedy-nav .hidden-links a,
+.dark-mode .masthead__menu-item a,
+.dark-mode .masthead a { color: #e5e7eb !important; }
+.dark-mode .greedy-nav .visible-links > li > a:hover,
+.dark-mode .greedy-nav .hidden-links a:hover,
+.dark-mode .masthead__menu-item a:hover,
+.dark-mode .masthead a:hover { color: #bfdbfe !important; }
+.dark-mode .greedy-nav .navicon,
+.dark-mode .greedy-nav button { color: #e5e7eb !important; fill: #e5e7eb !important; border-color: #2a2f3a !important; background: transparent !important; }
+.dark-mode .masthead,
+.dark-mode .masthead__inner-wrap { box-shadow: none !important; }
+
+/* Language toggle button */
+.lang-toggle { position: fixed; top: 12px; right: 60px; z-index: 9999; padding: 6px 10px; border: 1px solid #e0e0e0; border-radius: 18px; background: #ffffffcc; backdrop-filter: blur(4px); color: #333; text-decoration: none; font-family: "Times New Roman", Times, serif; font-size: 0.92em; box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+.lang-toggle:hover { box-shadow: 0 8px 16px rgba(0,0,0,0.16); }
+.dark-mode .lang-toggle { background: #1f2937cc; border-color: #374151; color: #e5e7eb; }
+
+/* Sidebar icon colors (Font Awesome / Academicons) */
+.dark-mode .sidebar i.fa,
+.dark-mode .sidebar i.fas,
+.dark-mode .sidebar i.far,
+.dark-mode .sidebar i.fab,
+.dark-mode .sidebar i.ai { color: #e5e7eb !important; }
+
+/* Education & Internship text colors */
+.dark-mode .edu-text, .dark-mode .edu-text p, .dark-mode .edu-text li { color: #e5e7eb !important; }
+.dark-mode .edu-title { color: #e5e7eb !important; }
+.dark-mode .edu-sub, .dark-mode .edu-time { color: #cbd5e1; }
+.dark-mode .exp-text, .dark-mode .exp-text p, .dark-mode .exp-text li { color: #e5e7eb !important; }
+.dark-mode .exp-title { color: #e5e7eb !important; }
+.dark-mode .exp-sub, .dark-mode .exp-time { color: #cbd5e1; }
+</style>

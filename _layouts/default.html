@@ -1,0 +1,53 @@
+---
+layout: compress
+---
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+
+  <body>
+
+    {% include browser-upgrade.html %}
+    {% include masthead.html %}
+    <button id="dark-toggle" class="dark-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.64 13.03A9 9 0 0 1 11 2a1 1 0 0 0-.92 1.39A7 7 0 0 0 12 21a7 7 0 0 0 9.61-6.39 1 1 0 0 0-1.97-.58Z"></path></svg>
+      <span class="sr-only">Toggle dark mode</span>
+    </button>
+    <a id="lang-toggle" class="lang-toggle" href="#" title="Switch language" aria-label="Switch language">中/英</a>
+
+    <div id="main" role="main">
+      {% include sidebar.html %}
+    
+      <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+        {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+        <div class="page__inner-wrap">
+          <section class="page__content" itemprop="text">
+            {{ content }}
+          </section>
+        </div>
+      </article>
+    </div>
+
+    {% include scripts.html %}
+    <script>
+    (function(){
+      var KEY='prefers-dark';
+      var root=document.documentElement;
+      function applyDark(on){ if(on){ root.classList.add('dark-mode'); } else { root.classList.remove('dark-mode'); } }
+      var btn=document.getElementById('dark-toggle');
+      if(btn){ btn.addEventListener('click', function(){ var next=!root.classList.contains('dark-mode'); applyDark(next); try{ localStorage.setItem(KEY, next?'1':'0'); }catch(e){} }); }
+      // language toggle: simple link to en (/ or baseurl) vs zh (/cn/)
+      try {
+        var isZh = '{{ page.lang }}' === 'zh';
+        var langA = document.getElementById('lang-toggle');
+        if(langA){ langA.href = isZh ? '{{ site.baseurl }}/' : '{{ site.baseurl }}/cn/'; }
+      } catch(e){}
+    })();
+    </script>
+
+  </body>
+</html>

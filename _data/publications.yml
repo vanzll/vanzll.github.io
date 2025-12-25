@@ -1,0 +1,98 @@
+main:
+  - title: "Diversifying Policy Behaviors via Extrinsic Behavioral Curiosity"
+    authors: "<strong>Zhenglin Wan</strong>, Xingrui Yu, David Bossens, Yueming Lyu, Qing Guo, Flint Xiaofeng Fan, Yew Soon Ong, Ivor Tsang"
+    conference_short: ICML 2025
+    conference: Forty-Second International Conference on Machine Learning
+    paper: https://arxiv.org/abs/2410.06151
+    code: https://github.com/vanzll/EBC
+    github_stars: "vanzll/EBC"
+    website: "https://arxiv.org/html/2410.06151v4#S2"
+    image: "./assets/papers/EBC.png"
+    intro: "Enables agent to efficiently learn diverse and high-performing policies via Quality Diversity (Inverse) Reinforcement Learning."
+
+  - title: "GoRL: An Algorithm-Agnostic Framework for Online Reinforcement Learning with Generative Policies"
+    authors: "Chubin Zhang*, <strong>Zhenglin Wan</strong>*, Feng Chen, Xingrui Yu, Ivor Tsang, Bo An"
+    conference_short: preprint
+    conference: preprint
+    paper: https://arxiv.org/abs/2512.02581
+    code: https://github.com/bennidict23/GoRL
+    github_stars: "bennidict23/GoRL"
+    website: "https://arxiv.org/html/2512.02581v1"
+    image: "./assets/papers/gorl.png"
+    intro: "Generic Framework for Online Reinforcement Learning with Generative Policy class (e.g., Diffusion Policy & Flow-Matching Policy)."
+
+  - title: "OSCAR: Orthogonal Stochastic Control for Alignment-Respecting Diversity in Flow Matching"
+    authors: "Jingxuan Wu*, <strong>Zhenglin Wan</strong>*, Xingrui Yu, Yuzhe Yang, Bo An, Ivor Tsang"
+    conference_short: preprint
+    conference: preprint
+    paper: https://arxiv.org/abs/2510.09060
+    code: https://github.com/Johnny221B/OSCAR
+    github_stars: "Johnny221B/OSCAR"
+    website: ""
+    image: "./assets/papers/OSCAR.png"
+    intro: "Enables Flow-Matching model to generate diverse but alignment-respecting images in training-free manner."
+
+  - title: "Imitation From Diverse Behaviors: Wasserstein Quality Diversity Imitation Learning with Single-Step Archive Exploration"
+    authors: "Xingrui Yu, <strong>Zhenglin Wan</strong>, David Bossens, Yueming Lyu, Qing Guo, Ivor Tsang"
+    conference_short: AAMAS 2025 (oral)
+    conference: The 24th International Conference on Autonomous Agents and Multiagent Systems
+    paper: https://arxiv.org/abs/2411.06965
+    website: "https://arxiv.org/html/2411.06965v2"
+    image: "./assets/papers/WQDI.png"
+    intro: "A new paradigm for imitation learning."
+    honor: "Oral presentation"
+
+  - title: "FM-IRL: Flow-Matching for Reward Modeling and Policy Regularization in Reinforcement Learning"
+    authors: "<strong>Zhenglin Wan</strong>*, Jingxuan Wu*, Xingrui Yu, Chubin Zhang, Mingcong Lei, Bo An, Ivor Tsang"
+    conference_short: preprint
+    conference: preprint
+    paper: https://arxiv.org/abs/2510.09222
+    code: https://github.com/vanzll/FM_IRL
+    github_stars: "vanzll/FM_IRL"
+    website: "https://arxiv.org/html/2510.09222v2"
+    image: "./assets/papers/FMIRL.png"
+    intro: "Equips Flow-Matching policies with exploratory strength when learning from demonstrations."
+
+  - title: "POI Recommendation via Multi-Objective Adversarial Imitation Learning"
+    authors: "<strong>Zhenglin Wan</strong>, Anjun Gao, Xingrui Yu, Pingfu Chao, Jun Song, Maohao Ran"
+    conference_short: AAAI 2025 (oral)
+    conference: The 39th Annual AAAI Conference on Artificial Intelligence
+    paper: "https://ojs.aaai.org/index.php/AAAI/article/view/33382/35537"
+    website: https://ojs.aaai.org/index.php/AAAI/article/view/33382#:~:text=In%20this%20paper%2C%20we%20introduce%20Multi-Objective%20Adversarial%20Imitation,Imitation%20Learning%20with%20multi-objective%20to%20address%20this%20issue.
+    image: "./assets/papers/POI.png"
+    intro: "Recommendate next Point-of-interest with sparse and noisy data via inverse RL."
+    honor: "Oral presentation (4.65%)"
+
+  - title: "Generative Quality Diversity Imitation Learning for Robot Skill Acquisition"
+    authors: "<strong>Zhenglin Wan</strong>, Xingrui Yu, David Bossens, Yueming Lyu, Qing Guo, Flint Xiaofeng Fan, Ivor Tsang"
+    conference_short: ICLR 2025 (workshop)
+    conference: The Thirteenth International Conference on Learning Representations
+    image: "./assets/papers/GQDI.png"
+    intro: "Quality Diversity Imitation Learning techniques for robot to acquire variety of skills."
+
+  - title: "RoboMemory: A Brain-inspired Multi-memory Agentic Framework for Interactive Environmental Learning in Physical Embodied Systems"
+    authors: "Mingcong Lei, Honghao Cai, (etc..) , <strong>Zhenglin Wan</strong>, Zhen Li, Shuguang Cui, Yiming Zhao, Yatong Han"
+    conference_short: preprint
+    conference: preprint
+    paper: https://arxiv.org/abs/2508.01415
+    website: "https://sp4595.github.io/robomemory/"
+    image: "./assets/papers/robo_memory.png"
+    intro: "A brain-inspired framework for embodied agentic learning."
+
+  - title: "Graph-based Reinforcement learning Approach for influential Node Detection in airport delay networks"
+    authors: "Chi Li, <strong>Zhenglin Wan</strong>, Kaize Wang, Yuxuan Huang, Chengxi Li, Lianmin Zhang, Xiongwen Qian, Jianfeng Mao"
+    conference_short: preprint
+    conference: preprint
+    paper: https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=5819545
+    image: "./assets/papers/GRAND.png"
+    intro: "RL to solve combinatorial optimization problems in transportation systems." 
+
+  - title: "Hierarchical Spatial-Temporal Graph-Enhanced Model for Map-Matching"
+    authors: "Anjun Gao, <strong>Zhenglin Wan</strong>, Pingfu Chao, Shunyu Yao"
+    conference_short: ADC 2024 (oral & best paper runner-up)
+    conference: Australasian Database Conference
+    paper: https://link.springer.com/chapter/10.1007/978-981-96-1242-0_4
+    website: https://link.springer.com/chapter/10.1007/978-981-96-1242-0_4
+    image: "./assets/papers/ADC.jpg"
+    intro: "Map-Matching techniques with strong aware of spatial-temporal information."
+    honor: "Oral presentation & Best Paper Runner-up"
