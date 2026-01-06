@@ -144,6 +144,7 @@ I am grateful to have received help and guidance for my career from so many peop
 
 <div class="news" markdown="1">
 <div class="scroll-window" markdown="1">
+- *2025.12*  &nbsp;🎉 We released our new work **CaveAgent** (a new product-inspired function calling paradigm for LLM Agent) ([ArXiv](https://arxiv.org/abs/2601.01569v1), [github](https://github.com/acodercat/cave-agent))!
 - *2025.12*  &nbsp;🎉 Our paper **GoRL** for online Reinforcement Learning with generative policies is on [ArXiv](https://arxiv.org/abs/2512.02581) and [github](https://github.com/bennidict23/GoRL)!
 - *2025.10*  &nbsp;🎉 Our paper **FM-IRL** (Flow Matching for inverse RL) is on [ArXiv](https://arxiv.org/abs/2510.09222) and [github](https://github.com/vanzll/FM_IRL).
 - *2025.10*  &nbsp;🎉 **OSCAR** (training free technique for diverse image generation) is on [ArXiv](https://arxiv.org/abs/2510.09060) and [github](https://github.com/Johnny221B/OSCAR).
