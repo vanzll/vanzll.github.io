@@ -98,14 +98,14 @@ html.dark .section-toggle-btn, body.dark .section-toggle-btn, html[data-theme="d
 <!-- Dark mode is handled globally in layout/head; local button/styles removed -->
 
 
-Zhenglin Wan (万政霖) received his B.Sc from [Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) on 2025 Fall. He is currently a research staff in [Nanyang Technological University](https://www.ntu.edu.sg/), advised by [Prof. Bo An](https://personal.ntu.edu.sg/boan/), and an incoming CS Ph.D student in [Department of Computer Science](https://www.comp.nus.edu.sg/), [National University of Singapore (NUS)](https://nus.edu.sg/). Previously, he spent a long time working with [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) and collaborated with [Prof. Ong Yew Soon](https://www3.ntu.edu.sg/home/asysong/home.html) at [Centre for Frontier AI Research (CFAR)](https://www.a-star.edu.sg/cfar), [IHPC](https://www.a-star.edu.sg/ihpc/), [A*STAR](https://www.a-star.edu.sg/) in Singapore. 
+Hi! I am Zhenglin Wan (万政霖), a first-year CS Ph.D. student at [HPC-AI Lab](https://ai.comp.nus.edu.sg/) at National University of Singapore, advised by [Prof. Yang You](https://www.comp.nus.edu.sg/~youy/) and supported by NUS Research Scholarship. Previously, I served as an Research Staff in Nanyang Technological University, working with [Prof. Bo An](https://personal.ntu.edu.sg/boan/). I received my B.Sc from Chinese University of Hong Kong on 2025 Fall (completed undergrad in Shenzhen campus). I also spent a long time working with [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) at [Centre for Frontier AI Research (CFAR)](https://www.a-star.edu.sg/cfar), [IHPC](https://www.a-star.edu.sg/ihpc/), [A*STAR](https://www.a-star.edu.sg/) in Singapore, and have interned at [Hong Kong Generative AI Research & Development Center (HKGAI)](https://www.hkgai.info/), led by [Prof. Yike Guo](https://cse.hkust.edu.hk/admin/people/faculty/profile/yikeguo) in HKUST.
 
 ---
 
-I am a RL (Reinforcement Learning) believer. Previously I mainly studied improving RL or inverse RL from algorithmic side: such as improving the policy diversity (like [EBC](https://arxiv.org/abs/2410.06151)) and policy expressiveness (like [GoRL](https://arxiv.org/abs/2512.02581)). Recently, I am focusing on Agentic RL: RL to empower LLM agents with long-horizon human-like reasoning, planning and decision-making skills.
+I am a RL (Reinforcement Learning) believer. Previously I mainly studied improving RL or inverse RL from algorithmic side: such as improving the policy diversity (like [EBC](https://arxiv.org/abs/2410.06151)) and policy expressiveness (like [GoRL](https://arxiv.org/abs/2512.02581)). Recently, I am focusing on RL and LLM Agent: RL to empower LLM agents with long-horizon human-like reasoning, planning and decision-making skills.
 
 ---
-I am grateful to have received help and guidance for my career from so many people—such as Flint, David, Ivor, Bo, Xingrui, and many others. I also understand many truly talented students may not have the opportunities to reach their full potential. So, if you are an undergrad or master student and believe I could offer advice, information, or opportunities that might help with your career, feel free to reach out to me by email. Meanwhile, I am also a student mentor in [CFAR](https://www.a-star.edu.sg/cfar), [IHPC](https://www.a-star.edu.sg/ihpc/), [A*STAR](https://www.a-star.edu.sg/) at Singapore. If you are interested in visiting or intern opportunities, you are welcomed to drop me an email for a chat.
+I am grateful to have received help and guidance for my career from so many people—such as Flint, Song, David, Ivor, Bo, Xingrui, and many others. I also understand many truly talented students may not have the opportunities to reach their full potential. So, if you are an undergrad or master student and believe I could offer advice, information, or opportunities that might help with your career, feel free to reach out to me by email. Meanwhile, I am also a student mentor in [CFAR](https://www.a-star.edu.sg/cfar), [IHPC](https://www.a-star.edu.sg/ihpc/), [A*STAR](https://www.a-star.edu.sg/) at Singapore. If you are interested in visiting or intern opportunities, you are welcomed to drop me an email for a chat.
 
 <style>
 .mentees-list {
@@ -412,7 +412,7 @@ As these works are presented in China, these names are directly translated from 
       <p class="edu-sub">National University of Singapore (NUS)</p>
       <ul style="margin: 6px 0 6px 18px; padding: 0; font-size: 0.96em; color: #555;">
         <li>Affiliation: Department of Computer Science, School of Computing</li>
-        <li>Advisor: TBD</li>
+        <li>Advisor: Prof. Yang You</li>
       </ul>
       <p class="edu-time">2026.01 -</p>
     </div>
