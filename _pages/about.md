@@ -98,7 +98,7 @@ html.dark .section-toggle-btn, body.dark .section-toggle-btn, html[data-theme="d
 <!-- Dark mode is handled globally in layout/head; local button/styles removed -->
 
 
-Hi! I am Zhenglin Wan (万政霖), a first-year CS Ph.D. student at [HPC-AI Lab](https://ai.comp.nus.edu.sg/) at *National University of Singapore (NUS)*, advised by [Prof. Yang You](https://www.comp.nus.edu.sg/~youy/) and supported by *NUS Research Scholarship*. Previously, I served as an Research Staff in *Nanyang Technological University (NTU)*, working with [Prof. Bo An](https://personal.ntu.edu.sg/boan/). I received my B.Sc from *Chinese University of Hong Kong* on 2025 Fall (completed undergrad in Shenzhen campus). I also have spent a long time working with [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) at [*Centre for Frontier AI Research (CFAR)*](https://www.a-star.edu.sg/cfar), [*IHPC*](https://www.a-star.edu.sg/ihpc/), [*A\*STAR*](https://www.a-star.edu.sg/) in Singapore, and have interned at [*Hong Kong Generative AI Research & Development Center (HKGAI)*](https://www.hkgai.info/), led by [Prof. Yike Guo](https://cse.hkust.edu.hk/admin/people/faculty/profile/yikeguo) in *HKUST*.
+Hi! I am Zhenglin Wan (万政霖), a first-year CS Ph.D. student at [HPC-AI Lab](https://ai.comp.nus.edu.sg/) at National University of Singapore (NUS), advised by [Prof. Yang You](https://www.comp.nus.edu.sg/~youy/) and supported by *NUS Research Scholarship*. Previously, I served as an Research Staff in Nanyang Technological University (NTU), working with [Prof. Bo An](https://personal.ntu.edu.sg/boan/). I received my B.Sc from Chinese University of Hong Kong (CUHK) on 2025 Fall (completed undergrad in Shenzhen campus). I also have spent a long time working with [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) at [Centre for Frontier AI Research (CFAR)](https://www.a-star.edu.sg/cfar), [IHPC](https://www.a-star.edu.sg/ihpc/), [A\*STAR](https://www.a-star.edu.sg/) in Singapore, and have interned at [Hong Kong Generative AI Research & Development Center (HKGAI)](https://www.hkgai.info/), led by [Prof. Yike Guo](https://cse.hkust.edu.hk/admin/people/faculty/profile/yikeguo) in HKUST.
 
 ---
 
@@ -205,7 +205,7 @@ I am grateful to have received help and guidance for my career from so many peop
 
 ## Conference papers and Preprints
 Please scroll down to view all publications.
-* denotes joint-first-author and equal contribution.
+\* denotes joint-first-author and equal contribution.
 <style>
 /* Publications section styles (scoped) */
 .publications { font-family: "Times New Roman", Times, serif; font-size: 0.96em; }
