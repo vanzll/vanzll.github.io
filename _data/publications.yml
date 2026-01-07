@@ -11,7 +11,7 @@ main:
     intro: "A new function calling paradigm for LLM agents featuring Stateful Runtime Management."
 
   - title: "Diversifying Policy Behaviors via Extrinsic Behavioral Curiosity"
-    authors: "<strong>Zhenglin Wan</strong>, Xingrui Yu, David Bossens, Yueming Lyu, Qing Guo, Flint Xiaofeng Fan, Yew Soon Ong, Ivor Tsang"
+    authors: "<strong>Zhenglin Wan*</strong>, Xingrui Yu*, David Bossens, Yueming Lyu, Qing Guo, Flint Xiaofeng Fan, Yew Soon Ong, Ivor Tsang"
     conference_short: ICML 2025
     conference: Forty-Second International Conference on Machine Learning
     paper: https://arxiv.org/abs/2410.06151
@@ -44,7 +44,7 @@ main:
     intro: "Enables Flow-Matching model to generate diverse but alignment-respecting images in training-free manner."
 
   - title: "Imitation From Diverse Behaviors: Wasserstein Quality Diversity Imitation Learning with Single-Step Archive Exploration"
-    authors: "Xingrui Yu, <strong>Zhenglin Wan</strong>, David Bossens, Yueming Lyu, Qing Guo, Ivor Tsang"
+    authors: "Xingrui Yu*, <strong>Zhenglin Wan</strong>*, David Bossens, Yueming Lyu, Qing Guo, Ivor Tsang"
     conference_short: AAMAS 2025 (oral)
     conference: The 24th International Conference on Autonomous Agents and Multiagent Systems
     paper: https://arxiv.org/abs/2411.06965
@@ -65,7 +65,7 @@ main:
     intro: "Equips Flow-Matching policies with exploratory strength when learning from demonstrations."
 
   - title: "POI Recommendation via Multi-Objective Adversarial Imitation Learning"
-    authors: "<strong>Zhenglin Wan</strong>, Anjun Gao, Xingrui Yu, Pingfu Chao, Jun Song, Maohao Ran"
+    authors: "<strong>Zhenglin Wan</strong>*, Anjun Gao*, Xingrui Yu, Pingfu Chao, Jun Song, Maohao Ran"
     conference_short: AAAI 2025 (oral)
     conference: The 39th Annual AAAI Conference on Artificial Intelligence
     paper: "https://ojs.aaai.org/index.php/AAAI/article/view/33382/35537"
@@ -99,7 +99,7 @@ main:
     intro: "RL to solve combinatorial optimization problems in transportation systems." 
 
   - title: "Hierarchical Spatial-Temporal Graph-Enhanced Model for Map-Matching"
-    authors: "Anjun Gao, <strong>Zhenglin Wan</strong>, Pingfu Chao, Shunyu Yao"
+    authors: "Anjun Gao*, <strong>Zhenglin Wan</strong>*, Pingfu Chao, Shunyu Yao"
     conference_short: ADC 2024 (oral & best paper runner-up)
     conference: Australasian Database Conference
     paper: https://link.springer.com/chapter/10.1007/978-981-96-1242-0_4
