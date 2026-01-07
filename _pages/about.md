@@ -144,12 +144,10 @@ I am grateful to have received help and guidance for my career from so many peop
 
 <div class="news" markdown="1">
 <div class="scroll-window" markdown="1">
-- *2026.01*  &nbsp;🎉 We released our new work **CaveAgent** (a new product-inspired function calling paradigm for LLM Agent) ([ArXiv](https://arxiv.org/abs/2601.01569v1), [github](https://github.com/acodercat/cave-agent))!
-- *2025.12*  &nbsp;🎉 Our paper **GoRL** for online Reinforcement Learning with generative policies is on [ArXiv](https://arxiv.org/abs/2512.02581) and [github](https://github.com/bennidict23/GoRL)!
-- *2025.10*  &nbsp;🎉 Our paper **FM-IRL** (Flow Matching for inverse RL) is on [ArXiv](https://arxiv.org/abs/2510.09222) and [github](https://github.com/vanzll/FM_IRL).
-- *2025.10*  &nbsp;🎉 **OSCAR** (training free technique for diverse image generation) is on [ArXiv](https://arxiv.org/abs/2510.09060) and [github](https://github.com/Johnny221B/OSCAR).
-- *2025.09*  &nbsp;🎉🎉 Awarded *NUS Research Scholarship* to support my Ph.D studies in [National University of Singapore](https://nus.edu.sg/) beginning from Jan, 2026.
-- *2025.09*  &nbsp;🎉🎉 Joined [Nanyang Technological University](https://www.ntu.edu.sg/) as a research staff.
+- *2026.01*  &nbsp;🎉 We released our new work **CaveAgent** (a new product-inspired function calling paradigm for LLM Agent) ([[Paper]](https://arxiv.org/abs/2601.01569v1), [[Source Code]](https://github.com/acodercat/cave-agent))!
+- *2025.12*  &nbsp;🎉 We released our new work **GoRL** for online Reinforcement Learning with generative policies. ([[Paper]](https://arxiv.org/abs/2512.02581), [[Code]](https://github.com/bennidict23/GoRL))
+- *2025.10*  &nbsp;🎉 Our paper **FM-IRL** (Flow Matching for inverse RL) is on Arxiv. ([[Paper]](https://arxiv.org/abs/2510.09222), [[Code]](https://github.com/vanzll/FM_IRL)).
+- *2025.10*  &nbsp;🎉 **OSCAR** (training free technique for diverse image generation) is on Arxiv. ([[Paper]](https://arxiv.org/abs/2510.09060), [[Code]](https://github.com/Johnny221B/OSCAR)).
 - *2025.08*  &nbsp;🎉🎉 Received my B.Sc from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) with 1-st class honor, looking forward to new journey!
 - *2025.05*  &nbsp;🎉🎉 [**EBC**](https://arxiv.org/abs/2410.06151) is accepted by ICML 2025 ([Code](https://github.com/vanzll/EBC) available).
 - *2025.03*  &nbsp;🎉🎉 One paper accepted by ICLR 2025 (generative models for robot learning workshop).
