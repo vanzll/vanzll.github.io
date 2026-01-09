@@ -43,6 +43,16 @@ main:
     image: "./assets/papers/OSCAR.png"
     intro: "Enables Flow-Matching model to generate diverse but alignment-respecting images in training-free manner."
 
+  - title: "AgentOCR: Reimagining Agent History via Optical Self-Compression"
+    authors: "Lang Feng*, Fuchao Yang*, Feng Chen, Xin Cheng, Haiyang Xu, <strong>Zhenglin Wan</strong>, Ming Yan, Bo An"
+    conference_short: preprint
+    conference: preprint
+    paper: https://arxiv.org/abs/2601.04786
+    website: "https://arxiv.org/abs/2601.04786"
+    image: "./assets/papers/agentocr.png"
+    intro: "Reinforcing Self-Compression for Optical Agent Memory."
+
+  
   - title: "Imitation From Diverse Behaviors: Wasserstein Quality Diversity Imitation Learning with Single-Step Archive Exploration"
     authors: "Xingrui Yu*, <strong>Zhenglin Wan</strong>*, David Bossens, Yueming Lyu, Qing Guo, Ivor Tsang"
     conference_short: AAMAS 2025 (oral)
