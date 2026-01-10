@@ -117,14 +117,14 @@ I am grateful to have received help and guidance for my career from so many peop
   margin-bottom: 2px;
   padding-bottom: 0;
 }
+details.mentees-details { margin: 0.5em 0 1em; }
+details.mentees-details > summary { cursor: pointer; }
+details.mentees-details > summary::marker { color: #2a72d4; }
+details.mentees-details > summary::-webkit-details-marker { color: #2a72d4; }
 </style>
-**Mentees (research-based, majority of them are co-mentored with scientists at CFAR, IHPC, A*STAR):**
 
-<button class="section-toggle-btn" onclick="toggleSection('mentees-section', this)">
-  <span class="toggle-icon">▼</span> Click to expand
-</button>
-
-<div id="mentees-section" class="collapsible-content">
+<details class="mentees-details">
+  <summary><strong>Mentees (research-based, majority of them are co-mentored with scientists at CFAR, IHPC, A*STAR):</strong></summary>
   <ul class="mentees-list">
     <li>Yaxin Zhou (Master's student @ CMU, America; Author of <a href="https://arxiv.org/abs/2601.01569v1">[[CaveAgent]]</a>)</li>
     <li>Jingxuan Wu (Master's student @ UNC, America; Author of <a href="https://arxiv.org/abs/2510.09060">[[OSCAR]]</a>)</li>
@@ -134,7 +134,7 @@ I am grateful to have received help and guidance for my career from so many peop
     <li>Xin Yan (Undergrad @ Beijing Normal University)</li>
     <li>He Ma (Undergrad @ CUHK(SZ))</li>
   </ul>
-</div>
+</details>
 
 
 <mark style="background-color: yellow; color: black;">Besides, I am ALWAYS open to collaborations, networking and intern opportunities, feel free to contact me by email! (vanzl3386 [at] gmail.com)</mark>
