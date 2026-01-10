@@ -119,16 +119,22 @@ I am grateful to have received help and guidance for my career from so many peop
 }
 </style>
 **Mentees (research-based, majority of them are co-mentored with scientists at CFAR, IHPC, A*STAR):**
-<ul class="mentees-list">
-  <li>Yaxin Zhou (Master's student @ CMU, America)</li>
-  <li>Jingxuan Wu (Master's student @ UNC, America)</li>
-  <li>Xu Pan (Master’s student @ Wuhan University)</li>
-  <li>Chubin Zhang (Master’s student @ Beijing University of Posts and Telecommunications)</li>
-  <li>Dongchu Xie (Undergrad @ CUHK(SZ))</li>
-  <li>Xin Yan (Undergrad @ Beijing Normal University)</li>
-  <li>He Ma (Undergrad @ CUHK(SZ))</li>
-  
-</ul>
+
+<button class="section-toggle-btn" onclick="toggleSection('mentees-section', this)">
+  <span class="toggle-icon">▼</span> Click to expand
+</button>
+
+<div id="mentees-section" class="collapsible-content">
+  <ul class="mentees-list">
+    <li>Yaxin Zhou (Master's student @ CMU, America; Author of <a href="https://arxiv.org/abs/2601.01569v1">[[CaveAgent]]</a>)</li>
+    <li>Jingxuan Wu (Master's student @ UNC, America; Author of <a href="https://arxiv.org/abs/2510.09060">[[OSCAR]]</a>)</li>
+    <li>Xu Pan (Master’s student @ Wuhan University)</li>
+    <li>Chubin Zhang (Master’s student @ Beijing University of Posts and Telecommunications; Author of <a href="https://arxiv.org/abs/2512.02581">[[GoRL]]</a>)</li>
+    <li>Dongchu Xie (Undergrad @ CUHK(SZ))</li>
+    <li>Xin Yan (Undergrad @ Beijing Normal University)</li>
+    <li>He Ma (Undergrad @ CUHK(SZ))</li>
+  </ul>
+</div>
 
 
 <mark style="background-color: yellow; color: black;">Besides, I am ALWAYS open to collaborations, networking and intern opportunities, feel free to contact me by email! (vanzl3386 [at] gmail.com)</mark>
@@ -195,11 +201,7 @@ I am grateful to have received help and guidance for my career from so many peop
 <span class='anchor' id='Publication-List'></span>
 # 📝 Selected Publications
 
-<button class="section-toggle-btn" onclick="toggleSection('publications-section', this)">
-  <span class="toggle-icon">▼</span> Click to expand
-</button>
-
-<div id="publications-section" class="collapsible-content" markdown="1">
+<div id="publications-section" markdown="1">
 
 ## Conference papers and Preprints
 Please scroll down to view all publications.
