@@ -512,6 +512,23 @@ html[data-theme="dark"] .exp-img img,
     </div>
     <div class="exp-img"><img src="assets/institutions/ntu.png" alt="NTU"></div>
   </li>
+
+
+  <li class="exp-item">
+    <div class="exp-text">
+      <p class="exp-title">Intern (Remote)</p>
+      <p class="exp-sub">Hong Kong Generative AI Research & Development Center (HKGAI), HKUST</p>
+      <ul style="margin: 6px 0 6px 18px; padding: 0; font-size: 0.96em; color: #555;">
+        <li>Affiliation: HKGAI</li>
+        <li>Director: Prof. Yike Guo</li>
+        <li>Proposed a new product-inspired Agentic Function Calling paradigm ([[CaveAgent]](https://arxiv.org/abs/2601.01569v1)).</li>
+      </ul>
+      <p class="exp-time">2025.05 - 2025.09</p>
+    </div>
+    <div class="exp-img"><img src="assets/institutions/hkgai.png" alt="HKGAI"></div>
+  </li>
+
+
   <li class="exp-item">
     <div class="exp-text">
       <p class="exp-title">Intern Researcher</p>
