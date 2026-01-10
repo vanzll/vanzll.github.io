@@ -521,7 +521,7 @@ html[data-theme="dark"] .exp-img img,
       <ul style="margin: 6px 0 6px 18px; padding: 0; font-size: 0.96em; color: #555;">
         <li>Affiliation: HKGAI</li>
         <li>Director: Prof. Yike Guo</li>
-        <li>Proposed a new product-inspired Agentic Function Calling paradigm ([[CaveAgent]](https://arxiv.org/abs/2601.01569v1)).</li>
+        <li>Proposed a new product-inspired Agentic Function Calling paradigm (<a href="https://arxiv.org/abs/2601.01569v1">[[CaveAgent]]</a>).</li>
       </ul>
       <p class="exp-time">2025.05 - 2025.09</p>
     </div>
