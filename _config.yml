@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "Zhenglin (Carlos) Wan 万政霖"
-description              : ""
+description              : "Ph.D. student @ NUS School of Computing"
 repository               : "vanzll/vanzll.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -23,7 +23,7 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "Zhenglin (Carlos) Wan"
   avatar           : "images/soochow.jpg"
-  bio              : ""
+  bio              : "Chasing the excellence with a soul."
   location         : "Singapore"
   employer         :
   pubmed           : 
