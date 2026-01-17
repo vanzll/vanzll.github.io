@@ -252,6 +252,7 @@ Please scroll down to view all publications.
 .publications .author { font-size: 0.98rem; }
 .publications .periodical { font-size: 0.96rem; }
 .publications .honor { font-size: 0.96rem; color: #e74d3c; font-weight: 700; margin: 4px 0; }
+.publications .honor p { margin: 0; }
 .publications .intro { font-size: 0.90rem; color: #555; font-weight: 600; font-style: italic; margin: 4px 0; }
 .publications .links a { font-size: 12px !important; }
 .publications .links { margin-top: 10px; display: flex; gap: 10px; flex-wrap: wrap; }
@@ -308,7 +309,7 @@ Please scroll down to view all publications.
       <div class="periodical"><em>{{ link.conference }}</em>
       </div>
       {% if link.honor %}
-      <div class="honor">{{ link.honor }}</div>
+      <div class="honor">{{ link.honor | markdownify }}</div>
       {% endif %}
       {% if link.intro %}
       <div class="intro">{{ link.intro }}</div>
