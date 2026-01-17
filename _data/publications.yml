@@ -1,15 +1,15 @@
 main:
   - title: "CaveAgent: Transforming LLMs into Stateful Runtime Operators"
     authors: "Maohao Ran*, <strong>Zhenglin Wan</strong>*, Cooper Lin, (etc..) , Bo An, Yike Guo, Jun Song"
-    conference_short: preprint
-    conference: preprint
+    conference_short: Technical Report
+    conference: Technical Report
     paper: https://arxiv.org/abs/2601.01569v1
     code: https://github.com/acodercat/cave-agent
     github_stars: "acodercat/cave-agent"
     website: "https://github.com/acodercat/cave-agent"
     image: "./assets/papers/caveagent.png"
     intro: "A new function calling paradigm for LLM agents featuring Stateful Runtime Management."
-    honor: "Core technology adopted by the HKGAI and InnoHK for the *港環通* product. [[website](https://www.hkgai.info/)]"
+    honor: "Core product technology adopted by the HKGAI and InnoHK. [[website](https://www.hkgai.info/)]"
 
   - title: "Diversifying Policy Behaviors via Extrinsic Behavioral Curiosity"
     authors: "<strong>Zhenglin Wan*</strong>, Xingrui Yu*, David Bossens, Yueming Lyu, Qing Guo, Flint Xiaofeng Fan, Yew Soon Ong, Ivor Tsang"
