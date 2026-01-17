@@ -9,6 +9,7 @@ main:
     website: "https://github.com/acodercat/cave-agent"
     image: "./assets/papers/caveagent.png"
     intro: "A new function calling paradigm for LLM agents featuring Stateful Runtime Management."
+    honor: "Core technology adopted by the Hong Kong Generative AI Research \& Development Center for the *HK E-Link* product ([website](https://www.hkgai.info/))"
 
   - title: "Diversifying Policy Behaviors via Extrinsic Behavioral Curiosity"
     authors: "<strong>Zhenglin Wan*</strong>, Xingrui Yu*, David Bossens, Yueming Lyu, Qing Guo, Flint Xiaofeng Fan, Yew Soon Ong, Ivor Tsang"
