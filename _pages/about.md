@@ -110,7 +110,7 @@ I am a RL (Reinforcement Learning) believer. Previously I mainly studied improvi
 ---
 I am grateful to have received help and guidance for my career from so many people—such as Flint, Song, David, Ivor, Bo, Xingrui, and many others. I also understand many truly talented students may not have the opportunities to reach their full potential. So, if you are an undergrad or master student and believe I could offer advice, information, or opportunities that might help with your career, feel free to reach out to me by email. Meanwhile, I am also a student mentor in [CFAR](https://www.a-star.edu.sg/cfar), [IHPC](https://www.a-star.edu.sg/ihpc/), [A*STAR](https://www.a-star.edu.sg/) and [HPC-AI Lab](https://ai.comp.nus.edu.sg/) in NUS. If you need visiting, intern, RA opportunities or unofficial Ph.D applicaiton consultation, you are welcomed to drop me an email for a chat.
 
-My honor to have worked with these talented talented individuals:
+My honor to have mentored and worked with these talented individuals:
 
 <style>
 .mentees-list {
@@ -137,7 +137,6 @@ details.mentees-details > summary::-webkit-details-marker { color: #2a72d4; }
     <li>Chubin Zhang (Master’s student @ Beijing University of Posts and Telecommunications; Author of <a href="https://arxiv.org/abs/2512.02581">[[GoRL]]</a>)</li>
     <li>Dongchu Xie (Undergrad @ CUHK(SZ))</li>
     <li>Xin Yan (Undergrad @ Beijing Normal University)</li>
-    <li>He Ma (Undergrad @ CUHK(SZ))</li>
   </ul>
 </details>
 
