@@ -141,7 +141,7 @@ details.mentees-details > summary::-webkit-details-marker { color: #2a72d4; }
 </details>
 
 
-<mark style="background-color: yellow; color: black;">I am looking for industrial internship opportunities in 2026 Summer (preferably in America), please contact me if you have openings. (vanzl3386 [at] gmail.com)</mark>
+<mark style="background-color: yellow; color: black;"></mark>
 
 <span class='anchor' id='news'></span>
 # 🔥 News
