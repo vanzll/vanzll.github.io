@@ -3,12 +3,12 @@ main:
     authors: "Maohao Ran*, <strong>Zhenglin Wan</strong>*, Cooper Lin, (etc..) , Bo An, Yike Guo, Jun Song"
     conference_short: Technical Report
     conference: Technical Report
-    paper: https://arxiv.org/abs/2601.01569v1
+    paper: https://arxiv.org/abs/2601.01569
     code: https://github.com/acodercat/cave-agent
     github_stars: "acodercat/cave-agent"
     website: "https://github.com/acodercat/cave-agent"
     image: "./assets/papers/caveagent.png"
-    intro: "A new function calling paradigm for LLM agents featuring Stateful Runtime Management."
+    intro: "Runtime as the primary workspace of LLM Agent, with a runtime agent-skill management mechanism."
     honor: "Core product technology adopted by the HKGAI and InnoHK. [[website](https://www.hkgai.info/)]"
 
   - title: "Diversifying Policy Behaviors via Extrinsic Behavioral Curiosity"
