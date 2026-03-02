@@ -110,35 +110,6 @@ I am a RL (Reinforcement Learning) believer. Previously I mainly studied improvi
 ---
 I am grateful to have received help and guidance for my career from so many people—such as Flint, Song, David, Ivor, Bo, Xingrui, and many others. I also understand many truly talented students may not have the opportunities to reach their full potential. So, if you are an undergrad or master student and believe I could offer advice, information, or opportunities that might help with your career, feel free to reach out to me by email. Meanwhile, I am also a student mentor in [CFAR](https://www.a-star.edu.sg/cfar), [IHPC](https://www.a-star.edu.sg/ihpc/), [A*STAR](https://www.a-star.edu.sg/) and [HPC-AI Lab](https://ai.comp.nus.edu.sg/) in NUS. If you need visiting, intern, RA opportunities or unofficial Ph.D applicaiton consultation, you are welcomed to drop me an email for a chat.
 
-My honor to have mentored and worked with these talented individuals:
-
-<style>
-.mentees-list {
-  margin-top: 0.5em;
-  margin-bottom: 1em;
-  padding-left: 20px;
-}
-.mentees-list li {
-  margin-bottom: 2px;
-  padding-bottom: 0;
-}
-details.mentees-details { margin: 0.5em 0 1em; }
-details.mentees-details > summary { cursor: pointer; }
-details.mentees-details > summary::marker { color: #2a72d4; }
-details.mentees-details > summary::-webkit-details-marker { color: #2a72d4; }
-</style>
-
-<details class="mentees-details">
-  <summary><strong>Mentees (research-based, from CFAR, IHPC, A*STAR or NUS HPC-AI Lab):</strong></summary>
-  <ul class="mentees-list">
-    <li>Yaxin Zhou (Master's student @ CMU, America; Author of <a href="https://arxiv.org/abs/2601.01569v1">[[CaveAgent]]</a>)</li>
-    <li>Jingxuan Wu (Master's student @ UNC, America; Author of <a href="https://arxiv.org/abs/2510.09060">[[OSCAR]]</a>)</li>
-    <li>Xu Pan (Master’s student @ Wuhan University)</li>
-    <li>Chubin Zhang (Master’s student @ Beijing University of Posts and Telecommunications; Author of <a href="https://arxiv.org/abs/2512.02581">[[GoRL]]</a>)</li>
-    <li>Dongchu Xie (Undergrad @ CUHK(SZ))</li>
-    <li>Xin Yan (Undergrad @ Beijing Normal University)</li>
-  </ul>
-</details>
 
 
 <mark style="background-color: yellow; color: black;"></mark>
