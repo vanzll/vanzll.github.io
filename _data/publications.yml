@@ -19,7 +19,7 @@ main:
     code: https://github.com/Johnny221B/TAPS
     github_stars: "Johnny221B/TAPS"
     website: "https://taps-dlm.github.io/"
-    image: "./assets/papers/taps.png"
+    image: "./assets/papers/TAPS.png"
     intro: "Dive into the creativity of diffusion language models."
     
   - title: "Diversifying Policy Behaviors via Extrinsic Behavioral Curiosity"
