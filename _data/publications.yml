@@ -8,9 +8,20 @@ main:
     github_stars: "acodercat/cave-agent"
     website: "https://github.com/acodercat/cave-agent"
     image: "./assets/papers/caveagent.png"
-    intro: "Runtime as the primary workspace of LLM Agent, with a runtime agent-skill management mechanism."
+    intro: "A new tool-use with runtime as the primary workspace of LLM Agent, featuring a runtime agent-skill management mechanism."
     honor: "Core product technology adopted by the HKGAI and InnoHK. [[website](https://www.hkgai.info/)]"
 
+  - title: "Time-Annealed Perturbation Sampling: Diverse Generation for Diffusion Language Models"
+    authors: "Jingxuan Wu*, <strong>Zhenglin Wan*</strong>, Xingrui Yu, Yuzhe Yang, Yiqiao Huang, Ivor Tsang, Yang You"
+    conference_short: Preprint
+    conference: Preprint
+    paper: https://arxiv.org/abs/2601.22629
+    code: https://github.com/Johnny221B/TAPS
+    github_stars: "Johnny221B/TAPS"
+    website: "https://taps-dlm.github.io/"
+    image: "./assets/papers/taps.png"
+    intro: "Dive into the creativity of diffusion language models."
+    
   - title: "Diversifying Policy Behaviors via Extrinsic Behavioral Curiosity"
     authors: "<strong>Zhenglin Wan*</strong>, Xingrui Yu*, David Bossens, Yueming Lyu, Qing Guo, Flint Xiaofeng Fan, Yew Soon Ong, Ivor Tsang"
     conference_short: ICML 2025
@@ -49,6 +60,8 @@ main:
     conference_short: preprint
     conference: preprint
     paper: https://arxiv.org/abs/2601.04786
+    code: https://github.com/langfengQ/AgentOCR
+    github_stars: "langfengQ/AgentOCR"
     website: "https://arxiv.org/abs/2601.04786"
     image: "./assets/papers/agentocr.png"
     intro: "Reinforcing Self-Compression for Optical Agent Memory."
