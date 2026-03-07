@@ -6,7 +6,7 @@ main:
     paper: https://arxiv.org/abs/2601.01569
     code: https://github.com/acodercat/cave-agent
     github_stars: "acodercat/cave-agent"
-    website: "https://vanzll.github.io/cave-agent-website/"
+    website: "https://caveagent.dev/"
     image: "./assets/papers/caveagent.png"
     intro: "A new tool-use with runtime as the primary workspace of LLM Agent, featuring a runtime agent-skill management mechanism."
     honor: "Core product technology adopted by the HKGAI and InnoHK. [[website](https://www.hkgai.info/)]"
