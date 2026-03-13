@@ -22,11 +22,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 # 😊 About me
-
-***Resume***: [Resume](https://drive.google.com/file/d/1fYYlj0MhJGsPPDdWUMB9LHMTqUo3bL1s/view?usp=sharing) (Updated on 6 Jan, 2026)
-
 ***Contact***: **vanzl3386 [at] gmail.com (preferred)**, vanzl [at] u.nus.edu, 121090525 [at] link.cuhk.edu.cn
-
 ---
 <style>
 /* Slightly reduce spacing between top-level headings on the home page */
