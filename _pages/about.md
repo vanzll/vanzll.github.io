@@ -127,7 +127,7 @@ The other topics I am interested:
 - *2026.02*  &nbsp;🎉 Our first dive into the "creativity" of Diffusion LLMs, is on [Arxiv](https://arxiv.org/abs/2601.22629)!
 - *2026.01*  &nbsp;🎉 We released our new work **CaveAgent** (Object-oriented Tool Use for LLM Agent) ([[Paper]](https://arxiv.org/abs/2601.01569v1), [[Source Code]](https://github.com/acodercat/cave-agent))!
 - *2025.12*  &nbsp;🎉 We released our new work **GoRL** for online Reinforcement Learning with generative policies. ([[Paper]](https://arxiv.org/abs/2512.02581), [[Code]](https://github.com/bennidict23/GoRL))
-- *2025.10*  &nbsp;🎉 Our paper **FM-IRL** (Flow Matching for inverse RL) is on Arxiv. ([[Paper]](https://arxiv.org/abs/2510.09222), [[Code]](https://github.com/vanzll/FM_IRL)).
+- *2025.10*  &nbsp;🎉 Introduced Flow Inverse RL ([[Paper]](https://arxiv.org/abs/2510.09222), [[Code]](https://github.com/vanzll/FM_IRL)).
 - *2025.10*  &nbsp;🎉 **OSCAR** (training free technique for diverse image generation) is on Arxiv. ([[Paper]](https://arxiv.org/abs/2510.09060), [[Code]](https://github.com/Johnny221B/OSCAR)).
 - *2025.08*  &nbsp;🎉🎉 Received my B.Sc from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) with 1-st class honor, looking forward to new journey!
 - *2025.05*  &nbsp;🎉🎉 [**EBC**](https://arxiv.org/abs/2410.06151) is accepted by ICML 2025 ([Code](https://github.com/vanzll/EBC) available).
