@@ -31,7 +31,7 @@ main:
     github_stars: "vanzll/EBC"
     website: "https://arxiv.org/html/2410.06151v4#S2"
     image: "./assets/papers/EBC.png"
-    intro: "Enables agent to efficiently learn diverse and high-performing policies via Quality Diversity (Inverse) Reinforcement Learning."
+    intro: "One-line code brings dynamic gradient-guided policy diversity for reinforcement learning."
 
   - title: "GoRL: An Algorithm-Agnostic Framework for Online Reinforcement Learning with Generative Policies"
     authors: "Chubin Zhang*, <strong>Zhenglin Wan</strong>*, Feng Chen, Xingrui Yu, Ivor Tsang, Bo An"
