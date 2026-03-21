@@ -96,18 +96,7 @@ html.dark .section-toggle-btn, body.dark .section-toggle-btn, html[data-theme="d
 
 Hi! I am Zhenglin Wan (万政霖), a first-year CS Ph.D. student at [HPC-AI Lab](https://ai.comp.nus.edu.sg/) at National University of Singapore (NUS), advised by [Prof. Yang You](https://www.comp.nus.edu.sg/~youy/). Previously, I worked at Nanyang Technological University (NTU) with [Prof. Bo An](https://personal.ntu.edu.sg/boan/), [Centre for Frontier AI Research (CFAR)](https://www.a-star.edu.sg/cfar), [IHPC](https://www.a-star.edu.sg/ihpc/), [A\*STAR](https://www.a-star.edu.sg/) with [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) , [Hong Kong Generative AI Research & Development Center (HKGAI)](https://www.hkgai.info/) with the team led by HKUST [Prof. Yike Guo](https://cse.hkust.edu.hk/admin/people/faculty/profile/yikeguo). I received my B.Sc from Chinese University of Hong Kong (CUHK) on 2025 Fall, during which I served as tech co-founder of AI start-up *Metasequoia Intelligence* based in Shenzhen, China.
 
----
-
-Previously I mainly studied RL or inverse RL from algorithmic side: such as the policy diversity/creativity (like [EBC](https://arxiv.org/abs/2410.06151)) and policy expressiveness (like [GoRL](https://arxiv.org/abs/2512.02581)). Recently, I am focusing on LLM Agent and RL as a core methodology to enhance it. Specifically:
-
-- The synergy/relationship between RL post-training and world model in LLM Agent.
-- Self-evolving Agent, particularly "Learning to Evolve"
-- Agent System (tool/skill/runtime/context management)
-
-The other topics I am interested:
-
-- Diffusion LLMs as a paradigm breaking the boundary of next-token-prediction
-- Efficiency in Agentic Systems
+Previously I mainly studied RL or inverse RL from algorithmic side: such as the policy diversity/creativity (like [EBC](https://arxiv.org/abs/2410.06151)) and policy expressiveness (like [GoRL](https://arxiv.org/abs/2512.02581)). Recently, I am focusing on RL infra and LLM/Agent Post-training. 
 
 
 
