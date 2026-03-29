@@ -96,7 +96,7 @@ html.dark .section-toggle-btn, body.dark .section-toggle-btn, html[data-theme="d
 
 Hi! I am Zhenglin Wan (万政霖), a first-year CS Ph.D. student at [HPC-AI Lab](https://ai.comp.nus.edu.sg/) at National University of Singapore (NUS), advised by [Prof. Yang You](https://www.comp.nus.edu.sg/~youy/). Previously, I worked at Nanyang Technological University (NTU) with [Prof. Bo An](https://personal.ntu.edu.sg/boan/), [Centre for Frontier AI Research (CFAR)](https://www.a-star.edu.sg/cfar), [IHPC](https://www.a-star.edu.sg/ihpc/), [A\*STAR](https://www.a-star.edu.sg/) with [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) , [Hong Kong Generative AI Research & Development Center (HKGAI)](https://www.hkgai.info/) with the team led by HKUST [Prof. Yike Guo](https://cse.hkust.edu.hk/admin/people/faculty/profile/yikeguo). I received my B.Sc from Chinese University of Hong Kong (CUHK) on 2025 Fall, during which I served as tech co-founder of AI start-up *Metasequoia Intelligence* based in Shenzhen, China.
 
-Previously I mainly studied RL or inverse RL from algorithmic side: such as the policy diversity/creativity (like [EBC](https://arxiv.org/abs/2410.06151)) and policy expressiveness (like [GoRL](https://arxiv.org/abs/2512.02581)). Recently, I am focusing on RL infra and LLM/Agent Post-training. 
+Always enjoy collaborating with talents, plz reach out if you are interested!
 
 
 
@@ -113,9 +113,7 @@ Previously I mainly studied RL or inverse RL from algorithmic side: such as the 
 
 <div class="news" markdown="1">
 <div class="scroll-window" markdown="1">
-- *2026.02*  &nbsp;🎉 Our first dive into the "creativity" of Diffusion LLMs, is on [Arxiv](https://arxiv.org/abs/2601.22629)!
-- *2026.01*  &nbsp;🎉 We released our new work **CaveAgent** (Object-oriented Tool Use for LLM Agent) ([[Paper]](https://arxiv.org/abs/2601.01569v1), [[Source Code]](https://github.com/acodercat/cave-agent))!
-- *2025.12*  &nbsp;🎉 We released our new work **GoRL** for online Reinforcement Learning with generative policies. ([[Paper]](https://arxiv.org/abs/2512.02581), [[Code]](https://github.com/bennidict23/GoRL))
+- *2025.12*  &nbsp;🎉 We released our new work **GoRL** for online Reinforcement Learning with diffusion/flow policies. ([[Paper]](https://arxiv.org/abs/2512.02581), [[Code]](https://github.com/bennidict23/GoRL))
 - *2025.10*  &nbsp;🎉 Introduced Flow Inverse RL ([[Paper]](https://arxiv.org/abs/2510.09222), [[Code]](https://github.com/vanzll/FM_IRL)).
 - *2025.10*  &nbsp;🎉 **OSCAR** (training free technique for diverse image generation) is on Arxiv. ([[Paper]](https://arxiv.org/abs/2510.09060), [[Code]](https://github.com/Johnny221B/OSCAR)).
 - *2025.08*  &nbsp;🎉🎉 Received my B.Sc from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) with 1-st class honor, looking forward to new journey!
