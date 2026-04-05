@@ -23,6 +23,7 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 # 😊 About me
 ***Contact***: **vanzl3386 [at] gmail.com (preferred)**, vanzl [at] u.nus.edu, 121090525 [at] link.cuhk.edu.cn
+
 ---
 <style>
 /* Slightly reduce spacing between top-level headings on the home page */
@@ -113,9 +114,9 @@ Always enjoy collaborating with talents, plz reach out if you are interested!
 
 <div class="news" markdown="1">
 <div class="scroll-window" markdown="1">
-- *2025.12*  &nbsp;🎉 We released our new work **GoRL** for online Reinforcement Learning with diffusion/flow policies. ([[Paper]](https://arxiv.org/abs/2512.02581), [[Code]](https://github.com/bennidict23/GoRL))
-- *2025.10*  &nbsp;🎉 Introduced Flow Inverse RL ([[Paper]](https://arxiv.org/abs/2510.09222), [[Code]](https://github.com/vanzll/FM_IRL)).
-- *2025.10*  &nbsp;🎉 **OSCAR** (training free technique for diverse image generation) is on Arxiv. ([[Paper]](https://arxiv.org/abs/2510.09060), [[Code]](https://github.com/Johnny221B/OSCAR)).
+- *2026.01*  &nbsp;🎉 [Cave-Agent](https://arxiv.org/abs/2601.01569) (object-oriented agentic framework with superior token-efficiency, deployed by HK gov) is released and open-sourced..
+- *2025.12*  &nbsp;🎉 We released our new work **GoRL** for online Reinforcement Learning with diffusion/flow-based generative models (a new insight for RL post-training of Flow Models). ([[Paper]](https://arxiv.org/abs/2512.02581), [[Code]](https://github.com/bennidict23/GoRL))
+- *2025.10*  &nbsp;🎉 **OSCAR** (training free technique for diverse image generation of Flow-based models) is on Arxiv. ([[Paper]](https://arxiv.org/abs/2510.09060), [[Code]](https://github.com/Johnny221B/OSCAR)).
 - *2025.08*  &nbsp;🎉🎉 Received my B.Sc from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) with 1-st class honor, looking forward to new journey!
 - *2025.05*  &nbsp;🎉🎉 [**EBC**](https://arxiv.org/abs/2410.06151) is accepted by ICML 2025 ([Code](https://github.com/vanzll/EBC) available).
 - *2025.03*  &nbsp;🎉🎉 One paper accepted by ICLR 2025 (generative models for robot learning workshop).
