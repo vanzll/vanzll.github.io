@@ -114,7 +114,7 @@ Always enjoy collaborating with talents, plz reach out if you are interested!
 
 <div class="news" markdown="1">
 <div class="scroll-window" markdown="1">
-- *2026.01*  &nbsp;🎉 [Cave-Agent](https://arxiv.org/abs/2601.01569) is open-sourced: an object-oriented agentic framework with superior token-efficiency, which is powering the agentic AI system being built by the Hong Kong Government.
+- *2026.01*  &nbsp;🎉 [Cave-Agent](https://arxiv.org/abs/2601.01569) is open-sourced: an object-oriented agentic framework with superior token-efficiency, empowering the agentic AI system being built by the Hong Kong Government.
 - *2025.12*  &nbsp;🎉 We released our new work **GoRL** for online Reinforcement Learning with diffusion/flow-based generative models (a new insight for RL post-training of Flow Models). ([[Paper]](https://arxiv.org/abs/2512.02581), [[Code]](https://github.com/bennidict23/GoRL))
 - *2025.10*  &nbsp;🎉 **OSCAR** (training free technique for diverse image generation of Flow-based models) is on Arxiv. ([[Paper]](https://arxiv.org/abs/2510.09060), [[Code]](https://github.com/Johnny221B/OSCAR)).
 - *2025.08*  &nbsp;🎉🎉 Received my B.Sc from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) with 1-st class honor, looking forward to new journey!
@@ -167,7 +167,7 @@ Always enjoy collaborating with talents, plz reach out if you are interested!
 <div id="publications-section" markdown="1">
 
 ## Conference papers and Preprints
-Please scroll down to view all publications.
+Please scroll down to view more.
 \* denotes joint-first-author and equal contribution.
 <style>
 /* Publications section styles (scoped) */
