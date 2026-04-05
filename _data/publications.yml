@@ -8,8 +8,8 @@ main:
     github_stars: "acodercat/cave-agent"
     website: "https://caveagent.dev/"
     image: "./assets/papers/caveagent.png"
-    intro: "A new tool-use with runtime as the primary workspace of LLM Agent, featuring a runtime agent-skill management mechanism."
-    honor: "Cave-Agent is powering the agentic AI system being built by the Hong Kong Government. [[website](https://www.hkgai.info/)]"
+    intro: "Object-oriented Agentic Systems, extending the philosophy of Anthropic Agent-skills, superior token-efficiency."
+    honor: "Cave-Agent is empowering the agentic AI system being built by the Hong Kong Government. [[website](https://www.hkgai.info/)]"
 
   
   - title: "GoRL: An Algorithm-Agnostic Framework for Online Reinforcement Learning with Generative Policies"
