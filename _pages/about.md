@@ -99,8 +99,8 @@ Hi! I am Zhenglin Wan (万政霖), a first-year CS Ph.D. student at [HPC-AI Lab]
 
 I am currently interested in:
 
-- Alignment of Visual Generation via Post-training, specifically from the perspective of understanding the generation dynamics of Flow-style models (like DiT).
-- World Models. I am interested in the DiT-AR mixed architecture as the generation backbone
+- Alignment of Visual Generation via Post-training, specifically from the perspective of understanding the generation dynamics of Flow-based models (like DiT).
+- World Models. I am currently more interested in the DiT-AR mixed architecture as the generation backbone
 - Agentic Systems. However, I am focusing more on the "agentic sense", rather than viewing "agentic AI" as a research domain. For example, an interesting question of mine will be:  how to make world models truly valuable in applications via the agentic engineering?
 
 Always enjoy collaborating with talents, plz reach out if you are interested!
