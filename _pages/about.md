@@ -580,6 +580,20 @@ html[data-theme="dark"] .exp-img img,
 
 </div>
 
+<span class='anchor' id='invited-talks'></span>
+# 🎤 Invited Talks
+
+<button class="section-toggle-btn" onclick="toggleSection('invited-talks-section', this)">
+  <span class="toggle-icon">▼</span> Click to expand
+</button>
+
+<div id="invited-talks-section" class="collapsible-content" markdown="1">
+
+- **Object-Oriented Agent Infrastructure** — Invited by *Qingke AI Community*
+- **Stable Online Alignment of Diffusion-based Foundation Model** — Invited by *Meta (MRS)*
+
+</div>
+
 <span class='anchor' id='services'></span>
 # 🎈 Services
 
