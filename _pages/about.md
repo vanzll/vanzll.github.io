@@ -95,14 +95,14 @@ html.dark .section-toggle-btn, body.dark .section-toggle-btn, html[data-theme="d
 <!-- Dark mode is handled globally in layout/head; local button/styles removed -->
 
 
-Hi! I am Zhenglin Wan (万政霖), a first-year CS Ph.D. student at [HPC-AI Lab](https://ai.comp.nus.edu.sg/) at National University of Singapore (NUS), advised by [Prof. Yang You](https://www.comp.nus.edu.sg/~youy/). Previously, I worked at Nanyang Technological University (NTU) with [Prof. Bo An](https://personal.ntu.edu.sg/boan/), [Centre for Frontier AI Research (CFAR)](https://www.a-star.edu.sg/cfar), [IHPC](https://www.a-star.edu.sg/ihpc/), [A\*STAR](https://www.a-star.edu.sg/) with [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) , [Hong Kong Generative AI Research & Development Center (HKGAI)](https://www.hkgai.info/) with the team led by HKUST [Prof. Yike Guo](https://cse.hkust.edu.hk/admin/people/faculty/profile/yikeguo). I received my B.Sc from Chinese University of Hong Kong (CUHK) on 2025 Fall, during which I served as tech co-founder of AI start-up *Metasequoia Intelligence* based in Shenzhen, China.
+Hi! I am Zhenglin Wan (万政霖), a CS Ph.D. student at [HPC-AI Lab](https://ai.comp.nus.edu.sg/) at National University of Singapore (NUS), advised by [Prof. Yang You](https://www.comp.nus.edu.sg/~youy/). Previously, I worked at Nanyang Technological University (NTU) with [Prof. Bo An](https://personal.ntu.edu.sg/boan/), [Centre for Frontier AI Research (CFAR)](https://www.a-star.edu.sg/cfar), [IHPC](https://www.a-star.edu.sg/ihpc/), [A\*STAR](https://www.a-star.edu.sg/) with [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) , [Hong Kong Generative AI Research & Development Center (HKGAI)](https://www.hkgai.info/) with the team led by HKUST [Prof. Yike Guo](https://cse.hkust.edu.hk/admin/people/faculty/profile/yikeguo). I received my B.Sc from Chinese University of Hong Kong (CUHK) on 2025 Fall, during which I served as tech co-founder of AI start-up *Metasequoia Intelligence* based in Shenzhen, China.
 
 I am currently interested in:
 
-- Alignment of Visual Generation via Post-training, specifically from the perspective of understanding the generation dynamics of Flow-based models (like DiT).
-- World Models. I am currently more interested in the DiT-AR mixed architecture as the generation backbone
-- Agentic Systems. However, I am focusing more on the "agentic sense", rather than viewing "agentic AI" as a research domain. For example, an interesting question of mine will be:  how to make world models truly valuable in applications via the agentic engineering?
-
+- Post-training of Visual Generation Models, specifically, understanding the dynamics of diffusion-transformer and the synergy and conflict of standard RL paradigm.
+- Interactive Video Generation and the extension to world models.
+- Agentic Systems. However, I am focusing more on the "agentic sense", rather than viewing "agentic AI" as a research domain. As I believe that large video models or world models could also benefit from agentic design in the future, as they are the same with LLMs from the foundamental perspective.
+ 
 Always enjoy collaborating with talents, plz reach out if you are interested!
 
 
@@ -120,7 +120,7 @@ Always enjoy collaborating with talents, plz reach out if you are interested!
 
 <div class="news" markdown="1">
 <div class="scroll-window" markdown="1">
-- *2026.04*  &nbsp;🎉🎉 Invited talk by Meta MRS (Stable online alignment of diffusion-based foundation models)!
+- *2026.04*  &nbsp;🎉🎉 Invited talk by Meta MRS (Stable online RL for alignment of diffusion-based foundation models)!
 - *2026.01*  &nbsp;🎉 [Cave-Agent](https://arxiv.org/abs/2601.01569) is open-sourced: an object-oriented agentic framework with superior token-efficiency, empowering the agentic AI system being built by the Hong Kong Government.
 - *2025.12*  &nbsp;🎉 We released our new work **GoRL** for online Reinforcement Learning with diffusion/flow-based generative models (a new insight for RL post-training of Flow Models). ([[Paper]](https://arxiv.org/abs/2512.02581), [[Code]](https://github.com/bennidict23/GoRL))
 - *2025.10*  &nbsp;🎉 **OSCAR** (training free technique for diverse image generation of Flow-based models) is on Arxiv. ([[Paper]](https://arxiv.org/abs/2510.09060), [[Code]](https://github.com/Johnny221B/OSCAR)).
