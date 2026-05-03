@@ -120,7 +120,7 @@ Always enjoy collaborating with talents, plz reach out if you are interested!
 
 <div class="news" markdown="1">
 <div class="scroll-window" markdown="1">
-- *2026.04*  &nbsp;🎉🎉 Three papers accepted by ICML 2026, congrats to all co-authors!
+- *2026.05*  &nbsp;🎉🎉 Three papers accepted by ICML 2026, congrats to all co-authors!
 - *2026.04*  &nbsp;🎉🎉 Invited talk by Meta MRS (Stable online RL for alignment of diffusion-based foundation models)!
 - *2026.03*  &nbsp;🎉🎉 Two papers accepted by ACL 2026.
 - *2026.01*  &nbsp;🎉 [Cave-Agent](https://arxiv.org/abs/2601.01569) is open-sourced: an object-oriented agentic framework with superior token-efficiency, empowering the agentic AI system being built by the Hong Kong Government.
