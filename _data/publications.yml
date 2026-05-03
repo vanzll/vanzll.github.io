@@ -12,16 +12,16 @@ main:
     honor: "Cave-Agent is empowering the agentic AI system being built by the Hong Kong Government. [[website](https://www.hkgai.info/)]"
 
   
-  - title: "GoRL: An Algorithm-Agnostic Framework for Online Reinforcement Learning with Generative Policies"
-    authors: "Chubin Zhang*, <strong>Zhenglin Wan</strong>*, Feng Chen, Xingrui Yu, Ivor Tsang, Bo An"
-    conference_short: preprint
-    conference: preprint
+  - title: "Evolving Diffusion and Flow Matching Policies for Online Reinforcement Learning"
+    authors: "Chubin Zhang*, <strong>Zhenglin Wan</strong>*, Feng Chen, Fuchao Yang, Lang Feng, Yaxin Zhou, Xingrui Yu, Yang You, Ivor Tsang, Bo An"
+    conference_short: ICML 2026
+    conference: Forty-Third International Conference on Machine Learning
     paper: https://arxiv.org/abs/2512.02581
     code: https://github.com/bennidict23/GoRL
     github_stars: "bennidict23/GoRL"
     website: "https://arxiv.org/html/2512.02581v1"
     image: "./assets/papers/gorl.png"
-    intro: "Generic Framework for Online Reinforcement Learning with Generative Policy class (e.g., Diffusion Policy & Flow-Matching Policy)."
+    intro: "A perspective for online RL training of diffusion-based models."
 
       
   - title: "Diversifying Policy Behaviors via Extrinsic Behavioral Curiosity"
@@ -37,14 +37,14 @@ main:
 
   - title: "OSCAR: Orthogonal Stochastic Control for Alignment-Respecting Diversity in Flow Matching"
     authors: "Jingxuan Wu*, <strong>Zhenglin Wan</strong>*, Xingrui Yu, Yuzhe Yang, Bo An, Ivor Tsang"
-    conference_short: preprint
-    conference: preprint
+    conference_short: ICML 2026
+    conference: Forty-Third International Conference on Machine Learning
     paper: https://arxiv.org/abs/2510.09060
     code: https://github.com/Johnny221B/OSCAR
     github_stars: "Johnny221B/OSCAR"
     website: ""
     image: "./assets/papers/OSCAR.png"
-    intro: "Enables Flow-Matching model to generate diverse but alignment-respecting images in training-free manner."
+    intro: "Enable DiT model to generate manifold-respecting but semantically diverse images (critical for RL post-training exploration)."
 
   - title: "Time-Annealed Perturbation Sampling: Diverse Generation for Diffusion Language Models"
     authors: "Jingxuan Wu*, <strong>Zhenglin Wan*</strong>, Xingrui Yu, Yuzhe Yang, Yiqiao Huang, Ivor Tsang, Yang You"
@@ -61,8 +61,8 @@ main:
 
   - title: "AgentOCR: Reimagining Agent History via Optical Self-Compression"
     authors: "Lang Feng*, Fuchao Yang*, Feng Chen, Xin Cheng, Haiyang Xu, <strong>Zhenglin Wan</strong>, Ming Yan, Bo An"
-    conference_short: preprint
-    conference: preprint
+    conference_short: ACL 2026
+    conference: ACL 2026
     paper: https://arxiv.org/abs/2601.04786
     code: https://github.com/langfengQ/AgentOCR
     github_stars: "langfengQ/AgentOCR"
