@@ -21,7 +21,7 @@ main:
     github_stars: "bennidict23/GoRL"
     website: "https://arxiv.org/html/2512.02581v1"
     image: "./assets/papers/gorl.png"
-    intro: "A perspective for online RL training of diffusion-based models."
+    intro: "A new perspective for online RL training of diffusion-based models."
 
       
   - title: "Diversifying Policy Behaviors via Extrinsic Behavioral Curiosity"
