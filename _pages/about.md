@@ -97,7 +97,7 @@ html.dark .section-toggle-btn, body.dark .section-toggle-btn, html[data-theme="d
 
 Hi! I am Zhenglin Wan (万政霖), a CS Ph.D. student at [HPC-AI Lab](https://ai.comp.nus.edu.sg/) at National University of Singapore (NUS), advised by [Prof. Yang You](https://www.comp.nus.edu.sg/~youy/). Previously, I worked at Nanyang Technological University (NTU) with [Prof. Bo An](https://personal.ntu.edu.sg/boan/), [Centre for Frontier AI Research (CFAR)](https://www.a-star.edu.sg/cfar), [IHPC](https://www.a-star.edu.sg/ihpc/), [A\*STAR](https://www.a-star.edu.sg/) with [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) , [Hong Kong Generative AI Research & Development Center (HKGAI)](https://www.hkgai.info/) with the team led by HKUST [Prof. Yike Guo](https://cse.hkust.edu.hk/admin/people/faculty/profile/yikeguo). I received my B.Sc from Chinese University of Hong Kong (CUHK) on 2025 Fall, during which I served as tech co-founder of AI start-up *Metasequoia Intelligence* based in Shenzhen, China.
 
-I am currently interested in:
+My research interest lies in Multi-modal generation and RL Post-training. Specifically,
 
 - Post-training of Visual Generation Models, specifically, understanding the dynamics of diffusion-transformer and the synergy and conflict of standard RL paradigm.
 - Interactive Video Generation and the extension to world models.
