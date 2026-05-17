@@ -483,7 +483,7 @@ html[data-theme="dark"] .exp-img img,
         <li>Affiliation: College of Computing and Data Science (CCDS)</li>
         <li>Advisor: Prof. Bo An</li>
       </ul>
-      <p class="exp-time">2025.09 - 2026.01</p>
+      <p class="exp-time"></p>
     </div>
     <div class="exp-img"><img src="assets/institutions/ntu.png" alt="NTU"></div>
   </li>
@@ -498,7 +498,7 @@ html[data-theme="dark"] .exp-img img,
         <li>Director: Prof. Yike Guo</li>
         <li>Proposed a new product-inspired Agentic Function Calling paradigm (<a href="https://arxiv.org/abs/2601.01569v1">[[CaveAgent]]</a>).</li>
       </ul>
-      <p class="exp-time">2025.05 - 2025.09</p>
+      <p class="exp-time"></p>
     </div>
     <div class="exp-img"><img src="assets/institutions/hkgai.png" alt="HKGAI"></div>
   </li>
@@ -512,7 +512,7 @@ html[data-theme="dark"] .exp-img img,
         <li>Affiliation: Centre for Frontier AI Research (CFAR), Institute of High Performance Computing (IHPC)</li>
         <li>Advisor: Prof. Ivor Tsang, Dr. Xingrui Yu</li>
       </ul>
-      <p class="exp-time">2024.07 - 2025.09  (3 months full-time + 11 months part-time)</p>
+      <p class="exp-time"></p>
     </div>
     <div class="exp-img"><img src="assets/institutions/astar.png" alt="A*STAR"></div>
   </li>
@@ -526,22 +526,12 @@ html[data-theme="dark"] .exp-img img,
         <li>Affiliation: School of Data Science</li>
         <li>Advisor: Prof. Jianfeng Mao</li>
       </ul>
-      <p class="exp-time">2023.06 - 2024.06</p>
+      <p class="exp-time"></p>
     </div>
     <div class="exp-img"><img src="assets/institutions/cuhksz.png" alt="CUHK(SZ)"></div>
   </li>
 
-  <li class="exp-item">
-    <div class="exp-text">
-      <p class="exp-title">Machine Learning Algorithm Engineer Intern</p>
-      <p class="exp-sub">HUIYINTONG, Shenzhen, China</p>
-      <ul style="margin: 6px 0 6px 18px; padding: 0; font-size: 0.96em; color: #555;">
-        <li>Mentor: Dr. Jun Song</li>
-      </ul>
-      <p class="exp-time">2023.07 - 2024.01</p>
-    </div>
 
-  </li>
 
 
 
@@ -617,7 +607,7 @@ html[data-theme="dark"] .exp-img img,
 
 <div id="honors-section" class="collapsible-content" markdown="1">
 
-- **NUS Research Scholarship** (approx. ￥250000/year plus full tuition fee subsidy, for entire Ph.D studies in NUS)
+- **NUS Research Scholarship** (Ph.D stipend and tuition fee subsidy)
   
 - **1-st class honor undergraduate student** awarded by The Chinese University of Hong Kong
 
