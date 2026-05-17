@@ -95,7 +95,7 @@ html.dark .section-toggle-btn, body.dark .section-toggle-btn, html[data-theme="d
 <!-- Dark mode is handled globally in layout/head; local button/styles removed -->
 
 
-Hi! I am Zhenglin Wan (万政霖), a CS Ph.D. student at [HPC-AI Lab](https://ai.comp.nus.edu.sg/) at National University of Singapore (NUS), advised by [Prof. Yang You](https://www.comp.nus.edu.sg/~youy/). Previously, I worked at Nanyang Technological University (NTU) with [Prof. Bo An](https://personal.ntu.edu.sg/boan/), [Centre for Frontier AI Research (CFAR)](https://www.a-star.edu.sg/cfar), [IHPC](https://www.a-star.edu.sg/ihpc/), [A\*STAR](https://www.a-star.edu.sg/) with [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) , [Hong Kong Generative AI Research & Development Center (HKGAI)](https://www.hkgai.info/) with the team led by HKUST [Prof. Yike Guo](https://cse.hkust.edu.hk/admin/people/faculty/profile/yikeguo). I received my B.Sc from Chinese University of Hong Kong (CUHK) on 2025 Fall, during which I served as tech co-founder of AI start-up *Metasequoia Intelligence* based in Shenzhen, China.
+Hi! I am Zhenglin Wan (万政霖), a CS Ph.D. student at [HPC-AI Lab](https://ai.comp.nus.edu.sg/) at National University of Singapore (NUS), advised by [Prof. Yang You](https://www.comp.nus.edu.sg/~youy/). Previously, I worked at Nanyang Technological University (NTU) with [Prof. Bo An](https://personal.ntu.edu.sg/boan/), [Centre for Frontier AI Research (CFAR)](https://www.a-star.edu.sg/cfar), [IHPC](https://www.a-star.edu.sg/ihpc/), [A\*STAR](https://www.a-star.edu.sg/) with [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) , [Hong Kong Generative AI Research & Development Center (HKGAI)](https://www.hkgai.info/) with the team led by HKUST [Prof. Yike Guo](https://cse.hkust.edu.hk/admin/people/faculty/profile/yikeguo). I received my B.Sc (with 1-st class honor) in Statistics and Data Science from The Chinese University of Hong Kong (CUHK).
 
 My research interest lies in Multi-modal generation and RL Post-training. Specifically,
 
@@ -103,7 +103,7 @@ My research interest lies in Multi-modal generation and RL Post-training. Specif
 - Interactive Video Generation and the extension to world models.
 - Agentic Systems. However, I am focusing more on the "agentic sense", rather than viewing "agentic AI" as a research domain. As I believe that large video models or world models could also benefit from agentic design in the future, as they are the same with LLMs from the foundamental perspective.
  
-Always enjoy collaborating with talents, plz reach out if you are interested!
+Always enjoy collaborating with talents, plz reach out via email!
 
 
 
@@ -120,13 +120,12 @@ Always enjoy collaborating with talents, plz reach out if you are interested!
 
 <div class="news" markdown="1">
 <div class="scroll-window" markdown="1">
-- *2026.05*  &nbsp;🎉🎉 Three papers accepted by ICML 2026, congrats to all co-authors!
-- *2026.04*  &nbsp;🎉🎉 Invited talk by Meta MRS (Stable online RL for alignment of diffusion-based foundation models)!
+- *2026.05*  &nbsp;🎉🎉 Three (co)first-author papers accepted by ICML 2026, congrats to all co-authors!
+- *2026.04*  &nbsp;🎉🎉 Gave a talk at Meta-NUS MoU ceremony (Stable online RL for alignment of diffusion-based foundation models).
 - *2026.03*  &nbsp;🎉🎉 Two papers accepted by ACL 2026.
 - *2026.01*  &nbsp;🎉 [Cave-Agent](https://arxiv.org/abs/2601.01569) is open-sourced: an object-oriented agentic framework with superior token-efficiency, empowering the agentic AI system being built by the Hong Kong Government.
 - *2025.12*  &nbsp;🎉 We released our new work **GoRL** for online RL training with diffusion/flow-based generative models. ([[Paper]](https://arxiv.org/abs/2512.02581), [[Code]](https://github.com/bennidict23/GoRL))
-- *2025.10*  &nbsp;🎉 **OSCAR** (training free technique for diverse generation of Flow-based models) is on Arxiv. ([[Paper]](https://arxiv.org/abs/2510.09060), [[Code]](https://github.com/Johnny221B/OSCAR)).
-- *2025.08*  &nbsp;🎉🎉 Received my B.Sc from [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/index.html) with 1-st class honor, looking forward to new journey!
+- *2025.10*  &nbsp;🎉 **OSCAR** (training free technique for diverse rollout of Flow-based models) is on Arxiv. ([[Paper]](https://arxiv.org/abs/2510.09060), [[Code]](https://github.com/Johnny221B/OSCAR)).
 - *2025.05*  &nbsp;🎉🎉 [**EBC**](https://arxiv.org/abs/2410.06151) is accepted by ICML 2025 ([Code](https://github.com/vanzll/EBC) available).
 - *2025.03*  &nbsp;🎉🎉 One paper accepted by ICLR 2025 (generative models for robot learning workshop).
 - *2024.12*  &nbsp;🎉🎉 One paper accepted by AAMAS 2025 (oral).
@@ -135,7 +134,6 @@ Always enjoy collaborating with talents, plz reach out if you are interested!
 - *2024.09*  &nbsp;🎉🎉 Awarded *Academic Performance Scholarship* (for top 5% students) for consecutive two years.
 - *2024.05*  &nbsp;🎉🎉 One invention patent is officially granted. 
 - *2023.12*  &nbsp;🎉🎉 As tech co-founder, I co-founded enterprise "Metasequoia Intelligence" based in Shenzhen, China.
-- *2021.09*  &nbsp;🎉🎉 Awarded *Zhejiang Guolong Inspirational* and *Diligentia Bowen* Scholarship to support my undergraduate studies in CUHK(SZ).
 - *2019.09*  &nbsp;🎉🎉 Lucky to win the 1-st prize in Provincial Chinese Mathematics Olympiad (CMO). Thanks for this intellectually-rewarding experience.
 
 </div>
@@ -391,7 +389,7 @@ As these works are presented in China, these names are directly translated from 
         <li>Affiliation: Department of Computer Science, School of Computing</li>
         <li>Advisor: Prof. Yang You</li>
       </ul>
-      <p class="edu-time">2026.01 -</p>
+      <p class="edu-time"></p>
     </div>
     <div class="edu-img"><img src="assets/institutions/nus.png" alt="NUS"></div>
   </li>
@@ -402,9 +400,9 @@ As these works are presented in China, these names are directly translated from 
       <ul style="margin: 6px 0 6px 18px; padding: 0; font-size: 0.96em; color: #555;">
         <li>1-st class honor</li>
         <li>Major: Statistics & Data Science, GPA: 3.85/4.0, Rank: 7%</li>
-        <li>Finished my undergraduate in CUHK-Shenzhen campus, while the degree is offered by CUHK.</li>
+        <li>Completed my undergraduate in CUHK-Shenzhen campus, while the degree is offered by CUHK.</li>
       </ul>
-      <p class="edu-time">2021.09 - 2025.08</p>
+      <p class="edu-time"></p>
     </div>
     <div class="edu-img"><img src="assets/institutions/cuhk.png" alt="CUHK(SZ)"></div>
   </li>
