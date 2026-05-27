@@ -23,6 +23,17 @@ main:
     image: "./assets/papers/gorl.png"
     intro: "A new perspective for online RL training of diffusion-based models."
 
+  - title: "Adversarial Dual On-Policy Distillation from Expressive Flow-based Teacher"
+    authors: "<strong>Zhenglin Wan*</strong>, Jingxuan Wu*, Xingrui Yu, Chubin Zhang, Mingcong Lei, Bo An, Ivor W. Tsang, Yang You"
+    conference_short: ICML 2026
+    conference: Forty-Third International Conference on Machine Learning
+    paper: https://arxiv.org/abs/2605.27095
+    code: https://github.com/vanzll/FA-OPD
+    github_stars: "vanzll/FA-OPD"
+    website: "https://arxiv.org/html/2605.27095v1"
+    image: "./assets/papers/FAOPD.png"
+    intro: "Adversarial dual on-policy distillation from a flow-matching teacher to a lightweight deployable MLP policy."
+
       
   - title: "Diversifying Policy Behaviors via Extrinsic Behavioral Curiosity"
     authors: "<strong>Zhenglin Wan*</strong>, Xingrui Yu*, David Bossens, Yueming Lyu, Qing Guo, Flint Xiaofeng Fan, Yew Soon Ong, Ivor Tsang"
@@ -69,4 +80,3 @@ main:
     website: "https://arxiv.org/abs/2601.04786"
     image: "./assets/papers/agentocr.png"
     intro: "Reinforcing Self-Compression for Optical Agent Memory."
-
