@@ -95,13 +95,15 @@ html.dark .section-toggle-btn, body.dark .section-toggle-btn, html[data-theme="d
 <!-- Dark mode is handled globally in layout/head; local button/styles removed -->
 
 
-Hi! I am Zhenglin Wan (万政霖), a CS Ph.D. student at [HPC-AI Lab](https://ai.comp.nus.edu.sg/) at National University of Singapore (NUS), advised by [Prof. Yang You](https://www.comp.nus.edu.sg/~youy/). Previously, I worked at Nanyang Technological University (NTU) with [Prof. Bo An](https://personal.ntu.edu.sg/boan/), [Centre for Frontier AI Research (CFAR)](https://www.a-star.edu.sg/cfar), [IHPC](https://www.a-star.edu.sg/ihpc/), [A\*STAR](https://www.a-star.edu.sg/) with [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) , [Hong Kong Generative AI Research & Development Center (HKGAI)](https://www.hkgai.info/) with the team led by HKUST [Prof. Yike Guo](https://cse.hkust.edu.hk/admin/people/faculty/profile/yikeguo). I received my B.Sc (with 1-st class honor) in Statistics and Data Science from The Chinese University of Hong Kong (CUHK).
+I am Zhenglin Wan (万政霖), a CS Ph.D. student at [HPC-AI Lab](https://ai.comp.nus.edu.sg/) at National University of Singapore (NUS), advised by [Prof. Yang You](https://www.comp.nus.edu.sg/~youy/). Previously, I worked at Nanyang Technological University (NTU) with [Prof. Bo An](https://personal.ntu.edu.sg/boan/), [Centre for Frontier AI Research (CFAR)](https://www.a-star.edu.sg/cfar), [IHPC](https://www.a-star.edu.sg/ihpc/), [A\*STAR](https://www.a-star.edu.sg/) with [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) , [Hong Kong Generative AI Research & Development Center (HKGAI)](https://www.hkgai.info/) with the team led by HKUST [Prof. Yike Guo](https://cse.hkust.edu.hk/admin/people/faculty/profile/yikeguo). I received my B.Sc (with 1-st class honor) in Statistics and Data Science from The Chinese University of Hong Kong (CUHK).
 
-My research interest lies in Multi-modal generation and RL Post-training. Specifically,
+I mainly work on Multi-modal generation and RL Post-training, with emphasis on:
 
-- Post-training of Visual Generation Models, specifically, understanding the dynamics of diffusion-transformer and the synergy and conflict of standard RL paradigm.
-- Interactive Video Generation and the extension to world models.
-- Agentic Systems. However, I am focusing more on the "agentic sense", rather than viewing "agentic AI" as a research domain. As I believe that large video models or world models could also benefit from agentic design in the future, as they are the same with LLMs from the foundamental perspective.
+- genuinely understanding diffusion models (the forward process and reverse process) and the synergy/conflict with Reinforcement Learning 
+- applying these insights for large-scale post-training of diffusion-based generative models (such as text/image/video/audio/omni generation)
+- infra-algorithm co-design, for identifying useful insights and developing easy-to-scale-up algorithms.
+
+I am also interested in and have explored Agentic systems and Diffusion Language Models (although not an expert :D).
  
 Always enjoy collaborating with talents, plz reach out via email!
 
