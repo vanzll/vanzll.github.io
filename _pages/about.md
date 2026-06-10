@@ -22,7 +22,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 # 😊 About me
-***Contact***: **vanzl3386 [at] gmail.com (preferred)**, vanzl [at] u.nus.edu, 121090525 [at] link.cuhk.edu.cn
+***Contact***: **vanzl3386 [at] gmail.com (main)**, vanzl [at] u.nus.edu, 121090525 [at] link.cuhk.edu.cn
 
 ---
 <style>
@@ -97,13 +97,11 @@ html.dark .section-toggle-btn, body.dark .section-toggle-btn, html[data-theme="d
 
 I am Zhenglin Wan (万政霖), a CS Ph.D. student at [HPC-AI Lab](https://ai.comp.nus.edu.sg/) at National University of Singapore (NUS), advised by [Prof. Yang You](https://www.comp.nus.edu.sg/~youy/). Previously, I worked at Nanyang Technological University (NTU) with [Prof. Bo An](https://personal.ntu.edu.sg/boan/), [Centre for Frontier AI Research (CFAR)](https://www.a-star.edu.sg/cfar), [IHPC](https://www.a-star.edu.sg/ihpc/), [A\*STAR](https://www.a-star.edu.sg/) with [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) , [Hong Kong Generative AI Research & Development Center (HKGAI)](https://www.hkgai.info/) with the team led by HKUST [Prof. Yike Guo](https://cse.hkust.edu.hk/admin/people/faculty/profile/yikeguo). I received my B.Sc (with 1-st class honor) in Statistics and Data Science from The Chinese University of Hong Kong (CUHK).
 
-I mainly work on Multi-modal generation and RL Post-training, with emphasis on:
+I mainly work on infra-algorithm co-design of Multi-modal generation and RL Post-training, with emphasis on:
 
 - genuinely understanding diffusion models (the forward process and reverse process) and the synergy/conflict with Reinforcement Learning 
-- applying these insights for large-scale post-training of diffusion-based generative models (such as text/image/video/audio/omni generation)
-- infra-algorithm co-design, for identifying useful insights and developing easy-to-scale-up algorithms.
-
-I am also interested in and have explored Agentic systems and Diffusion Language Models (although not an expert :D).
+- applying these insights for better large-scale post-training of diffusion-based generative models (such as text/image/video/audio/omni generation)
+- agentic workflow (for both LLM Agent and Video Gen)
  
 Always enjoy collaborating with talents, plz reach out via email!
 
