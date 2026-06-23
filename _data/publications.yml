@@ -12,7 +12,7 @@ main:
     honor: "Cave-Agent is empowering the agentic AI system being built by the Hong Kong Government. [[website](https://www.hkgai.info/)]"
 
   
-  - title: "Evolving Diffusion and Flow Matching Policies for Online Reinforcement Learning"
+  - title: "Training Diffusion Policies via Prior-Mapping Co-evolution"
     authors: "Chubin Zhang*, <strong>Zhenglin Wan</strong>*, Feng Chen, Fuchao Yang, Lang Feng, Yaxin Zhou, Xingrui Yu, Yang You, Ivor Tsang, Bo An"
     conference_short: ICML 2026
     conference: Forty-Third International Conference on Machine Learning
@@ -21,7 +21,7 @@ main:
     github_stars: "bennidict23/GoRL"
     website: "https://arxiv.org/html/2512.02581v1"
     image: "./assets/papers/gorl.png"
-    intro: "A new perspective for online RL training of diffusion-based models."
+    intro: "The initial noise selection can be optimized for online RL training of diffusion models."
 
   - title: "Adversarial Dual On-Policy Distillation from Expressive Flow-based Teacher"
     authors: "<strong>Zhenglin Wan*</strong>, Jingxuan Wu*, Xingrui Yu, Chubin Zhang, Mingcong Lei, Bo An, Ivor W. Tsang, Yang You"
@@ -32,7 +32,7 @@ main:
     github_stars: "vanzll/FA-OPD"
     website: "https://arxiv.org/html/2605.27095v1"
     image: "./assets/papers/FAOPD.png"
-    intro: "Adversarial dual on-policy distillation from a flow-matching teacher to a lightweight deployable MLP policy."
+    intro: "Dual channel (RL and SL) optimization could stablize On-policy Distillation ."
 
       
   - title: "Diversifying Policy Behaviors via Extrinsic Behavioral Curiosity"
@@ -44,7 +44,7 @@ main:
     github_stars: "vanzll/EBC"
     website: "https://arxiv.org/html/2410.06151v4#S2"
     image: "./assets/papers/EBC.png"
-    intro: "One-line code brings dynamic gradient-guided policy diversity for reinforcement learning."
+    intro: "Introduce gradient-guided policy diversity for reinforcement learning."
 
   - title: "OSCAR: Orthogonal Stochastic Control for Alignment-Respecting Diversity in Flow Matching"
     authors: "Jingxuan Wu*, <strong>Zhenglin Wan</strong>*, Xingrui Yu, Yuzhe Yang, Bo An, Ivor Tsang"
@@ -55,7 +55,7 @@ main:
     github_stars: "Johnny221B/OSCAR"
     website: ""
     image: "./assets/papers/OSCAR.png"
-    intro: "Enable DiT model to generate manifold-respecting but semantically diverse images (critical for RL post-training exploration)."
+    intro: "Enable diffusion model to roll out manifold-respecting but semantically diverse images (critical for RL post-training exploration)."
 
   - title: "Time-Annealed Perturbation Sampling: Diverse Generation for Diffusion Language Models"
     authors: "Jingxuan Wu*, <strong>Zhenglin Wan*</strong>, Xingrui Yu, Yuzhe Yang, Yiqiao Huang, Ivor Tsang, Yang You"
@@ -66,7 +66,7 @@ main:
     github_stars: "Johnny221B/TAPS"
     website: "https://taps-dlm.github.io/"
     image: "./assets/papers/TAPS.png"
-    intro: "Dive into the creativity of diffusion language models."
+    intro: "Our first dive into the creativity of diffusion language models."
 
 
 
