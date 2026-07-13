@@ -103,7 +103,7 @@ I mainly work on infra-algorithm co-design of Multi-modal generation and RL Post
 - applying these insights for better large-scale post-training of diffusion-based generative models (such as text/image/video/audio/omni generation)
 - agentic workflow (for both LLM Agent and Video Gen)
 
-I like intellectual games in my spare time: I am a 17-years chess player as *National Chess Athlete* of China, and have won the provincial 1-st prize in Chinese Mathematics Olympiad (CMO)-1st round (scored 162/300) by 1-year's part-time self-training. I am also an amature music player (playing guitar/piano/keyboards in several bands).
+I like intellectual games in my spare time: I am a 17-years chess player as *National Chess Athlete* of China, and have won the 1-st prize in Chinese Mathematics Olympiad (CMO)-1st round (scored 162/300) by 1-year's part-time self-training. I am also an amature music player (playing guitar/piano/keyboards in several bands).
  
 I always enjoy working with talents, academic collaboration/industry internship opportunities/VCs are welcomed to reach out via email!
 
@@ -623,7 +623,7 @@ html[data-theme="dark"] .exp-img img,
 
 - **Zhejiang Guolong Inspirational Scholarship** (￥120000, Undergraduate Admission Scholarship for top 0.5% students in Chinese College Entrance Exam)  
 
-- **1st-Prize in Chinese Mathematics Olympiad (CMO)-Chongqing Province**
+- **1st-Prize in Chinese Mathematics Olympiad (CMO)-1st round**
 
 </div>
   
@@ -672,9 +672,7 @@ html[data-theme="dark"] .exp-img img,
 
 
 
-- I am also a **15-years chess player**, with the honor of "National Level-3 Athlete". I love the process of comprehensive planning, logical-thinking and reasoning. Visit my [Lichess profile](https://lichess.org/@/Carlos1333860).
-
-- I love play **basketball** 🏀. Sports makes me energetic.
+- I am also a **17-years chess player**, with the honor of "National Athlete". I love the process of comprehensive planning, logical-thinking and reasoning. Visit my [Lichess profile](https://lichess.org/@/Carlos1333860).
 
 - I play video games like **League of Legends**, where I achieved the "diamond" level as my historically highest honor. I also play 3A games like Elden Ring, Dark Souls, Nier Automata, and elder scrolls.
 
