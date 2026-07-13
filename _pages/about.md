@@ -121,12 +121,12 @@ Always enjoy collaborating with talents, plz reach out via email!
 <div class="news" markdown="1">
 <div class="scroll-window" markdown="1">
 - *2026.05*  &nbsp;🎉🎉 Three (co)first-author papers accepted by ICML 2026, congrats to all co-authors!
-- *2026.04*  &nbsp;🎉🎉 Gave a talk at Meta-NUS MoU ceremony (Stable online RL for alignment of diffusion-based foundation models).
+- *2026.04*  &nbsp;🎉🎉 Gave a talk invited by Meta MRS (topic: Stable online RL for alignment of diffusion-based foundation models).
 - *2026.03*  &nbsp;🎉🎉 Two papers accepted by ACL 2026.
 - *2026.01*  &nbsp;🎉 [Cave-Agent](https://arxiv.org/abs/2601.01569) is open-sourced: an object-oriented agentic framework with superior token-efficiency, empowering the agentic AI system being built by the Hong Kong Government.
-- *2025.12*  &nbsp;🎉 We released our new work **GoRL** for online RL training with diffusion/flow-based generative models. ([[Paper]](https://arxiv.org/abs/2512.02581), [[Code]](https://github.com/bennidict23/GoRL))
+- *2025.12*  &nbsp;🎉 We released our new work **GoRL** providing a new perspective for online RL training with diffusion/flow-based generative models. ([[Paper]](https://arxiv.org/abs/2512.02581), [[Code]](https://github.com/bennidict23/GoRL))
 - *2025.10*  &nbsp;🎉 **OSCAR** (training free technique for diverse rollout of Flow-based models) is on Arxiv. ([[Paper]](https://arxiv.org/abs/2510.09060), [[Code]](https://github.com/Johnny221B/OSCAR)).
-- *2025.05*  &nbsp;🎉🎉 [**EBC**](https://arxiv.org/abs/2410.06151) is accepted by ICML 2025 ([Code](https://github.com/vanzll/EBC) available).
+- *2025.05*  &nbsp;🎉🎉 [**EBC**](https://arxiv.org/abs/2410.06151) (Evolutionary Strategy for Quality Diversity RL) is accepted by ICML 2025.
 - *2025.03*  &nbsp;🎉🎉 One paper accepted by ICLR 2025 (generative models for robot learning workshop).
 - *2024.12*  &nbsp;🎉🎉 One paper accepted by AAMAS 2025 (oral).
 - *2024.12*  &nbsp;🎉🎉 One paper accepted by AAAI 2025 (oral).
