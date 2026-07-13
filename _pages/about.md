@@ -102,8 +102,10 @@ I mainly work on infra-algorithm co-design of Multi-modal generation and RL Post
 - genuinely understanding diffusion models (the forward process and reverse process) and the synergy/conflict with Reinforcement Learning 
 - applying these insights for better large-scale post-training of diffusion-based generative models (such as text/image/video/audio/omni generation)
 - agentic workflow (for both LLM Agent and Video Gen)
+
+I like intellectual games in my spare time: I am a 17-years chess player as *National Chess Athlete* of China, and have won the provincial 1-st prize in Chinese Mathematics Olympiad (CMO)-1st round (scored 162/300) by 1-year's part-time self-training. I am also an amature music player (playing guitar/piano/keyboards in several bands).
  
-Always enjoy collaborating with talents, plz reach out via email!
+I always enjoy working with talents, academic collaboration/industry internship opportunities/VCs are welcomed to reach out via email!
 
 
 
