@@ -97,10 +97,11 @@ html.dark .section-toggle-btn, body.dark .section-toggle-btn, html[data-theme="d
 
 I am Zhenglin Wan (万政霖), a CS Ph.D. student at [HPC-AI Lab](https://ai.comp.nus.edu.sg/) at National University of Singapore (NUS), advised by [Prof. Yang You](https://www.comp.nus.edu.sg/~youy/). Previously, I worked at Nanyang Technological University (NTU) with [Prof. Bo An](https://personal.ntu.edu.sg/boan/), [Centre for Frontier AI Research (CFAR)](https://www.a-star.edu.sg/cfar), [IHPC](https://www.a-star.edu.sg/ihpc/), [A\*STAR](https://www.a-star.edu.sg/) with [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) , [Hong Kong Generative AI Research & Development Center (HKGAI)](https://www.hkgai.info/) with the team led by HKUST [Prof. Yike Guo](https://cse.hkust.edu.hk/admin/people/faculty/profile/yikeguo). I received my B.Sc (with 1-st class honor) in Statistics and Data Science from The Chinese University of Hong Kong (CUHK).
 
-I mainly work on foundamental side of Multi-modal generation and RL Post-training, with emphasis on:
+I am recently working on fundamental side of Multi-modal generation, RL Post-training and Physical AI. Particularly:
 
-- understanding diffusion models and Reinforcement Learning (Diffusion RL)
-- applying these insights for better large-scale post-training of diffusion-based generative models (such as text/image/video/audio/omni generation)
+- genuinely understanding diffusion(flow) models and Reinforcement Learning (Diffusion RL), and develop efficient, scalable and stable post-training for diffusion-based generative models (such as text/image/video/audio/policy/omni generation)
+- Unified autoregressive reasoning and diffusion-based generation
+- extending these methods and insights to interactive video generation and world/action models for Physical AI
 - agentic workflow (for both LLM Agent and Video Gen)
 
 I like intellectual games in my spare time: I am a 17-years chess player as *National Chess Athlete* of China, and have won the 1-st prize in Chinese Mathematics Olympiad (CMO)-1st round by 1-year's part-time self-training. I am also an music player (playing guitar/piano/keyboards in several bands).
