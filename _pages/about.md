@@ -342,19 +342,7 @@ Please scroll down to view more.
 })();
 </script>
 
-## Invention Patents
-As these works are patented in China, all these names are directly translated from Chinese.
-- **A Method, System, Terminal Device, and Storage Medium for Air Quality Spatial Inference** (Granted)
-  
-   Inventor: Jun Song, Yibo Xu, Yiwen Pan, Maohao Ran, **<u>Zhenglin Wan</u>**, Xiaoyun Yan, Yike Guo
-- **A Single-UAV Atmospheric Pollutant Source Tracing Method Based on Gradient Ascent and Physical Kinematics** (Public)
 
-   Inventor: **<u>Zhenglin Wan</u>**, Jun Song, Yibo Xu, Maohao Ran, Yike Guo
-
-## White Paper
-As these works are presented in China, these names are directly translated from Chinese.
-
-- **White Paper on Cross-Border Economic Large Language Model**
 
 </div>
 
