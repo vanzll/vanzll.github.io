@@ -99,10 +99,10 @@ I am Zhenglin Wan (万政霖), a CS Ph.D. student at [HPC-AI Lab](https://ai.com
 
 I am recently working on fundamental side of Multi-modal generation, RL Post-training and Physical AI. Particularly:
 
-- genuinely understanding diffusion(flow) models and Reinforcement Learning (Diffusion RL), and develop efficient, scalable and stable post-training for diffusion-based generative models (such as text/image/video/audio/policy/omni generation)
+- Genuinely understanding diffusion(flow) models and Reinforcement Learning (Diffusion RL), and develop efficient, scalable and stable post-training for diffusion-based generative models (such as text/image/video/audio/policy/omni generation)
 - Unified autoregressive reasoning and diffusion-based generation
-- extending these methods and insights to interactive video generation and world/action models for Physical AI
-- agentic workflow (for both LLM Agent and Video Gen)
+- Extending these methods and insights to interactive video generation and world/action models for Physical AI
+- Agentic workflow (for both LLM Agent and Video Gen)
 
 I like intellectual games in my spare time: I am a 17-years chess player as *National Chess Athlete* of China, and have won the 1-st prize in Chinese Mathematics Olympiad (CMO)-1st round by 1-year's part-time self-training. I am also an music player (playing guitar/piano/keyboards in several bands).
  
