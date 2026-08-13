@@ -99,7 +99,7 @@ I am Zhenglin Wan (万政霖), a CS Ph.D. student at [HPC-AI Lab](https://ai.com
 
 My research is driven by the curiosity of genuinely understanding (both theoretically and intuitively) the rationale, spirit and failure modes of ML algorithms and methods, rather than merely improving the benchmark scores. In this mode, insight should be the first product and the novelty is naturally derived from it. I am recently working on fundamental side of Multi-modal generation, RL Post-training and Physical AI. Particularly:
 
-- Genuinely understanding diffusion(flow) models and Reinforcement Learning (Diffusion RL), and develop efficient, scalable and stable post-training for diffusion-based generative models (such as text/image/video/audio/policy/omni generation)
+- Diffusion(flow) models and Reinforcement Learning (Diffusion RL), and develop efficient, scalable and stable post-training for diffusion-based generative models (such as text/image/video/audio/policy/omni generation)
 - Unified autoregressive reasoning and diffusion-based generation
 - Extending these methods and insights to interactive video generation and world/action models for Physical AI
 - Agentic workflow (for both LLM Agent and Video Gen)
