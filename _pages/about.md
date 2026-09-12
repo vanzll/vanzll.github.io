@@ -97,12 +97,11 @@ html.dark .section-toggle-btn, body.dark .section-toggle-btn, html[data-theme="d
 
 I am Zhenglin Wan (万政霖), a CS Ph.D. student at [HPC-AI Lab](https://ai.comp.nus.edu.sg/) at National University of Singapore (NUS), advised by [Prof. Yang You](https://www.comp.nus.edu.sg/~youy/). Previously, I worked at Nanyang Technological University (NTU) with [Prof. Bo An](https://personal.ntu.edu.sg/boan/), [Centre for Frontier AI Research (CFAR)](https://www.a-star.edu.sg/cfar), [IHPC](https://www.a-star.edu.sg/ihpc/), [A\*STAR](https://www.a-star.edu.sg/) with [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) , [Hong Kong Generative AI Research & Development Center (HKGAI)](https://www.hkgai.info/) with the team led by HKUST [Prof. Yike Guo](https://cse.hkust.edu.hk/admin/people/faculty/profile/yikeguo). I received my B.Sc (with 1-st class honor) in Statistics and Data Science from The Chinese University of Hong Kong (CUHK).
 
-My research is driven by the curiosity of genuinely understanding (both theoretically and intuitively) the rationale, spirit and failure modes of ML algorithms and methods. Based on this principle, I am recently working on fundamental side of Multi-modal generation, RL Post-training and Physical AI. Particularly:
+My research is driven by the curiosity of genuinely understanding (both theoretically and intuitively) the rationale, spirit and failure modes of ML algorithms and methods. Based on this principle, I am recently working on fundamental side of Multi-modal generation and RL Post-training. Particularly:
 
 - RL post-training on continuous-space generative models (such as diffusion model)
-- Unified Model for text/image/video/audio/policy/omni generation
-- Interactive video generation and world action models for Physical AI
-- Agentic workflow (for both LLM Agent and Video Gen)
+- Unified AR-based understanding and Diffusion-based Generation and the RL-post-training paradigm of such systems
+- Long-horizon agents and unified model (Agentic unified model), such as Agentic VLA and Agentic Video Generation, and the RL-post-training paradigm
 
 I love intellectual games in my spare time: I am a 17-years chess player as *National Chess Athlete* of China (Grade 3), and have won the 1-st prize in Chinese Mathematics Olympiad (CMO)-1st round by 1.5-year's part-time self-training.
  
