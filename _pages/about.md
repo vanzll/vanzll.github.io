@@ -126,7 +126,6 @@ I love intellectual games in my spare time: I am a 17-years chess player as *Nat
 - *2026.04*  &nbsp;🎉🎉 Gave a talk invited by Meta MRS (topic: Stable online RL for alignment of diffusion-based foundation models).
 - *2026.01*  &nbsp;🎉 [Cave-Agent](https://arxiv.org/abs/2601.01569) is open-sourced: an object-oriented coding agentic framework with superior token-efficiency, empowering the agentic AI system being built by the Hong Kong Government.
 - *2025.05*  &nbsp;🎉🎉 [**EBC**](https://arxiv.org/abs/2410.06151) (Evolutionary Strategy for robot learning to learn diverse policies) is accepted by ICML 2025.
-- *2023.12*  &nbsp;🎉🎉 As tech co-founder, I co-founded enterprise "Metasequoia Intelligence" based in Shenzhen, China.
 - *2019.09*  &nbsp;🎉🎉 Lucky to win the 1-st prize in Provincial Chinese Mathematics Olympiad (CMO). Thanks for this intellectually-rewarding experience.
 
 </div>
