@@ -8,7 +8,7 @@ main:
     github_stars: "acodercat/cave-agent"
     website: "https://caveagent.dev/"
     image: "./assets/papers/caveagent.png"
-    intro: "Object-oriented Agentic Systems, extending the philosophy of Anthropic Agent-skills, superior token-efficiency."
+    intro: "Unleashing the capability of coding agents by stateful-runtime harness, with superior token-efficiency."
     honor: "Cave-Agent is empowering the agentic AI system being built by the Hong Kong Government. [[website](https://www.hkgai.info/)]"
 
   
