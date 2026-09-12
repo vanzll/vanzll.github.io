@@ -21,7 +21,7 @@ main:
     github_stars: "bennidict23/GoRL"
     website: "https://arxiv.org/html/2512.02581v1"
     image: "./assets/papers/gorl.png"
-    intro: "The initial noise selection can be optimized for online RL training of diffusion models."
+    intro: "Initial noise selection and denoising process can be jointly trained for better efficiency and generalizability."
 
   - title: "Adversarial Dual On-Policy Distillation from Expressive Flow-based Teacher"
     authors: "<strong>Zhenglin Wan*</strong>, Jingxuan Wu*, Xingrui Yu, Chubin Zhang, Mingcong Lei, Bo An, Ivor W. Tsang, Yang You"
@@ -55,7 +55,7 @@ main:
     github_stars: "Johnny221B/OSCAR"
     website: ""
     image: "./assets/papers/OSCAR.png"
-    intro: "Enable diffusion model to roll out manifold-respecting but semantically diverse images (critical for RL post-training exploration)."
+    intro: "Enable diffusion model to roll-out manifold-respecting but semantically diverse images (critical for RL post-training exploration)."
 
   - title: "Time-Annealed Perturbation Sampling: Diverse Generation for Diffusion Language Models"
     authors: "Jingxuan Wu*, <strong>Zhenglin Wan*</strong>, Xingrui Yu, Yuzhe Yang, Yiqiao Huang, Ivor Tsang, Yang You"
