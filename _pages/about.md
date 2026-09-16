@@ -103,7 +103,7 @@ My research is driven by the curiosity of genuinely understanding (both theoreti
 - Unified AR-based understanding and Diffusion-based Generation and the RL-post-training paradigm of such systems
 - Long-horizon agents and unified model (Agentic unified model), such as Agentic VLA and Agentic Video Generation, and the RL-post-training paradigm
 
-I love intellectual games in my spare time: I am a 17-years chess player as *National Chess Athlete* of China (Grade 3), and have won the 1-st prize in Chinese Mathematics Olympiad (CMO)-1st round by 1.5-year's part-time self-training.
+I love intellectual games in my spare time: I am a 17-years chess player as *National Chess Athlete* in China (Level 3), and have won the 1-st prize in Chinese Mathematics Olympiad (CMO)-1st round by 1.5-year's part-time self-training. For academic discussion and collaboration, please don't hesitate to reach out to me via email!
  
 
 
@@ -121,12 +121,11 @@ I love intellectual games in my spare time: I am a 17-years chess player as *Nat
 
 <div class="news" markdown="1">
 <div class="scroll-window" markdown="1">
-- *2026.05*  &nbsp;🎉 **GoRL** is accepted to ICML 2026, providing a new perspective for online RL training with diffusion/flow policy for robot learning. ([[Paper]](https://arxiv.org/abs/2512.02581), [[Code]](https://github.com/bennidict23/GoRL))
-- *2026.05*  &nbsp;🎉 **OSCAR** (training free method for diverse rollout of diffusion model) is accepted to ICML 2026. ([[Paper]](https://arxiv.org/abs/2510.09060), [[Code]](https://github.com/Johnny221B/OSCAR)).
-- *2026.04*  &nbsp;🎉🎉 Gave a talk invited by Meta MRS (topic: Stable online RL for alignment of diffusion-based foundation models).
-- *2026.01*  &nbsp;🎉 [Cave-Agent](https://arxiv.org/abs/2601.01569) is open-sourced: an object-oriented coding agentic framework with superior token-efficiency, empowering the agentic AI system being built by the Hong Kong Government.
+- *2026.05*  &nbsp;🎉🎉 **GoRL** is accepted to ICML 2026, providing a new perspective for online RL training with diffusion/flow policy for robot learning. ([[Paper]](https://arxiv.org/abs/2512.02581), [[Code]](https://github.com/bennidict23/GoRL))
+- *2026.05*  &nbsp;🎉🎉 **OSCAR** (training free method for diverse rollout of diffusion model) is accepted to ICML 2026. ([[Paper]](https://arxiv.org/abs/2510.09060), [[Code]](https://github.com/Johnny221B/OSCAR)).
+- *2026.04*  &nbsp;🎉🎉 I was invited to give a talk by Meta MRS (Stable online RL for alignment of diffusion-based foundation models).
+- *2026.01*  &nbsp;🎉🎉 [Cave-Agent](https://arxiv.org/abs/2601.01569) is open-sourced: an object-oriented coding agentic framework with superior token-efficiency, empowering the agentic AI system being built by the Hong Kong Government.
 - *2025.05*  &nbsp;🎉🎉 [**EBC**](https://arxiv.org/abs/2410.06151) (Evolutionary Strategy for robot learning to learn diverse policies) is accepted by ICML 2025.
-- *2019.09*  &nbsp;🎉🎉 Lucky to win the 1-st prize in Provincial Chinese Mathematics Olympiad (CMO). Thanks for this intellectually-rewarding experience.
 
 </div>
 </div>
@@ -650,7 +649,7 @@ html[data-theme="dark"] .exp-img img,
 
 
 
-- I am also a **17-years chess player**, with the honor of "National Athlete". I love the process of comprehensive planning, logical-thinking and reasoning. Visit my [Lichess profile](https://lichess.org/@/Carlos1333860).
+- I am also a **17-years chess player**, with the honor of "National Level 3 Chess Athlete". I love the process of comprehensive planning, logical-thinking and reasoning. Visit my [Lichess profile](https://lichess.org/@/Carlos1333860).
 
 - I play video games like **League of Legends**, where I achieved the "diamond" level as my historically highest honor. I also play 3A games like Elden Ring, Dark Souls, Nier Automata, and elder scrolls.
 
