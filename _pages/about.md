@@ -101,7 +101,7 @@ My research is driven by the curiosity of genuinely understanding (both theoreti
 
 - RL post-training on continuous-space generative models (such as diffusion model)
 - Unified AR-based understanding and Diffusion-based Generation and the RL-post-training paradigm of such systems
-- Long-horizon agents and unified model (Agentic unified model), such as Agentic VLA and Agentic Video Generation, and the RL-post-training paradigm
+- Long-horizon agents, such as coding agent, agentic VLA and agentic Video Generation, and the RL-post-training paradigm for both un-unified and unified paradigm of generation and understanding.
 
 I love intellectual games in my spare time: I am a 17-years chess player as *National Chess Athlete* in China (Level 3), and have won the 1-st prize in Chinese Mathematics Olympiad (CMO)-1st round by 1.5-year's part-time self-training. For academic discussion and collaboration, please don't hesitate to reach out to me via email!
  
