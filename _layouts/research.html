@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="{{ page.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/images/favicon-32x32.png' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/images/apple-touch-icon.png' | relative_url }}">
+  <title>{{ page.title | escape }} | Zhenglin Wan</title>
+  <meta name="description" content="{{ page.description | default: site.description | escape }}">
+  {% unless page.draft %}<link rel="canonical" href="{{ page.url | absolute_url }}">{% endunless %}
+  {% if page.draft %}<meta name="robots" content="noindex,nofollow">{% endif %}
+  <meta property="og:type" content="{% if page.layout == 'research-post' %}article{% else %}website{% endif %}">
+  <meta property="og:title" content="{{ page.title | escape }}">
+  <meta property="og:description" content="{{ page.description | default: site.description | escape }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  {% if page.image %}<meta property="og:image" content="{{ page.image | absolute_url }}">{% endif %}
+  <meta name="twitter:card" content="summary_large_image">
+  {% if page.layout == 'research-post' and page.draft != true %}
+  <meta name="citation_title" content="{{ page.title | escape }}">
+  {% for author in page.authors %}<meta name="citation_author" content="{{ author.name | escape }}">{% endfor %}
+  <meta name="citation_publication_date" content="{{ page.date | date: '%Y/%m/%d' }}">
+  {% if page.doi %}<meta name="citation_doi" content="{{ page.doi | escape }}">{% endif %}
+  {% if page.pdf %}<meta name="citation_pdf_url" content="{{ page.pdf | absolute_url }}">{% endif %}
+  {% endif %}
+  <link rel="alternate" type="application/atom+xml" title="Zhenglin Wan" href="{{ '/feed.xml' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/research.css' | relative_url }}">
+  {% if page.math %}
+  <link rel="stylesheet" href="{{ '/assets/vendor/katex/katex.min.css' | relative_url }}">
+  <script defer src="{{ '/assets/vendor/katex/katex.min.js' | relative_url }}"></script>
+  <script defer src="{{ '/assets/vendor/katex/auto-render.min.js' | relative_url }}"></script>
+  {% endif %}
+  <script defer src="{{ '/assets/js/research.js' | relative_url }}"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="research-header">
+    <a class="research-name" href="{{ '/' | relative_url }}">Zhenglin Wan</a>
+    <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="research-nav" title="Menu"><img src="{{ '/assets/vendor/lucide/menu.svg' | relative_url }}" alt="" width="24" height="24"></button>
+    <nav id="research-nav" aria-label="Main navigation">
+      <a href="{{ '/' | relative_url }}">About</a>
+      <a href="{{ '/blog/' | relative_url }}"{% if page.url == '/blog/' %} aria-current="page"{% endif %}>Research notes</a>
+      <a href="https://github.com/vanzll">GitHub</a>
+    </nav>
+  </header>
+  {{ content }}
+  <footer class="research-footer">
+    <a href="{{ '/' | relative_url }}">Zhenglin Wan</a>
+    <nav aria-label="Footer navigation"><a href="{{ '/blog/' | relative_url }}">Research notes</a><a href="https://github.com/vanzll">GitHub</a><a href="{{ '/feed.xml' | relative_url }}">RSS</a></nav>
+  </footer>
+</body>
+</html>

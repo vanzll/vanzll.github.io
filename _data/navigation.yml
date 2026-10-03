@@ -1,5 +1,8 @@
 # main links links
 main:
+  - title: "Blog"
+    url: "/blog/"
+
   - title: "About Me"
     url: "/#about-me"
 
@@ -9,21 +12,11 @@ main:
   - title: "Publications"
     url: "/#Publication-List"
 
-  - title: "Educations"
-    url: "/#educations"
-
   - title: "Internships"
     url: "/#internships"
-
-  - title: "Services"
-    url: "/#services"
 
   - title: "Honors and Awards"
     url: "/#honors-and-awards"
 
-  - title: "Press/Media"
-    url: "/#press-media"
-
   - title: "Miscellaneous"
     url: "/#person"
-

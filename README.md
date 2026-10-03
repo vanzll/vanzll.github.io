@@ -23,6 +23,17 @@ Some examples:
 - [Demo Page](https://rayeren.github.io/acad-homepage.github.io/)
 - [Personal Homepage of the author](https://rayeren.github.io/)
 
+## Research Blog
+
+The research blog uses a TML OPD-style reading layout at `/blog/`.
+See [docs/BLOG.md](docs/BLOG.md) for local preview, writing, and publishing.
+The blog is intentionally empty until the first article is ready to publish.
+
+The homepage includes a Blog section. Education, Services and Press/Media
+sections have been removed; remaining sections are displayed without expansion
+buttons or nested scroll windows. Temporary test fixtures verify the article
+template without publishing manuscript content.
+
 ## Key Features
 - **Automatically update google scholar citations**: using the google scholar crawler and github action, this REPO can update the author citations and publication citations automatically.
 - **Support Google analytics**: you can trace the traffics of your homepage by easy configuration.

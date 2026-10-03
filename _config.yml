@@ -9,6 +9,8 @@
 title                    : "Zhenglin (Carlos) Wan 万政霖"
 description              : "Ph.D. student @ NUS Computing"
 repository               : "vanzll/vanzll.github.io"
+url                      : "https://vanzll.github.io"
+baseurl                  : ""
 google_scholar_stats_use_cdn : true
 
 # google analytics
@@ -91,6 +93,7 @@ exclude:
   - node_modules
   - package.json
   - tmp
+  - scripts
   - vendor
 keep_files:
   - .git

@@ -17,9 +17,6 @@ redirect_from:
 {% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
 
 
-
-
-
 <span class='anchor' id='about-me'></span>
 # 😊 About me
 ***Contact***: **vanzl3386 [at] gmail.com (main)**, vanzl [at] u.nus.edu, 121090525 [at] link.cuhk.edu.cn
@@ -38,58 +35,6 @@ redirect_from:
 .page__content h1 { border-bottom: 2px solid #e5e5e5; padding-bottom: 4px; }
 .page__content h2, .page__content h3 { border-left: 4px solid #2a72d4; padding-left: 10px; background: linear-gradient(to right, rgba(42,114,212,0.06), rgba(42,114,212,0)); border-radius: 4px; }
 
-/* Collapsible section styles */
-.section-toggle-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: #fff;
-  border: none;
-  border-radius: 20px;
-  padding: 6px 16px;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 0.9em;
-  font-weight: 600;
-  cursor: pointer;
-  margin: 8px 0 12px 0;
-  box-shadow: 0 3px 10px rgba(102, 126, 234, 0.3);
-  transition: all 0.3s ease;
-}
-.section-toggle-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-}
-.section-toggle-btn:active {
-  transform: translateY(0);
-}
-.section-toggle-btn .toggle-icon {
-  display: inline-block;
-  transition: transform 0.3s ease;
-  font-size: 0.85em;
-}
-.section-toggle-btn.expanded .toggle-icon {
-  transform: rotate(180deg);
-}
-.collapsible-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease-out, opacity 0.3s ease;
-  opacity: 0;
-}
-.collapsible-content.expanded {
-  max-height: 5000px;
-  opacity: 1;
-  transition: max-height 0.7s ease-in, opacity 0.3s ease;
-}
-/* Dark mode support for toggle button */
-@media (prefers-color-scheme: dark) {
-  .section-toggle-btn { background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%); box-shadow: 0 3px 10px rgba(90, 103, 216, 0.4); }
-}
-html.dark .section-toggle-btn, body.dark .section-toggle-btn, html[data-theme="dark"] .section-toggle-btn { 
-  background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%) !important; 
-  box-shadow: 0 3px 10px rgba(90, 103, 216, 0.4) !important; 
-}
 </style>
 
 <!-- Dark mode is handled globally in layout/head; local button/styles removed -->
@@ -107,20 +52,23 @@ I love intellectual games in my spare time: I am a 17-years chess player as *Nat
  
 
 
+# Blog
 
-<mark style="background-color: yellow; color: black;"></mark>
+[Research notes →]({{ '/blog/' | relative_url }})
+
+{% assign research_posts = site.posts | where: 'layout', 'research-post' %}
+{% for post in research_posts %}
+- [{{ post.title }}]({{ post.url | relative_url }})
+{% else %}
+New posts coming soon.
+{% endfor %}
 
 <span class='anchor' id='news'></span>
 # 🔥 News
-<style>
-/* News section scroll window styles (scoped) */
-.news .scroll-window { max-height: 640px; overflow-y: auto; padding: 8px 6px; border: 1px solid #eaeaea; border-radius: 12px; background: #fff; box-shadow: inset 0 1px 0 rgba(255,255,255,0.6), 0 6px 14px rgba(0,0,0,0.04); }
-.news .scroll-window::-webkit-scrollbar { width: 8px; }
-.news .scroll-window::-webkit-scrollbar-thumb { background: #ddd; border-radius: 4px; }
-</style>
+
 
 <div class="news" markdown="1">
-<div class="scroll-window" markdown="1">
+<div markdown="1">
 - *2026.05*  &nbsp;🎉🎉 **GoRL** is accepted to ICML 2026, providing a new perspective for online RL training with diffusion/flow policy for robot learning. ([[Paper]](https://arxiv.org/abs/2512.02581), [[Code]](https://github.com/bennidict23/GoRL))
 - *2026.05*  &nbsp;🎉🎉 **OSCAR** (training free method for diverse rollout of diffusion model) is accepted to ICML 2026. ([[Paper]](https://arxiv.org/abs/2510.09060), [[Code]](https://github.com/Johnny221B/OSCAR)).
 - *2026.04*  &nbsp;🎉🎉 I was invited to give a talk by Meta MRS (Stable online RL for alignment of diffusion-based foundation models).
@@ -130,34 +78,6 @@ I love intellectual games in my spare time: I am a 17-years chess player as *Nat
 </div>
 </div>
 
-<script>
-(function() {
-  function setNewsScrollWindowHeight() {
-    var container = document.querySelector('.news .scroll-window');
-    if (!container) return;
-    var firstLi = container.querySelector('li');
-    if (!firstLi) return; // fallback to CSS default max-height
-    var liRect = firstLi.getBoundingClientRect();
-    var liStyle = window.getComputedStyle(firstLi);
-    var marginTop = parseFloat(liStyle.marginTop) || 0;
-    var marginBottom = parseFloat(liStyle.marginBottom) || 0;
-    var perItem = liRect.height + (marginTop + marginBottom);
-    var target = perItem * 9; // show ~9 items
-    container.style.maxHeight = target + 'px';
-  }
-  function onReady(fn) {
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', fn, { once: true });
-    } else { fn(); }
-  }
-  onReady(setNewsScrollWindowHeight);
-  var resizeTimeout;
-  window.addEventListener('resize', function() {
-    clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(setNewsScrollWindowHeight, 150);
-  });
-})();
-</script>
 
 <span class='anchor' id='Publication-List'></span>
 # 📝 Selected Publications
@@ -165,7 +85,6 @@ I love intellectual games in my spare time: I am a 17-years chess player as *Nat
 <div id="publications-section" markdown="1">
 
 ## Conference papers and Preprints
-Please scroll down to view more.
 \* denotes joint-first-author and equal contribution.
 <style>
 /* Publications section styles (scoped) */
@@ -178,7 +97,7 @@ Please scroll down to view more.
   align-items: center;
   background: #fff;
   border: 1px solid #eee;
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 14px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.06);
   max-width: 900px;
@@ -239,19 +158,14 @@ Please scroll down to view more.
 }
 .publications .title a { color: #2a72d4; text-decoration: none; }
 .publications .title a:hover { text-decoration: underline; color: #1e5bb8; }
-/* Scroll window to show only a few items initially */
-.publications .scroll-window { max-height: 640px; overflow-y: auto; padding: 8px 6px; border: 1px solid #eaeaea; border-radius: 12px; background: #fff; box-shadow: inset 0 1px 0 rgba(255,255,255,0.6), 0 6px 14px rgba(0,0,0,0.04); }
-.publications .scroll-window::-webkit-scrollbar { width: 8px; }
-.publications .scroll-window::-webkit-scrollbar-thumb { background: #ddd; border-radius: 4px; }
 @media (max-width: 640px) {
   .publications .pub-row { flex-direction: column; }
   .publications .pub-row .abbr.pub-thumb { max-width: 100%; flex-basis: auto; }
-  .publications .scroll-window { max-height: 420px; }
 }
 </style>
 
 <div class="publications" markdown="1">
-<div class="scroll-window">
+<div>
 <ul class="bibliography">
 
 {% for link in site.data.publications.main %}
@@ -293,116 +207,24 @@ Please scroll down to view more.
 </li>
 
 
-
 {% endfor %}
 
 </ul>
 </div>
 </div>
 
-<script>
-(function() {
-  function setScrollWindowHeight() {
-    var container = document.querySelector('.publications .scroll-window');
-    if (!container) return;
-    var firstLi = container.querySelector('.bibliography > li');
-    var firstRow = container.querySelector('.pub-row');
-    if (!firstRow || !firstLi) return;
-    var rowRect = firstRow.getBoundingClientRect();
-    var liStyle = window.getComputedStyle(firstLi);
-    var marginTop = parseFloat(liStyle.marginTop) || 0;
-    var marginBottom = parseFloat(liStyle.marginBottom) || 0;
-    var perItem = rowRect.height + (marginTop + marginBottom);
-  var target = perItem * 3.5; // show ~3.5 items
-    container.style.maxHeight = target + 'px';
-  }
-  function onReady(fn) {
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', fn, { once: true });
-    } else { fn(); }
-  }
-  onReady(setScrollWindowHeight);
-  var resizeTimeout;
-  window.addEventListener('resize', function() {
-    clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(setScrollWindowHeight, 150);
-  });
-})();
-</script>
-
-
 
 </div>
 
-<span class='anchor' id='educations'></span>
-# 📖 Educations
-
-<button class="section-toggle-btn" onclick="toggleSection('educations-section', this)">
-  <span class="toggle-icon">▼</span> Click to expand
-</button>
-
-<div id="educations-section" class="collapsible-content" markdown="1">
-
-<style>
-.edu-list { list-style: none; margin: 0; padding: 0; }
-.edu-item { 
-  background: #fff; border: 1px solid #eee; border-radius: 12px; 
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06); padding: 14px; 
-  display: flex; gap: 16px; align-items: center; max-width: 900px; margin: 10px auto;
-}
-.edu-text { flex: 1 1 auto; font-family: "Times New Roman", Times, serif; }
-.edu-title { font-weight: 700; margin: 0 0 6px; }
-.edu-sub { color: #555; margin: 0 0 6px; }
-.edu-time { color: #777; font-size: 0.95em; }
-.edu-img { flex: 0 0 200px; max-width: 200px; }
-.edu-img img { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 6px 14px rgba(0,0,0,0.10); }
-@media (max-width: 640px) { .edu-item { flex-direction: column; } .edu-img { max-width: 100%; flex-basis: auto; } }
-</style>
-
-<ul class="edu-list">
-  <li class="edu-item">
-    <div class="edu-text">
-      <p class="edu-title">Doctor of Philosophy (Ph.D)</p>
-      <p class="edu-sub">National University of Singapore (NUS)</p>
-      <ul style="margin: 6px 0 6px 18px; padding: 0; font-size: 0.96em; color: #555;">
-        <li>Affiliation: Department of Computer Science, School of Computing</li>
-        <li>Advisor: Prof. Yang You</li>
-      </ul>
-      <p class="edu-time"></p>
-    </div>
-    <div class="edu-img"><img src="assets/institutions/nus.png" alt="NUS"></div>
-  </li>
-  <li class="edu-item">
-    <div class="edu-text">
-      <p class="edu-title">Bachelor of Science (B.Sc)</p>
-      <p class="edu-sub">The Chinese University of Hong Kong (CUHK)</p>
-      <ul style="margin: 6px 0 6px 18px; padding: 0; font-size: 0.96em; color: #555;">
-        <li>1-st class honor</li>
-        <li>Major: Statistics & Data Science, GPA: 3.85/4.0, Rank: 7%</li>
-        <li>Completed my undergraduate in CUHK-Shenzhen campus, while the degree is offered by CUHK.</li>
-      </ul>
-      <p class="edu-time"></p>
-    </div>
-    <div class="edu-img"><img src="assets/institutions/cuhk.png" alt="CUHK(SZ)"></div>
-  </li>
-</ul>
-
-</div>
-
----
 <span class='anchor' id='internships'></span>
 # 💻 Internships and Work Experiences
 
-<button class="section-toggle-btn" onclick="toggleSection('internships-section', this)">
-  <span class="toggle-icon">▼</span> Click to expand
-</button>
-
-<div id="internships-section" class="collapsible-content" markdown="1">
+<div id="internships-section" markdown="1">
 
 <style>
 .exp-list { list-style: none; margin: 0; padding: 0; }
 .exp-item { 
-  background: #fff; border: 1px solid #eee; border-radius: 12px; 
+  background: #fff; border: 1px solid #eee; border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.06); padding: 14px; 
   display: flex; gap: 16px; align-items: center; max-width: 900px; margin: 10px auto;
 }
@@ -415,28 +237,16 @@ Please scroll down to view more.
 @media (max-width: 640px) { .exp-item { flex-direction: column; } .exp-img { max-width: 100%; flex-basis: auto; } }
 </style>
 
-<style>
-/* Experiences section scroll window styles (scoped) */
-.experiences .scroll-window { max-height: 640px; overflow-y: auto; padding: 8px 6px; border: 1px solid #eaeaea; border-radius: 12px; background: transparent; box-shadow: inset 0 1px 0 rgba(255,255,255,0.6), 0 6px 14px rgba(0,0,0,0.04); }
-.experiences .scroll-window::-webkit-scrollbar { width: 8px; }
-.experiences .scroll-window::-webkit-scrollbar-thumb { background: #ddd; border-radius: 4px; }
-</style>
 
 <style>
 /* Dark mode overrides for Internships section */
 @media (prefers-color-scheme: dark) {
-  .experiences .scroll-window { background: #111; border-color: #333; box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), 0 6px 14px rgba(0,0,0,0.6); }
   .exp-item { background: #111; border-color: #333; box-shadow: 0 4px 12px rgba(0,0,0,0.5); }
 }
 </style>
 
 <style>
 /* Dark mode overrides (class/data-attribute toggles) for Internships section */
-html.dark .experiences .scroll-window,
-body.dark .experiences .scroll-window,
-html[data-theme="dark"] .experiences .scroll-window,
-:root[data-theme="dark"] .experiences .scroll-window,
-[data-scheme="dark"] .experiences .scroll-window { background: #111 !important; border-color: #333 !important; box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), 0 6px 14px rgba(0,0,0,0.6) !important; }
 
 html.dark .exp-item,
 body.dark .exp-item,
@@ -452,7 +262,7 @@ html[data-theme="dark"] .exp-img img,
 </style>
 
 <div class="experiences">
-<div class="scroll-window">
+<div>
 <ul class="exp-list">
   <li class="exp-item">
     <div class="exp-text">
@@ -511,80 +321,27 @@ html[data-theme="dark"] .exp-img img,
   </li>
 
 
-
-
-
  </ul>
 </div>
 </div>
-<span class='anchor' id='person'></span>
 
-<script>
-(function() {
-  function setExpScrollWindowHeight() {
-    var container = document.querySelector('.experiences .scroll-window');
-    if (!container) return;
-    var firstLi = container.querySelector('.exp-list > li');
-    if (!firstLi) return; // fallback to CSS default max-height
-    var rowRect = firstLi.getBoundingClientRect();
-    var liStyle = window.getComputedStyle(firstLi);
-    var marginTop = parseFloat(liStyle.marginTop) || 0;
-    var marginBottom = parseFloat(liStyle.marginBottom) || 0;
-    var perItem = rowRect.height + (marginTop + marginBottom);
-    var target = perItem * 3; // show ~3 items
-    container.style.maxHeight = target + 'px';
-  }
-  function onReady(fn) {
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', fn, { once: true });
-    } else { fn(); }
-  }
-  onReady(setExpScrollWindowHeight);
-  var resizeTimeout;
-  window.addEventListener('resize', function() {
-    clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(setExpScrollWindowHeight, 150);
-  });
-})();
-</script>
 
 </div>
 
 <span class='anchor' id='invited-talks'></span>
 # 🎤 Invited Talks
 
-<button class="section-toggle-btn" onclick="toggleSection('invited-talks-section', this)">
-  <span class="toggle-icon">▼</span> Click to expand
-</button>
-
-<div id="invited-talks-section" class="collapsible-content" markdown="1">
+<div id="invited-talks-section" markdown="1">
 
 - **Object-Oriented Agent Infrastructure** — Invited by *Qingke AI Community*
 - **Stable Online Alignment of Diffusion-based Foundation Model** — Invited by *Meta (MRS)*
 
 </div>
 
-<span class='anchor' id='services'></span>
-# 🎈 Services
-
-<button class="section-toggle-btn" onclick="toggleSection('services-section', this)">
-  <span class="toggle-icon">▼</span> Click to expand
-</button>
-
-<div id="services-section" class="collapsible-content" markdown="1">
-
-- Reviewer of AAAI, ICLR, ICML, NeurIPS
-
-</div>
-
 <span class='anchor' id='honors-and-awards'></span>
 # 🎖 Honors, Awards and Scholarships
 
-<button class="section-toggle-btn" onclick="toggleSection('honors-section', this)">
-  <span class="toggle-icon">▼</span> Click to expand
-</button>
-
-<div id="honors-section" class="collapsible-content" markdown="1">
+<div id="honors-section" markdown="1">
 
 - **NUS Research Scholarship** (Ph.D stipend and tuition fee subsidy)
   
@@ -604,36 +361,10 @@ html[data-theme="dark"] .exp-img img,
 
 </div>
   
-<span class='anchor' id='press-media'></span>
-
-# 💬 Press/Media
-
-<button class="section-toggle-btn" onclick="toggleSection('press-section', this)">
-  <span class="toggle-icon">▼</span> Click to expand
-</button>
-
-<div id="press-section" class="collapsible-content" markdown="1">
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">White Paper</div><img src='personal_page_sources/white_paper.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-
-- The co-author of the first White Paper on Cross-Border Economic Large Language Model in Shenzhen, China.
-[深圳卫视：深圳发布首个跨境经济大模型白皮书](https://www.sohu.com/a/786227332_121123831)
-
-</div>
-</div>
-
-</div>
-
 <span class='anchor' id='person'></span>
 # Miscellaneous
 
-<button class="section-toggle-btn" onclick="toggleSection('misc-section', this)">
-  <span class="toggle-icon">▼</span> Click to expand
-</button>
-
-<div id="misc-section" class="collapsible-content" markdown="1">
+<div id="misc-section" markdown="1">
 
 - In my spare time, I'm an **music enthusiast**. I’ve been playing guitar for more than 10 years and began teaching myself the piano when I was 15. During my undergraduate, I played music in two bands: "Minor Blue" and "Major Pink." See our photos: 
 
@@ -644,11 +375,6 @@ html[data-theme="dark"] .exp-img img,
 </div>
 
 
-
-
-
-
-
 - I am also a **17-years chess player**, with the honor of "National Level 3 Chess Athlete". I love the process of comprehensive planning, logical-thinking and reasoning. Visit my [Lichess profile](https://lichess.org/@/Carlos1333860).
 
 - I play video games like **League of Legends**, where I achieved the "diamond" level as my historically highest honor. I also play 3A games like Elden Ring, Dark Souls, Nier Automata, and elder scrolls.
@@ -656,23 +382,3 @@ html[data-theme="dark"] .exp-img img,
 - I have a deep interest in **philosophy of mind**, particularly Buddhism and Taoism, as paths to explore the fundamental nature of human existence. I am also intrigued by the potential integration of these philosophical insights with modern artificial intelligence.
 
 </div>
-
-<script>
-function toggleSection(sectionId, btn) {
-  var content = document.getElementById(sectionId);
-  var isExpanded = content.classList.contains('expanded');
-  
-  if (isExpanded) {
-    content.classList.remove('expanded');
-    btn.classList.remove('expanded');
-    btn.innerHTML = '<span class="toggle-icon">▼</span> Click to expand';
-  } else {
-    content.classList.add('expanded');
-    btn.classList.add('expanded');
-    btn.innerHTML = '<span class="toggle-icon">▼</span> Click to collapse';
-  }
-}
-</script>
-
-
-
