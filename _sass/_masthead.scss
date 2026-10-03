@@ -43,6 +43,34 @@
   }
 }
 
+.page-nav {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 110px;
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+
+  a {
+    display: block;
+    padding: 0.5rem 0;
+    color: $masthead-link-color;
+
+    &:hover,
+    &[aria-current="page"] {
+      color: $masthead-link-color-hover;
+    }
+  }
+
+  @media (max-width: 640px) {
+    padding-right: 100px;
+    ul { gap: 20px; }
+  }
+}
+
 .masthead__menu-home-item {
   @include breakpoint($medium) {
     display: block !important;
@@ -60,5 +88,4 @@
     font-weight: 700;
   }
 }
-
 

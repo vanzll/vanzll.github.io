@@ -1,28 +1,4 @@
 (() => {
-  const menu = document.querySelector('.nav-toggle');
-  const navigation = document.getElementById('research-nav');
-  const closeMenu = () => {
-    if (!menu || !navigation) return;
-    menu.setAttribute('aria-expanded', 'false');
-    navigation.dataset.open = 'false';
-  };
-  if (menu && navigation) {
-    menu.addEventListener('click', () => {
-      const open = menu.getAttribute('aria-expanded') !== 'true';
-      menu.setAttribute('aria-expanded', String(open));
-      navigation.dataset.open = String(open);
-    });
-    navigation.addEventListener('click', event => {
-      if (event.target.closest('a')) closeMenu();
-    });
-    document.addEventListener('keydown', event => {
-      if (event.key === 'Escape' && menu.getAttribute('aria-expanded') === 'true') {
-        closeMenu();
-        menu.focus();
-      }
-    });
-    window.matchMedia('(max-width: 760px)').addEventListener('change', closeMenu);
-  }
   const article = document.querySelector('.article-body');
   if (!article) return;
 

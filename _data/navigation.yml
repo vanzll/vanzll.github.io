@@ -1,25 +1,7 @@
-# main links links
+# Page navigation
 main:
-  - title: "About Me"
-    url: "/#about-me"
+  - title: "Homepage"
+    url: "/"
 
-  - title: "News"
-    url: "/#news"
-
-  - title: "Blog"
+  - title: "Blogs"
     url: "/blog/"
-
-  - title: "Invited Talks"
-    url: "/#invited-talks"
-
-  - title: "Publications"
-    url: "/#Publication-List"
-
-  - title: "Internships"
-    url: "/#internships"
-
-  - title: "Honors and Awards"
-    url: "/#honors-and-awards"
-
-  - title: "Miscellaneous"
-    url: "/#person"

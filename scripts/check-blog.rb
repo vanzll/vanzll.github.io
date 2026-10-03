@@ -54,6 +54,9 @@ end
 
 docs = [index, home]
 docs.each do |doc|
+  navigation = doc.at_css('nav[aria-label="Main navigation"]')
+  assert.call(navigation.css('a').map(&:text).map(&:strip) == %w[Homepage Blogs], 'Top navigation must only contain Homepage and Blogs')
+  assert.call(navigation.css('a').map { |link| link['href'] } == ['/', '/blog/'], 'Top navigation must link to pages, not sections')
   doc.css('link[href], script[src], img[src]').each do |node|
     url = node['href'] || node['src']
     next unless url.start_with?('/') && !url.start_with?('//')
