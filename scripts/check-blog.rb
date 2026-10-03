@@ -28,7 +28,13 @@ assert.call(home.at_css('.page__content a[href="/blog/"]'), 'Missing homepage bl
   assert.call(!home.at_css("[id='#{id}']"), "Removed section still present: #{id}")
   assert.call(home.css("a[href='/##{id}']").empty?, "Removed navigation still present: #{id}")
 end
-assert.call(home.css('.section-toggle-btn, .collapsible-content, .scroll-window').empty?, 'Old hidden or scroll-window UI retained')
+assert.call(home.css('.section-toggle-btn, .collapsible-content').empty?, 'Old hidden UI retained')
+%w[news publications experiences].each do |section|
+  assert.call(home.css(".#{section} .scroll-window[data-visible-items]").size == 1, "Missing scroll window: #{section}")
+end
+headings = home.css('.page__content h1').map(&:text)
+assert.call(headings.index('🔥 News') < headings.index('Blog'), 'Blog must follow News')
+assert.call(headings[headings.index('Blog') + 1] == '🎤 Invited Talks', 'Invited Talks must immediately follow Blog')
 assert.call(!home.to_html.include?('toggleSection'), 'Old toggle script retained')
 %w[publications-section internships-section invited-talks-section honors-section misc-section].each do |id|
   assert.call(home.at_css("[id='#{id}']"), "Lost retained section: #{id}")

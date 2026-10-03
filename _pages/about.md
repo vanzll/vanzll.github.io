@@ -35,6 +35,21 @@ redirect_from:
 .page__content h1 { border-bottom: 2px solid #e5e5e5; padding-bottom: 4px; }
 .page__content h2, .page__content h3 { border-left: 4px solid #2a72d4; padding-left: 10px; background: linear-gradient(to right, rgba(42,114,212,0.06), rgba(42,114,212,0)); border-radius: 4px; }
 
+.news .scroll-window,
+.publications .scroll-window,
+.experiences .scroll-window {
+  max-height: 640px;
+  overflow-y: auto;
+  padding: 8px 6px;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  background: #fff;
+}
+.scroll-window::-webkit-scrollbar { width: 8px; }
+.scroll-window::-webkit-scrollbar-thumb { background: #ddd; border-radius: 4px; }
+.scroll-window:focus-visible { outline: 2px solid #2a72d4; outline-offset: 2px; }
+.dark-mode .experiences .scroll-window { background: #0f141b; border-color: #2a2f3a; }
+@media (max-width: 640px) { .publications .scroll-window { max-height: 420px; } }
 </style>
 
 <!-- Dark mode is handled globally in layout/head; local button/styles removed -->
@@ -52,6 +67,22 @@ I love intellectual games in my spare time: I am a 17-years chess player as *Nat
  
 
 
+<span class='anchor' id='news'></span>
+# 🔥 News
+
+
+<div class="news" markdown="1">
+<div class="scroll-window" markdown="1" tabindex="0" role="region" aria-label="News" data-visible-items="9">
+- *2026.05*  &nbsp;🎉🎉 **GoRL** is accepted to ICML 2026, providing a new perspective for online RL training with diffusion/flow policy for robot learning. ([[Paper]](https://arxiv.org/abs/2512.02581), [[Code]](https://github.com/bennidict23/GoRL))
+- *2026.05*  &nbsp;🎉🎉 **OSCAR** (training free method for diverse rollout of diffusion model) is accepted to ICML 2026. ([[Paper]](https://arxiv.org/abs/2510.09060), [[Code]](https://github.com/Johnny221B/OSCAR)).
+- *2026.04*  &nbsp;🎉🎉 I was invited to give a talk by Meta MRS (Stable online RL for alignment of diffusion-based foundation models).
+- *2026.01*  &nbsp;🎉🎉 [Cave-Agent](https://arxiv.org/abs/2601.01569) is open-sourced: an object-oriented coding agentic framework with superior token-efficiency, empowering the agentic AI system being built by the Hong Kong Government.
+- *2025.05*  &nbsp;🎉🎉 [**EBC**](https://arxiv.org/abs/2410.06151) (Evolutionary Strategy for robot learning to learn diverse policies) is accepted by ICML 2025.
+
+</div>
+</div>
+
+
 # Blog
 
 [Research notes →]({{ '/blog/' | relative_url }})
@@ -63,21 +94,15 @@ I love intellectual games in my spare time: I am a 17-years chess player as *Nat
 New posts coming soon.
 {% endfor %}
 
-<span class='anchor' id='news'></span>
-# 🔥 News
+<span class='anchor' id='invited-talks'></span>
+# 🎤 Invited Talks
 
+<div id="invited-talks-section" markdown="1">
 
-<div class="news" markdown="1">
-<div markdown="1">
-- *2026.05*  &nbsp;🎉🎉 **GoRL** is accepted to ICML 2026, providing a new perspective for online RL training with diffusion/flow policy for robot learning. ([[Paper]](https://arxiv.org/abs/2512.02581), [[Code]](https://github.com/bennidict23/GoRL))
-- *2026.05*  &nbsp;🎉🎉 **OSCAR** (training free method for diverse rollout of diffusion model) is accepted to ICML 2026. ([[Paper]](https://arxiv.org/abs/2510.09060), [[Code]](https://github.com/Johnny221B/OSCAR)).
-- *2026.04*  &nbsp;🎉🎉 I was invited to give a talk by Meta MRS (Stable online RL for alignment of diffusion-based foundation models).
-- *2026.01*  &nbsp;🎉🎉 [Cave-Agent](https://arxiv.org/abs/2601.01569) is open-sourced: an object-oriented coding agentic framework with superior token-efficiency, empowering the agentic AI system being built by the Hong Kong Government.
-- *2025.05*  &nbsp;🎉🎉 [**EBC**](https://arxiv.org/abs/2410.06151) (Evolutionary Strategy for robot learning to learn diverse policies) is accepted by ICML 2025.
+- **Object-Oriented Agent Infrastructure** — Invited by *Qingke AI Community*
+- **Stable Online Alignment of Diffusion-based Foundation Model** — Invited by *Meta (MRS)*
 
 </div>
-</div>
-
 
 <span class='anchor' id='Publication-List'></span>
 # 📝 Selected Publications
@@ -165,7 +190,7 @@ New posts coming soon.
 </style>
 
 <div class="publications" markdown="1">
-<div>
+<div class="scroll-window" tabindex="0" role="region" aria-label="Selected publications" data-visible-items="3.5">
 <ul class="bibliography">
 
 {% for link in site.data.publications.main %}
@@ -262,7 +287,7 @@ html[data-theme="dark"] .exp-img img,
 </style>
 
 <div class="experiences">
-<div>
+<div class="scroll-window" tabindex="0" role="region" aria-label="Internships and work experiences" data-visible-items="3">
 <ul class="exp-list">
   <li class="exp-item">
     <div class="exp-text">
@@ -328,16 +353,6 @@ html[data-theme="dark"] .exp-img img,
 
 </div>
 
-<span class='anchor' id='invited-talks'></span>
-# 🎤 Invited Talks
-
-<div id="invited-talks-section" markdown="1">
-
-- **Object-Oriented Agent Infrastructure** — Invited by *Qingke AI Community*
-- **Stable Online Alignment of Diffusion-based Foundation Model** — Invited by *Meta (MRS)*
-
-</div>
-
 <span class='anchor' id='honors-and-awards'></span>
 # 🎖 Honors, Awards and Scholarships
 
@@ -382,3 +397,5 @@ html[data-theme="dark"] .exp-img img,
 - I have a deep interest in **philosophy of mind**, particularly Buddhism and Taoism, as paths to explore the fundamental nature of human existence. I am also intrigued by the potential integration of these philosophical insights with modern artificial intelligence.
 
 </div>
+
+<script src="{{ '/assets/js/home-scroll.js' | relative_url }}" defer></script>

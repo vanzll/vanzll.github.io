@@ -31,7 +31,8 @@ The blog is intentionally empty until the first article is ready to publish.
 
 The homepage includes a Blog section. Education, Services and Press/Media
 sections have been removed; remaining sections are displayed without expansion
-buttons or nested scroll windows. Temporary test fixtures verify the article
+buttons. News, Publications and Internships retain their internal scroll windows;
+Blog follows News, with Invited Talks immediately below. Temporary test fixtures verify the article
 template without publishing manuscript content.
 
 ## Key Features
