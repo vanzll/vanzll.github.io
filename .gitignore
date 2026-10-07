@@ -5,3 +5,8 @@ push.sh
 .bundle/
 .jekyll-cache/
 .jekyll-metadata
+/_drafts/
+/_draft_assets/
+/_includes/blog-drafts/
+/_config.preview.yml
+/reviews/

@@ -27,7 +27,7 @@ Some examples:
 
 The research blog uses a TML OPD-style reading layout at `/blog/`.
 See [docs/BLOG.md](docs/BLOG.md) for local preview, writing, and publishing.
-The blog is intentionally empty until the first article is ready to publish.
+The bilingual note at `/blog/diffusion-rl/` is unlisted: accessible by direct link, but not advertised on the homepage or article index.
 
 The homepage includes a Blog section. Education, Services and Press/Media
 sections have been removed; remaining sections are displayed without expansion

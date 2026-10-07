@@ -14,16 +14,16 @@ index = read.call('blog/index.html')
 assert.call(index.at_css('h1')&.text == 'Research notes', 'Missing blog index')
 assert.call(index.at_css('link[rel="canonical"]')&.[]('href') == 'https://vanzll.github.io/blog/', 'Invalid canonical URL')
 
-assert.call(!root.join('blog/diffusion-rl/index.html').exist?, 'Removed article leaked into production')
-assert.call(!root.join('assets/blog/diffusion-rl').exist?, 'Removed manuscript figures leaked')
-assert.call(!index.text.include?('What Actually Drives an Update?'), 'Draft leaked into blog index')
-unless fixture
-  assert.call(index.css('.post-row').empty?, 'Blog should remain empty')
-end
+assert.call(root.join('blog/diffusion-rl/index.html').file?, 'Published research note is missing')
+assert.call(root.join('assets/blog/diffusion-rl').directory?, 'Published figures are missing')
+assert.call(!index.at_css('a[href="/blog/diffusion-rl/"]'), 'Unlisted note must not appear in Research notes')
+assert.call(!root.join('_draft_assets').exist?, 'Private draft assets leaked into production')
+assert.call(!root.join('reviews').exist?, 'Private comments leaked into production')
 
 home = read.call('index.html')
 assert.call(home.at_css('#blog'), 'Missing homepage Blog section')
 assert.call(home.at_css('.page__content a[href="/blog/"]'), 'Missing homepage blog link')
+assert.call(!home.at_css('.page__content a[href="/blog/diffusion-rl/"]'), 'Unlisted note must not appear on homepage')
 %w[educations services press-media].each do |id|
   assert.call(!home.at_css("[id='#{id}']"), "Removed section still present: #{id}")
   assert.call(home.css("a[href='/##{id}']").empty?, "Removed navigation still present: #{id}")
@@ -32,7 +32,7 @@ assert.call(home.css('.section-toggle-btn, .collapsible-content').empty?, 'Old h
 %w[news publications experiences].each do |section|
   assert.call(home.css(".#{section} .scroll-window[data-visible-items]").size == 1, "Missing scroll window: #{section}")
 end
-headings = home.css('.page__content h1').map(&:text)
+headings = home.css('.page__content h1').map { |node| node.text.strip }
 assert.call(headings.index('🔥 News') < headings.index('Blog'), 'Blog must follow News')
 assert.call(headings[headings.index('Blog') + 1] == '🎤 Invited Talks', 'Invited Talks must immediately follow Blog')
 assert.call(!home.to_html.include?('toggleSection'), 'Old toggle script retained')

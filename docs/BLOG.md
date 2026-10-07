@@ -1,6 +1,6 @@
 # Research blog
 
-This Jekyll template reconstructs the layout of Thinking Machines Lab's [On-Policy Distillation blog](https://thinkingmachines.ai/blog/on-policy-distillation/): centered 30px serif title and byline, opening concept figure, centered 660px reading column, 17px serif text, and a restrained left-margin TOC. The blog is intentionally empty. The personal homepage has a Blog section and directly displays its remaining content.
+This Jekyll template reconstructs the layout of Thinking Machines Lab's [On-Policy Distillation blog](https://thinkingmachines.ai/blog/on-policy-distillation/): centered serif title and byline, a centered reading column, and a restrained left-margin TOC. The personal homepage has a Blog section linking to published research notes.
 
 This is an independently implemented visual adaptation, not an official TML template. TML branding and proprietary webfont files are not copied. On this Mac it uses the installed Iowan Old Style font; other systems fall back to Palatino or Georgia. Navigation uses system sans-serif instead of licensed GT America. No external runtime request is needed.
 
@@ -57,5 +57,29 @@ bundle exec ruby scripts/check-blog.rb /tmp/research-blog-public
 ```
 
 References: https://distill.pub/guide/ and https://thinkingmachines.ai/blog/on-policy-distillation/ .
+
+## Bilingual publication snapshot
+
+The Chinese draft is the editorial master. After synchronizing its English
+translation and receiving explicit publication approval, run:
+
+```sh
+bundle exec ruby scripts/publish-research-note.rb --publish
+bundle exec jekyll build --destination /tmp/research-blog-public
+bundle exec ruby scripts/check-published-note.rb /tmp/research-blog-public
+```
+
+The public note lives at `/blog/diffusion-rl/`, with one shared figure set and an
+in-page Chinese/English switch. It is an unlisted page, not a feed post, and uses `_includes/research-notes/` and
+`assets/blog/diffusion-rl/`. Private drafts, author reviews, editing services,
+raw probe archives and local machine paths are not published. The local review
+draft remains separate; exclude this public page from the draft preview config
+to avoid two pages claiming the same permalink. Publication fingerprints are
+recorded in `docs/diffusion-rl-publication.json`; later local edits do not silently
+change the published snapshot.
+
+The unlisted page has `sitemap: false` and `noindex,nofollow`. It is absent from
+the homepage, article index, RSS and sitemap, but is not password-protected:
+anyone with the direct URL can read it, and its source is in the public repository.
 
 Vendored icons: Lucide 0.468.0 (`copy.svg`, `x.svg`, `menu.svg`), license retained in `assets/vendor/lucide/LICENSE`.

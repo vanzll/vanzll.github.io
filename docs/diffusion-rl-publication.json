@@ -1,0 +1,24 @@
+{
+  "published_at": "2026-10-07T13:54:37Z",
+  "url": "https://vanzll.github.io/blog/diffusion-rl/",
+  "visibility": "unlisted",
+  "source_sha256": {
+    "zh": "cc52c58ba4b72d52fcf0d4e17f4b4e026b504a285fd34f6e9771d67434d2b75d",
+    "en": "84d50aa78aa9b58bec176a19ba582018b95563a24228c213cfaf51711194332f"
+  },
+  "figures": {
+    "force_overview.png": "6c25503788334fd35f4ced979c23d75cb8eb08526908e5f4c7cfe2c3c40f20e2",
+    "reverse_gradients_compact.png": "f1042233e628ced436a36793386f008d88217f3d2640cc41693b1d961384a44f",
+    "prefix_spread_compact.png": "da705681829a02ed1830dfd29f46eb72f8cc2cfbadcebd133bd62a66c9e5567b",
+    "critic_advantage.png": "33c5f4bb3d7e925ae84135004a94977e441bdf540fc9b1529fb965a91be0e025",
+    "gate_transfer_compact.png": "17734b3c6d96483b0c7e543b76968bf3499e057545c01a53132b6527f5ddaebd",
+    "reverse_learning_compact.png": "7305446eea755868aab7cb3c393c53fed74e4fc513e36accb2d8076255a53141",
+    "nft_branch_geometry.png": "c5da81ed7c7de7921dea4c77f2af1fa2f19521949917099640cad61f9ab21f41",
+    "nft_arxiv_restoration.png": "88d38b625b50784973d25aceef85e5752fac1e009ad8e3e73ce2d35c915e2d49",
+    "nft_second_update_geometry.png": "ae4dc2f052dfd440b27246c8d807b7d7207fdec4b71280869450b8c72f6a2ed0",
+    "repulsion_geometry.png": "795ed26eeec276de263a68725e30dd20e4b0a5434f45f484cd00a0b0e41a5c97",
+    "mirror_reversal_compact.png": "cda69f984cd9ddd8d22e054213bf461848d59b9c3bea3b7ff6f37d56013107c7",
+    "mirror_dynamics_compact.png": "feeaaf4f81e198a26acf1d98582014c787f9545af209626539ac9fdc2bb68768",
+    "force_competition_compact.png": "324c818912d0db7bed5162ff26df02184a53605a7beff07c82432788521b5cc2"
+  }
+}

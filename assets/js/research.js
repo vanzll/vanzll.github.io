@@ -13,7 +13,47 @@
     });
   }
 
-  article.querySelectorAll('h2[id], h3[id]').forEach(heading => {
+  const equationPanels = article.querySelectorAll('[data-language-panel]');
+  (equationPanels.length ? [...equationPanels] : [article]).forEach(panel => {
+    const language = panel.dataset.languagePanel || 'article';
+    const equations = new Map();
+    panel.querySelectorAll('div.math[data-equation]').forEach((equation, index) => {
+      equation.id = `eq-${language}-${equation.dataset.equation}`;
+      const number = document.createElement('a');
+      number.className = 'equation-number';
+      number.href = `#${equation.id}`;
+      number.textContent = `(${index + 1})`;
+      number.setAttribute('aria-label', `${language === 'zh' ? '公式' : 'Equation'} ${index + 1}`);
+      equation.append(number);
+      equations.set(equation.dataset.equation, { id: equation.id, number: index + 1 });
+    });
+    panel.querySelectorAll('[data-equation-ref]').forEach(reference => {
+      const equation = equations.get(reference.dataset.equationRef);
+      if (!equation) return;
+      reference.href = `#${equation.id}`;
+      if (!reference.textContent.trim()) reference.textContent = `(${equation.number})`;
+    });
+  });
+
+  const revealLinkedDerivation = () => {
+    let id;
+    try { id = decodeURIComponent(location.hash.slice(1)); }
+    catch { return; }
+    const target = document.getElementById(id);
+    if (!target || !article.contains(target)) return;
+    let opened = false;
+    for (let parent = target.parentElement; parent && parent !== article; parent = parent.parentElement) {
+      if (parent.tagName === 'DETAILS' && !parent.open) {
+        parent.open = true;
+        opened = true;
+      }
+    }
+    if (opened) requestAnimationFrame(() => target.scrollIntoView({block: 'center'}));
+  };
+  window.addEventListener('hashchange', revealLinkedDerivation);
+  revealLinkedDerivation();
+
+  article.querySelectorAll('h2[id], h3[id], h4[id]').forEach(heading => {
     const anchor = document.createElement('a');
     anchor.className = 'section-anchor';
     anchor.href = `#${heading.id}`;
@@ -22,7 +62,7 @@
     heading.prepend(anchor);
   });
   const links = [...document.querySelectorAll('.article-toc a')];
-  const headings = links.map(link => document.getElementById(link.hash.slice(1))).filter(Boolean);
+  let headings = links.map(link => document.getElementById(link.hash.slice(1))).filter(Boolean);
   if (headings.length) {
     let pending = false;
     const updateToc = () => {
@@ -43,6 +83,10 @@
     };
     window.addEventListener('scroll', scheduleToc, { passive: true });
     window.addEventListener('resize', scheduleToc);
+    document.addEventListener('blog:languagechange', () => {
+      headings = links.map(link => document.getElementById(link.hash.slice(1))).filter(Boolean);
+      scheduleToc();
+    });
     updateToc();
   }
 

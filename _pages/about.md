@@ -83,13 +83,14 @@ I love intellectual games in my spare time: I am a 17-years chess player as *Nat
 </div>
 
 
-# Blog
+<span class='anchor' id='blog'></span>
+# <i class="fas fa-pen-nib" aria-hidden="true"></i> Blog
 
 [Research notes →]({{ '/blog/' | relative_url }})
 
-{% assign research_posts = site.posts | where: 'layout', 'research-post' %}
+{% assign research_posts = site.posts | where: 'layout', 'research-post' | where_exp: 'post', 'post.draft != true' %}
 {% for post in research_posts %}
-- [{{ post.title }}]({{ post.url | relative_url }})
+- [{{ post.title_en | default: post.title }}]({{ post.url | relative_url }})
 {% else %}
 New posts coming soon.
 {% endfor %}

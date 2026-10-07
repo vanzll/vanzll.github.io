@@ -68,6 +68,8 @@ include:
   - _pages
   - files
 exclude:
+  - reviews
+  - _site
   - docs
   - google_scholar_crawler
   - "*.sublime-project"

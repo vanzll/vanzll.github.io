@@ -8,7 +8,7 @@
   <title>{{ page.title | escape }} | Zhenglin Wan</title>
   <meta name="description" content="{{ page.description | default: site.description | escape }}">
   {% unless page.draft %}<link rel="canonical" href="{{ page.url | absolute_url }}">{% endunless %}
-  {% if page.draft %}<meta name="robots" content="noindex,nofollow">{% endif %}
+  {% if page.draft or page.unlisted %}<meta name="robots" content="noindex,nofollow">{% endif %}
   <meta property="og:type" content="{% if page.layout == 'research-post' %}article{% else %}website{% endif %}">
   <meta property="og:title" content="{{ page.title | escape }}">
   <meta property="og:description" content="{{ page.description | default: site.description | escape }}">
@@ -30,6 +30,13 @@
   <script defer src="{{ '/assets/vendor/katex/auto-render.min.js' | relative_url }}"></script>
   {% endif %}
   <script defer src="{{ '/assets/js/research.js' | relative_url }}"></script>
+  {% if page.bilingual %}<script defer src="{{ '/assets/js/blog-language.js' | relative_url }}"></script>{% endif %}
+  {% if site.local_review and page.draft %}
+  <link rel="stylesheet" href="{{ '/_draft_assets/review/quill.snow.css' | relative_url }}">
+  <script defer src="{{ '/_draft_assets/review/quill.js' | relative_url }}"></script>
+  <link rel="stylesheet" href="{{ '/_draft_assets/review/review.css' | relative_url }}">
+  <script defer src="{{ '/_draft_assets/review/review.js' | relative_url }}"></script>
+  {% endif %}
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -39,6 +46,8 @@
       <a href="{{ link.url | relative_url }}"{% if page.url == link.url %} aria-current="page"{% endif %}>{{ link.title }}</a>
       {% endfor %}
     </nav>
+    {% if site.local_review and page.draft %}<button class="review-toggle" type="button" aria-label="查看批注" title="查看批注" aria-expanded="false"><img src="{{ '/_draft_assets/review/message-square.svg' | relative_url }}" alt="" width="18" height="18"><span data-review-count>0</span></button>{% endif %}
+    {% if page.bilingual %}<button class="language-toggle" type="button" data-language-toggle aria-label="Switch to English">English</button>{% endif %}
   </header>
   {{ content }}
   <footer class="research-footer">
