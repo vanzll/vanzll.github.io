@@ -86,7 +86,7 @@ def main():
     fig.savefig(args.output.with_suffix(".pdf"), facecolor="white")
     plt.close(fig)
     with args.output.with_suffix(".csv").open("w", newline="") as stream:
-        writer = csv.DictWriter(stream, fieldnames=list(rows[0]))
+        writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
     metadata = dict(sources=sources, statistics=rows, queried_on="2026-10-09",
