@@ -1,10 +1,10 @@
 {
-  "published_at": "2026-10-08T17:22:35.022312+00:00",
+  "published_at": "2026-10-08T17:51:26.294835+00:00",
   "url": "https://vanzll.github.io/blog/diffusion-rl/",
   "visibility": "unlisted",
   "source_sha256": {
-    "zh": "d25749c1dee9bb5efa87fcdb11ffefb2a38869efbb13d1b289830b89207e8d14",
-    "en": "4b7fb32ae968e85fdfe22f558489c587832dab5d6cf820bff0b1d4ee33e602d1"
+    "zh": "547d0d7835525ac39eb040b449631e4be7c59277a26b891c537233be71fe1cd5",
+    "en": "dabe6f6d56efedb54fc1efa02b7fa87a8bc069cd219301118fda0df8de05cf7d"
   },
   "figures": {
     "force_overview.png": "6c25503788334fd35f4ced979c23d75cb8eb08526908e5f4c7cfe2c3c40f20e2",
@@ -22,5 +22,5 @@
     "force_competition_compact.png": "324c818912d0db7bed5162ff26df02184a53605a7beff07c82432788521b5cc2",
     "three_layer_force_probe.png": "c2a974559045ab7f27ea8db1008e5b64e7cedb2ba4001a305bd0e8f17b960363"
   },
-  "publication_scope": "Section 3.3 force diagnostics and evidence notes only; other unpublished local revisions remain private"
+  "publication_scope": "Restore author Section 3.3 structure: five force bullets, Case Study 1 and Case Study 2; preserve diagnostics and other sections"
 }

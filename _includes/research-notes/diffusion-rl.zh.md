@@ -728,16 +728,19 @@ f=-\nabla_{v_\theta}\ell_{\rm NFT}
 
 <h3 id="zh-detail-11">3.3 理解哪种力会很强</h3>
 
+<h4 id="zh-force-comparison">3.3.1 多种常见力的分析</h4>
+
 <p>回到第 1 节的<a href="#eq-zh-chain" data-equation-ref="chain">三层心智模型</a>：输出力 → 各 state 的 Jacobian 映射 → 跨 state 聚合。<strong>一股力能推动模型多少，取决于它经过这三层后还剩多少，而不只是起点有多大。</strong></p>
 
-先区分两件事：一股输出力经过网络后会被放大多少，以及不同 state 的参数梯度相加时还能保留多少。**相邻梯度更同向，不一定意味着总梯度保留更多。**
+<p><strong>先比较这五类力。</strong> 前两层不容易直接校准，却可以分别测量；不能把最终强弱全部归因于第三层的抵消。</p>
 
-<p><a href="#zh-reverse-gradients">图2</a>测的是一个 microbatch 内各 timestep 的梯度，不是逐样本输出力。它展示了晚期分项主导合力；相邻 timestep 的 cosine 均值约为 0.003，接近正交，不能据此断言存在强烈的反向抵消。我们重新查了 Flow-GRPO 与 NFT 的 temporal probe，已有量如下：</p>
-
-- **Flow-GRPO：**逐 timestep 梯度模长之和，平均为 **0.00285**；先把梯度向量相加再取模长，平均为 **0.00190**；逐次聚合保留率的均值为 **0.669**。
-- **NFT：**对应值为 **3.426、1.993、0.552**，相邻 timestep 的 cosine 均值约为 **0.275**。相邻方向更一致，聚合保留率却没有更高：前者只看相邻夹角，后者还取决于全部方向与相对模长。
-
-这两组是历史配置，不用原始模长横比算法强弱；它们也没有同时记录完整的“输出力 → 逐样本参数梯度 → 完整 update 合力”链条。**下面的 NFT 分项测量则直接连接了输出力与聚合参数梯度。**
+<ul>
+<li><strong>Reverse RL 的推拉：</strong>轨迹级 advantage 混合了 state 价值与 action 贡献，不同 action 的请求未必协同；独立探索噪声本身不能证明参数梯度抵消更多。</li>
+<li><strong>Forward RL／NFT 的 guidance：</strong>从高奖励 endpoint 构造的请求有机会更协同。但 NFT guidance 还包含前向–反向自一致性项（见<a href="#zh-detail-9">3.2.2 节</a>），需要分项测量才能判断抵消来自哪里。</li>
+<li><strong>DiffusionART 的 covariance guidance：</strong>把奖励相关的 covariance 与自一致性项分开，有望留下更协同的指导；是否进一步提高聚合保留率，仍待匹配的三层对照。</li>
+<li><strong>恢复力：</strong>撤销已经实现过的变化；分项实验发现它可以在输出空间很小，却在参数空间很强。</li>
+<li><strong>KL（reference-MSE）正则力：</strong>限制偏离 reference；下面测其未加权梯度，不把它等同于已施加的 KL 更新。</li>
+</ul>
 
 **恢复力给出了一个反直觉的例子。** 在同一参数、同一批状态上分解第二次更新，恢复项的输出力小约 **9.4 倍**，参数梯度反而大约 **4.9 倍**：
 
@@ -759,6 +762,17 @@ f=-\nabla_{v_\theta}\ell_{\rm NFT}
 \]
 </div>
 <p>γ 衡量输出力映射后放大多少；ρ 衡量参数梯度相加后保留多少，位于 0 与 1 之间。两者相乘，才是整体转化率 κ。上面的 temporal probe 只测跨 timestep 的保留率，不能直接代入逐样本分解，也不能用输出 RMS 替代这里的平均模长。</p>
+
+<div markdown="1">
+先区分两件事：一股输出力经过网络后会被放大多少，以及不同 state 的参数梯度相加时还能保留多少。**相邻梯度更同向，不一定意味着总梯度保留更多。**
+
+<p><a href="#zh-reverse-gradients">图2</a>测的是一个 microbatch 内各 timestep 的梯度，不是逐样本输出力。它展示了晚期分项主导合力；相邻 timestep 的 cosine 均值约为 0.003，接近正交，不能据此断言存在强烈的反向抵消。我们重新查了 Flow-GRPO 与 NFT 的 temporal probe，已有量如下：</p>
+
+- **Flow-GRPO：**逐 timestep 梯度模长之和，平均为 **0.00285**；先把梯度向量相加再取模长，平均为 **0.00190**；逐次聚合保留率的均值为 **0.669**。
+- **NFT：**对应值为 **3.426、1.993、0.552**，相邻 timestep 的 cosine 均值约为 **0.275**。相邻方向更一致，聚合保留率却没有更高：前者只看相邻夹角，后者还取决于全部方向与相对模长。
+
+这两组是历史配置，不用原始模长横比算法强弱；它们也没有同时记录完整的“输出力 → 逐样本参数梯度 → 完整 update 合力”链条。**下面的 NFT 分项测量则直接连接了输出力与聚合参数梯度。**
+</div>
 </details>
 
 **新增诊断：把三层分别测出来。** 我们在同一诊断窗口内，分别测输出力模长均值、逐 state 参数梯度模长均值，以及梯度向量平均后的模长，再拆成映射增益 γ 与聚合保留率 ρ：
@@ -779,7 +793,11 @@ Fast guidance 的保留率约为 **28%**，NFT guidance 约为 **25%**，没有�
 
 这个直觉也可以延伸到映射层：已发生的输出位移来自 Jacobian 对参数变化的作用，不是任意的输出方向。它可能更集中在网络容易响应的方向上；经过 Jacobian 的转置映射时，这些方向还能被进一步放大。但“可实现”不保证“高增益”，具体还取决于位移与 Jacobian 高增益方向的对齐。实验确认的是映射增益更高，这个谱方向解释仍是机制猜想。
 
-**这如何影响学习速度？** 看一次更新与两次 disjoint 更新的完整曲线：
+<h4 id="zh-force-competition-role">3.3.2 什么时候需要考虑力的大小</h4>
+
+当两股力竞争，相对尺度才决定谁留下。整体缩放一股力，可能被现代优化器大幅淡化；改变两股力的比例，却会改变聚合方向。
+
+**Case Study 1：Diffusion RL 里的 Off-policy 训练。** 图10比较一次更新与两次 disjoint 更新：
 
 <figure class="figure-compact" data-figure="mirror_dynamics"><img src="/assets/blog/diffusion-rl/mirror_dynamics_compact.png" alt="图10：一次更新与两次 disjoint 更新的稳定性和速度" loading="lazy" width="2400" height="930"><figcaption>图10：一次更新与两次 disjoint 更新；左 β=1，右 β=0.1。完整 online train OCR 曲线，不平滑，横轴为记录 reward 时的 optimizer step。每个 one/disjoint pair 使用同一训练 commit；跨 β 来自不同版本，具体配方见数据说明。</figcaption></figure>
 
@@ -805,6 +823,8 @@ W&B 的真实测量补上了两个关键环节：
 
 这些 run 使用 normalized-X0 与 current-STD，而非上式的裸 MSE；图11测的是实际 loss 的分项梯度。因此，核心公式解释相对尺度竞争，实际强度则以测量为准。
 
+
+**Case Study 2：KL divergence。** 一旦 current 偏离 reference，reward guidance 与正则力就同时参与更新。需要调的是它们在参数空间的相对模长与方向；KL 系数小，不保证它的梯度份额小。
 
 **Reference-MSE 也会发生更大的尺度反转。** 在 Fast 的相同非零诊断窗口里，它的输出力约为 guidance 的 **1.8 倍**，聚合参数梯度却约为 **185 倍**。这不是 KL 已经压住了训练：本批正则系数为 0，reference-MSE 只用于测量。真正加入正则后，要比较系数加权后的参数梯度及其方向，而不是把 loss 数值当成力。
 

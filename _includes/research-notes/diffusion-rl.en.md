@@ -723,16 +723,17 @@ But why can a seemingly small restoration term have such a large effect?
 
 <h3 id="en-detail-11">3.3 Understanding which forces become strong</h3>
 
+<h4 id="en-force-comparison">3.3.1 Analyzing common training forces</h4>
+
 <p>Return to the <a href="#eq-en-chain" data-equation-ref="chain">three-layer model in Section 1</a>: output force → each state's Jacobian → aggregation across states. <strong>A force's influence depends on how much survives these layers, not merely how large it starts.</strong></p>
 
-First separate two questions: how much the network amplifies an output force, and how much remains when parameter gradients across states are added. **More aligned neighboring gradients need not mean greater overall retention.**
+<p><strong>First compare these five forces.</strong> The first two layers are difficult to calibrate directly but can be measured separately; final strength cannot be attributed entirely to third-layer cancellation.</p>
 
-<p><a href="#en-reverse-gradients">Figure 2</a> measures timestep gradients within one microbatch, not per-sample output forces. It shows late components dominating the resultant; the mean adjacent-timestep cosine is about 0.003, nearly orthogonal, not evidence of strong opposing cancellation. A fresh query of the Flow-GRPO and NFT temporal probes provides these recorded quantities:</p>
-
-- **Flow-GRPO:** the mean sum of timestep-gradient norms is **0.00285**; the mean norm after summing the vectors is **0.00190**; mean per-probe aggregation retention is **0.669**.
-- **NFT:** the corresponding values are **3.426, 1.993, and 0.552**, with mean adjacent-timestep cosine about **0.275**. Neighboring directions are more aligned, yet retention is not higher: the former measures neighboring angles, while the latter depends on every direction and relative norm.
-
-These historical recipes do not support comparing algorithm strength by raw norms. Neither records the complete matched chain of output force → per-sample parameter gradient → full-update resultant. **The NFT component measurements below directly connect output force to aggregate parameter gradient.**
+- **Reverse RL's attraction and repulsion:** trajectory-level advantage mixes state value with action contribution, and requests from different actions need not cooperate. Independent exploration noise alone does not establish greater parameter-gradient cancellation.
+- **Forward RL / NFT guidance:** requests from high-reward endpoints may cooperate more. But NFT guidance also contains forward–reverse consistency (see <a href="#en-detail-9">Section 3.2.2</a>); attributing cancellation requires component measurements.
+- **DiffusionART covariance guidance:** separating reward covariance from consistency may leave more cooperative guidance; any further improvement in retention still needs a matched three-layer comparison.
+- **Restoration:** it attempts to undo changes the model has already realized. Our component measurements show that it can be small in output space yet strong in parameter space.
+- **KL (reference-MSE) regularization:** it limits deviation from a reference. Below we measure its unweighted gradient, not an applied KL update.
 
 **Restoration provides a counterintuitive example.** Decomposing the second update at the same parameters and states, restoration has about **9.4 times smaller** output force but **4.9 times larger** parameter-gradient norm:
 
@@ -754,6 +755,17 @@ These historical recipes do not support comparing algorithm strength by raw norm
 \]
 </div>
 <p>γ measures amplification through the mapping; ρ measures how much survives gradient summation, between zero and one. Their product is overall conversion κ. The temporal probes above measure retention across timesteps, not the per-sample decomposition; output RMS cannot replace the mean norm in this identity.</p>
+
+<div markdown="1">
+First separate two questions: how much the network amplifies an output force, and how much remains when parameter gradients across states are added. **More aligned neighboring gradients need not mean greater overall retention.**
+
+<p><a href="#en-reverse-gradients">Figure 2</a> measures timestep gradients within one microbatch, not per-sample output forces. It shows late components dominating the resultant; the mean adjacent-timestep cosine is about 0.003, nearly orthogonal, not evidence of strong opposing cancellation. A fresh query of the Flow-GRPO and NFT temporal probes provides these recorded quantities:</p>
+
+- **Flow-GRPO:** the mean sum of timestep-gradient norms is **0.00285**; the mean norm after summing the vectors is **0.00190**; mean per-probe aggregation retention is **0.669**.
+- **NFT:** the corresponding values are **3.426, 1.993, and 0.552**, with mean adjacent-timestep cosine about **0.275**. Neighboring directions are more aligned, yet retention is not higher: the former measures neighboring angles, while the latter depends on every direction and relative norm.
+
+These historical recipes do not support comparing algorithm strength by raw norms. Neither records the complete matched chain of output force → per-sample parameter gradient → full-update resultant. **The NFT component measurements below directly connect output force to aggregate parameter gradient.**
+</div>
 </details>
 
 **New diagnostic: measure all three layers separately.** Within each diagnostic window, we measure the mean output-force norm, the mean per-state parameter-gradient norm, and the norm of the mean gradient vector, then separate mapping gain γ from aggregation retention ρ:
@@ -774,7 +786,11 @@ Why might restoration be easier to realize? It asks shared parameters to undo a 
 
 This intuition can extend to the mapping layer: an already realized output displacement comes from the Jacobian acting on a parameter change, rather than an arbitrary output direction. It may concentrate on directions to which the network responds strongly, and the transpose-Jacobian mapping can amplify them further. Realizability alone does not guarantee high gain; alignment with high-gain Jacobian directions also matters. The measurements establish higher mapping gain; this spectral explanation remains a hypothesis.
 
-**How does this affect learning speed?** Compare the complete curves for one update and two disjoint updates:
+<h4 id="en-force-competition-role">3.3.2 When does force magnitude matter?</h4>
+
+When two forces compete, relative scale determines what survives. Modern optimizers may largely attenuate a global scaling of one force; changing the ratio of two forces changes their aggregate direction.
+
+**Case Study 1: off-policy training in diffusion RL.** Figure 10 compares one update with two disjoint updates:
 
 <figure class="figure-compact" data-figure="mirror_dynamics"><img src="/assets/blog/diffusion-rl/mirror_dynamics_compact.png" alt="Figure 10: Stability and speed with one update versus two disjoint updates" loading="lazy" width="2400" height="930"><figcaption>Figure 10. One update versus two disjoint updates; β=1 on the left and β=0.1 on the right. Complete online train OCR curves without smoothing, against the optimizer step at reward logging. Each one/disjoint pair shares a training commit; the cross-β comparison spans versions. Recipe details appear in the data notes.</figcaption></figure>
 
@@ -800,6 +816,8 @@ At the first update, output-change MSE is **0.002318 / 0.002311**, and parameter
 
 These runs use normalized-X0 and current-STD, not the bare MSE above; Figure 11 measures components of the actual loss. The core formula explains relative-scale competition, while measurements establish its implemented strength.
 
+
+**Case Study 2: KL divergence.** Once current departs from reference, reward guidance and regularization both enter the update. Tune their relative parameter-gradient norms and directions; a small KL coefficient does not guarantee a small gradient share.
 
 **Reference MSE shows an even larger scale reversal.** On Fast's matched nonzero diagnostic windows, its output force is about **1.8 times** guidance's, but its aggregate parameter gradient is about **185 times** larger. This does not mean KL constrained training: the regularization coefficient is zero, and reference MSE is diagnostic only. When adding regularization, compare coefficient-weighted parameter gradients and their directions, not loss values as forces.
 
