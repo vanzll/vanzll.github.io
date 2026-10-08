@@ -125,6 +125,10 @@ kramdown:
 
 # Defaults
 defaults:
+  - scope:
+      path: "assets/blog/diffusion-rl"
+    values:
+      sitemap: false
   # _pages
   - scope:
       path: ""

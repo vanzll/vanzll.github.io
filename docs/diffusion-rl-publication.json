@@ -1,10 +1,10 @@
 {
-  "published_at": "2026-10-07T13:54:37Z",
+  "published_at": "2026-10-08T17:22:35.022312+00:00",
   "url": "https://vanzll.github.io/blog/diffusion-rl/",
   "visibility": "unlisted",
   "source_sha256": {
-    "zh": "cc52c58ba4b72d52fcf0d4e17f4b4e026b504a285fd34f6e9771d67434d2b75d",
-    "en": "84d50aa78aa9b58bec176a19ba582018b95563a24228c213cfaf51711194332f"
+    "zh": "d25749c1dee9bb5efa87fcdb11ffefb2a38869efbb13d1b289830b89207e8d14",
+    "en": "4b7fb32ae968e85fdfe22f558489c587832dab5d6cf820bff0b1d4ee33e602d1"
   },
   "figures": {
     "force_overview.png": "6c25503788334fd35f4ced979c23d75cb8eb08526908e5f4c7cfe2c3c40f20e2",
@@ -19,6 +19,8 @@
     "repulsion_geometry.png": "795ed26eeec276de263a68725e30dd20e4b0a5434f45f484cd00a0b0e41a5c97",
     "mirror_reversal_compact.png": "cda69f984cd9ddd8d22e054213bf461848d59b9c3bea3b7ff6f37d56013107c7",
     "mirror_dynamics_compact.png": "feeaaf4f81e198a26acf1d98582014c787f9545af209626539ac9fdc2bb68768",
-    "force_competition_compact.png": "324c818912d0db7bed5162ff26df02184a53605a7beff07c82432788521b5cc2"
-  }
+    "force_competition_compact.png": "324c818912d0db7bed5162ff26df02184a53605a7beff07c82432788521b5cc2",
+    "three_layer_force_probe.png": "c2a974559045ab7f27ea8db1008e5b64e7cedb2ba4001a305bd0e8f17b960363"
+  },
+  "publication_scope": "Section 3.3 force diagnostics and evidence notes only; other unpublished local revisions remain private"
 }

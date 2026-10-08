@@ -1,0 +1,105 @@
+{
+  "sources": {
+    "26rilzmp": {
+      "sha256": "3ac7de0ce52f9854c1088b822221cc1f188d5db8e774534180c2ef3c5c1c114c",
+      "commit": "2a451c0025712dad0d41d087a39f5d10eecb3c24",
+      "state": "finished",
+      "url": "https://wandb.ai/vanzl3386-chinese-university-of-hong-kong-shenzhen/flow-grpo-algo/runs/26rilzmp"
+    },
+    "adnxitig": {
+      "sha256": "39e57e0d51f0f25becce59a8f57f0e8e5ed52dcde5603372ab5d9a202ae3da44",
+      "commit": "2a451c0025712dad0d41d087a39f5d10eecb3c24",
+      "state": "finished",
+      "url": "https://wandb.ai/vanzl3386-chinese-university-of-hong-kong-shenzhen/flow-grpo-algo/runs/adnxitig"
+    },
+    "75pf0fok": {
+      "sha256": "afc4277ddabf704f7b04ea6aec8d16f225ce0f1ea7f8827c3619824d83f65a4d",
+      "commit": "2a451c0025712dad0d41d087a39f5d10eecb3c24",
+      "state": "crashed",
+      "url": "https://wandb.ai/vanzl3386-chinese-university-of-hong-kong-shenzhen/flow-grpo-algo/runs/75pf0fok"
+    }
+  },
+  "statistics": [
+    {
+      "run": "26rilzmp",
+      "group": "NFT + EMA",
+      "component": "guidance",
+      "windows": 18,
+      "states_per_window": 80,
+      "output_norm": 0.004079314191752747,
+      "individual_gradient_norm": 0.1690414237942212,
+      "aggregate_gradient_norm": 0.041688370227333904,
+      "gain": 41.438686957718666,
+      "retention": 0.24661629848836525
+    },
+    {
+      "run": "26rilzmp",
+      "group": "NFT + EMA",
+      "component": "restore",
+      "windows": 18,
+      "states_per_window": 80,
+      "output_norm": 0.0007647286376076755,
+      "individual_gradient_norm": 0.10681120713642649,
+      "aggregate_gradient_norm": 0.03978482205391291,
+      "gain": 139.67203774474476,
+      "retention": 0.3724779741801537
+    },
+    {
+      "run": "adnxitig",
+      "group": "NFT: second update",
+      "component": "guidance",
+      "windows": 20,
+      "states_per_window": 80,
+      "output_norm": 0.004596256658337027,
+      "individual_gradient_norm": 0.2089464579559237,
+      "aggregate_gradient_norm": 0.051652044513592774,
+      "gain": 45.46013712635505,
+      "retention": 0.24720229775078809
+    },
+    {
+      "run": "adnxitig",
+      "group": "NFT: second update",
+      "component": "restore",
+      "windows": 20,
+      "states_per_window": 80,
+      "output_norm": 0.0005672929601933818,
+      "individual_gradient_norm": 0.07824947857454069,
+      "aggregate_gradient_norm": 0.03274439898693317,
+      "gain": 137.93486622479256,
+      "retention": 0.41846156144977703
+    },
+    {
+      "run": "75pf0fok",
+      "group": "Fast: partial",
+      "component": "guidance",
+      "windows": 32,
+      "states_per_window": 24,
+      "output_norm": 0.00038258955568468687,
+      "individual_gradient_norm": 0.0013295273565464179,
+      "aggregate_gradient_norm": 0.00037672223331392896,
+      "gain": 3.4750748858449096,
+      "retention": 0.2833504940375978
+    },
+    {
+      "run": "75pf0fok",
+      "group": "Fast: partial",
+      "component": "reference_mse",
+      "windows": 32,
+      "states_per_window": 24,
+      "output_norm": 0.0006878614319762817,
+      "individual_gradient_norm": 0.15105915978635404,
+      "aggregate_gradient_norm": 0.06958092638314027,
+      "gain": 219.6069626295936,
+      "retention": 0.46062037205522627
+    }
+  ],
+  "queried_on": "2026-10-09",
+  "aggregation": "Ratio of window-mean norms; identical paired windows with nonzero output forces for both components.",
+  "uncertainty": "Single seed; no confidence interval or smoothing.",
+  "limitations": [
+    "NFT has 80 sampled states/window; Fast has 24 and different noise positions.",
+    "Cloud histories contain 19 EMA, 40 NFT-disjoint, 33 Fast windows; local coverage is 20, 40, 34.",
+    "Reference MSE is diagnostic only; applied KL coefficient is zero.",
+    "Runtime commit differs from supplied dfc49cd; runtime diff not yet verified."
+  ]
+}
