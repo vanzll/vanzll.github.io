@@ -1,11 +1,7 @@
 {
-  "published_at": "2026-10-08T17:51:26.294835+00:00",
+  "published_at": "2026-10-09T15:17:24Z",
   "url": "https://vanzll.github.io/blog/diffusion-rl/",
   "visibility": "unlisted",
-  "source_sha256": {
-    "zh": "547d0d7835525ac39eb040b449631e4be7c59277a26b891c537233be71fe1cd5",
-    "en": "dabe6f6d56efedb54fc1efa02b7fa87a8bc069cd219301118fda0df8de05cf7d"
-  },
   "figures": {
     "force_overview.png": "6c25503788334fd35f4ced979c23d75cb8eb08526908e5f4c7cfe2c3c40f20e2",
     "reverse_gradients_compact.png": "f1042233e628ced436a36793386f008d88217f3d2640cc41693b1d961384a44f",
@@ -18,9 +14,24 @@
     "nft_second_update_geometry.png": "ae4dc2f052dfd440b27246c8d807b7d7207fdec4b71280869450b8c72f6a2ed0",
     "repulsion_geometry.png": "795ed26eeec276de263a68725e30dd20e4b0a5434f45f484cd00a0b0e41a5c97",
     "mirror_reversal_compact.png": "cda69f984cd9ddd8d22e054213bf461848d59b9c3bea3b7ff6f37d56013107c7",
+    "force_mechanisms.png": "b7804e1ebf2b6755ea046c9f0ea0de1c274c16bd7ce245711ea016a5aaebd507",
+    "force_direction_control.png": "457dfb00847790dae0861244c50387b259c9c434b0c3deb7e4726286ce35f0b8",
     "mirror_dynamics_compact.png": "feeaaf4f81e198a26acf1d98582014c787f9545af209626539ac9fdc2bb68768",
     "force_competition_compact.png": "324c818912d0db7bed5162ff26df02184a53605a7beff07c82432788521b5cc2",
-    "three_layer_force_probe.png": "c2a974559045ab7f27ea8db1008e5b64e7cedb2ba4001a305bd0e8f17b960363"
+    "force_stability.png": "776196f42d0a4bd97bd803647b68e0751876e359ae747598741779ba12dc0822"
   },
-  "publication_scope": "Restore author Section 3.3 structure: five force bullets, Case Study 1 and Case Study 2; preserve diagnostics and other sections"
+  "publication_scope": "Restore author Section 3.3 structure: five force bullets, Case Study 1 and Case Study 2; preserve diagnostics and other sections",
+  "base_full_draft_sha256": {
+    "zh": "547d0d7835525ac39eb040b449631e4be7c59277a26b891c537233be71fe1cd5",
+    "en": "dabe6f6d56efedb54fc1efa02b7fa87a8bc069cd219301118fda0df8de05cf7d"
+  },
+  "last_update_scope": "Section 3.3 and its figure data notes only; remaining public text preserved.",
+  "public_sha256": {
+    "zh": "16a9b5002371bf92ad0c965b9338edff4a9687a2f86ab3c26d3b3fa0c5558efb",
+    "en": "989bbdb1f967518e642b3031a441c30085a7eb907235274ffe8eafd33d6753b5"
+  },
+  "section_3_3_source_sha256": {
+    "zh": "fc13b30800ff269ffdd554b1beed32a6b936fec4a31b959a6bde07af74d9dbc7",
+    "en": "7575a14068b7e44083bf01db7d4168bc87491793e599cc0f03e93f6a78a326af"
+  }
 }

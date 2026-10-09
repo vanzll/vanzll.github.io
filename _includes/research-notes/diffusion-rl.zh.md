@@ -732,14 +732,14 @@ f=-\nabla_{v_\theta}\ell_{\rm NFT}
 
 <p>回到第 1 节的<a href="#eq-zh-chain" data-equation-ref="chain">三层心智模型</a>：输出力 → 各 state 的 Jacobian 映射 → 跨 state 聚合。<strong>一股力能推动模型多少，取决于它经过这三层后还剩多少，而不只是起点有多大。</strong></p>
 
-<p><strong>先比较这五类力。</strong> 前两层不容易直接校准，却可以分别测量；不能把最终强弱全部归因于第三层的抵消。</p>
+<p>直觉上，endpoint-based 的请求比独立随机动作更有结构，似乎应该在跨 state 聚合时保留更多。<strong>但把三层真正拆开，最大的差异却出现在聚合之前。</strong>先看这五类力：</p>
 
 <ul>
-<li><strong>Reverse RL 的推拉：</strong>轨迹级 advantage 混合了 state 价值与 action 贡献，不同 action 的请求未必协同；独立探索噪声本身不能证明参数梯度抵消更多。</li>
-<li><strong>Forward RL／NFT 的 guidance：</strong>从高奖励 endpoint 构造的请求有机会更协同。但 NFT guidance 还包含前向–反向自一致性项（见<a href="#zh-detail-9">3.2.2 节</a>），需要分项测量才能判断抵消来自哪里。</li>
-<li><strong>DiffusionART 的 covariance guidance：</strong>把奖励相关的 covariance 与自一致性项分开，有望留下更协同的指导；是否进一步提高聚合保留率，仍待匹配的三层对照。</li>
-<li><strong>恢复力：</strong>撤销已经实现过的变化；分项实验发现它可以在输出空间很小，却在参数空间很强。</li>
-<li><strong>KL（reference-MSE）正则力：</strong>限制偏离 reference；下面测其未加权梯度，不把它等同于已施加的 KL 更新。</li>
+<li><strong>Reverse RL 的推拉：</strong>在旧策略锚点，Flow-GRPO 的输出力沿随机 action 残差的方向，advantage 决定其正负与尺度。轨迹 reward 不会把这条轴旋转成一个新的方向。</li>
+<li><strong>Forward RL／NFT 的 guidance：</strong>请求来自 endpoint 与模型预测的残差，不只是独立坐标噪声。这里测的是排除 current–old 恢复项后的实际 guidance，仍包含<a href="#zh-detail-9">前向–反向自一致性项</a>。</li>
+<li><strong>DiffusionART 的 covariance guidance：</strong>DiffusionART（简称 ART）是我们基于 covariance guidance 与自适应恢复提出的训练方法。它先聚合 prompt 组内的 reward–endpoint covariance，再形成每个 state 的请求，不包含 NFT 的那项前向–反向自一致性残差。</li>
+<li><strong>恢复力：</strong>撤销 current 相对 old 的变化。EMA 让 old 滞后，冻结 old 后的第二次更新也会产生这股力。</li>
+<li><strong>Reference 正则力：</strong>限制 current 偏离 base。下面测量 plain model-output MSE 导出的未加权输出力；该 MSE 是常用的 KL 替代项，不与带 transition 方差权重的 Gaussian KL 混称。</li>
 </ul>
 
 **恢复力给出了一个反直觉的例子。** 在同一参数、同一批状态上分解第二次更新，恢复项的输出力小约 **9.4 倍**，参数梯度反而大约 **4.9 倍**：
@@ -749,7 +749,7 @@ f=-\nabla_{v_\theta}\ell_{\rm NFT}
 > **Observation：恢复的优势出现在转化过程中。** 它的输出力本身更小，却在映射和聚合之后更强。接下来要区分：是 Jacobian 放大更多，还是跨 state 抵消更少？
 
 <details class="derivation" id="zh-force-conversion-proof">
-<summary>如何把转化率拆成“映射增益 × 聚合保留率”？</summary>
+<summary>转化率为什么等于“映射增益 × 聚合保留率”？</summary>
 <p>沿用第1节的 <span class="math">\(f_i\)</span>（输出力）、<span class="math">\(g_i=J_i^\top f_i\)</span>（单个 state 的参数方向）与 <span class="math">\(\bar g=N^{-1}\sum_i g_i\)</span>（平均合力）。统一模长与归约、分母非零时：</p>
 <div class="math" data-equation="conversion">
 \[
@@ -761,49 +761,46 @@ f=-\nabla_{v_\theta}\ell_{\rm NFT}
 \end{aligned}
 \]
 </div>
-<p>γ 衡量输出力映射后放大多少；ρ 衡量参数梯度相加后保留多少，位于 0 与 1 之间。两者相乘，才是整体转化率 κ。上面的 temporal probe 只测跨 timestep 的保留率，不能直接代入逐样本分解，也不能用输出 RMS 替代这里的平均模长。</p>
-
-<div markdown="1">
-先区分两件事：一股输出力经过网络后会被放大多少，以及不同 state 的参数梯度相加时还能保留多少。**相邻梯度更同向，不一定意味着总梯度保留更多。**
-
-<p><a href="#zh-reverse-gradients">图2</a>测的是一个 microbatch 内各 timestep 的梯度，不是逐样本输出力。它展示了晚期分项主导合力；相邻 timestep 的 cosine 均值约为 0.003，接近正交，不能据此断言存在强烈的反向抵消。我们重新查了 Flow-GRPO 与 NFT 的 temporal probe，已有量如下：</p>
-
-- **Flow-GRPO：**逐 timestep 梯度模长之和，平均为 **0.00285**；先把梯度向量相加再取模长，平均为 **0.00190**；逐次聚合保留率的均值为 **0.669**。
-- **NFT：**对应值为 **3.426、1.993、0.552**，相邻 timestep 的 cosine 均值约为 **0.275**。相邻方向更一致，聚合保留率却没有更高：前者只看相邻夹角，后者还取决于全部方向与相对模长。
-
-这两组是历史配置，不用原始模长横比算法强弱；它们也没有同时记录完整的“输出力 → 逐样本参数梯度 → 完整 update 合力”链条。**下面的 NFT 分项测量则直接连接了输出力与聚合参数梯度。**
-</div>
+<p>γ 是按输出力模长加权的单 state gain 均值；ρ 衡量参数梯度相加后保留多少，位于 0 与 1 之间。统一缩放同一 state 的力，不改变它的 gain，因为分子与分母一起缩放。不同 state 的相对尺度却会改变汇总 γ 的权重。下图使用 L2 模长，不用输出 RMS 或 loss 数值代替。</p>
 </details>
 
-**新增诊断：把三层分别测出来。** 我们在同一诊断窗口内，分别测输出力模长均值、逐 state 参数梯度模长均值，以及梯度向量平均后的模长，再拆成映射增益 γ 与聚合保留率 ρ：
+在每个诊断窗口中，我们分别测输出力模长均值、单 state 参数梯度模长均值，以及参数梯度向量平均后的模长。**每一项都使用实际 loss 的输出力，参数梯度在 Adam 和裁剪之前测量。** Gain 衡量单位输出力映射出的参数方向有多大；保留率衡量这些参数方向相加后留下多少。
 
-<figure id="zh-three-layer-probe" class="figure-compact" data-figure="three_layer_force_probe"><img src="/assets/blog/diffusion-rl/three_layer_force_probe.png" alt="图12：恢复力与 reference-MSE 的映射增益和聚合保留率" loading="lazy" width="4800" height="1980"><figcaption>图12：高转化率发生在哪一层？左为映射增益（对数轴），右为聚合保留率。每对分项在相同参数与诊断状态上测量；数值为跨窗口平均模长之比，不是逐窗口比例的均值，也不是 Adam 更新占比。NFT 双更新只取第二窗口。Fast 为未完成实验的部分结果；reference-MSE 未加权、仅用于诊断。采样数与覆盖范围见数据说明。</figcaption></figure>
+<figure id="zh-three-layer-probe" class="figure-compact" data-figure="force_mechanisms"><img src="/assets/blog/diffusion-rl/force_mechanisms.png" alt="图10：五类力的映射增益与聚合保留率" loading="lazy"><figcaption>图10：差异主要发生在哪一层？左为映射 gain（对数轴），右为聚合保留率；数值为所选窗口平均模长之比。空心圆为与对应恢复力或 reference 配对的 guidance 子集。每组分项在相同参数和诊断状态上测量，跨算法则使用各自合法的训练状态，不是同一 Jacobian 的算法消融。NFT 第二次更新只取第二窗口；Fast 为 17/20 rollout 的部分结果。Reference-MSE 未乘正则系数，训练中该系数为 0；测量总体与覆盖见数据说明。</figcaption></figure>
 
-**恢复力的优势不只来自抵消少。** EMA 与双更新 NFT 中，恢复力的映射增益分别约为 guidance 的 **3.4 倍、3.0 倍**；在已读取的所有非零恢复窗口中，这个增益都更高。聚合保留率的优势却没有这么稳定：EMA 约 **78%** 的有效窗口更高，双更新只有 **55%**，后者逐窗口保留率之比的中位数约 **1.08**。因此，不能把恢复力的全部优势归因于跨 state 协同。
+Flow-GRPO、NFT EMA 与 ART guidance 的 gain 分别约为 **3.8、41、129**，聚合保留率却约为 **30%、25%、27%**。这些自然训练状态上的测量，没有支持“ART 的优势主要来自最后一层抵消更少”。最大的差异在**单个 state 的力如何经过 Jacobian**。
 
-> **Observation：这次最稳定的反转发生在映射层。** 小输出力经 Jacobian 映射后可以获得更高增益；更少抵消则不是每个窗口都成立。高转化率也不等于必然主导：本批 EMA 与双更新 NFT 的恢复/guidance 聚合模长之比分别约为 0.95、0.63，未重现图9那样的平均主导。
+> **Observation：请求更有结构，不一定表现为跨 state 保留更多。** 在这批测量中，guidance 的 gain 相差一个数量级以上，聚合保留率却接近；差异首先出现在映射层。
 
-Fast guidance 的保留率约为 **28%**，NFT guidance 约为 **25%**，没有出现“Reverse 一定抵消更多”的排序。不过两者的诊断 state 数与噪声位置不同，不能据此反向给算法排名；DiffusionART 的完整三层对照仍待补。
+这也提示了一个容易忽略的层次：<strong>单个 state 的参数梯度，已经是向量所有 element 贡献的和。</strong>不同坐标的贡献可能在这一步就抵消。Flow-GRPO 的随机 action 残差与 endpoint-based 请求，可能在向量内部结构及 Jacobian 匹配上不同；即便最后一层保留率接近，gain 仍能相差很大。当前的证据支持“方向很重要”，尚未把坐标内部抵消与低敏感方向分开。
+
+恢复力的高 gain 更值得注意：NFT EMA 与第二次更新中约为 **140、138**，ART 第二窗口中约为 **458**。它没有必要先成为最大的输出力，才能在参数空间与 guidance 竞争。
 
 为什么恢复可能更容易实现？它要求模型撤销共享参数**刚刚共同实现过的变化**，而 reward guidance 提出的新请求未必能由同一次参数更新共同满足。
 
-<p>这个直觉有一个局部支点。若参数已经移动了 <span class="math">\(\Delta\theta\)</span>，则各 state 的偏移约为 <span class="math">\(d_i\approx J_i\Delta\theta\)</span>，恢复的参数下降方向约为 <span class="math">\(-N^{-1}\sum_iJ_i^\top J_i\Delta\theta\)</span>，省略共同系数。它们都在响应同一个已发生的参数变化；不要求各 state 的输出力平行。</p>
+<p>若参数已经移动了 <span class="math">\(\Delta\theta\)</span>，局部有 <span class="math">\(d_i\approx J_i\Delta\theta\)</span>；恢复的参数下降方向约为 <span class="math">\(-N^{-1}\sum_iJ_i^\top J_i\Delta\theta\)</span>，省略共同系数。恢复方向来自模型已经实现的输出变化，而不是任意的新请求。</p>
 
 > **Insight：共同可实现，比输出方向相同更重要。** 恢复试图撤销一组已经实现过的函数变化，而不是提出一组全新的请求。这为它的高转化率提供了机制直觉；它不要求各 state 的输出力同向，也不证明恢复一定主导。
 
-这个直觉也可以延伸到映射层：已发生的输出位移来自 Jacobian 对参数变化的作用，不是任意的输出方向。它可能更集中在网络容易响应的方向上；经过 Jacobian 的转置映射时，这些方向还能被进一步放大。但“可实现”不保证“高增益”，具体还取决于位移与 Jacobian 高增益方向的对齐。实验确认的是映射增益更高，这个谱方向解释仍是机制猜想。
+我们做了一个方向干预：固定模型、state 和各 state 的力模长，只改变恢复力的方向。
+
+<figure id="zh-force-direction-control" class="figure-compact" data-figure="force_direction_control"><img src="/assets/blog/diffusion-rl/force_direction_control.png" alt="图11：恢复方向置换后的 gain 与聚合保留率" loading="lazy"><figcaption>图11：恢复方向与 state 的匹配。原始方向、同 timestep 内跨 endpoint 置换的单位方向、随机方向，都保留接收 state 原有的力模长。19 个非零窗口；三个干预 seed 不是三个训练 seed。置换同时改变 Jacobian 匹配与聚合，不能当作只改变协同的消融。</figcaption></figure>
+
+置换后，gain 从 **139 降到 74**，保留率反而从 **32% 升到 50%**；最终聚合梯度仍变小了。随机方向的 gain 则只有约 **3.2**。<strong>保留率更高，不等于作用更强。</strong>原始恢复方向与对应 state 的 Jacobian 有特殊匹配；“共同实现过”是解释这种匹配的机制直觉，不是高 gain 的保证。
 
 <h4 id="zh-force-competition-role">3.3.2 什么时候需要考虑力的大小</h4>
 
-当两股力竞争，相对尺度才决定谁留下。整体缩放一股力，可能被现代优化器大幅淡化；改变两股力的比例，却会改变聚合方向。
+前面比较的是力如何转化；但高 gain 本身既不保证 reward 上升，也不意味着必然失稳。<strong>当两股力竞争时，它们转化后的相对尺度与方向才决定合力。</strong>回顾第1节：整体缩放可能被 Adam 大幅淡化，改变分项比例却会改变输入优化器的方向。
 
-**Case Study 1：Diffusion RL 里的 Off-policy 训练。** 图10比较一次更新与两次 disjoint 更新：
+> **Insight：当存在两股力竞争时，需要考虑它们分别的大小。** 关键是聚合后的参数梯度，而不只是输出空间的系数或 loss 数值。
 
-<figure class="figure-compact" data-figure="mirror_dynamics"><img src="/assets/blog/diffusion-rl/mirror_dynamics_compact.png" alt="图10：一次更新与两次 disjoint 更新的稳定性和速度" loading="lazy" width="2400" height="930"><figcaption>图10：一次更新与两次 disjoint 更新；左 β=1，右 β=0.1。完整 online train OCR 曲线，不平滑，横轴为记录 reward 时的 optimizer step。每个 one/disjoint pair 使用同一训练 commit；跨 β 来自不同版本，具体配方见数据说明。</figcaption></figure>
+<p><strong>Case Study 1：Diffusion RL 里的 Off-policy 训练。</strong>图12比较一次更新与两次 disjoint 更新：</p>
 
-两条青色线都能快速学起来；粉色线却对 β 更敏感：β=1 学得很慢，β=0.1 更快，但后期仍会崩溃与恢复。关键不是“某个绝对尺度最好”，而是**第二次更新多了一股与 guidance 竞争的力**。
+<figure class="figure-compact" data-figure="mirror_dynamics"><img src="/assets/blog/diffusion-rl/mirror_dynamics_compact.png" alt="图12：一次更新与两次 disjoint 更新的稳定性和速度" loading="lazy" width="2400" height="930"><figcaption>图12：一次更新与两次 disjoint 更新；左 β=1，右 β=0.1。完整 online train OCR 曲线，不平滑，横轴为记录 reward 时的 optimizer step。每个 one/disjoint pair 使用同一训练 commit；跨 β 来自不同版本，具体配方见数据说明。</figcaption></figure>
 
-<p>对前面未归一化的镜像 MSE 核心，令 <span class="math">\(d=v_\theta-v_{\rm old}\)</span>，提取共同系数后：</p>
+<p>两条青色线起步都很快；两条粉色线的表现却不同：β=1 学得慢，β=0.1 更快，但后期仍会崩溃与恢复。解释这一差异的关键是：<strong>第二次更新多了一股恢复力，β 此时调控的不再只是 guidance 的绝对大小，而是两股力的竞争。</strong></p>
+
+<p>沿用<a href="#eq-zh-mirror-force" data-equation-ref="mirror-force">3.2.3 节的 NFT 输出力分解</a>，暂不引入实现中的额外归一化。把等式两边同除以共同的正系数 <span class="math">\(2\beta^2\)</span>，不改变力的方向，却能直接看出 guidance 与 restoration 的相对大小：</p>
 
 <div class="math" data-equation="mirror-relative-scale">
 \[
@@ -813,22 +810,32 @@ Fast guidance 的保留率约为 **28%**，NFT guidance 约为 **25%**，没有�
 \]
 </div>
 
-第一次更新 current=old，恢复项为零。整体缩放 guidance，可能被 Adam 大幅淡化；第二次更新 current 已经移动，old 仍冻结，缩放 guidance 就是在改变它相对于恢复项的份额。**同一个尺度，在第一次更新中是整体尺度，在第二次更新中成为相对尺度。** 这里的“恢复尺度相同”指提取共同系数后、相同位移下的核心项，不是原始恢复系数与 β 无关。
+<p>在未归一化核心的 current=old 锚点，恢复项为零；共同缩放 guidance 只改变整体尺度。第二次更新时 current 已移动，old 仍冻结，改变 β 就会改变 guidance 相对于恢复项的份额。<strong>同一个尺度，在锚点是整体尺度，离开锚点后成为相对尺度。</strong>提取共同系数后，相同位移对应相同的核心恢复项，不是说原始恢复系数与 β 无关。</p>
 
 W&B 的真实测量补上了两个关键环节：
 
-<figure id="zh-force-competition" class="figure-compact" data-figure="force_competition"><img src="/assets/blog/diffusion-rl/force_competition_compact.png" alt="图11：初次更新位移、第二窗口分项梯度比例与方向" loading="lazy" width="2400" height="960"><figcaption>图11：两次 disjoint 更新的 β=1 / 0.1 配方。左：首个 optimizer update 在诊断状态上的 velocity 变化 MSE。中、右：rollout 0–17 第二窗口的恢复/guidance 参数梯度模长比与 cosine，保留全部有效点、不平滑。虚线分别为等模长与正交；跨 β 不是严格单变量对照。</figcaption></figure>
+<figure id="zh-force-competition" class="figure-compact" data-figure="force_competition"><img src="/assets/blog/diffusion-rl/force_competition_compact.png" alt="图13：初次更新位移、第二窗口分项梯度比例与方向" loading="lazy" width="2400" height="960"><figcaption>图13：两次 disjoint 更新的 β=1 / 0.1 配方。左：首个 optimizer update 在诊断状态上的 velocity 变化 MSE。中、右：rollout 0–17 第二窗口的恢复/guidance 参数梯度模长比与 cosine，保留全部有效点、不平滑。虚线分别为等模长与正交；跨 β 的代码差异尚待完整核验。</figcaption></figure>
 
 首个更新的输出变化 MSE 为 **0.002318 / 0.002311**，参数位移模长均约 **0.888**：起步移动确实几乎相同。第二窗口中，恢复/guidance 的平均模长之比却从 **4.85 降至 0.78**。这比单看 reward 更直接地支持“恢复份额改变了”的解释；cosine 也说明，恢复主导不等于每次都与 guidance 精确反向。后续模型走上不同轨迹，不能把起步相同推广成全程相同。
 
-这些 run 使用 normalized-X0 与 current-STD，而非上式的裸 MSE；图11测的是实际 loss 的分项梯度。因此，核心公式解释相对尺度竞争，实际强度则以测量为准。
+这些 run 使用 normalized-X0 与 current-STD，而非上式的裸 MSE；图13测的是实际 loss 的分项梯度。核心公式解释竞争，实际强度以测量为准。
+
+**只有力的比例还不够，还要看它们的转化率是否随训练升温。** 我们延长了纯 on-policy NFT 与双更新 ART 的 OCR 实验，分别追踪 guidance 的输出力、gain、保留率和 reward：
+
+<figure id="zh-force-stability" class="figure-compact" data-figure="force_stability"><img src="/assets/blog/diffusion-rl/force_stability.png" alt="图14：NFT 与 ART 的输出力、gain、保留率和 OCR 曲线" loading="lazy"><figcaption>图14：失稳发生在哪一层？横轴为 fresh rollout；NFT 每轮一次更新，ART 每轮两次，后者的两窗口分开绘制。原始点不平滑，无效比值留空；空心菱形表示 gain 的有效 state 少于80。Gain 为有效 state 的等权均值，保留率为参数向量聚合后的比例；单训练 seed。Reward 在同轮更新前采集，因此不把同横坐标的 gain 当作已经造成该 reward 变化的证据。</figcaption></figure>
+
+NFT 的等权 gain 从初始约 **44** 升到 rollout 44/45 的约 **1239/2784**，伴随 OCR reward 崩溃；这两个窗口都有 **80 个有效 state**，不是少量有效样本造成的汇总假象。ART 在已观察的长程轨迹中没有出现相同的失控，仍保持较高 reward。聚合保留率没有呈现与 NFT gain 相当的暴涨。
+
+> **Observation：稳定性不能只看最后一层抵消。** 这次 NFT 的危险升温发生在单 state 映射层；恢复是否能制约 guidance，还取决于两者转化率如何随训练变化。
+
+这解释了为什么“输出力不大”未必安全，也给出了更直接的监控对象：**分别追踪 guidance 与 restoration 的 gain，再看它们的参数合力。**当前曲线尚未区分是 Jacobian、力方向还是诊断 state 的变化导致 gain 升温。
+
+**Case Study 2：KL／reference 正则。** 一旦 current 偏离 reference，reward guidance 与正则力就同时参与更新。Reference-MSE 的 gain 也可以很高：图10中，Flow-GRPO 与 ART 的 raw reference-MSE gain 分别约为 **146、271**。但它有多强，还取决于 current–reference 的实际距离，而不只取决于这个 gain。
 
 
-**Case Study 2：KL divergence。** 一旦 current 偏离 reference，reward guidance 与正则力就同时参与更新。需要调的是它们在参数空间的相对模长与方向；KL 系数小，不保证它的梯度份额小。
+在 Fast 的相同诊断窗口里，raw reference-MSE 输出力约为 guidance 的 **1.8 倍**，聚合参数梯度却约为 **185 倍**。本批训练正则系数为 0，这测的是潜在方向，不是已经施加的正则。设正则系数为 λ，它加入的是 <span class="math">\(\lambda\bar g_{\rm ref}\)</span>；λ 缩放力和参数梯度，却不改变固定 state 上的单位力 gain。
 
-**Reference-MSE 也会发生更大的尺度反转。** 在 Fast 的相同非零诊断窗口里，它的输出力约为 guidance 的 **1.8 倍**，聚合参数梯度却约为 **185 倍**。这不是 KL 已经压住了训练：本批正则系数为 0，reference-MSE 只用于测量。真正加入正则后，要比较系数加权后的参数梯度及其方向，而不是把 loss 数值当成力。
-
-**下一步：验证机制，而不是重复测总模长。** 新 probe 已拆开 NFT 与 Fast 的三层；还需要匹配 state 数与噪声区域，补上 DiffusionART 和独立 consistency 分项，并检验恢复方向是否更对齐 Jacobian 的高增益方向。
+> **Recipe：调竞争的力，不是调两个 loss 到一样大。** 同时看系数加权后的参数梯度模长比、cosine 和实际函数移动；这个原则既适用于 KL，也适用于第二次更新的恢复力。
 
 <h2 id="zh-recipes" data-section-key="recipes">4. 选配方前，我们会先测什么？</h2>
 
@@ -930,10 +937,11 @@ g_{\rm restore}\approx-\frac{1}{N}\sum_iJ_i^\top J_i\Delta\theta.
 - 图3右为跨历史版本的 initial-noise 对照：模型、reward、K、训练步数、LR、batch 与累积设置相同；shared run 每10轮 eval，对照每30轮 eval，保存频率也不同。比较相同 logged step 的 eval，保留各自的实际测量频率。
 - Forward 公式分析未归一化 NFT mirror-MSE 核心；normalized-X0 实现的 normalization 与归约会改变具体系数，图用实现自身的分项 probe。
 - 图6显示历史窗口0–100；原始说明称该分支实验去掉EMA，但现有历史run名称含tf0.99，实际开关仍需核对，不据名称断言使用EMA或将其作为严格on-policy对照。图7使用2026-10-02更新的原图，左侧延伸到500个optimizer steps，以首次达到OCR=0.9比较21与320步；两次更新是disjoint，而非旧AdvBridge replay实验。中间保留EMA-anchor消融，它的原始统计轴为fresh rollout iteration，图中标成Training steps；左右两类轴不用于横向效率比较。图8是固定state与target的几何示意，不是实验测量。每张图的来源快照和资产hash见manifest，源文件未修改。
-- 图9–11：normalized-X0 Mirror、current-STD，无 rollout EMA/KL。One/disjoint pair 同训练 commit，但每次 update 的 batch 与参考同步节奏不同；beta0.1 跨版本，不称严格 beta-only 对照。图10 reward event 用实际 optimizer-step 计数，仅有初始 held-out eval，不作 wall-time 或最终泛化结论。
+- 图9、12、13：normalized-X0 Mirror、current-STD，无 rollout EMA/KL。One/disjoint pair 同训练 commit，但每次 update 的 batch 与参考同步节奏不同；两个 beta 版本的代码差异尚待核验，不能仅凭 commit 不同认定还有其他算法变量。图12 reward event 用实际 optimizer-step 计数，仅有初始 held-out eval，不作 wall-time 或最终泛化结论。
 - 图9平均 guidance/restoration 输出 RMS 为 2.633e-5 / 2.803e-6，参数梯度 norm 为 0.00812 / 0.03939；单位不同，比值均为均值之比。Probe 为数值重建，最大 normalized reconstruction error 约 0.0041，测量训练参数子空间；完整 runtime AMP/clipping 口径仍待核对。β=0.1 版本前18次 probe 的 restoration/guidance 参数梯度比约0.78，β=1 为4.85；OCR 0.8 首次到达 update48 / 232，不能据此隔离恢复系数的因果作用。
-- 图11于2026-10-07从 W&B 定向取回：位移来自 opt/update/v_delta_to_prev_current_mean，代码对更新前后相同诊断状态的输出差逐元素平方后取均值，不是 RMS 或整条轨迹位移；参数位移为实际更新前后的 trainable-parameter L2 norm。梯度分项取 probe/mirror_components，先检查 valid，再保留前18轮的全部第二窗口测量。数据、CSV、统计和训练 commit 保存于 force_conversion_wandb.json 与 force_competition_compact.json；初次位移与第二窗口的梯度测量不是同一个时点。
-- 第3.3节 temporal 数值来自 aggregation_review_wandb.json：Flow-GRPO / NFT 分别有43 / 42次 probe、9 / 10个 timestep，均为 microbatch 0 的 LoRA 梯度；不是完整累积 update 或逐样本梯度。每次先求模长和、向量和模长及二者之比，再分别跨 probe 取均值。Flow-GRPO 合力模长由 logged coherence × 逐时步模长和重建；NFT 与直接记录的 gradient_sum_norm 一致到浮点误差。两者 rollout 分别为 SDE / deterministic，梯度累积为8 / 16，不能据此给算法排序。已有 output-force RMS 不等于 MSE，且对应另一组 NFT 分项 probe；这些历史 run 未测完整三层；图12来自新增的三层 probe。
-- 图12来自 2026-10-09 定向查询的 [NFT EMA](https://wandb.ai/vanzl3386-chinese-university-of-hong-kong-shenzhen/flow-grpo-algo/runs/26rilzmp)、[NFT 双更新](https://wandb.ai/vanzl3386-chinese-university-of-hong-kong-shenzhen/flow-grpo-algo/runs/adnxitig) 与 [Fast](https://wandb.ai/vanzl3386-chinese-university-of-hong-kong-shenzhen/flow-grpo-algo/runs/75pf0fok)。SD3.5-M LoRA、OCR、seed42、LR=3e-4，无外部 CFG，正则系数为0。NFT 为10步确定性 rollout，Fast 为10步 rollout 中的3步 CPS 窗口；NFT 每窗口80个诊断 state，Fast 24个，均不是完整 optimizer update 的所有样本。图中分别使用18个 EMA 非零恢复配对窗口、20个第二更新配对窗口和32个 Fast 非零 reference 配对窗口。云端原始覆盖为19/40/33个窗口，远端报告本地为20/40/34；Fast 因存储配额退出于17/20轮，未补齐或外推。
-- 图12的 γ/ρ 是跨所选窗口平均模长之比；78%/55% 与1.08则来自逐窗口配对比例。重建误差最大约0.66%/0.70%/1.06%，不是无误差的数值分解。NFT guidance 尚包含 consistency，Fast signed displacement 不是统一正恢复力。W&B 记录运行 commit 为2a451c0…，不同于交付的dfc49cd…；修复 diff 尚未核实。三层原始模长及来源 hash 见 [CSV](/assets/blog/diffusion-rl/three_layer_force_probe.csv) 与 [测量说明](/assets/blog/diffusion-rl/three_layer_force_probe.json)。
+- 图13于2026-10-07从 W&B 定向取回：位移来自 opt/update/v_delta_to_prev_current_mean，代码对更新前后相同诊断状态的输出差逐元素平方后取均值，不是 RMS 或整条轨迹位移；参数位移为实际更新前后的 trainable-parameter L2 norm。梯度分项取 probe/mirror_components，先检查 valid，再保留前18轮的全部第二窗口测量。数据、CSV、统计和训练 commit 保存于 force_conversion_wandb.json 与 force_competition_compact.json；初次位移与第二窗口的梯度测量不是同一个时点。
+- 第3.3节三层口径：输出力为实际 loss 对 velocity 的负梯度，撤销 batch mean，但保留坐标和时步归约；参数方向由同一输出力的 LoRA VJP 直接计算，在 Adam/clip 前，不使用更新后的参数位移。BF16 forward/VJP 后转高精度计算模长，并非全 FP32 梯度。只覆盖每 rank 抽取的诊断行，不冒称整个 optimizer batch。各窗口分别测 F=mean‖fᵢ‖、P=mean‖gᵢ‖、A=‖mean gᵢ‖；图10、11先平均 F/P/A 再求 γ=P/F、ρ=A/P，图14的 gain 则为逐有效 state 的比值等权平均。
+- 图10的来源：[Flow-GRPO](https://wandb.ai/vanzl3386-chinese-university-of-hong-kong-shenzhen/flow-grpo-algo/runs/9mau8hwi)、[ART](https://wandb.ai/vanzl3386-chinese-university-of-hong-kong-shenzhen/flow-grpo-algo/runs/4w87ez9o)、[NFT EMA](https://wandb.ai/vanzl3386-chinese-university-of-hong-kong-shenzhen/flow-grpo-algo/runs/26rilzmp)、[NFT 双更新](https://wandb.ai/vanzl3386-chinese-university-of-hong-kong-shenzhen/flow-grpo-algo/runs/adnxitig) 和 [Fast](https://wandb.ai/vanzl3386-chinese-university-of-hong-kong-shenzhen/flow-grpo-algo/runs/75pf0fok)。共同为 SD3.5-M/OCR512/K16/LoRA32/seed42/LR3e-4/no-CFG/外部正则系数0。Flow-GRPO 为 full-SDE，NFT/ART 为确定性 rollout；Fast 为3步 CPS 窗口。Flow-GRPO/ART各40窗口、每窗口80 state；NFT EMA18个非零配对窗口，双更新20个第二窗口，Fast32个非零 reference 配对窗口、每窗口24 state。EMA原云端覆盖19窗口、Fast33窗口，远端本地报告20/34；Fast于17/20 rollout因配额退出。NFT/Fast重建误差最高约0.66%/0.70%/1.06%，Naive约1.61%；实际运行 commit 与交付版本不同，完整 runtime diff 尚未核验。数据与归约见 [CSV](/assets/blog/diffusion-rl/force_mechanisms.csv) 和 [测量说明](/assets/blog/diffusion-rl/force_mechanisms.json)。
+- 图11来自 [恢复方向干预](https://wandb.ai/vanzl3386-chinese-university-of-hong-kong-shenzhen/flow-grpo-algo/runs/bqrf8nn7)，同一图上复用当前模型与 state，每 rank/window 至多4个 endpoint；19个非零恢复窗口。单位方向仅在同 rank、同 timestep 的非零行中置换，乘回接收行原模长；控制 seed 为314159/271828/161803，未改变训练 loss。原始/置换/随机的 P/F 约138.65/73.74/3.19，A/P约32.16%/49.69%/12.93%；分项重建误差最高约0.54%。置换同时影响映射与聚合，不是 coherence-only；其诊断总体比图10更大，不直接跨图比较保留率。数据见 [CSV](/assets/blog/diffusion-rl/force_direction_control.csv) 与 [说明](/assets/blog/diffusion-rl/force_direction_control.json)。
+- 图14来自 [纯 on-policy NFT](https://wandb.ai/vanzl3386-chinese-university-of-hong-kong-shenzhen/flow-grpo-algo/runs/2xi0cj0u) 与 [双更新 ART](https://wandb.ai/vanzl3386-chinese-university-of-hong-kong-shenzhen/flow-grpo-algo/runs/f9la5w7l)。共同 OCR512/K16/LR3e-4/seed42/10步 rollout与全部10步训练/no-CFG/KL0，每窗口最多80个诊断 state；单 seed，两种方法的合法 state 分布不同。横轴使用实际 rollout context；ART由 microbatch0/8区分两窗口，不用 inner_epoch。有效比值与计数逐窗口核验，近零恢复和无效 gain 不填0、不沿用 summary 残值；不同预算下不宣称匹配 GPU-hours。实际 runtime 为92ed8cc…，完整 diff 尚未取得。曲线为一次冻结查询，不冒称仍 running 或已完成预算；数据与查询时间见 [CSV](/assets/blog/diffusion-rl/force_stability.csv) 与 [说明](/assets/blog/diffusion-rl/force_stability.json)。
 - 待补实验包括 action controllability、完整 gate matrix、Fast compute accounting、匹配三层对照与机制干预、adaptive restoration。

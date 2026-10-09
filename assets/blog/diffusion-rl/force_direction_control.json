@@ -1,0 +1,600 @@
+{
+  "figure": "force_direction_control",
+  "sources": {
+    "bqrf8nn7": {
+      "path": "_draft_assets/diffusion-rl/force_mechanisms_source_bqrf8nn7.json",
+      "sha256": "964b41875dc47888f3f8467816c9bfd95dcf0e42c558ff4b065cf5b00e244e19",
+      "commit": "b08bc7f8b01cd0b71e6a30fa8b3f636557057014",
+      "state": "finished",
+      "url": "https://wandb.ai/vanzl3386-chinese-university-of-hong-kong-shenzhen/flow-grpo-algo/runs/bqrf8nn7",
+      "fetched_at": "2026-10-09T15:09:02.527657+00:00",
+      "cutoff_step": 19,
+      "config": {
+        "nft": {
+          "ou_aug": {
+            "sigma": 0.5,
+            "enabled": false,
+            "ramp_epochs": 40,
+            "start_epoch": 80,
+            "max_fraction": 0.25
+          },
+          "loss_mode": "standard",
+          "noise_source": "fresh",
+          "pairing_mode": "none",
+          "rollout_noise": {
+            "enabled": false,
+            "ramp_epochs": 40,
+            "start_epoch": 80,
+            "max_fraction": 0.25,
+            "quantile_max": 0.99,
+            "quantile_min": 0.9
+          },
+          "target_source": "self",
+          "objective_mode": "mirror",
+          "loss_scale_mode": "normalized_x0",
+          "advantage_std_mode": "current_std",
+          "advantage_fixed_std": 0.3,
+          "training_state_source": "forward_noised_endpoint",
+          "within_rollout_proximal": {
+            "enabled": false,
+            "data_reuse_mode": "disjoint",
+            "replay_full_rollout": false,
+            "preserve_rollout_lr_mass": true,
+            "optimizer_steps_per_rollout": 1,
+            "adv_bridge_tangent_stabilization": {
+              "radius": 0.1,
+              "enabled": false,
+              "restore_strength": 1
+            },
+            "adv_bridge_linear_guidance_enabled": false,
+            "directional_corrective_mask_enabled": false,
+            "directional_corrective_mask_diagnostics": false
+          },
+          "adv_bridge_mse_target_gain": 1,
+          "local_posterior_covariance": {
+            "enabled": false,
+            "candidate_chunk_size": 16
+          },
+          "temporal_advantage_dropout": {
+            "scope": "all",
+            "enabled": false,
+            "exponent": 0.5,
+            "coupling_mode": "independent",
+            "min_kept_per_negative_trajectory": 0
+          },
+          "pair_contrast_endpoint_mode": "paired_rows",
+          "advantage_scale_preserving_step": {
+            "mode": "legacy_mean_abs",
+            "enabled": false,
+            "ema_beta": 0.9
+          },
+          "equal_likelihood_pair_covariance": {
+            "enabled": false
+          },
+          "pair_contrast_legality_weighting": {
+            "mode": "gaussian_density_ratio_active_microbatch_mean",
+            "enabled": false
+          },
+          "pair_contrast_advantage_normalization": "none",
+          "pair_contrast_direction_normalization": "rms",
+          "pair_contrast_preserve_old_velocity_rms": false
+        },
+        "beta": 1,
+        "seed": 42,
+        "debug": false,
+        "train": {
+          "cfg": false,
+          "ema": false,
+          "beta": 0,
+          "adv_mode": "all",
+          "algorithm": "nft",
+          "lora_path": "",
+          "loss_type": "grpo",
+          "adam_beta1": 0.9,
+          "adam_beta2": 0.999,
+          "batch_size": 8,
+          "clip_range": 1e-05,
+          "x0_kl_beta": 0,
+          "log_base_kl": false,
+          "adam_epsilon": 1e-08,
+          "adv_clip_max": 5,
+          "clip_range_gt": 0.0001,
+          "clip_range_lt": 0.0001,
+          "learning_rate": 0.0003,
+          "max_grad_norm": 1,
+          "use_8bit_adam": false,
+          "counterfactual": {
+            "enabled": false,
+            "pairing": "ranked_negpos",
+            "extra_ratio": 0.5
+          },
+          "timestep_shift": 3,
+          "num_inner_epochs": 1,
+          "adam_weight_decay": 0.0001,
+          "timestep_fraction": 1,
+          "update_diagnostics": {
+            "every": 1,
+            "enabled": false
+          },
+          "advantage_estimator": "group_norm",
+          "force_conversion_probe": {
+            "enabled": true,
+            "profile": "nft_intervention",
+            "max_rows": 4,
+            "every_epochs": 1,
+            "persist_records": false,
+            "old_policy_decay": 0.9,
+            "save_checkpoints": false,
+            "intervention_seeds": [
+              314159,
+              271828,
+              161803
+            ],
+            "max_parameter_count": 25000000,
+            "intervention_enabled": true
+          },
+          "multi_reward_advantage": {
+            "enabled": false,
+            "renormalize_combined": false
+          },
+          "nft_update_diagnostics": {
+            "enabled": false
+          },
+          "critic_advantage_center": true,
+          "raw_reward_as_advantage": false,
+          "temporal_gradient_probe": {
+            "seed": 314159,
+            "enabled": false,
+            "stop_epoch": -1,
+            "start_epoch": 0,
+            "every_epochs": 10,
+            "late_indices": [
+              6,
+              7,
+              8
+            ],
+            "require_lora": true,
+            "early_indices": [
+              0,
+              1,
+              2
+            ],
+            "microbatch_index": 0,
+            "max_parameter_count": 25000000
+          },
+          "frozen_score_ppo_enabled": false,
+          "critic_advantage_fallback": "global_reward_norm",
+          "critic_advantage_normalize": true,
+          "exact_sample_gradient_probe": {
+            "enabled": false,
+            "stop_epoch": -1,
+            "start_epoch": 0,
+            "every_epochs": 1,
+            "require_lora": true,
+            "microbatch_index": 0,
+            "max_parameter_count": 25000000
+          },
+          "gradient_accumulation_steps": 16,
+          "critic_advantage_ramp_epochs": 0,
+          "covariance_guidance_assignment": "prompt_global",
+          "critic_advantage_warmup_epochs": 0,
+          "gradient_sensitivity_controller": {
+            "kappa": 2,
+            "power": 2,
+            "enabled": false,
+            "epsilon": 1e-12,
+            "calibration_updates": 8
+          },
+          "covariance_guidance_reward_source": "weighted_reward",
+          "frozen_score_ppo_lateral_restore_enabled": false,
+          "frozen_score_ppo_lateral_movement_threshold": 0.01
+        },
+        "critic": {
+          "dropout": 0.1,
+          "enabled": false,
+          "lora_path": "",
+          "loss_type": "mse",
+          "adam_beta1": 0.9,
+          "adam_beta2": 0.999,
+          "hidden_dim": 1024,
+          "model_mode": "shared_head",
+          "num_layers": 3,
+          "huber_delta": 1,
+          "resume_from": "",
+          "adam_epsilon": 1e-08,
+          "feature_mode": "hidden_state",
+          "reward_names": [],
+          "state_source": "ode_trajectory",
+          "value_target": "raw_return",
+          "weight_decay": 0.01,
+          "hidden_layers": [
+            7,
+            15,
+            23
+          ],
+          "learning_rate": 3e-05,
+          "max_grad_norm": 1,
+          "ranking_margin": 0,
+          "mixed_precision": true,
+          "hidden_num_heads": 8,
+          "value_clip_range": 0,
+          "eval_noise_filter": {
+            "enabled": false,
+            "start_epoch": 0,
+            "paired_control_enabled": false,
+            "control_candidate_index": 0
+          },
+          "hidden_branch_dim": 1024,
+          "value_loss_weight": 1,
+          "train_noise_filter": {
+            "enabled": false,
+            "start_epoch": 0
+          },
+          "pairwise_delta_clip": 0,
+          "ranking_loss_weight": 0,
+          "listwise_loss_weight": 0,
+          "predicted_x0_dropout": 0,
+          "backbone_weight_decay": 0,
+          "num_updates_per_epoch": 1,
+          "train_microbatch_size": 0,
+          "backbone_learning_rate": 1e-05,
+          "distributed_group_loss": false,
+          "gradient_checkpointing": true,
+          "predicted_x0_mlp_ratio": 4,
+          "predicted_x0_num_heads": 8,
+          "ranking_min_reward_gap": 0.05,
+          "consistency_loss_weight": 0,
+          "fixed_policy_value_only": false,
+          "noise_filter_chunk_size": 0,
+          "predicted_x0_hidden_dim": 1024,
+          "predicted_x0_num_layers": 4,
+          "predicted_x0_patch_size": 4,
+          "pairwise_delta_loss_type": "huber",
+          "listwise_score_temperature": 1,
+          "pairwise_delta_huber_delta": 1,
+          "pairwise_delta_loss_weight": 0,
+          "control_variate_diagnostics": false,
+          "listwise_target_temperature": 0.5,
+          "noise_filter_selection_mode": "argmax",
+          "noise_filter_candidate_multiplier": 2,
+          "auto_resume_from_policy_checkpoint": true,
+          "predicted_x0_noise_filter_chunk_size": 8,
+          "forward_noised_timesteps_per_endpoint": 1,
+          "pairwise_delta_normalize_within_prompt": false
+        },
+        "logdir": "[private path omitted]",
+        "sample": {
+          "solver": "dpm2",
+          "sde_type": "cps",
+          "num_steps": 10,
+          "batch_size": 8,
+          "global_std": true,
+          "noise_level": 0.7,
+          "same_latent": false,
+          "logprob_type": "gaussian",
+          "deterministic": true,
+          "eval_num_steps": 40,
+          "guidance_scale": 1,
+          "noise_level_min": 0,
+          "sde_window_size": 0,
+          "test_batch_size": 16,
+          "sde_window_range": [
+            0,
+            5
+          ],
+          "train_batch_size": 8,
+          "noise_level_power": 1,
+          "pc_cps_first_step": "ode",
+          "eval_guidance_scale": 1,
+          "noise_level_schedule": "constant",
+          "num_image_per_prompt": 16,
+          "num_batches_per_epoch": 16,
+          "pc_cps_first_step_noise_level": 0
+        },
+        "dataset": "[private path omitted]",
+        "run_name": "P1-SD35M-OCR-F09-S42-V1-A409202610090257_2026.10.09_02.57.32",
+        "save_dir": "[private path omitted]",
+        "use_lora": true,
+        "eval_freq": 999999,
+        "eval_only": false,
+        "prompt_fn": "general_ocr",
+        "reward_fn": {
+          "ocr": 1
+        },
+        "save_freq": 999999,
+        "allow_tf32": true,
+        "decay_type": 0,
+        "num_epochs": 20,
+        "pretrained": {
+          "model": "[private path omitted]",
+          "revision": "main"
+        },
+        "resolution": 512,
+        "resume_from": null,
+        "eval_enabled": false,
+        "resume_epoch": 0,
+        "wandb_method": "insight-followup-nft_intervention",
+        "eval_at_start": false,
+        "eval_observer": {
+          "enabled": false,
+          "reward_fn": {
+            "pickscore": 1
+          }
+        },
+        "wandb_project": "flow-grpo-algo",
+        "early_eval_freq": 10,
+        "mixed_precision": "bf16",
+        "early_eval_until": 60,
+        "extra_save_steps": [],
+        "insight_no_media": true,
+        "resume_global_step": 0,
+        "paper_experiment_id": "P1-SD35M-OCR-F09-S42-V1-A409202610090257",
+        "num_checkpoint_limit": 0,
+        "fsdp_optimizer_offload": false,
+        "activation_checkpointing": false,
+        "per_prompt_stat_tracking": true,
+        "skip_initial_resume_eval_save": false
+      },
+      "summary": {
+        "_step": 19,
+        "probe/force_conversion/context/intervention_enabled": true,
+        "probe/force_conversion/context/intervention_seed_0": 314159,
+        "probe/force_conversion/context/intervention_seed_1": 271828,
+        "probe/force_conversion/context/intervention_seed_2": 161803,
+        "probe/force_conversion/context/optimizer_step": 19,
+        "probe/force_conversion/context/permutation_within_rank": true,
+        "probe/force_conversion/context/rollout": 19,
+        "probe/force_conversion/context/shared_t_within_batch": true,
+        "probe/force_conversion/context/window": 0,
+        "probe/force_conversion/context/zero_receivers_preserved": true,
+        "probe/force_conversion/restore_original/gain_valid": true,
+        "probe/force_conversion/restore_original/output/individual_l2_mean": 0.0004551392934551428,
+        "probe/force_conversion/restore_original/parameter/aggregate_mean_l2": 0.007308833172516805,
+        "probe/force_conversion/restore_original/parameter/individual_l2_mean": 0.04414090954892892,
+        "probe/force_conversion/restore_original/retention_valid": true,
+        "probe/force_conversion/restore_original/sample_count": 320,
+        "probe/force_conversion/restore_permuted_seed_161803/gain_valid": true,
+        "probe/force_conversion/restore_permuted_seed_161803/output/individual_l2_mean": 0.0004551392932851994,
+        "probe/force_conversion/restore_permuted_seed_161803/parameter/aggregate_mean_l2": 0.004670318778079068,
+        "probe/force_conversion/restore_permuted_seed_161803/parameter/individual_l2_mean": 0.016280667460386228,
+        "probe/force_conversion/restore_permuted_seed_161803/retention_valid": true,
+        "probe/force_conversion/restore_permuted_seed_161803/sample_count": 320,
+        "probe/force_conversion/restore_permuted_seed_271828/gain_valid": true,
+        "probe/force_conversion/restore_permuted_seed_271828/output/individual_l2_mean": 0.00045513929309632664,
+        "probe/force_conversion/restore_permuted_seed_271828/parameter/aggregate_mean_l2": 0.004284859781276042,
+        "probe/force_conversion/restore_permuted_seed_271828/parameter/individual_l2_mean": 0.016282891452355112,
+        "probe/force_conversion/restore_permuted_seed_271828/retention_valid": true,
+        "probe/force_conversion/restore_permuted_seed_271828/sample_count": 320,
+        "probe/force_conversion/restore_permuted_seed_314159/gain_valid": true,
+        "probe/force_conversion/restore_permuted_seed_314159/output/individual_l2_mean": 0.000455139292893776,
+        "probe/force_conversion/restore_permuted_seed_314159/parameter/aggregate_mean_l2": 0.004321910701856923,
+        "probe/force_conversion/restore_permuted_seed_314159/parameter/individual_l2_mean": 0.016032000379615517,
+        "probe/force_conversion/restore_permuted_seed_314159/retention_valid": true,
+        "probe/force_conversion/restore_permuted_seed_314159/sample_count": 320,
+        "probe/force_conversion/restore_random_seed_161803/gain_valid": true,
+        "probe/force_conversion/restore_random_seed_161803/output/individual_l2_mean": 0.0004551392934531931,
+        "probe/force_conversion/restore_random_seed_161803/parameter/aggregate_mean_l2": 0.00016157518705507337,
+        "probe/force_conversion/restore_random_seed_161803/parameter/individual_l2_mean": 0.001392685957625255,
+        "probe/force_conversion/restore_random_seed_161803/retention_valid": true,
+        "probe/force_conversion/restore_random_seed_161803/sample_count": 320,
+        "probe/force_conversion/restore_random_seed_271828/gain_valid": true,
+        "probe/force_conversion/restore_random_seed_271828/output/individual_l2_mean": 0.00045513929345635207,
+        "probe/force_conversion/restore_random_seed_271828/parameter/aggregate_mean_l2": 0.00016857915412339303,
+        "probe/force_conversion/restore_random_seed_271828/parameter/individual_l2_mean": 0.001449872253442159,
+        "probe/force_conversion/restore_random_seed_271828/retention_valid": true,
+        "probe/force_conversion/restore_random_seed_271828/sample_count": 320,
+        "probe/force_conversion/restore_random_seed_314159/gain_valid": true,
+        "probe/force_conversion/restore_random_seed_314159/output/individual_l2_mean": 0.0004551392934640723,
+        "probe/force_conversion/restore_random_seed_314159/parameter/aggregate_mean_l2": 0.00016083656420283666,
+        "probe/force_conversion/restore_random_seed_314159/parameter/individual_l2_mean": 0.0013786791524842451,
+        "probe/force_conversion/restore_random_seed_314159/retention_valid": true,
+        "probe/force_conversion/restore_random_seed_314159/sample_count": 320,
+        "probe/force_conversion/valid": 1
+      },
+      "queried_keys": [
+        "probe/force_conversion/context/intervention_enabled",
+        "probe/force_conversion/context/intervention_seed_0",
+        "probe/force_conversion/context/intervention_seed_1",
+        "probe/force_conversion/context/intervention_seed_2",
+        "probe/force_conversion/context/optimizer_step",
+        "probe/force_conversion/context/permutation_within_rank",
+        "probe/force_conversion/context/rollout",
+        "probe/force_conversion/context/shared_t_within_batch",
+        "probe/force_conversion/context/window",
+        "probe/force_conversion/context/zero_receivers_preserved",
+        "probe/force_conversion/restore_original/gain_valid",
+        "probe/force_conversion/restore_original/output/individual_l2_mean",
+        "probe/force_conversion/restore_original/parameter/aggregate_mean_l2",
+        "probe/force_conversion/restore_original/parameter/individual_l2_mean",
+        "probe/force_conversion/restore_original/retention_valid",
+        "probe/force_conversion/restore_original/sample_count",
+        "probe/force_conversion/restore_permuted_seed_161803/gain_valid",
+        "probe/force_conversion/restore_permuted_seed_161803/output/individual_l2_mean",
+        "probe/force_conversion/restore_permuted_seed_161803/parameter/aggregate_mean_l2",
+        "probe/force_conversion/restore_permuted_seed_161803/parameter/individual_l2_mean",
+        "probe/force_conversion/restore_permuted_seed_161803/retention_valid",
+        "probe/force_conversion/restore_permuted_seed_161803/sample_count",
+        "probe/force_conversion/restore_permuted_seed_271828/gain_valid",
+        "probe/force_conversion/restore_permuted_seed_271828/output/individual_l2_mean",
+        "probe/force_conversion/restore_permuted_seed_271828/parameter/aggregate_mean_l2",
+        "probe/force_conversion/restore_permuted_seed_271828/parameter/individual_l2_mean",
+        "probe/force_conversion/restore_permuted_seed_271828/retention_valid",
+        "probe/force_conversion/restore_permuted_seed_271828/sample_count",
+        "probe/force_conversion/restore_permuted_seed_314159/gain_valid",
+        "probe/force_conversion/restore_permuted_seed_314159/output/individual_l2_mean",
+        "probe/force_conversion/restore_permuted_seed_314159/parameter/aggregate_mean_l2",
+        "probe/force_conversion/restore_permuted_seed_314159/parameter/individual_l2_mean",
+        "probe/force_conversion/restore_permuted_seed_314159/retention_valid",
+        "probe/force_conversion/restore_permuted_seed_314159/sample_count",
+        "probe/force_conversion/restore_random_seed_161803/gain_valid",
+        "probe/force_conversion/restore_random_seed_161803/output/individual_l2_mean",
+        "probe/force_conversion/restore_random_seed_161803/parameter/aggregate_mean_l2",
+        "probe/force_conversion/restore_random_seed_161803/parameter/individual_l2_mean",
+        "probe/force_conversion/restore_random_seed_161803/retention_valid",
+        "probe/force_conversion/restore_random_seed_161803/sample_count",
+        "probe/force_conversion/restore_random_seed_271828/gain_valid",
+        "probe/force_conversion/restore_random_seed_271828/output/individual_l2_mean",
+        "probe/force_conversion/restore_random_seed_271828/parameter/aggregate_mean_l2",
+        "probe/force_conversion/restore_random_seed_271828/parameter/individual_l2_mean",
+        "probe/force_conversion/restore_random_seed_271828/retention_valid",
+        "probe/force_conversion/restore_random_seed_271828/sample_count",
+        "probe/force_conversion/restore_random_seed_314159/gain_valid",
+        "probe/force_conversion/restore_random_seed_314159/output/individual_l2_mean",
+        "probe/force_conversion/restore_random_seed_314159/parameter/aggregate_mean_l2",
+        "probe/force_conversion/restore_random_seed_314159/parameter/individual_l2_mean",
+        "probe/force_conversion/restore_random_seed_314159/retention_valid",
+        "probe/force_conversion/restore_random_seed_314159/sample_count",
+        "probe/force_conversion/valid"
+      ]
+    }
+  },
+  "renderer": "scripts/plot-insight-force-mechanisms.py",
+  "renderer_sha256": "2aeadb9dbeed0bd08ac3a6bbd6e7b6e8bd0f0ba6c1fd70596da1bf1f068cdbf0",
+  "uncertainty": "One training seed (42); sampled states are not independent training seeds; no CI.",
+  "force_definition": "F = mean_i ||f_i||; P = mean_i ||J_i^T f_i||; A = ||mean_i J_i^T f_i||, raw LoRA VJP before Adam/clip.",
+  "smoothing": "None. No interpolation, forward-fill or imputation.",
+  "runtime_diff_verified": false,
+  "limitations": [
+    "Three direction-control seeds are not independent training seeds.",
+    "Larger diagnostic population than old NFT EMA: do not reuse its retention as an algorithm constant.",
+    "Full runtime diff not audited."
+  ],
+  "statistics": [
+    {
+      "run": "bqrf8nn7",
+      "group": "Original",
+      "component": "original",
+      "windows": 19,
+      "observations": 19,
+      "sample_counts": "[320]",
+      "training_seed": 42,
+      "F": 0.0007429631493156835,
+      "P": 0.10301113272166332,
+      "A": 0.03312509895021321,
+      "gain": 138.64904715199285,
+      "retention": 0.32156814584028914
+    },
+    {
+      "run": "bqrf8nn7",
+      "group": "Same-timestep permutation",
+      "component": "permuted",
+      "windows": 19,
+      "observations": 57,
+      "sample_counts": "[320]",
+      "training_seed": 42,
+      "F": 0.0007429631492736403,
+      "P": 0.05478965069669373,
+      "A": 0.02722250675213823,
+      "gain": 73.74477556559698,
+      "retention": 0.4968549060996471
+    },
+    {
+      "run": "bqrf8nn7",
+      "group": "Random direction",
+      "component": "random",
+      "windows": 19,
+      "observations": 57,
+      "sample_counts": "[320]",
+      "training_seed": 42,
+      "F": 0.0007429631493151595,
+      "P": 0.0023717835022572915,
+      "A": 0.0003067255529261672,
+      "gain": 3.192329935130064,
+      "retention": 0.1293227449445736
+    }
+  ],
+  "control_seeds": [
+    314159,
+    271828,
+    161803
+  ],
+  "aggregation": "Identical 19 nonzero paired windows. Mean F/P/A over windows and, for controls, 3 diagnostic seeds; then P/F and A/P. Original is not triplicated.",
+  "selected_contexts": [
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      5,
+      0
+    ],
+    [
+      6,
+      0
+    ],
+    [
+      7,
+      0
+    ],
+    [
+      8,
+      0
+    ],
+    [
+      9,
+      0
+    ],
+    [
+      10,
+      0
+    ],
+    [
+      11,
+      0
+    ],
+    [
+      12,
+      0
+    ],
+    [
+      13,
+      0
+    ],
+    [
+      14,
+      0
+    ],
+    [
+      15,
+      0
+    ],
+    [
+      16,
+      0
+    ],
+    [
+      17,
+      0
+    ],
+    [
+      18,
+      0
+    ],
+    [
+      19,
+      0
+    ]
+  ],
+  "control_definition": "Same state/Jacobian and receiving state force norm. Permute unit direction only within rank and timestep among nonzero endpoints; random unit direction rescaled to original norm. Training is unchanged.",
+  "dimensions_inches": [
+    8.0,
+    2.85
+  ],
+  "png_dpi": 600,
+  "matplotlib_version": "3.10.9",
+  "preview_dpi": 150,
+  "output_base": "assets/blog/diffusion-rl/force_direction_control",
+  "csv_sha256": "54789edbbc7ac394e216841ad8e4c22ccc51c357a4848b91e9626b55e4ac1770"
+}
