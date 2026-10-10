@@ -6,7 +6,7 @@ layout: research
     <h1{% if page.bilingual %} data-i18n data-zh="{{ page.title_zh | escape }}" data-en="{{ page.title_en | escape }}"{% endif %}>{{ page.title | escape }}</h1>
     <div class="article-byline">
       <div>{% for author in page.authors %}<a href="{{ author.url | default: '/' | relative_url }}">{{ author.name }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</div>
-      <div>{% if page.draft %}<span class="draft-note"{% if page.bilingual %} data-i18n data-zh="未发布草稿" data-en="Unpublished draft"{% endif %}>{% if page.bilingual %}未发布草稿{% else %}Unpublished working draft{% endif %}</span>{% else %}<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%b %-d, %Y' }}</time>{% endif %}</div>
+      <div>{% if page.draft %}<span class="draft-note"{% if page.bilingual %} data-i18n data-zh="未发布草稿" data-en="Unpublished draft"{% endif %}>{% if page.bilingual %}{% if page.lang == 'en' %}Unpublished draft{% else %}未发布草稿{% endif %}{% else %}Unpublished working draft{% endif %}</span>{% else %}<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%b %-d, %Y' }}</time>{% endif %}</div>
     </div>
     {% if page.paper_url %}<a class="paper-link" href="{{ page.paper_url }}">Companion paper</a>{% endif %}
   </header>
@@ -19,7 +19,7 @@ layout: research
   <div class="article-grid">
     {% if page.toc %}
     <nav class="article-toc" aria-label="Table of contents">
-      <ol><li><a href="#introduction"{% if page.bilingual %} data-i18n data-zh="导读" data-en="Overview"{% endif %}>{% if page.bilingual %}导读{% else %}Introduction{% endif %}</a></li>{% for item in page.toc %}<li><a href="#{% if page.bilingual %}zh-{% endif %}{{ item.id }}"{% if page.bilingual %} data-section-key="{{ item.id }}" data-i18n data-zh="{{ item.title }}" data-en="{{ item.title_en }}"{% endif %}>{{ item.title }}</a></li>{% endfor %}{% if page.bibtex and page.draft != true %}<li><a href="#citation">Citation</a></li>{% endif %}</ol>
+      <ol><li><a href="#introduction"{% if page.bilingual %} data-i18n data-zh="导读" data-en="Overview"{% endif %}>{% if page.bilingual %}{% if page.lang == 'en' %}Overview{% else %}导读{% endif %}{% else %}Introduction{% endif %}</a></li>{% for item in page.toc %}<li><a href="#{% if page.bilingual %}{% if page.lang == 'en' %}en-{% else %}zh-{% endif %}{% endif %}{{ item.id }}"{% if page.bilingual %} data-section-key="{{ item.id }}" data-i18n data-zh="{{ item.title }}" data-en="{{ item.title_en }}"{% endif %}>{% if page.bilingual and page.lang == 'en' %}{{ item.title_en }}{% else %}{{ item.title }}{% endif %}</a></li>{% endfor %}{% if page.bibtex and page.draft != true %}<li><a href="#citation">Citation</a></li>{% endif %}</ol>
     </nav>
     {% endif %}
     <article id="introduction" class="article-body" data-math="{{ page.math }}">

@@ -47,7 +47,7 @@
       {% endfor %}
     </nav>
     {% if site.local_review and page.draft %}<button class="review-toggle" type="button" aria-label="查看批注" title="查看批注" aria-expanded="false"><img src="{{ '/_draft_assets/review/message-square.svg' | relative_url }}" alt="" width="18" height="18"><span data-review-count>0</span></button>{% endif %}
-    {% if page.bilingual %}<button class="language-toggle" type="button" data-language-toggle aria-label="Switch to English">English</button>{% endif %}
+    {% if page.bilingual %}<button class="language-toggle" type="button" data-language-toggle aria-label="{% if page.lang == 'en' %}切换为中文{% else %}Switch to English{% endif %}">{% if page.lang == 'en' %}中文{% else %}English{% endif %}</button>{% endif %}
   </header>
   {{ content }}
   <footer class="research-footer">

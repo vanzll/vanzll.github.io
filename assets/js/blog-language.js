@@ -3,7 +3,7 @@
   const panels = [...document.querySelectorAll('[data-language-panel]')];
   if (!button || panels.length !== 2) return;
 
-  let language = 'zh';
+  let language = panels.find(panel => !panel.hidden)?.dataset.languagePanel || 'en';
   button.addEventListener('click', () => {
     const visible = panels.find(panel => !panel.hidden);
     const section = [...visible.querySelectorAll('h2[data-section-key]')]
