@@ -1,37 +1,26 @@
 {
-  "published_at": "2026-10-09T15:17:24Z",
+  "published_at": "2026-10-10T09:53:59Z",
   "url": "https://vanzll.github.io/blog/diffusion-rl/",
   "visibility": "unlisted",
+  "source_sha256": {
+    "zh": "2ec76118d5313457e0a9beddd3f33ae9420fb5c271e6adf81d60527b8a2a2cf0",
+    "en": "c35e56517cfffe80fcbeffb1eb6082346016d1c495bb3fba9f3b2ae3013a1b6d"
+  },
   "figures": {
     "force_overview.png": "6c25503788334fd35f4ced979c23d75cb8eb08526908e5f4c7cfe2c3c40f20e2",
     "reverse_gradients_compact.png": "f1042233e628ced436a36793386f008d88217f3d2640cc41693b1d961384a44f",
     "prefix_spread_compact.png": "da705681829a02ed1830dfd29f46eb72f8cc2cfbadcebd133bd62a66c9e5567b",
     "critic_advantage.png": "33c5f4bb3d7e925ae84135004a94977e441bdf540fc9b1529fb965a91be0e025",
-    "gate_transfer_compact.png": "17734b3c6d96483b0c7e543b76968bf3499e057545c01a53132b6527f5ddaebd",
+    "gate_matrix_ocr_updated.png": "c6e41105d0efd9f2477a0e8f159e048658736f6396f13f4ef6f92ad967c6e600",
     "reverse_learning_compact.png": "7305446eea755868aab7cb3c393c53fed74e4fc513e36accb2d8076255a53141",
     "nft_branch_geometry.png": "c5da81ed7c7de7921dea4c77f2af1fa2f19521949917099640cad61f9ab21f41",
     "nft_arxiv_restoration.png": "88d38b625b50784973d25aceef85e5752fac1e009ad8e3e73ce2d35c915e2d49",
     "nft_second_update_geometry.png": "ae4dc2f052dfd440b27246c8d807b7d7207fdec4b71280869450b8c72f6a2ed0",
     "repulsion_geometry.png": "795ed26eeec276de263a68725e30dd20e4b0a5434f45f484cd00a0b0e41a5c97",
-    "mirror_reversal_compact.png": "cda69f984cd9ddd8d22e054213bf461848d59b9c3bea3b7ff6f37d56013107c7",
-    "force_mechanisms.png": "b7804e1ebf2b6755ea046c9f0ea0de1c274c16bd7ce245711ea016a5aaebd507",
-    "force_direction_control.png": "457dfb00847790dae0861244c50387b259c9c434b0c3deb7e4726286ce35f0b8",
+    "force_stability_nft.png": "3ff655d57abb08ee1962e77e9e0c14cad4e129fd12f8cd7d9914e97941d4f654",
+    "restoration_three_metrics.png": "39ed7ff353efa4c692744af6c3c36527febd75a90ee066e1e7203a98a1ca7e11",
+    "flow_mapping_course.png": "063d83266882e4f2ba4a74ba80211a8d2328a479d8bb99b6bb7bf16164c4874c",
     "mirror_dynamics_compact.png": "feeaaf4f81e198a26acf1d98582014c787f9545af209626539ac9fdc2bb68768",
-    "force_competition_compact.png": "324c818912d0db7bed5162ff26df02184a53605a7beff07c82432788521b5cc2",
-    "force_stability.png": "776196f42d0a4bd97bd803647b68e0751876e359ae747598741779ba12dc0822"
-  },
-  "publication_scope": "Restore author Section 3.3 structure: five force bullets, Case Study 1 and Case Study 2; preserve diagnostics and other sections",
-  "base_full_draft_sha256": {
-    "zh": "547d0d7835525ac39eb040b449631e4be7c59277a26b891c537233be71fe1cd5",
-    "en": "dabe6f6d56efedb54fc1efa02b7fa87a8bc069cd219301118fda0df8de05cf7d"
-  },
-  "last_update_scope": "Section 3.3 and its figure data notes only; remaining public text preserved.",
-  "public_sha256": {
-    "zh": "16a9b5002371bf92ad0c965b9338edff4a9687a2f86ab3c26d3b3fa0c5558efb",
-    "en": "989bbdb1f967518e642b3031a441c30085a7eb907235274ffe8eafd33d6753b5"
-  },
-  "section_3_3_source_sha256": {
-    "zh": "fc13b30800ff269ffdd554b1beed32a6b936fec4a31b959a6bde07af74d9dbc7",
-    "en": "7575a14068b7e44083bf01db7d4168bc87491793e599cc0f03e93f6a78a326af"
+    "force_competition_compact.png": "324c818912d0db7bed5162ff26df02184a53605a7beff07c82432788521b5cc2"
   }
 }

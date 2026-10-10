@@ -29,9 +29,6 @@ toc:
 - id: algebra
   title: 想看代数的读者
   title_en: A little algebra
-- id: evidence
-  title: 数据说明
-  title_en: About the evidence
 unlisted: true
 sitemap: false
 date: '2026-10-07 12:00:00 +0800'

@@ -17,7 +17,11 @@ sources = %w[zh en].to_h do |language|
 end
 documents = sources.transform_values { |source| Nokogiri::HTML.fragment(source) }
 equations = documents.transform_values do |document|
-  document.css('[data-equation]').map { |node| [node['data-equation'], node.text.strip] }
+  document.css('[data-equation]').map do |node|
+    text = node.text.strip.gsub('单样本响应率', 'Per-state response rate')
+               .gsub('聚合保留率', 'Aggregation retention')
+    [node['data-equation'], text]
+  end
 end
 abort 'Chinese and English mathematical anchors differ.' unless equations['zh'] == equations['en']
 figures = documents.transform_values { |document| document.css('figure img').map { |image| image['src'] } }

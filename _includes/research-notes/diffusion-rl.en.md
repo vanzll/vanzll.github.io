@@ -253,7 +253,7 @@ Within / between STD is **0.4543 / 0.3651** early and **0.1709 / 0.5179** late. 
 
 The critic costs extra training and has estimation error. We used a very simple critic without tuning it. These results support a practical direction: **rather than assigning every action the same trajectory-level verdict, estimate the value of the state it inherited, then assess its incremental contribution.**
 
-LLMs also have crucial decisions and inconsequential actions, but token position alone usually does not identify the crucial ones. Diffusion supplies an additional structural clue: noise time t indicates how far the sample has formed. We can use it to look for training positions more likely to carry strong action credit.
+<p id="en-noise-time-clue" class="structural-clue">LLMs also have crucial decisions and inconsequential actions, but token position alone usually does not identify the crucial ones. Diffusion supplies an additional structural clue: noise time t indicates how far the sample has formed. We can use it to look for training positions more likely to carry strong action credit.</p>
 
 Connecting this to the preceding section exposes the tension: **the actions that dominate updates need not be the actions that can effectively change reward, or may have worse credit assignment.** If late signals carry more inherited state quality, yet implicit loss weighting amplifies them, the resultant may favor less informative directions. That makes high-noise training windows worth testing: they reduce backward computation and give directions with stronger action credit more influence.
 
@@ -263,18 +263,19 @@ Diffusion RL differs from LLM RL in another way: initial noise supplies differen
 
 <h3 id="en-detail-6">2.4 The training location need not be where benefits appear</h3>
 
-We train LoRA only at the first step, but the same parameters can act at other timesteps. At inference, enabling or disabling LoRA at each step controls where the learned function change takes effect. For the same checkpoint, compare:
+We train LoRA only at the first step, but the same parameters can act at other timesteps. At inference, enabling or disabling LoRA at each step controls where the learned function change takes effect. This time, we directly disable the trained position and compare:
 
-- **First step only**: subsequent steps use the original model.
-- **All steps enabled**: the first step is unchanged; subsequent steps also use the trained LoRA.
+- **All off**: the original model, used as the paired baseline.
+- **Steps 2–8 only**: the first step is disabled; only untrained positions use LoRA.
+- **Step 1 only, step 8 only, and all on**: distinguish the trained position, a single untrained position, and the combined effect of multiple steps.
 
-<figure class="figure-compact" data-figure="gate_transfer"><img src="/assets/blog/diffusion-rl/gate_transfer_compact.png" alt="Figure 4: LoRA trained at the first step can contribute gains at later steps" loading="lazy" width="2400" height="930"><figcaption>Figure 4. First-step training, with LoRA enabled at inference only at the first step or at all 10 steps. Left: reward. Right: paired difference. The checkpoint, 64 fixed prompts and seed are shared; the x-axis is logged step. Gains vary across checkpoints, shrink later and sometimes turn negative.</figcaption></figure>
+<figure class="figure-compact" data-figure="gate_transfer"><img src="/assets/blog/diffusion-rl/gate_matrix_ocr_updated.png" alt="Figure 4: Train only step 1 or step 8 and measure OCR gains from seven untrained inference positions" loading="lazy" width="4800" height="1860"><figcaption>Figure 4. LoRA timestep interventions after 120 rollouts. Left: train step 1 only; the seven untrained positions are steps 2–8. Right: train step 8 only; the seven untrained positions are steps 1–7. The y-axis is the OCR gain over disabling LoRA everywhere; error bars show one paired standard error over 64 fixed prompts. Both all-off baselines are 0.064.</figcaption></figure>
 
-At logged step 60, disabling LoRA at subsequent steps reduces reward from **0.703 to 0.512**. Thus, **parameter changes learned at the first step can also contribute gains at untrained later steps.** Those steps receive no additional training; shared parameters carry the first step's learned change to them.
+After training only step 1, disabling it at inference and enabling only steps 2–8 still improves the OCR score from **0.064 to 0.877**. Enabling only step 1 reaches just **0.296**. The trained position need not participate in inference for the gain to appear: **parameter changes learned at the first step can be realized by untrained later steps.**
 
 > **Insight: selecting training timesteps selects gradient sources, not where gains must appear.** Informative action signals can take effect at other timesteps through shared parameters.
 
-**Open experiment: is this transfer asymmetric?** Disable the first step and enable only the eighth, or steps two through eight. Then reverse the direction: train only the eighth step and enable only the first. Both existing conditions retain first-step LoRA, so they cannot answer this question.
+Conversely, training only step 8 and enabling only step 1 gives **0.100**: the gain is small, but not demonstrably absent. With reciprocal single-step gates, training step 1 and enabling step 8 gains **0.024 ± 0.016**, while training step 8 and enabling step 1 gains **0.036 ± 0.020**. The clearest conclusion is therefore **that gains can appear at untrained positions**, not that transfer must be stronger from early to late. Enabling seven later positions versus one early position also cannot establish a directional advantage.
 
 <h3 id="en-detail-7">2.5 Understanding Flow-GRPO Fast: training only high-noise regions can greatly improve efficiency</h3>
 
@@ -335,7 +336,7 @@ f_{i,k}&=A_i\delta_k b_{t_k}\xi_{i,k}\times
 - **Divide by standard deviation to the first power: remove the noise-scale preference, equalizing training positions on this scale.**
 - **Keep the variance denominator: force scales with 1/σₜₖ, emphasizing low noise.**
 
-<figure class="figure-compact" data-figure="reverse_learning"><img src="/assets/blog/diffusion-rl/reverse_learning_compact.png" alt="Figure 5: Denominator intervention and Flow-GRPO Fast versus Naive Flow-GRPO" loading="lazy" width="2400" height="930"><figcaption>Figure 5. Left: training at all timesteps, removing the variance denominator improves reward earlier. Right: Flow-GRPO Fast's early 3-step window versus Naive Flow-GRPO. The x-axis is logged step; the y-axis is GenEval score. Archived evaluation points are shown without smoothing. Sampling and scoring protocols are listed in the data notes.</figcaption></figure>
+<figure class="figure-compact" data-figure="reverse_learning"><img src="/assets/blog/diffusion-rl/reverse_learning_compact.png" alt="Figure 5: Denominator intervention and Flow-GRPO Fast versus Naive Flow-GRPO" loading="lazy" width="2400" height="930"><figcaption>Figure 5. Left: training at all timesteps, removing the variance denominator improves reward earlier. Right: Flow-GRPO Fast's early 3-step window versus Naive Flow-GRPO. The x-axis is logged step; the y-axis is GenEval score. Archived evaluation points are shown without smoothing.</figcaption></figure>
 
 > **Insight: give actions with stronger causal influence on reward a larger share of the total gradient.** Flow-GRPO Fast concentrates these useful signals by training only high-noise actions. Shared parameter updates then carry them to untrained states, benefiting low-noise velocity predictions as well.
 
@@ -723,79 +724,135 @@ But why can a seemingly small restoration term have such a large effect?
 
 <h3 id="en-detail-11">3.3 Understanding which forces become strong</h3>
 
-<h4 id="en-force-comparison">3.3.1 Analyzing common training forces</h4>
+<h4 id="en-force-comparison">3.3.1 Four forces: what survives the three layers?</h4>
 
-<p>Return to the <a href="#eq-en-chain" data-equation-ref="chain">three-layer model in Section 1</a>: output force → each state's Jacobian → aggregation across states. <strong>A force's influence depends on how much survives these layers, not merely how large it starts.</strong></p>
-
-<p>Intuitively, endpoint-based requests have more structure than independent random actions, so we might expect more to survive cross-state aggregation. <strong>But separating the three layers reveals the largest difference before aggregation.</strong> Start with these five forces:</p>
-
-<ul>
-<li><strong>Reverse RL's attraction and repulsion:</strong> at the old-policy anchor, Flow-GRPO's output force follows the random action residual; advantage sets its sign and scale. Trajectory reward does not rotate this axis into a new direction.</li>
-<li><strong>Forward RL / NFT guidance:</strong> the request comes from an endpoint–prediction residual, not just independent coordinate noise. We measure actual guidance after removing current–old restoration; it still contains <a href="#en-detail-9">forward–reverse consistency</a>.</li>
-<li><strong>DiffusionART covariance guidance:</strong> DiffusionART (ART for short) is our method based on covariance guidance and adaptive restoration. It aggregates reward–endpoint covariance within a prompt group before forming each state's request, without NFT's forward–reverse consistency residual.</li>
-<li><strong>Restoration:</strong> it undoes current's departure from old. EMA keeps old lagging; a second update against frozen old also produces this force.</li>
-<li><strong>Reference regularization:</strong> it limits current's departure from base. Below we measure the unweighted output force derived from plain model-output MSE. This MSE is a common KL substitute, not Gaussian KL with transition-variance weighting.</li>
-</ul>
-
-**Restoration provides a counterintuitive example.** Decomposing the second update at the same parameters and states, restoration has about **9.4 times smaller** output force but **4.9 times larger** parameter-gradient norm:
-
-<figure class="figure-compact" data-figure="mirror_reversal"><img src="/assets/blog/diffusion-rl/mirror_reversal_compact.png" alt="Figure 9: Matched-point output-force and parameter-gradient scale reversal" loading="lazy" width="2400" height="840"><figcaption>Figure 9. Small output force, large parameter gradient. Dots and lines show 18 paired measurements; diamonds show their means. β=1, second window of rollouts 0–17. Both components are measured at the same parameters and states before the optimizer; y-axes are logarithmic. Ratios are ratios of means, not Adam update ratios.</figcaption></figure>
-
-> **Observation: restoration gains its advantage during conversion.** Its output force is smaller but becomes stronger after mapping and aggregation. Which contributes more: Jacobian amplification or reduced cross-state cancellation?
+<p>Return to the <a href="#eq-en-chain" data-equation-ref="chain">three-layer model</a>. To analyze a force's training behavior, we follow its three layers (<em>three quantities and two rates</em>): 1. the force acting on each state; 2. how that force becomes a parameter gradient at that state; 3. how these gradients aggregate into a total gradient. We measure <strong>output-force magnitude F → per-state parameter-gradient magnitude P → cross-state aggregate-gradient magnitude A</strong>. The arrows define two <em>rates</em>: <strong>per-state response rate = P/F</strong>, how much parameter gradient a unit output force produces; and <strong>aggregation retention = A/P</strong>, how much survives when the states' parameter gradients are added.</p>
 
 <details class="derivation" id="en-force-conversion-proof">
-<summary>Why does conversion equal mapping gain × aggregation retention?</summary>
-<p>Use Section 1's <span class="math">\(f_i\)</span> (output force), <span class="math">\(g_i=J_i^\top f_i\)</span> (one state's parameter direction), and <span class="math">\(\bar g=N^{-1}\sum_i g_i\)</span> (mean resultant). With consistent norms and reductions and nonzero denominators:</p>
+<summary>Recall: how do the three quantities and two rates connect?</summary>
+<p>Using the output force <span class="math">\(f_i\)</span> and per-state parameter direction <span class="math">\(g_i=J_i^\top f_i\)</span> defined earlier, the three quantities and two rates are:</p>
 <div class="math" data-equation="conversion">
 \[
 \begin{aligned}
-\kappa&=\frac{\|\bar g\|}{N^{-1}\sum_i\|f_i\|}
-=\gamma\rho,\\
-\gamma&=\frac{\sum_i\|g_i\|}{\sum_i\|f_i\|},\qquad
-\rho=\frac{\|\sum_i g_i\|}{\sum_i\|g_i\|}.
+F&=\frac1N\sum_i\|f_i\|,\qquad
+P=\frac1N\sum_i\|g_i\|,\qquad
+A=\left\|\frac1N\sum_i g_i\right\|,\\
+\underbrace{\frac{P}{F}}_{\text{Per-state response rate}}
+&=\frac{\sum_i\|g_i\|}{\sum_i\|f_i\|},\qquad
+\underbrace{\frac{A}{P}}_{\text{Aggregation retention}}
+=\frac{\|\sum_i g_i\|}{\sum_i\|g_i\|},\\
+\frac{A}{F}&=\frac{P}{F}\times\frac{A}{P}.
 \end{aligned}
 \]
 </div>
-<p>γ is the output-force-norm-weighted mean of per-state gains; ρ measures how much survives gradient summation, between zero and one. Scaling one state's force does not change its gain: numerator and denominator scale together. Relative scales across states do change the weights in γ. The figure below uses L2 norms, not output RMS or loss values.</p>
+<p>With consistent norms and reductions and nonzero denominators, these identities are exact. P/F is the output-force-norm-weighted per-state response rate.</p>
 </details>
 
-Within each diagnostic window, we measure the mean output-force norm, mean per-state parameter-gradient norm, and norm of the mean parameter-gradient vector. **Every component uses the actual loss's output force, with parameter gradients measured before Adam and clipping.** Gain measures how large a parameter direction a unit output force produces; retention measures how much remains when those parameter directions are summed.
+<p>In Diffusion RL, we typically encounter four kinds of forces:</p>
 
-<figure id="en-three-layer-probe" class="figure-compact" data-figure="force_mechanisms"><img src="/assets/blog/diffusion-rl/force_mechanisms.png" alt="Figure 10: Mapping gain and aggregation retention of five training forces" loading="lazy"><figcaption>Figure 10. Where does the main difference arise? Left: mapping gain on a log axis. Right: aggregation retention. Values are ratios of selected window-mean norms. Open circles show guidance subsets paired with the corresponding restoration or reference measurements. Components within each group share parameters and diagnostic states; algorithms use their own valid training states, not a shared-Jacobian algorithm ablation. Two-update NFT uses second windows only; Fast covers 17/20 rollouts. Reference MSE is unweighted, with a training coefficient of zero. Populations and coverage appear in the data notes.</figcaption></figure>
+<ul>
+<li><strong>Reverse RL policy force (e.g., Flow-GRPO):</strong> attraction or repulsion along the random action residual at the old-policy anchor; advantage sets its sign and scale.</li>
+<li><strong>Forward RL guidance (e.g., DiffusionNFT):</strong> an endpoint-based regression request. Removing current–old restoration still leaves reward covariance and <a href="#en-detail-9">forward–reverse consistency</a>.</li>
+<li><strong>Restoration from off-policy training:</strong> undoing current's departure from old. We distinguish a lagging EMA old policy from the old policy frozen for a second update.</li>
+<li><strong>KL / reference force:</strong> limiting current's departure from the base model.</li>
+</ul>
 
-Flow-GRPO, NFT EMA, and ART guidance have gains of roughly **3.8, 41, and 129**, but retention of about **30%, 25%, and 27%**. These natural-training-state measurements do not support the explanation that ART's advantage mainly comes from less cancellation in the final layer. The largest difference is in **how one state's force passes through its Jacobian**.
+<p>Within one algorithm pipeline, the <a href="#en-detail-1">earlier "vector-sum" model</a> lets us decompose forces and analyze each one's three quantities and two rates separately. The table below gives our experimental results directly:</p>
 
-> **Observation: more structured requests need not retain more across states.** In these measurements, guidance gains differ by over an order of magnitude while retention is similar; the difference first appears in the mapping layer.
+<figure id="en-three-layer-probe" class="figure-compact force-summary" data-figure="force_measured_overview">
+<div class="force-table-scroll" tabindex="0" role="region" aria-label="Three quantities and two rates for four forces">
+<table class="force-table">
+<thead><tr><th scope="col">Force</th><th scope="col">Measurement source</th><th scope="col">Output force<br>F</th><th scope="col">Per-state gradient<br>P</th><th scope="col">Aggregate gradient<br>A</th><th scope="col">Per-state response rate<br>P/F</th><th scope="col">Aggregation retention<br>A/P</th></tr></thead>
+<tbody>
+<tr data-run="9mau8hwi" data-component="guidance"><th class="force-kind" scope="row">Flow-GRPO<br>guidance</th><td>Flow-GRPO</td><td>0.863</td><td>3.29</td><td>0.978</td><td>3.8</td><td>29.7%</td></tr>
+<tr data-run="26rilzmp" data-component="guidance"><th class="force-kind" scope="row">DiffusionNFT<br>guidance</th><td>NFT</td><td>4.08</td><td>169</td><td>41.7</td><td>41.4</td><td>24.7%</td></tr>
+<tr data-run="26rilzmp" data-component="restore"><th class="force-kind" scope="row">EMA restoration</th><td>NFT</td><td>0.765</td><td>107</td><td>39.8</td><td>139.7</td><td>37.2%</td></tr>
+<tr data-run="adnxitig" data-component="restore"><th class="force-kind" scope="row">Second-update<br>restoration</th><td>Two-update NFT</td><td>0.567</td><td>78.2</td><td>32.7</td><td>137.9</td><td>41.8%</td></tr>
+<tr data-run="9mau8hwi" data-component="reference_mse"><th class="force-kind" scope="row">KL loss</th><td>Flow-GRPO</td><td>0.435</td><td>63.4</td><td>25.8</td><td>145.6</td><td>40.6%</td></tr>
+</tbody>
+</table>
+</div>
+<figcaption>Table 1. Three quantities and two rates for five force measurements. F, P and A are in units of 10⁻³; the rates are P/F and A/P. Parameter gradients are measured before Adam/clipping.</figcaption>
+</figure>
 
-This points to an easily missed layer: <strong>one state's parameter gradient already sums contributions from every output element.</strong> Those contributions can cancel at this step. Flow-GRPO's random action residual and endpoint-based requests may differ in their internal structure and Jacobian alignment; similar final-layer retention can coexist with very different gains. Current evidence supports the importance of direction, without separating coordinate-level cancellation from low-sensitivity directions.
+<blockquote class="observation">
+<p><strong>Observation:</strong></p>
+<ul>
+<li>Flow-GRPO and NFT EMA guidance have per-state response rates of about <strong>3.8 and 41</strong>, with aggregation retention of roughly <strong>30% and 25%</strong>. Differences in per-state response rate are key to their differing learning efficiency and stability, while aggregation retention shows little difference.</li>
+<li>Both NFT restoration mechanisms have markedly higher per-state response rates and aggregation retention than NFT guidance.</li>
+<li>KL loss has a high per-state response rate and aggregation retention.</li>
+</ul>
+</blockquote>
 
-Restoration's high gain is especially notable: about **140 and 138** in NFT EMA and second updates, and about **458** in ART's second windows. It need not start as the largest output force to compete with guidance in parameter space.
+Note: the NFT guidance measurements in this table cover only the early, stable phase. Its per-state response rate can spike (<a href="#en-force-stability">Figure 10</a>), which this table does not show.
 
-Why might restoration be easier to realize? It asks shared parameters to undo a change **they have just jointly realized**, whereas new reward requests need not be jointly satisfiable by a single update.
+<h5 id="en-nft-art-dynamics">1. Understanding Forward Process RL instability through three quantities and two rates</h5>
 
-<p>After parameters move by <span class="math">\(\Delta\theta\)</span>, locally <span class="math">\(d_i\approx J_i\Delta\theta\)</span>; restoration's parameter-descent direction is approximately <span class="math">\(-N^{-1}\sum_iJ_i^\top J_i\Delta\theta\)</span>, omitting a common coefficient. Its direction comes from an output change the model has already realized, not an arbitrary new request.</p>
+Run pure on-policy NFT longer, tracking guidance's output force, per-state response rate, retention and OCR reward separately:
 
-> **Insight: joint realizability matters more than identical output directions.** Restoration attempts to undo an already realized function change rather than propose entirely new requests. This offers an intuition for efficient conversion; it requires neither parallel output forces nor universal restoration dominance.
+<figure id="en-force-stability" class="figure-compact" data-figure="force_stability"><img src="/assets/blog/diffusion-rl/force_stability_nft.png" alt="Figure 10: Longitudinal NFT output force, per-state response rate, retention and OCR reward" loading="lazy"><figcaption>Figure 10. Pure on-policy NFT instability accompanies spikes in per-state response rate, not a comparable surge in aggregation retention. The x-axis counts rollouts; response rates average valid states equally.</figcaption></figure>
 
-We tested this with a direction intervention: hold the model, states, and per-state force norms fixed, changing only restoration's directions.
+NFT's per-state response rate rises from about **44** initially to **1239/2784** at rollouts 44/45, alongside a reward collapse; retention does not show a comparable surge. **The reward collapse comes not from a sudden increase in NFT's output force, nor from more gradients becoming aligned, but from a unit output force mapping to a raw parameter gradient orders of magnitude larger, causing a spike in the gradient used for updates.**
 
-<figure id="en-force-direction-control" class="figure-compact" data-figure="force_direction_control"><img src="/assets/blog/diffusion-rl/force_direction_control.png" alt="Figure 11: Gain and retention after permuting restoration directions" loading="lazy"><figcaption>Figure 11. Matching restoration directions to states. Original directions, unit directions permuted across endpoints within a timestep, and random directions all preserve the receiving state's original force norm. Nineteen nonzero windows; three intervention seeds are not three training seeds. Permutation changes both Jacobian alignment and aggregation, not cooperation alone.</figcaption></figure>
+This connects to the <a href="#en-detail-9">fundamental limitation of Forward RL</a>: NFT's actual force contains not only ideal reward-improving guidance but also a self-consistency force. **An overly sensitive consistency residual is a concrete candidate mechanism for the per-state response rate spike.** As training proceeds, the reverse denoising velocity field may drift further from the ideal straight-line forward-noising field induced by the same endpoints, making the consistency force harder to control. This is also consistent with the trend in panel (b).
 
-Permutation lowers gain from **139 to 74**, yet raises retention from **32% to 50%**; the aggregate gradient still becomes smaller. Random directions have a gain of only about **3.2**. <strong>Higher retention does not imply stronger influence.</strong> Original restoration directions have a special alignment with their states' Jacobians. Joint realizability offers an intuition for that alignment, not a guarantee of high gain.
+<h5 id="en-restoration-rescue">2. How can the two restoration mechanisms help?</h5>
 
-<h4 id="en-force-competition-role">3.3.2 When does force magnitude matter?</h4>
+Table 1 gives NFT EMA and second-update restoration per-state response rates of about **140 and 138**, with retention of **37% and 42%**. Within their respective paired windows, restoration has only about **19% and 12%** of guidance's output force, yet about **95% and 63%** of its parameter resultant. Small in output space does not mean weak as a constraint.
 
-So far we have compared force conversion. High gain alone guarantees neither reward improvement nor instability. <strong>When two forces compete, their relative strengths and directions after conversion determine the resultant.</strong> Recall Section 1: Adam may largely attenuate global scaling, but changing component ratios changes the direction entering the optimizer.
+Why are restoration requests jointly realizable? Locally, a parameter movement Δθ changes each state's output by dᵢ ≈ JᵢΔθ. **The same parameter direction −Δθ can undo all these changes: Jᵢ(−Δθ) ≈ −dᵢ.** This is joint realizability; it does not require parallel output directions.
 
-> **Insight: when two forces compete, their respective magnitudes matter.** What matters is the aggregate parameter gradient, not just an output-space coefficient or loss value.
+For uniformly weighted, unnormalized output MSE, their aggregation takes the following form, omitting a common positive coefficient:
 
-<p><strong>Case Study 1: off-policy training in diffusion RL.</strong> Figure 12 compares one update with two disjoint updates:</p>
+<div class="math">
+\[
+\begin{aligned}
+g_i^{\rm restore}&=-J_i^\top J_i\Delta\theta,\\
+\left\langle g_i^{\rm restore},-\Delta\theta\right\rangle
+&=\|J_i\Delta\theta\|^2\ge0,\\
+\left\langle \frac1N\sum_i g_i^{\rm restore},-\Delta\theta\right\rangle
+&=\frac1N\sum_i\|J_i\Delta\theta\|^2.
+\end{aligned}
+\]
+</div>
 
-<figure class="figure-compact" data-figure="mirror_dynamics"><img src="/assets/blog/diffusion-rl/mirror_dynamics_compact.png" alt="Figure 12: Stability and speed with one update versus two disjoint updates" loading="lazy" width="2400" height="930"><figcaption>Figure 12. One update versus two disjoint updates; β=1 on the left and β=0.1 on the right. Complete online train OCR curves without smoothing, against the optimizer step at reward logging. Each one/disjoint pair shares a training commit; the cross-β comparison spans versions. Recipe details appear in the data notes.</figcaption></figure>
+Each state's restoration contribution has a component pointing back: **contributions along the shared reversal direction add rather than cancel**; perpendicular components may still cancel. Actual loss weights and normalization must remain inside each term. This gives a local explanation for restoration coherence, not a guarantee of higher per-state response rate.
 
-<p>Both teal curves learn quickly at the start. The pink curves differ: β=1 learns slowly, while β=0.1 learns faster but later collapses and recovers. The key to explaining this difference is that <strong>the second update introduces restoration: β controls not just guidance's absolute size but the competition between two forces.</strong></p>
+> **Insight: joint realizability matters more than identical output directions.** Restoration tries to undo an already realized function change. This offers an intuition for efficient conversion without requiring parallel output forces or guaranteeing restoration dominance.
 
-<p>Use the <a href="#eq-en-mirror-force" data-equation-ref="mirror-force">NFT output-force decomposition in Section 3.2.3</a>, before the implementation's additional normalization. Dividing both sides by the common positive coefficient <span class="math">\(2\beta^2\)</span> preserves the force direction and makes guidance's magnitude relative to restoration explicit:</p>
+Track output force, per-state response rate and aggregation retention separately for the two restoration mechanisms:
+
+<figure id="en-restoration-three-metrics" class="figure-compact" data-figure="restoration_three_metrics"><img src="/assets/blog/diffusion-rl/restoration_three_metrics.png" alt="Figure 11: Output force, per-state response rate and aggregation retention of NFT EMA and second-update restoration" loading="lazy"><figcaption>Figure 11. Three diagnostics for the two restoration mechanisms. The x-axis counts rollouts; response rate is per-window P/F and retention is A/P. Available data cover only the first 20 rollouts.</figcaption></figure>
+
+These short-run curves show how restoration converts to parameter gradients; they cannot yet tell us whether it keeps pace with, and constrains, long-term guidance spikes.
+
+EMA and second updates, however, intervene on different schedules:
+- **Second update:** the first starts at current=old, without restoration. The second has restoration, but old is synchronized to current at the end of the rollout; the next rollout starts from zero again.
+- **EMA:** old lags across rollouts, so restoration does not reset each round. Rollouts and targets also follow this slowly changing old policy.
+
+<h5 id="en-flow-force-mapping">3. Flow-GRPO: why is even the per-state response rate so low?</h5>
+
+Cross-state cancellation cannot explain all of Flow-GRPO's low conversion. In the full Flow-GRPO time course, per-state response rate is already in single digits, while retention is close to NFT:
+
+<figure id="en-flow-mapping-course" class="figure-compact" data-figure="flow_mapping_course"><img src="/assets/blog/diffusion-rl/flow_mapping_course.png" alt="Figure 12: Full Flow-GRPO per-state response rate and aggregation retention over training" loading="lazy"><figcaption>Figure 12. Flow-GRPO's low response rate appears before cross-state aggregation. The two update windows are plotted separately; response rate is P/F and retention is A/P.</figcaption></figure>
+
+<p>At the old-policy anchor, Flow-GRPO attracts or repels along the random action-residual axis. Advantage sets its sign and scale. Crucially, <strong>one state's parameter gradient sums contributions from every output element: <span class="math">\(g_i=J_i^\top f_i=\sum_{d=1}^{D}f_{i,d}\nabla_\theta v_{\theta,d}(s_i)\)</span>, where d indexes output coordinates. From the optimizer's perspective, each element of Flow-GRPO's force is independent (an isotropic, independent Gaussian), yet all are reinforced by the same advantage-dependent scale, so their gradient contributions cancel substantially</strong>. This differs from cancellation across states in the final layer; the low per-state response rate of random directions in Figure 11 offers a clue consistent with this observation. In forward RL, force elements are highly correlated, carrying information from an endpoint distribution. Their per-state response rate is therefore much higher, which also helps explain forward RL's greater efficiency than Flow-GRPO.</p>
+
+<h4 id="en-force-competition-role">3.3.2 When does force magnitude matter? When two forces compete.</h4>
+
+Adam may largely attenuate a common scaling of one force. Changing the ratio between two forces instead changes the direction entering the optimizer. Here we focus on two situations in which two forces compete.
+
+<p><strong>Case Study 1: off-policy stabilization in forward RL</strong></p>
+
+<p>One experiment makes this visible: pure on-policy NFT (without EMA), at two <span class="math">\(\beta\)</span> values, 1 and 0.1. In the <a href="#eq-en-mirror-force" data-equation-ref="mirror-force">earlier decomposition</a>, guidance magnitude is proportional to beta; here guidance includes both reward-improving guidance and the self-consistency force. At each beta, we compare one and two updates per rollout. As <a href="#en-nft-restoration-role">discussed earlier</a>, a second update introduces restoration.</p>
+
+<figure class="figure-compact" data-figure="mirror_dynamics"><img src="/assets/blog/diffusion-rl/mirror_dynamics_compact.png" alt="Figure 13: One-update and two-disjoint-update OCR curves at beta 1 and 0.1" loading="lazy" width="2400" height="930"><figcaption>Figure 13. OCR curves for one update and two disjoint updates. Left: β=1; right: β=0.1. The x-axis counts optimizer steps. Restoration in the second update changes the competition between forces.</figcaption></figure>
+
+> **Observation:**
+> - With one update, reward rises at similar speeds for β=0.1 and β=1 (compare the teal curves).
+> - With two updates per rollout, the difference is substantial: β=0.1 learns much faster, but is clearly less stable later.
+
+<p>Divide the <a href="#eq-en-mirror-force" data-equation-ref="mirror-force">existing NFT force decomposition</a> by the common positive coefficient <span class="math">\(2\beta^2\)</span> to reveal the competition:</p>
 
 <div class="math" data-equation="mirror-relative-scale">
 \[
@@ -805,33 +862,42 @@ So far we have compared force conversion. High gain alone guarantees neither rew
 \]
 </div>
 
-<p>At the unnormalized core's current=old anchor, restoration is zero; a common scaling of guidance changes only global scale. At the second update, current has moved while old stays frozen, so changing β changes guidance's share relative to restoration. <strong>A scale that is global at the anchor becomes relative after leaving it.</strong> After extracting the common coefficient, equal displacements give equal core restoration terms; this does not make the original restoration coefficient independent of β.</p>
+At the first update, current=old and restoration is zero; β primarily changes guidance's global scale. Given <a href="#en-detail-2">modern optimizers' approximate invariance to global scaling</a>, parameter displacement and output-space movement should be similar. At the second, current has moved while old remains frozen. After extracting the common coefficient, similar displacement gives a similar restoration term, and β changes guidance's relative share.
 
-Actual W&B measurements fill in two missing links:
+<figure id="en-force-competition" class="figure-compact" data-figure="force_competition"><img src="/assets/blog/diffusion-rl/force_competition_compact.png" alt="Figure 14: Initial movement and second-window restoration versus guidance strength and direction" loading="lazy" width="2400" height="960"><figcaption>Figure 14. Similar initial movement, different subsequent competition. Left: output-change MSE at the first update. Middle and right: restoration/guidance gradient-norm ratio and cosine in second windows.</figcaption></figure>
 
-<figure id="en-force-competition" class="figure-compact" data-figure="force_competition"><img src="/assets/blog/diffusion-rl/force_competition_compact.png" alt="Figure 13: Initial displacement and second-window component strength and direction" loading="lazy" width="2400" height="960"><figcaption>Figure 13. Two-disjoint-update recipes at β=1 / 0.1. Left: velocity-change MSE on diagnostic states at the first optimizer update. Middle and right: restoration/guidance parameter-gradient norm ratio and cosine at second windows of rollouts 0–17, retaining all valid points without smoothing. Dashed lines denote equal norms and orthogonality; the cross-β code diff remains to be fully checked.</figcaption></figure>
+The first update's output-change MSE is **0.002318/0.002311**, with parameter-displacement norms both about **0.888**. Yet the ratio of mean restoration/guidance norms in the second windows falls from **4.85 to 0.78**. Nearly equal initial movement leads to different learning speeds. **A force's scale is global without a competing force (here, restoration), but becomes relative once restoration appears.**
 
-At the first update, output-change MSE is **0.002318 / 0.002311**, and parameter-displacement norms are both about **0.888**: the initial movements are indeed nearly equal. At second windows, the ratio of mean restoration/guidance norms falls from **4.85 to 0.78**. This supports a change in restoration's share more directly than reward alone. The cosine also shows that restoration dominance does not mean exact opposition at every update. Later trajectories diverge; equal initial movement does not imply equality throughout training.
+**Case Study 2: how should we tune KL in continuous-time, continuous-space RL?**
 
-These runs use normalized-X0 and current-STD, not the bare MSE above; Figure 13 measures components of the actual loss. The core formula explains competition; measurements establish its implemented strength.
+Both KL / reference regularization and restoration undo function changes the model has already realized. They differ in where they pull back: restoration returns toward a frozen or EMA old policy, while reference regularization returns toward a fixed base. The earlier intuition of joint realizability also applies here: undoing an already realized change differs from making new reward-driven requests. A small reference residual need not imply a weak parameter constraint. Here we use model-output MSE regularization, not a literal distributional KL.
 
-**Force ratios are not enough: conversion can also heat up during training.** We extended the OCR experiments for pure on-policy NFT and two-update ART, tracking guidance's output force, gain, retention, and reward separately:
+<p>Tuning <span class="math">\(\lambda\)</span> means tuning the final contribution <span class="math">\(\lambda\bar g_{\rm ref}\)</span>, not merely the ratio of loss values or output forces. Recall the three layers: <strong>output-force magnitude → per-state gradient response → cross-state aggregate gradient.</strong> In continuous space, different directions have different per-state response rates and aggregation retention. After both arrows, similar output forces can have very different parameter effects.</p>
 
-<figure id="en-force-stability" class="figure-compact" data-figure="force_stability"><img src="/assets/blog/diffusion-rl/force_stability.png" alt="Figure 14: NFT and ART output force, gain, retention, and OCR curves" loading="lazy"><figcaption>Figure 14. Where does instability appear? The x-axis counts fresh rollouts. NFT updates once per rollout; ART updates twice, with its windows drawn separately. Raw points, no smoothing; invalid ratios remain gaps. Open diamonds indicate fewer than 80 valid gain states. Gain is the equal-state mean over valid states; retention measures parameter-vector aggregation. One training seed. Reward is collected before the same rollout's update, so same-index gain is not evidence that it already caused that reward change.</figcaption></figure>
+For example, Flow-GRPO's raw reference output force is only **0.49 times** guidance's, yet its aggregate gradient is **25.9 times** as large. In Fast, these ratios are **1.80 and 184.7**. Comparing only the first layer can substantially underestimate the constraint.
 
-NFT's equal-state gain rises from about **44** initially to **1239/2784** at rollouts 44/45, alongside an OCR reward collapse. Both windows contain **80 valid states**, so this is not an artifact of a shrinking valid population. ART does not show the same loss of control over its observed long trajectory and retains high reward. Retention does not show a surge comparable to NFT's gain.
+<p>Matched-window diagnostics give an equal-norm coefficient: <span class="math">\(\lambda_{\rm match}=A_{\rm guidance}/A_{\rm ref}\)</span>. Here A is the mean of per-window aggregate-gradient norms; NFT guidance excludes old-policy restoration:</p>
 
-> **Observation: stability cannot be judged from final-layer cancellation alone.** NFT's dangerous increase here appears in the per-state mapping layer; whether restoration can constrain guidance also depends on how their conversion rates evolve.
+<div class="force-table-scroll" tabindex="0" role="region" aria-label="Reference equal-norm coefficients by algorithm">
+<table class="force-table">
+<thead><tr><th scope="col">Paradigm / algorithm</th><th scope="col">Guidance aggregate gradient<br>A</th><th scope="col">Raw reference aggregate gradient<br>A</th><th scope="col">Equal-norm coefficient<br>λ</th></tr></thead>
+<tbody>
+<tr><th scope="row">Forward / NFT + EMA</th><td>0.0417</td><td>0.00539</td><td><strong>7.73</strong></td></tr>
+<tr><th scope="row">Reverse / Flow-GRPO</th><td>0.000996</td><td>0.0258</td><td><strong>0.0387</strong></td></tr>
+<tr><th scope="row">Reverse / Flow-GRPO Fast</th><td>0.000377</td><td>0.0696</td><td><strong>0.00541</strong></td></tr>
+</tbody>
+</table>
+</div>
 
-This explains why a small output force need not be safe and suggests a more direct monitor: **track guidance and restoration gains separately, then examine their parameter-space resultant.** Current curves do not separate changes in the Jacobian, force direction, and diagnostic states as causes of the gain increase.
+At these measured states, NFT needs a coefficient of about **7.7** for reference to match guidance's aggregate-gradient norm; Flow-GRPO needs only about **0.039**, and Fast about **0.0054**. The applied training coefficient was **zero** in all these runs: this is offline scale calibration from raw probes, not training with those coefficients or an optimal-coefficient estimate. Guidance, the current–base gap and both conversion rates contribute to the difference; these are not fixed recommendations for forward versus reverse RL.
 
-**Case Study 2: KL / reference regularization.** Once current departs from reference, reward guidance and regularization both enter the update. Reference-MSE gain can also be high: Figure 10 shows raw gains of about **146 and 271** for Flow-GRPO and ART. Its strength still depends on the actual current–reference distance, not just gain.
+> **Insight: choose KL coefficients in relation to how the policy force converts.** Calibrate parameter influence at the third layer, not just loss values or output forces at the first; then use the forces' cosine and actual drift to decide how strong the constraint should be.
 
-On Fast's matched diagnostic windows, raw reference MSE has about **1.8 times** guidance's output force but **185 times** its aggregate parameter-gradient norm. Regularization has a training coefficient of zero in this batch: we measure a potential direction, not an applied constraint. With coefficient λ, it contributes <span class="math">\(\lambda\bar g_{\rm ref}\)</span>; λ scales both force and parameter gradient without changing unit-force gain at a fixed state.
-
-> **Recipe: tune competing forces, not two loss values to equality.** Compare coefficient-weighted parameter-gradient norm ratios, cosines, and actual function movement. This applies both to KL and to second-update restoration.
+> **Recipe: constraints should not suppress ordinary learning, yet must keep up when guidance becomes dangerous.** Track both forces' output magnitudes, per-state response rates, aggregation retention and weighted parameter resultants. Second-update restoration and KL tuning are both instances of this competition.
 
 <h2 id="en-recipes" data-section-key="recipes">4. What would we measure before choosing a recipe?</h2>
+
+<p>When tuning the ratio between forces, <strong>tune the relative strengths of the aggregated parameter gradients, rather than the force magnitudes (i.e., loss values): in continuous-time, continuous-space diffusion models, different force directions can have very different effects (<a href="#en-force-comparison">see the three quantities and two rates in Section 3.3.1</a>).</strong></p>
 
 **Reverse: how do actions mix?** Measure gradient norms by noise position and cosine with the resultant. Ask whether influential actions can change reward. Try informative short windows, controlled initial noise or better baselines, comparing learning progress separately from reduced backward computation.
 
@@ -845,31 +911,6 @@ The common question is not "how much did loss fall?" It is: **which directions r
 
 <h2 id="en-algebra" data-section-key="algebra">Appendix: a little algebra</h2>
 
-<h3 id="en-detail-13">Restoration in the mirror objective</h3>
-
-Holding feedback, target and reference fixed, the unnormalized core is:
-
-<div class="math" data-equation="mirror-loss">
-\[
-\begin{aligned}
-L&=r\|\beta d-e\|^2+(1-r)\|-\beta d-e\|^2\\
-&=\beta^2\|d\|^2
--2\beta(2r-1)\langle d,e\rangle+\|e\|^2.
-\end{aligned}
-\]
-</div>
-
-The last term is constant with respect to current. Taking the negative output derivative gives guidance minus restoration. Conditioning the identity "mean of r times target = covariance + product of means" produces the consistency residual. Elementwise averaging introduces a common reduction factor; actual normalization must be checked separately.
-
-<div class="math" data-equation="covariance-identity">
-\[
-\begin{aligned}
-\mathbb E[ru\mid s]
-&=\operatorname{Cov}(r,u\mid s)\\
-&\quad+\mathbb E[r\mid s]\mathbb E[u\mid s].
-\end{aligned}
-\]
-</div>
 
 <h3 id="en-detail-14">Why covariance appears</h3>
 
@@ -922,20 +963,3 @@ This is not an Adam identity. For a realized shared parameter displacement Δθ,
 g_{\rm restore}\approx-\frac{1}{N}\sum_iJ_i^\top J_i\Delta\theta.
 \]
 </div>
-
-<h2 id="en-evidence" data-section-key="evidence">About the evidence</h2>
-
-Figures come from historical SD3.5-M LoRA experiments, not cross-paper performance comparisons. Reverse uses archived GenEval-related evaluation aggregates; forward uses online OCR. Curves are raw single-seed results without fabricated confidence intervals. Checkpoints are not independent seeds. Figure manifests retain run IDs, metrics, data and hashes instead of using run IDs as evidence in the prose.
-
-- Reverse interventions: K=24, LR=3e-4, 10 rollout positions, 40 evaluation steps, seed 42, no external CFG, KL=0. Temporal probes train zero-based positions 0–8 and accumulate eight microbatches; Figure 2 retains that numbering. The independent prefix figure retains archival position labels 1/8. The Fast run in Figure 5 uses an early 3-step CPS window and its no-variance-denominator score; Naive uses the original SDE score. These are complete configurations; matched-sampler ablations are needed to separate window and denominator effects. The denominator formula compares output forces at the old anchor; changing the log-prob denominator also changes later PPO ratios and clipping.
-- Figure 3, right compares initial-noise settings across historical versions. Model, reward, K, training steps, learning rate, batch size and accumulation match. The shared-noise run evaluates every 10 rounds versus every 30 in the control; checkpoint frequency also differs. Evaluation is compared at matching logged steps, retaining each run's actual measurement frequency.
-- Forward formulas analyze the unnormalized NFT mirror-MSE core. Normalization and reductions in the normalized-X0 implementation change specific coefficients; figures use the implementation's own component probes.
-- Figure 6 shows the historical 0–100 window. The original description mentions removing EMA, but archived run names contain tf0.99; the actual switch remains to be checked, so names alone establish neither EMA usage nor a strict on-policy control. Figure 7 uses the updated 2026-10-02 source figure: the left panel extends to 500 optimizer steps and compares 21 versus 320 steps to first reach OCR=0.9. The two updates are disjoint, not the old AdvBridge replay experiment. The middle retains the EMA-anchor ablation, whose raw axis is fresh rollout iterations, labeled Training steps in the figure; axes across these panels are not used for cross-panel efficiency comparisons. Figure 8 is fixed-state, fixed-target geometry, not a measurement. Source snapshots and asset hashes are recorded in figure manifests; source files are unchanged.
-- Figures 9, 12, and 13: normalized-X0 Mirror, current-STD, no rollout EMA/KL. One/disjoint pairs share a training commit but differ in batch size per update and reference synchronization cadence. Code differences between the two beta versions remain to be checked; different commits alone do not establish an additional algorithm variable. Figure 12 uses actual optimizer-step counts at reward events; held-out evaluation is initial-only, without wall-time or final generalization claims.
-- Figure 9's mean guidance/restoration output RMS values are 2.633e-5 / 2.803e-6; parameter-gradient norms are 0.00812 / 0.03939. Units differ and ratios are ratios of means. Probes numerically reconstruct components in the trainable parameter subspace, with a maximum normalized reconstruction error of about 0.0041; exact runtime AMP/clipping conventions remain to be checked. In the β=0.1 version, the restoration/guidance parameter-gradient ratio over the first 18 probes is about 0.78, versus 4.85 at β=1. OCR 0.8 is first reached at updates 48 / 232; this does not isolate the causal effect of a restoration coefficient.
-- Figure 13 was fetched from W&B on 2026-10-07. Displacement uses opt/update/v_delta_to_prev_current_mean: the implementation averages squared pre/post-update output differences on the same diagnostic states, not RMS or whole-trajectory movement. Parameter displacement is the actual trainable-parameter L2 change. Components use probe/mirror_components, filtered for valid measurements, retaining all second-window probes over the first 18 rollouts. Data, CSV, statistics and training commits are saved in force_conversion_wandb.json and force_competition_compact.json. Initial displacement and second-window gradients are measured at different times.
-- Section 3.3's three-layer convention: output force is the actual loss's negative velocity gradient, undoing batch averaging but retaining coordinate and timestep reductions. Parameter directions are direct LoRA VJPs of that same force, before Adam/clip, not post-update parameter displacements. Norms are computed at higher precision after BF16 forward/VJP, not from fully FP32 gradients. Only sampled diagnostic rows per rank are measured, not the whole optimizer batch. Each window measures F=mean‖fᵢ‖, P=mean‖gᵢ‖, and A=‖mean gᵢ‖. Figures 10 and 11 average F/P/A across selected windows before taking γ=P/F and ρ=A/P; Figure 14 instead uses the equal-state mean of valid per-state gain ratios.
-- Figure 10 sources: [Flow-GRPO](https://wandb.ai/vanzl3386-chinese-university-of-hong-kong-shenzhen/flow-grpo-algo/runs/9mau8hwi), [ART](https://wandb.ai/vanzl3386-chinese-university-of-hong-kong-shenzhen/flow-grpo-algo/runs/4w87ez9o), [NFT EMA](https://wandb.ai/vanzl3386-chinese-university-of-hong-kong-shenzhen/flow-grpo-algo/runs/26rilzmp), [two-update NFT](https://wandb.ai/vanzl3386-chinese-university-of-hong-kong-shenzhen/flow-grpo-algo/runs/adnxitig), and [Fast](https://wandb.ai/vanzl3386-chinese-university-of-hong-kong-shenzhen/flow-grpo-algo/runs/75pf0fok). All use SD3.5-M/OCR512/K16/LoRA32/seed42/LR3e-4/no-CFG/zero external regularization. Flow-GRPO uses full SDE, NFT/ART deterministic rollouts, and Fast a three-step CPS window. Flow-GRPO/ART each have 40 windows of 80 states; NFT EMA uses 18 nonzero paired windows, two-update NFT 20 second windows, and Fast 32 nonzero reference-paired windows of 24 states. Retrieved EMA/Fast coverage is 19/33 windows versus remotely reported 20/34. Fast stopped at 17/20 rollouts due to quota. Maximum NFT/Fast reconstruction errors are about 0.66%/0.70%/1.06%, and Naive about 1.61%. Runtime commits differ from supplied versions; complete diffs remain unverified. Data and reductions: [CSV](/assets/blog/diffusion-rl/force_mechanisms.csv) and [measurement notes](/assets/blog/diffusion-rl/force_mechanisms.json).
-- Figure 11 uses the [restoration-direction intervention](https://wandb.ai/vanzl3386-chinese-university-of-hong-kong-shenzhen/flow-grpo-algo/runs/bqrf8nn7), reusing the current model and states on the same graph, with up to four endpoints per rank/window and 19 nonzero restoration windows. Unit directions are permuted only among nonzero rows at the same rank and timestep, then rescaled to receiving-row norms. Control seeds are 314159/271828/161803; training loss is unchanged. Original/permuted/random P/F are about 138.65/73.74/3.19 and A/P about 32.16%/49.69%/12.93%, with maximum component reconstruction error about 0.54%. Permutation changes both mapping and aggregation, not coherence alone. Its larger diagnostic population prevents direct cross-figure retention comparisons. Data: [CSV](/assets/blog/diffusion-rl/force_direction_control.csv) and [notes](/assets/blog/diffusion-rl/force_direction_control.json).
-- Figure 14 uses [pure on-policy NFT](https://wandb.ai/vanzl3386-chinese-university-of-hong-kong-shenzhen/flow-grpo-algo/runs/2xi0cj0u) and [two-update ART](https://wandb.ai/vanzl3386-chinese-university-of-hong-kong-shenzhen/flow-grpo-algo/runs/f9la5w7l). Both use OCR512/K16/LR3e-4/seed42/10-step rollouts and all ten training steps/no-CFG/KL0, with up to 80 diagnostic states per window. One seed; valid state distributions differ by method. The x-axis uses actual rollout context; ART's microbatch0/8 distinguishes windows, not inner_epoch. Validity and counts are checked per window; near-zero restoration and invalid gain are not filled with zero or stale summary values. Different budgets are not matched GPU-hours. Actual runtime is 92ed8cc…, with the complete diff unavailable. Curves use one frozen query, without claiming runs remain running or have completed their budgets. Data and query timestamp: [CSV](/assets/blog/diffusion-rl/force_stability.csv) and [notes](/assets/blog/diffusion-rl/force_stability.json).
-- Proposed experiments include action controllability, a complete gate matrix, Fast compute accounting, matched three-layer comparisons and mechanism interventions, and adaptive restoration.
