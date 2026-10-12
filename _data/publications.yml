@@ -7,8 +7,9 @@ main:
     code: https://github.com/vanzll/DiffusionART
     github_stars: "vanzll/DiffusionART"
     website: "https://vanzll.github.io/diffusionart-project/"
-    image: "./assets/papers/diffusionart.png"
+    image: "./assets/papers/diffusionart-cover.png"
     intro: "Aggregation-first reward tilting and adaptive restoration for efficient, stable image and video reinforcement."
+    honor: "[Hugging Face Daily Papers #1](https://huggingface.co/papers/2610.12572)"
     models:
       - name: Image model
         url: https://huggingface.co/vanzl/DiffusionART-SD35M-MultiReward
