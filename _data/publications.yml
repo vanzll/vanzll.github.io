@@ -1,5 +1,6 @@
 main:
   - title: "DiffusionART: Efficient, Stable and Scalable Reinforcement of Diffusion Models"
+    representative: true
     authors: "<strong>Zhenglin Wan</strong>, Jiayu Chen, Zhengfeiyang Zhang, Pengfei Zhou, Wangbo Zhao, Fangyuan Kong, Pengfei Wan, Kun Gai, Yang You"
     conference_short: Preprint
     conference: arXiv, 2026

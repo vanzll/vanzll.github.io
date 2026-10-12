@@ -128,6 +128,25 @@ New posts coming soon.
   margin-left: auto;
   margin-right: auto;
 }
+.publications .pub-row.representative {
+  background: #f0f7ff;
+  border-color: #cbdff2;
+}
+.publications .representative-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+  color: #245f8f;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.dark-mode .publications .pub-row.representative {
+  background: #172535;
+  border-color: #365675;
+}
+.dark-mode .publications .representative-label { color: #a8cffa; }
 .publications .pub-row .abbr.pub-thumb {
   position: relative;
   flex: 0 0 320px;
@@ -195,7 +214,7 @@ New posts coming soon.
 {% for link in site.data.publications.main %}
 
 <li>
-<div class="pub-row">
+<div class="pub-row{% if link.representative %} representative{% endif %}">
   <div class="col-sm-3 abbr pub-thumb" style="position: relative;padding-right: 15px;padding-left: 15px;">
     {% if link.image %} 
     <img src="{{ link.image }}" class="teaser img-fluid z-depth-1" style="width: 100%; height: auto;">
@@ -205,6 +224,9 @@ New posts coming soon.
     {% endif %}
   </div>
   <div class="col-sm-9 pub-content" style="position: relative;padding-right: 15px;padding-left: 20px;">
+      {% if link.representative %}
+      <div class="representative-label"><i class="fas fa-star" aria-hidden="true"></i> Representative Work</div>
+      {% endif %}
       <div class="title"><a href="{{ link.paper | default: '/404.html' }}">{{ link.title }}</a></div>
       <div class="author">{{ link.authors }}</div>
       <div class="periodical"><em>{{ link.conference }}</em>
