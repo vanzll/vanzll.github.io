@@ -73,6 +73,7 @@ I love intellectual games in my spare time: I am a 17-years chess player as *Nat
 
 <div class="news" markdown="1">
 <div class="scroll-window" markdown="1" tabindex="0" role="region" aria-label="News" data-visible-items="9">
+- *2026.10* &nbsp; **DiffusionART** is on arXiv, with open-source training code and image/video model releases. ([[Paper]](https://arxiv.org/abs/2610.12572), [[Project]](https://vanzll.github.io/diffusionart-project/), [[Code]](https://github.com/vanzll/DiffusionART), [[Image model]](https://huggingface.co/vanzl/DiffusionART-SD35M-MultiReward), [[Video model]](https://huggingface.co/vanzl/DiffusionART-HunyuanVideo-7-2-1))
 - *2026.05*  &nbsp;🎉🎉 **GoRL** is accepted to ICML 2026, providing a new perspective for online RL training with diffusion/flow policy for robot learning. ([[Paper]](https://arxiv.org/abs/2512.02581), [[Code]](https://github.com/bennidict23/GoRL))
 - *2026.05*  &nbsp;🎉🎉 **OSCAR** (training free method for diverse rollout of diffusion model) is accepted to ICML 2026. ([[Paper]](https://arxiv.org/abs/2510.09060), [[Code]](https://github.com/Johnny221B/OSCAR)).
 - *2026.04*  &nbsp;🎉🎉 I was invited to give a talk by Meta MRS (Stable online RL for alignment of diffusion-based foundation models).
@@ -221,6 +222,9 @@ New posts coming soon.
       <a href="{{ link.paper | default: '/404.html' }}" class="pub-button paper" role="button" target="_blank">Paper</a>
       <a href="{{ link.code | default: '/404.html' }}" class="pub-button code" role="button" target="_blank">Code</a>
       <a href="{{ link.website | default: '/404.html' }}" class="pub-button website" role="button" target="_blank">Website</a>
+      {% for model in link.models %}
+      <a href="{{ model.url }}" class="pub-button" role="button" target="_blank" rel="noopener">{{ model.name }}</a>
+      {% endfor %}
       {% if link.github_folks %} 
       <a target="_blank" href ="https://github.com/{{ link.github_stars }}"><img alt="GitHub forks" align="right" src="https://img.shields.io/github/forks/{{ link.github_folks }}?style=social"></a>
       {% endif %}

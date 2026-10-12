@@ -1,4 +1,20 @@
 main:
+  - title: "DiffusionART: Efficient, Stable and Scalable Reinforcement of Diffusion Models"
+    authors: "<strong>Zhenglin Wan</strong>, Jiayu Chen, Zhengfeiyang Zhang, Pengfei Zhou, Wangbo Zhao, Fangyuan Kong, Pengfei Wan, Kun Gai, Yang You"
+    conference_short: Preprint
+    conference: arXiv, 2026
+    paper: https://arxiv.org/abs/2610.12572
+    code: https://github.com/vanzll/DiffusionART
+    github_stars: "vanzll/DiffusionART"
+    website: "https://vanzll.github.io/diffusionart-project/"
+    image: "./assets/papers/diffusionart.png"
+    intro: "Aggregation-first reward tilting and adaptive restoration for efficient, stable image and video reinforcement."
+    models:
+      - name: Image model
+        url: https://huggingface.co/vanzl/DiffusionART-SD35M-MultiReward
+      - name: Video model
+        url: https://huggingface.co/vanzl/DiffusionART-HunyuanVideo-7-2-1
+
   - title: "CaveAgent: Transforming LLMs into Stateful Runtime Operators"
     authors: "Maohao Ran*, <strong>Zhenglin Wan</strong>*, Cooper Lin, (etc..) , Bo An, Yike Guo, Jun Song"
     conference_short: Technical Report
