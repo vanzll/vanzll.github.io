@@ -76,7 +76,6 @@ I love intellectual games in my spare time: I am a 17-years chess player as *Nat
 - *2026.10* &nbsp;🔥 **DiffusionART**: a highly efficient and stable algorithm for diffusion post-training. Paper, code, and image/video models are now available. ([[Paper]](https://arxiv.org/abs/2610.12572), [[Project]](https://vanzll.github.io/diffusionart-project/), [[Code]](https://github.com/vanzll/DiffusionART), [[Image model]](https://huggingface.co/vanzl/DiffusionART-SD35M-MultiReward), [[Video model]](https://huggingface.co/vanzl/DiffusionART-HunyuanVideo-7-2-1))
 - *2026.04*  &nbsp;🎉🎉 I was invited to give a talk by Meta MRS (Stable online RL for alignment of diffusion-based foundation models).
 - *2026.01*  &nbsp;🎉🎉 [Cave-Agent](https://arxiv.org/abs/2601.01569) is open-sourced: an object-oriented coding agentic framework with superior token-efficiency, empowering the agentic AI system being built by the Hong Kong Government.
-- *2025.05*  &nbsp;🎉🎉 [**EBC**](https://arxiv.org/abs/2410.06151) (Evolutionary Strategy for robot learning to learn diverse policies) is accepted by ICML 2025.
 
 </div>
 </div>
