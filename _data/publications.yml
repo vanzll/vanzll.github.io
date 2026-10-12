@@ -8,7 +8,9 @@ main:
     code: https://github.com/vanzll/DiffusionART
     github_stars: "vanzll/DiffusionART"
     website: "https://vanzll.github.io/diffusionart-project/"
-    image: "./assets/papers/diffusionart-cover.png"
+    image: "/assets/papers/diffusionart-cover.png"
+    image_width: 1320
+    image_height: 680
     intro: "Aggregation-first reward tilting and adaptive restoration for efficient, stable image and video reinforcement."
     honor: "[Hugging Face Daily Papers #1](https://huggingface.co/papers/2610.12572)"
     models:
@@ -77,8 +79,8 @@ main:
 
   - title: "Time-Annealed Perturbation Sampling: Diverse Generation for Diffusion Language Models"
     authors: "Jingxuan Wu*, <strong>Zhenglin Wan*</strong>, Xingrui Yu, Yuzhe Yang, Yiqiao Huang, Ivor Tsang, Yang You"
-    conference_short: Preprint
-    conference: Preprint
+    conference_short: NeurIPS 2026
+    conference: Accepted to NeurIPS 2026
     paper: https://arxiv.org/abs/2601.22629
     code: https://github.com/Johnny221B/TAPS
     github_stars: "Johnny221B/TAPS"

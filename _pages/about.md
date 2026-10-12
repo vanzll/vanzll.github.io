@@ -217,7 +217,10 @@ New posts coming soon.
 <div class="pub-row{% if link.representative %} representative{% endif %}">
   <div class="col-sm-3 abbr pub-thumb" style="position: relative;padding-right: 15px;padding-left: 15px;">
     {% if link.image %} 
-    <img src="{{ link.image }}" class="teaser img-fluid z-depth-1" style="width: 100%; height: auto;">
+    <img src="{{ link.image | relative_url }}" alt="{{ link.title | escape }}"
+         {% if link.image_width and link.image_height %}width="{{ link.image_width }}" height="{{ link.image_height }}"{% endif %}
+         {% if link.representative %}fetchpriority="high"{% endif %}
+         class="teaser img-fluid z-depth-1" style="width: 100%; height: auto;">
     {% endif %}
     {% if link.conference_short %} 
     <abbr class="badge">{{ link.conference_short }}</abbr>
@@ -225,7 +228,7 @@ New posts coming soon.
   </div>
   <div class="col-sm-9 pub-content" style="position: relative;padding-right: 15px;padding-left: 20px;">
       {% if link.representative %}
-      <div class="representative-label"><i class="fas fa-star" aria-hidden="true"></i> Representative Work</div>
+      <div class="representative-label"><i class="fas fa-star" aria-hidden="true"></i> Representative</div>
       {% endif %}
       <div class="title"><a href="{{ link.paper | default: '/404.html' }}">{{ link.title }}</a></div>
       <div class="author">{{ link.authors }}</div>
