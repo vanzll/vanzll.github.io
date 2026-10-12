@@ -14,10 +14,8 @@ main:
     intro: "Aggregation-first reward tilting and adaptive restoration for efficient, stable image and video reinforcement."
     honor: "[Hugging Face Daily Papers #1](https://huggingface.co/papers/2610.12572)"
     models:
-      - name: Image model
-        url: https://huggingface.co/vanzl/DiffusionART-SD35M-MultiReward
-      - name: Video model
-        url: https://huggingface.co/vanzl/DiffusionART-HunyuanVideo-7-2-1
+      - name: HF model
+        url: https://huggingface.co/collections/vanzl/diffusionart
 
   - title: "CaveAgent: Transforming LLMs into Stateful Runtime Operators"
     authors: "Maohao Ran*, <strong>Zhenglin Wan</strong>*, Cooper Lin, (etc..) , Bo An, Yike Guo, Jun Song"
