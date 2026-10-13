@@ -1,10 +1,10 @@
 {
-  "published_at": "2026-10-10T10:35:48Z",
+  "published_at": "2026-10-13T05:51:45Z",
   "url": "https://vanzll.github.io/blog/diffusion-rl/",
   "visibility": "unlisted",
   "source_sha256": {
-    "zh": "c9e9839644ceaa39b6cc50d5b4fbd3999903990e884d5e558f6081ce1f79db8a",
-    "en": "0dc7b7eca453789c5b1fc92ff4dab7584ba4677921dd8ca7becf20bde1bd9778"
+    "zh": "8ddabbce2fc96f71ca34bc688d8f04d9eac39e967f47a6e3ee970c8e99c422e0",
+    "en": "cdc22cf2db871709646098e666f26dde77c5592468ccec80479d25ed0bda1730"
   },
   "figures": {
     "force_overview.png": "6c25503788334fd35f4ced979c23d75cb8eb08526908e5f4c7cfe2c3c40f20e2",
@@ -19,6 +19,8 @@
     "repulsion_geometry.png": "795ed26eeec276de263a68725e30dd20e4b0a5434f45f484cd00a0b0e41a5c97",
     "force_stability_nft.png": "3ff655d57abb08ee1962e77e9e0c14cad4e129fd12f8cd7d9914e97941d4f654",
     "restoration_three_metrics.png": "39ed7ff353efa4c692744af6c3c36527febd75a90ee066e1e7203a98a1ca7e11",
+    "art_nft_force_comparison.png": "7065ae12866c3f00936841d620d5184e248d0bb3f18bfb02844ff2d4848a7ab9",
+    "art_longrun_restoration.png": "8db8c979018fceec0519576df4e2cd3ace08da686cfb138ef75d52479f09f90a",
     "flow_mapping_course.png": "063d83266882e4f2ba4a74ba80211a8d2328a479d8bb99b6bb7bf16164c4874c",
     "mirror_dynamics_compact.png": "feeaaf4f81e198a26acf1d98582014c787f9545af209626539ac9fdc2bb68768",
     "force_competition_compact.png": "324c818912d0db7bed5162ff26df02184a53605a7beff07c82432788521b5cc2"

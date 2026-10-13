@@ -6,13 +6,34 @@
 
 <p><strong>We focus on the first two. Before beginning, here is a concise summary of the insights we hope to convey, with the aim of informing future academic research and practical applications:</strong></p>
 
-<ul><li>Building a core mental model for RL in continuous generative processes:<ul><li>Unifying Diffusion RL algorithms conceptually: we describe MSE losses as "forces." Typically, one end of an MSE loss is a policy output and the other is a constructed target. Positive MSE pulls the policy output toward that target (attraction); negative MSE pushes it away (repulsion). Here, force is synonymous with gradient.</li><li>Understanding the relative scales of sample gradients, and gradient aggregation and cancellation;</li><li>Understanding that MSE loss, the loss form underlying RL in continuous-time generative processes, is only a gradient (force) provider: its target is not what we ultimately want to fit.</li><li>Analyzing Diffusion RL training behavior means analyzing the directions and magnitudes of action gradients at individual states, and what happens when they aggregate.</li></ul>
-
-</li><li>Reverse denoising is a special Markov chain with properties we can exploit.<ul><li>These properties help explain why reverse-process RL is usually stable but inefficient, and why Flow-GRPO Fast can be much more efficient than Flow-GRPO by training fewer timesteps.</li></ul>
-
-</li><li>The limitations of forward RL training: a hidden forward–reverse consistency term in the loss affects gradient quality, slows training and introduces instability.<ul><li>The fundamental difference between off-policy and on-policy training in Diffusion RL, and why off-policy strategies can stabilize training;</li><li>Why some forces are small in output space yet produce large aggregate gradients, while others are large in output space but yield small gradients after aggregation.</li></ul>
-
-</li></ul>
+<blockquote class="takeaways">
+<ul>
+<li><strong>An analytical mental model applicable to all Diffusion RL paradigms:</strong> gradient analysis through "three quantities, two rates, and relative scales" to understand the essential properties and failure modes of all Diffusion RL algorithms. <a href="#en-target">§1</a>, <a href="#en-force-comparison">§3.3.1</a></li>
+<li><strong>Understanding reverse RL:</strong>
+<ul>
+<li>Reverse denoising is a special Markov decision process, and its structure amplifies the limitations of group-based methods. <a href="#en-detail-5">§2.3</a></li>
+<li>How training samples at poor positions affects reverse-RL training efficiency through competition between sample gradients. <a href="#en-detail-4">§2.2</a></li>
+<li>Improvements occur at more than just the positions being trained. <a href="#en-detail-6">§2.4</a></li>
+<li>Formalizing and understanding Flow-GRPO Fast: train better positions, then bring improvements to positions that were not trained. <a href="#en-detail-7">§2.5</a></li>
+</ul>
+</li>
+<li><strong>Understanding forward RL:</strong>
+<ul>
+<li>Clarifying the essence of forward RL. <a href="#en-detail-8">§3.1</a>, <a href="#en-nft-objective-equivalence">§3.2.1</a></li>
+<li>Understanding the fundamental limitation of forward RL: an additional implicit self-consistency error in the objectives. <a href="#en-detail-9">§3.2.2</a></li>
+<li>Understanding the fundamental distinction between off-policy and on-policy RL for continuous-time, continuous-space generative models: restoration. <a href="#en-nft-restoration-role">§3.2.3</a></li>
+<li>Understanding DiffusionNFT's two indispensable designs based on points 3.2 and 3.3 above. <a href="#en-detail-9">§3.2.2</a>, <a href="#en-nft-restoration-role">§3.2.3</a></li>
+</ul>
+</li>
+<li><strong>Understanding the strengths of different forces in RL for continuous-time, continuous-space generative models through three quantities and two rates.</strong>
+<ul>
+<li>Using this perspective to understand the sources of instability in forward-process RL and inefficiency in reverse-process RL. <a href="#en-force-comparison">§3.3.1</a></li>
+<li>Deepening our understanding of how off-policy restoration works and how to tune stabilizers such as KL regularization. <a href="#en-force-competition-role">§3.3.2</a></li>
+<li>Understanding from this perspective how DiffusionART can train efficiently and stably. <a href="#en-art-longrun">§3.3.1</a></li>
+</ul>
+</li>
+</ul>
+</blockquote>
 
 <h2 id="en-target" data-section-key="target">1. A core mental model for RL in continuous generative processes</h2>
 
@@ -634,7 +655,7 @@ f_{\rm fit}=-\nabla_{v_\theta}\ell_{\rm fit}
 
 <p><strong>Why do we still need the negative branch?</strong> Look at the actual sample. At current=old, omitting the common 2β factor:</p>
 <ul>
-<li><strong>Positive branch only:</strong> the force is <span class="math">\(r(u-v_{\rm old})=r[u-v_{\rm fwd}^{\rm old}(s)]+r\Delta_{\rm fwd}(s)\)</span>. Every sample pulls toward u, good or bad; low-scoring samples merely pull less. The consistency component also always pulls toward the ideal forward field.</li>
+<li><strong>Positive branch only:</strong> the force is <span class="math">\(r(u-v_{\rm old})=r[u-v_{\rm fwd}^{\rm old}(s)]+r\Delta_{\rm fwd}(s)\)</span>. Every sample pulls toward u, good or bad; low-scoring samples merely pull less. The consistency component also always pulls toward the ideal forward field, <em>effectively adding <strong>implicit distillation toward the reward-tilted forward velocity field</strong> to the objective</em>.</li>
 <li><strong>Negative branch only:</strong> the force is <span class="math">\(-(1-r)(u-v_{\rm old})=-(1-r)[u-v_{\rm fwd}^{\rm old}(s)]-(1-r)\Delta_{\rm fwd}(s)\)</span>. Every sample pushes away from u, good or bad; high-scoring samples merely push less. The consistency component always pushes away from the ideal forward field.</li>
 </ul>
 <p>Combining them yields <span class="math">\((2r-1)(u-v_{\rm old})\)</span>: samples above the group mean pull; samples below it push. The consistency coefficient also changes from the one-sided r or −(1−r) to the signed 2r−1, allowing extra components from different samples to cancel during global gradient aggregation across states. This answers both <a href="#en-nft-question-negative">Question 2: why do we need positive and negative branches?</a> and <a href="#en-nft-question-goodness">Question 3: why replace r with goodness obtained by normalizing reward?</a>, sacrificing unbiasedness: if r is goodness, then <span class="math">\(\sum (2r-1)=0\)</span>, balancing the coefficients of consistency forces across states. But the gap varies across states, so balanced coefficients do not guarantee cancellation of the weighted vectors (<span class="math">\(\sum (2r-1)=0\)</span> does not imply <span class="math">\(\sum \mathrm{grad}\,(2r-1)f=0\)</span>). Any uncancelled residual still slows training or makes reward training collapse outright (Figure 6, right).</p>
@@ -830,6 +851,22 @@ EMA and second updates, however, intervene on different schedules:
 - **Second update:** the first starts at current=old, without restoration. The second has restoration, but old is synchronized to current at the end of the rollout; the next rollout starts from zero again.
 - **EMA:** old lags across rollouts, so restoration does not reset each round. Rollouts and targets also follow this slowly changing old policy.
 
+<p id="en-art-longrun"><strong>Diffusion-ART: why does a high response rate not produce the same collapse?</strong></p>
+
+<p>Our method, Diffusion-ART, explicitly constructs reward–endpoint covariance within a prompt group, normalizes it after aggregation, and uses it to construct a frozen velocity-field target. Each rollout has two disjoint mini-batch updates. At the second update, current has moved while old and the target remain frozen, so the actual force can be decomposed into guidance and restoration. Unlike NFT, its guidance is not produced indirectly through mirror regression.</p>
+
+<p>First, compare ART with pure on-policy NFT. To keep the definitions consistent, both response rates below use P/F, rather than Figure 10's equal-state average of individual ratios. NFT's response spike accompanies reward collapse; ART's response rate also increases, without the same reward collapse in this training interval.</p>
+
+<figure id="en-art-nft-comparison" class="figure-compact" data-figure="art_nft_force_comparison"><img src="/assets/blog/diffusion-rl/art_nft_force_comparison.png" alt="Figure 11a: On-policy NFT and ART output force, per-state response, aggregation retention and train OCR" loading="lazy"><figcaption>Figure 11a. Three-layer diagnostics and train OCR on SD3.5-M/OCR. Each window probes 80 states, measuring LoRA gradients before Adam/clipping; response is the force-norm-weighted P/F, shown with square-root axis spacing. NFT response and retention connect observed valid points without filling undefined values. NFT uses its single update; ART uses its first window. Rollouts are not equal compute budgets: NFT takes one update per rollout and ART takes two; sampling and state construction also differ.</figcaption></figure>
+
+<p>Continue ART through rollout boundary 777: mean train OCR over the latest 50 rollouts remains about <strong>0.962</strong>. Its response rate does not stay small. Over the latest 50 second-update windows, guidance's mean response rate is about <strong>2800</strong>, versus <strong>9000</strong> for restoration. Restoration's mean output force is only about <strong>40%</strong> of guidance's, but its response and retention are higher. After all three layers, restoration has a larger probe-aggregate gradient in <strong>49/50</strong> windows, with a mean paired norm ratio of about <strong>2.7</strong>.</p>
+
+<figure id="en-art-restoration-longrun" class="figure-compact" data-figure="art_longrun_restoration"><img src="/assets/blog/diffusion-rl/art_longrun_restoration.png" alt="Figure 11b: ART second-update guidance and restoration over the long run, compared with on-policy NFT" loading="lazy"><figcaption>Figure 11b. ART's long run with the same on-policy NFT reference as Figure 11a. ART uses second-update windows, with the same 80 probe states per window; A is the norm of their mean raw LoRA gradient, not the complete training-batch gradient. NFT is shown only over its observed rollouts 0–109 and has no restoration term; (c) shows only ART's same-window A_restore/A_guidance, with the dotted line at 1 marking equal norms. No smoothing; response uses a log axis, and NFT's valid points are connected across undefined intervals without imputation. OCR is the pre-update training reward, not held-out evaluation.</figcaption></figure>
+
+<p><strong>This shifts the stability question from "is guidance insensitive?" to "can the two forces keep working together?"</strong> Along ART's actual training trajectory, the measured guidance produces larger parameter gradients per unit output force, while restoration strengthens alongside it. Restoration undoes changes the model has already jointly realized, matching the earlier intuition. A larger norm, however, does not imply exactly opposing directions or an Adam update share. Establishing restoration as the cause of long-run stability still requires a restoration-removal ablation.</p>
+
+<blockquote><strong>Insight: a high per-state response rate does not make collapse inevitable.</strong> With guidance alone, a response spike can amplify updates. With a competing force, we must also ask whether restoration keeps pace. ART's long run illustrates the latter, not a model that stays insensitive.</blockquote>
+
 <h5 id="en-flow-force-mapping">3. Flow-GRPO: why is even the per-state response rate so low?</h5>
 
 Cross-state cancellation cannot explain all of Flow-GRPO's low conversion. In the full Flow-GRPO time course, per-state response rate is already in single digits, while retention is close to NFT:
@@ -883,13 +920,12 @@ For example, Flow-GRPO's raw reference output force is only **0.49 times** guida
 <thead><tr><th scope="col">Paradigm / algorithm</th><th scope="col">Guidance aggregate gradient<br>A</th><th scope="col">Raw reference aggregate gradient<br>A</th><th scope="col">Equal-norm coefficient<br>λ</th></tr></thead>
 <tbody>
 <tr><th scope="row">Forward / NFT + EMA</th><td>0.0417</td><td>0.00539</td><td><strong>7.73</strong></td></tr>
-<tr><th scope="row">Reverse / Flow-GRPO</th><td>0.000996</td><td>0.0258</td><td><strong>0.0387</strong></td></tr>
 <tr><th scope="row">Reverse / Flow-GRPO Fast</th><td>0.000377</td><td>0.0696</td><td><strong>0.00541</strong></td></tr>
 </tbody>
 </table>
 </div>
 
-At these measured states, NFT needs a coefficient of about **7.7** for reference to match guidance's aggregate-gradient norm; Flow-GRPO needs only about **0.039**, and Fast about **0.0054**. The applied training coefficient was **zero** in all these runs: this is offline scale calibration from raw probes, not training with those coefficients or an optimal-coefficient estimate. Guidance, the current–base gap and both conversion rates contribute to the difference; these are not fixed recommendations for forward versus reverse RL.
+At these measured states, NFT needs a coefficient of about **7.7** for reference to match guidance's aggregate-gradient norm; Flow-GRPO Fast needs about **0.0054**. The applied training coefficient was **zero** in all these runs: this is offline scale calibration from raw probes, not training with those coefficients or an optimal-coefficient estimate. Guidance, the current–base gap and both conversion rates contribute to the difference; these are not fixed recommendations for forward versus reverse RL.
 
 > **Insight: choose KL coefficients in relation to how the policy force converts.** Calibrate parameter influence at the third layer, not just loss values or output forces at the first; then use the forces' cosine and actual drift to decide how strong the constraint should be.
 
