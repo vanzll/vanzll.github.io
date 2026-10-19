@@ -2,9 +2,7 @@
 
 <ol><li><strong>Reverse-process RL</strong>, such as <a href="https://arxiv.org/abs/2505.05470">Flow-GRPO</a>: treat denoising as a sequence of actions and use the final output's reward to guide policy updates for those actions.</li><li><strong>Forward-process RL</strong>, such as <a href="https://arxiv.org/abs/2509.16117">DiffusionNFT</a>: score generated outputs, add noise to them, and turn reward feedback into regression training along the forward process.</li><li><strong>Backpropagation through a reward model</strong>, such as <a href="https://arxiv.org/abs/2304.05977">ReFL</a>: propagate reward gradients through generation to update the model directly.</li></ol>
 
-<p>The first two typically need only scores, not a differentiable reward model. The third needs gradients through the reward computation.</p>
-
-<p><strong>We focus on the first two. Before beginning, here is a concise summary of the insights we hope to convey, with the aim of informing future academic research and practical applications:</strong></p>
+<p>The first two typically need only scores, not a differentiable reward model, so they can use a wider range of reward sources, such as Gemini 3.1 Pro through an API. The third needs gradients through the reward computation, limiting it to self-trained or open-source reward models. <strong>We focus on the first two. Before beginning, here is a concise summary of the insights we hope to convey, with the aim of informing future academic research and practical applications:</strong></p>
 
 <blockquote class="takeaways">
 <ul>
@@ -37,7 +35,7 @@
 
 <h2 id="en-target" data-section-key="target">1. A core mental model for RL in continuous generative processes</h2>
 
-<p>Both forward and reverse RL can be understood through their underlying MSE push-and-pull terms. An MSE term connects a policy output (typically the denoising velocity field <span class="math">\(v_\theta\)</span>) to a detached target <span class="math">\(v_{\rm tgt}\)</span>. Averaging over D output elements, the loss with a fixed coefficient λ and its force are <span class="math" data-equation="force">\(\ell=\frac{\lambda}{D}\|v_\theta-v_{\rm tgt}\|^2\); \(f=-\nabla_{v_\theta}\ell=\frac{2\lambda}{D}(v_{\rm tgt}-v_\theta)\)</span>. λ &gt; 0 pulls the output toward the target; λ &lt; 0 pushes it away. We call <span class="math">\(f\)</span> the output-space force: this "force" is the loss's <strong>negative output gradient</strong>. Training can be understood as the aggregation of pushes and pulls at intermediate states.</p>
+<p>Forward and reverse Diffusion RL both use MSE losses as their training interface. An MSE term connects a policy output (typically the denoising velocity field <span class="math">\(v_\theta\)</span>) to a detached target <span class="math">\(v_{\rm tgt}\)</span>. Averaging over D output elements, the loss with a fixed coefficient λ and its force are <span class="math" data-equation="force">\(\ell=\frac{\lambda}{D}\|v_\theta-v_{\rm tgt}\|^2\); \(f=-\nabla_{v_\theta}\ell=\frac{2\lambda}{D}(v_{\rm tgt}-v_\theta)\)</span>. λ &gt; 0 pulls the output toward the target; λ &lt; 0 pushes it away. We call <span class="math">\(f\)</span> the output-space force: this "force" is the loss's <strong>negative gradient with respect to the velocity field</strong>. Training can be understood as the aggregation of pushes and pulls at intermediate states.</p>
 
 <p><strong>A target provides a gradient, not a destination.</strong> Flow matching already offers an example: multiple forward velocity fields can pass through the same noisy state. The MSE-optimal prediction is their conditional mean (<a href="https://arxiv.org/abs/2210.02747">Flow Matching</a>); it cannot reach every target at once. A post-training target need not be the velocity field we ultimately want either. Its role can simply be to provide a reward-improving "force," or gradient.</p>
 
@@ -89,7 +87,7 @@ q_n&=\beta_2q_{n-1}+(1-\beta_2)h_n^2,\\
 
 </details>
 
-Thus, **equal participation in the loss does not mean equal influence on the update**. Opposing gradients cancel. Orthogonal gradients neither directly cancel nor reinforce one another. Many strong, unrelated directions can also dilute a useful direction's share of the resultant.
+Thus, **equal participation in the loss does not mean equal influence on the update**. Many strong, unrelated directions can also dilute a useful direction's share of the resultant.
 
 <blockquote><strong>Insight: not every reinforced action helps reward, and useful directions must survive in the resultant.</strong> To analyze Diffusion RL, use the mental model of vector decomposition and vector sums: ask how actions at each state are pushed or pulled, how these forces map to parameters, and which components dominate or cancel after aggregation. This is our common starting point for understanding Reverse RL and Forward RL.</blockquote>
 
@@ -933,14 +931,12 @@ At these measured states, NFT needs a coefficient of about **7.7** for reference
 
 <h2 id="en-recipes" data-section-key="recipes">4. What would we measure before choosing a recipe?</h2>
 
-<p>When tuning the ratio between forces, <strong>tune the relative strengths of the aggregated parameter gradients, rather than the force magnitudes (i.e., loss values): in continuous-time, continuous-space diffusion models, different force directions can have very different effects (<a href="#en-force-comparison">see the three quantities and two rates in Section 3.3.1</a>).</strong></p>
+<p>To analyze a complex Diffusion RL algorithm, first translate it into the most intuitive training interface at each state: <strong>an MSE loss</strong>. Then use the <a href="#en-force-comparison">three quantities and two rates</a> to follow output-force magnitude, per-state response, and cross-state aggregation retention, asking <strong>which forces dominate the resultant and whether they improve reward</strong>. Tune their relative strengths by their influence on the aggregate gradient.</p>
 
 **Reverse: how do actions mix?** Measure gradient norms by noise position and cosine with the resultant. Ask whether influential actions can change reward. Try informative short windows, controlled initial noise or better baselines, comparing learning progress separately from reduced backward computation.
 
 **Forward: how do forces mix?** At matched points, measure guidance/restoration output forces and parameter gradients, their cosine and resultant direction. A small loss component can dominate. Competing directions need not be exact opposites.
 
 **Stability: how does the function actually move?** Measure current-reference gaps and actual output changes at fixed states. Adaptive restoration is worth exploring: allow useful movement and intervene on dangerous drift. Current curves motivate that experiment; they do not validate a particular rule.
-
-**Open experiment: can restoration intervene only when useful?** Compare fixed and adaptive restoration on reward, fixed-state drift and failure rates at matched sampling cost. Specify the rule in advance and use multiple seeds rather than retrospectively selecting the best coefficient.
 
 The common question is not "how much did loss fall?" It is: **which directions reached the shared update, and what did they achieve?** Reverse hides that question in action credit; forward hides it in the conversion of regression forces. Making the intermediate quantities visible is often the quickest way to understand an unusual curve.

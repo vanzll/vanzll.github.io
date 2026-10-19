@@ -47,6 +47,10 @@ sources.each do |language, source|
   destination.write(source.gsub(asset_prefix, public_prefix))
 end
 metadata['draft'] = false
+metadata['lang'] = 'en'
+metadata['title'] = metadata.fetch('title_en')
+body = body.sub('<div data-language-panel="zh" lang="zh-CN">', '<div data-language-panel="zh" lang="zh-CN" hidden>')
+           .sub('<div data-language-panel="en" lang="en" hidden>', '<div data-language-panel="en" lang="en">')
 metadata['unlisted'] = true
 metadata['sitemap'] = false
 metadata['date'] = '2026-10-07 12:00:00 +0800'

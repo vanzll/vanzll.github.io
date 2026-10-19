@@ -1,10 +1,10 @@
 {
-  "published_at": "2026-10-13T05:51:45Z",
+  "published_at": "2026-10-19T08:31:41Z",
   "url": "https://vanzll.github.io/blog/diffusion-rl/",
   "visibility": "unlisted",
   "source_sha256": {
-    "zh": "8ddabbce2fc96f71ca34bc688d8f04d9eac39e967f47a6e3ee970c8e99c422e0",
-    "en": "cdc22cf2db871709646098e666f26dde77c5592468ccec80479d25ed0bda1730"
+    "zh": "d521f3d9a959d4326716ecd751ea699f023c904610c6403f40fb6d5b108470bd",
+    "en": "98d7abe466b75ff4fb23024e973f47783b842d09dc119548728591b5492c9d73"
   },
   "figures": {
     "force_overview.png": "6c25503788334fd35f4ced979c23d75cb8eb08526908e5f4c7cfe2c3c40f20e2",

@@ -2,8 +2,9 @@
   const article = document.querySelector('.article-body');
   if (!article) return;
 
+  function prepareContent(root) {
   if (article.dataset.math === 'true' && typeof renderMathInElement === 'function') {
-    renderMathInElement(article, {
+    renderMathInElement(root, {
       delimiters: [
         { left: '$$', right: '$$', display: true },
         { left: '\\[', right: '\\]', display: true },
@@ -19,6 +20,7 @@
     const equations = new Map();
     panel.querySelectorAll('div.math[data-equation]').forEach((equation, index) => {
       equation.id = `eq-${language}-${equation.dataset.equation}`;
+      equation.querySelectorAll('.equation-number').forEach(node => node.remove());
       const number = document.createElement('a');
       number.className = 'equation-number';
       number.href = `#${equation.id}`;
@@ -34,6 +36,30 @@
       if (!reference.textContent.trim()) reference.textContent = `(${equation.number})`;
     });
   });
+
+  root.querySelectorAll('h2[id], h3[id], h4[id]').forEach(heading => {
+    if (heading.querySelector('.section-anchor')) return;
+    const anchor = document.createElement('a');
+    anchor.className = 'section-anchor';
+    anchor.href = `#${heading.id}`;
+    anchor.setAttribute('aria-label', `Link to section: ${heading.textContent}`);
+    anchor.textContent = '#';
+    heading.prepend(anchor);
+  });
+  const figureRoot = root === article ? document.querySelector('.research-article') || root : root;
+  figureRoot.querySelectorAll('figure img').forEach(image => {
+    if (image.closest('.figure-expand') || image.closest('button')) return;
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'figure-expand';
+    button.title = 'Enlarge figure';
+    button.setAttribute('aria-label', `Enlarge figure: ${image.alt}`);
+    image.before(button);
+    button.append(image);
+  });
+  }
+  prepareContent(article);
+  document.addEventListener('blog:contentchange', event => prepareContent(event.detail.panel));
 
   const revealLinkedDerivation = () => {
     let id;
@@ -53,14 +79,6 @@
   window.addEventListener('hashchange', revealLinkedDerivation);
   revealLinkedDerivation();
 
-  article.querySelectorAll('h2[id], h3[id], h4[id]').forEach(heading => {
-    const anchor = document.createElement('a');
-    anchor.className = 'section-anchor';
-    anchor.href = `#${heading.id}`;
-    anchor.setAttribute('aria-label', `Link to section: ${heading.textContent}`);
-    anchor.textContent = '#';
-    heading.prepend(anchor);
-  });
   const links = [...document.querySelectorAll('.article-toc a')];
   let headings = links.map(link => document.getElementById(link.hash.slice(1))).filter(Boolean);
   if (headings.length) {
@@ -83,29 +101,27 @@
     };
     window.addEventListener('scroll', scheduleToc, { passive: true });
     window.addEventListener('resize', scheduleToc);
-    document.addEventListener('blog:languagechange', () => {
+    const refreshHeadings = () => {
       headings = links.map(link => document.getElementById(link.hash.slice(1))).filter(Boolean);
       scheduleToc();
-    });
+    };
+    document.addEventListener('blog:languagechange', refreshHeadings);
+    document.addEventListener('blog:contentchange', refreshHeadings);
     updateToc();
   }
 
   const dialog = document.querySelector('.figure-dialog');
   if (dialog && typeof dialog.showModal === 'function') {
-    document.querySelectorAll('.research-article figure img').forEach(image => {
-      const button = document.createElement('button');
-      button.type = 'button';
-      button.className = 'figure-expand';
-      button.title = 'Enlarge figure';
-      button.setAttribute('aria-label', `Enlarge figure: ${image.alt}`);
-      image.before(button);
-      button.append(image);
-      button.addEventListener('click', () => {
+    (document.querySelector('.research-article') || article).addEventListener('click', event => {
+      const button = event.target.closest('.figure-expand');
+      if (!button) return;
+      const image = button.querySelector('img');
+      if (image) {
         const enlarged = dialog.querySelector('.figure-dialog-image');
         enlarged.src = image.currentSrc || image.src;
         enlarged.alt = image.alt;
         dialog.showModal();
-      });
+      }
     });
     dialog.querySelector('.figure-close').addEventListener('click', () => dialog.close());
     dialog.addEventListener('click', event => {

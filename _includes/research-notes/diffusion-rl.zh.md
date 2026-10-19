@@ -2,9 +2,7 @@
 
 <ol><li><strong>基于反向过程的 RL</strong>，如 <a href="https://arxiv.org/abs/2505.05470">Flow-GRPO</a>：把去噪过程看成一串 action，用生成结果的 reward 来指导这些 action 的策略更新。</li><li><strong>基于前向过程的 RL</strong>，如 <a href="https://arxiv.org/abs/2509.16117">DiffusionNFT</a>：给生成结果打分，再对它们加噪，把奖励反馈转成前向过程上的回归训练。</li><li><strong>通过奖励模型反传梯度</strong>，如 <a href="https://arxiv.org/abs/2304.05977">ReFL</a>：让奖励梯度穿过生成过程，直接指导模型更新。</li></ol>
 
-<p>前两类通常只需要奖励模型给出分数，不要求它可微；第三类需要沿奖励计算路径反传梯度。</p>
-
-<p><strong>本文聚焦前两类问题展开， 在全文开始之前， 先精炼总结一下本文旨在传达的洞见， 希望能够启发未来的学术研究或者业界落地应用：</strong></p>
+<p>前两类通常只需要奖励模型给出分数，不要求它可微，可适用于更多场景（比如Gemini 3.1 Pro这种API reward model）；第三类需要沿奖励计算路径反传梯度 （只适用于自己训练的或者开源的reward model）。<strong>本文聚焦前两类问题展开， 在全文开始之前， 先精炼总结一下本文旨在传达的洞见， 希望能够启发未来的学术研究或者业界落地应用：</strong></p>
 
 <blockquote class="takeaways">
 <ul>
@@ -37,7 +35,7 @@
 
 <h2 id="zh-target" data-section-key="target">1. 连续生成过程 RL 的核心心智模型</h2>
 
-<p>前向与反向 RL，都可以从底层的 MSE 推拉项来理解。一个 MSE 项的一头是 policy 的输出（通常是去噪速度场 <span class="math">\(v_\theta\)</span>），另一头是停止梯度的 target <span class="math">\(v_{\rm tgt}\)</span>。对 D 个输出元素取平均，带固定系数 λ 的 loss 与它提供的力为 <span class="math" data-equation="force">\(\ell=\frac{\lambda}{D}\|v_\theta-v_{\rm tgt}\|^2\); \(f=-\nabla_{v_\theta}\ell=\frac{2\lambda}{D}(v_{\rm tgt}-v_\theta)\)</span>。λ &gt; 0 把输出拉向 target，λ &lt; 0 把输出推离 target。我们称这个 <span class="math">\(f\)</span> 为输出空间的力，这里的“力”就是 loss 对输出的<strong>负梯度</strong>；训练可以理解为各个中间 state 上推力与拉力的聚合作用。</p>
+<p>前向与反向 Diffusion RL， 其训练接口都是MSE loss。一个 MSE 项的一头是 policy 的输出（通常是去噪速度场 <span class="math">\(v_\theta\)</span>），另一头是停止梯度的 target <span class="math">\(v_{\rm tgt}\)</span>。对 D 个输出元素取平均，带固定系数 λ 的 loss 与它提供的力为 <span class="math" data-equation="force">\(\ell=\frac{\lambda}{D}\|v_\theta-v_{\rm tgt}\|^2\); \(f=-\nabla_{v_\theta}\ell=\frac{2\lambda}{D}(v_{\rm tgt}-v_\theta)\)</span>。λ &gt; 0 把输出拉向 target，λ &lt; 0 把输出推离 target。我们称这个 <span class="math">\(f\)</span> 为输出空间的力，这里的“力”就是 loss 对速度场的<strong>负梯度</strong>；训练可以理解为各个中间 state 上推力与拉力的聚合作用。</p>
 
 <p><strong>Target 是梯度提供器，不是目的地。</strong> Flow matching 已经给过我们一个例子：同一个含噪 state 对应多个经过它的前向速度场，MSE 的最优预测是它们的条件均值（<a href="https://arxiv.org/abs/2210.02747">Flow Matching</a>），不可能同时到达每个 target。Post-training 构造的 target 也不必是我们最终想要的速度场；它可以只负责提供改善 reward 的“力”， 即梯度。</p>
 
@@ -89,7 +87,7 @@ q_n&=\beta_2q_{n-1}+(1-\beta_2)h_n^2,\\
 
 </details>
 
-<p>因此，<strong>同样参与 loss，不等于同样影响更新</strong>。反向的梯度会抵消；正交的梯度不直接抵消，也不相互增强。许多强而不相关的方向，还会稀释一个有用方向在合力中的占比。</p>
+<p>因此，<strong>同样参与 loss，不等于同样影响更新</strong>。许多强而不相关的方向，还会稀释一个有用方向在合力中的占比。</p>
 
 <blockquote><strong>Insight：并不是每个被强化的action都对reward有用，而有用方向必须在合力中活下来。</strong> 分析 Diffusion RL，可以使用“向量分解与向量和”的心智模型，要看各个 state 上的 action 被怎样推拉、这些力怎样映射到参数，以及聚合之后谁主导、什么力成分被抵消。这是后文理解 Reverse RL 和 Forward RL 的共同起点。</blockquote>
 
@@ -936,7 +934,7 @@ KL／reference 与恢复力都在撤销模型已经实现过的函数变化，�
 
 <h2 id="zh-recipes" data-section-key="recipes">4. 选配方前，我们会先测什么？</h2>
 
-<p>在调控力的比例的时候，<strong>应调控聚合后梯度的相对强弱，而不是力的相对大小（即loss值），因为Diffusion 这种连续时间连续空间模型，连续空间中不同力的方向的收益大不一样（<a href="#zh-force-comparison">见3.3.1的三量两率分析</a>）。</strong></p>
+<p>分析复杂的 Diffusion RL 算法，可以先把它翻译成每个 state 上最直观的训练接口：<strong>MSE loss</strong>。再用<a href="#zh-force-comparison">“三量两率”分析法</a>，沿着输出力大小、单样本响应率和跨 state 的聚合保留率，判断<strong>哪些力在合力中占主导，以及这些力是否能提升 reward</strong>。调控力的比例，也应以聚合后的梯度影响为依据。</p>
 
 **Reverse：看 action 如何混合。** 测逐噪声位置梯度模长和与合力的 cosine，问有影响的 action 能否改变 reward。试有信息的短窗口、受控 initial noise 或更好的 baseline，分别比较学习进展和减少 backward 的收益。
 
@@ -944,6 +942,6 @@ KL／reference 与恢复力都在撤销模型已经实现过的函数变化，�
 
 **稳定性：看函数实际怎么动。** 固定 state 测 current–reference gap 与真实输出变化。Adaptive restoration 很值得探索：允许有用移动，在危险漂移时介入。当前曲线提出这个实验方向，还没有证明某个规则有效。
 
-**留白实验：恢复能否只在有用的时候介入？** 固定恢复与 adaptive 恢复，对比 reward、fixed-state drift、失败率和相同采样成本。预先规定规则，多 seed 验证，不事后挑最好看的系数。
+<p></p>
 
 统一的问题不是“loss 降了多少”，而是：**哪些方向到达了共享更新，它们实现了什么？** Reverse 把问题藏在 action credit 里，Forward 把问题藏在回归力的转化里。让中间量可见，往往是理解异常曲线最快的方式。
