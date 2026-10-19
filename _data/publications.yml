@@ -11,7 +11,7 @@ main:
     image: "/assets/papers/diffusionart-cover.png"
     image_width: 1320
     image_height: 680
-    intro: "Aggregation-first reward tilting and adaptive restoration for efficient, stable image and video reinforcement."
+    intro: "Aggregation-first reward tilting with adaptive restoration for efficient, stable image and video reinforcement."
     honor: "[Hugging Face Daily Papers #1](https://huggingface.co/papers/2610.12572)"
     models:
       - name: HF model
