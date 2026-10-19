@@ -55,15 +55,15 @@ redirect_from:
 <!-- Dark mode is handled globally in layout/head; local button/styles removed -->
 
 
-I am Zhenglin Wan (万政霖), a CS Ph.D. student at [HPC-AI Lab](https://ai.comp.nus.edu.sg/) at National University of Singapore (NUS), advised by [Prof. Yang You](https://www.comp.nus.edu.sg/~youy/). Previously, I worked at Nanyang Technological University (NTU) with [Prof. Bo An](https://personal.ntu.edu.sg/boan/), [Centre for Frontier AI Research (CFAR)](https://www.a-star.edu.sg/cfar), [IHPC](https://www.a-star.edu.sg/ihpc/), [A\*STAR](https://www.a-star.edu.sg/) with [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) , [Hong Kong Generative AI Research & Development Center (HKGAI)](https://www.hkgai.info/) with the team led by HKUST [Prof. Yike Guo](https://cse.hkust.edu.hk/admin/people/faculty/profile/yikeguo). I received my B.Sc (with 1-st class honor) in Statistics and Data Science from The Chinese University of Hong Kong (CUHK).
+I am Zhenglin Wan (万政霖), a CS Ph.D. student at [HPC-AI Lab](https://ai.comp.nus.edu.sg/) at National University of Singapore (NUS), advised by [Prof. Yang You](https://www.comp.nus.edu.sg/~youy/). Previously, I worked at Nanyang Technological University (NTU) with [Prof. Bo An](https://personal.ntu.edu.sg/boan/), [Centre for Frontier AI Research (CFAR)](https://www.a-star.edu.sg/cfar), [IHPC](https://www.a-star.edu.sg/ihpc/), [A\*STAR](https://www.a-star.edu.sg/) with [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) , [Hong Kong Generative AI Research & Development Center (HKGAI)](https://www.hkgai.info/) with the team led by HKUST [Prof. Yike Guo](https://cse.hkust.edu.hk/admin/people/faculty/profile/yikeguo). I received my B.Sc (with highest honor) in Statistics and Data Science from The Chinese University of Hong Kong (CUHK).
 
-My research is driven by the curiosity of genuinely understanding (both theoretically and intuitively) the rationale, spirit and failure modes of ML algorithms and methods. Based on this principle, I am recently working on fundamental side of Multi-modal generation and RL Post-training. Particularly:
+My research is driven by the curiosity of genuinely understanding (both theoretically and intuitively) the rationale, spirit and failure modes of ML methodologies. Based on this principle, I am recently working on fundamental side of Multi-modal understanding & generation and RL Post-training. Particularly:
 
 - RL post-training on continuous-space generative models (such as diffusion model)
 - Unified AR-based understanding and Diffusion-based Generation and the RL-post-training paradigm of such systems
-- Long-horizon agents, such as coding agent, agentic VLA and agentic Video Generation, and the RL-post-training paradigm for both un-unified and unified paradigm of generation and understanding.
+- Long-horizon agents. Such as coding agent, agentic VLA and agentic Video Generation. And the RL paradigm for both un-unified and unified paradigm of generation and understanding.
 
-I love intellectual games in my spare time: I am a 17-years chess player as *National Chess Athlete* in China (Level 3), and have won the 1-st prize in Chinese Mathematics Olympiad (CMO)-1st round by 1.5-year's part-time self-training. For academic discussion and collaboration, please don't hesitate to reach out to me via email!
+I love intellectual games in my spare time: I am a 17-years chess player as *National Chess Athlete* in China, and have won the 1-st prize in Chinese Mathematics Olympiad (CMO)-1st round by 1.5-year's part-time self-training. For academic discussion and collaboration, please don't hesitate to reach out to me via email!
  
 
 
@@ -73,7 +73,7 @@ I love intellectual games in my spare time: I am a 17-years chess player as *Nat
 
 <div class="news" markdown="1">
 <div class="scroll-window" markdown="1" tabindex="0" role="region" aria-label="News" data-visible-items="9">
-- *2026.10* &nbsp;🔥 **DiffusionART**: a highly efficient and stable algorithm for diffusion post-training. Paper and code are now available. ([[Paper]](https://arxiv.org/abs/2610.12572), [[Project]](https://vanzll.github.io/diffusionart-project/), [[Code]](https://github.com/vanzll/DiffusionART))
+- *2026.10* &nbsp;🔥 **DiffusionART** is released: a highly efficient and stable algorithm for diffusion post-training in Visual Generation ([[Paper]](https://arxiv.org/abs/2610.12572), [[Project]](https://vanzll.github.io/diffusionart-project/), [[Code]](https://github.com/vanzll/DiffusionART)).
 - *2026.04*  &nbsp;🎉🎉 I was invited to give a talk by Meta MRS (Stable online RL for alignment of diffusion-based foundation models).
 - *2026.01*  &nbsp;🎉🎉 [Cave-Agent](https://arxiv.org/abs/2601.01569) is open-sourced: an object-oriented coding agentic framework with superior token-efficiency, empowering the agentic AI system being built by the Hong Kong Government.
 
