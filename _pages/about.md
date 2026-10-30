@@ -73,7 +73,7 @@ I love intellectual games in my spare time: I am a 17-years chess player as *Nat
 
 <div class="news" markdown="1">
 <div class="scroll-window" markdown="1" tabindex="0" role="region" aria-label="News" data-visible-items="9">
-- *2026.10* &nbsp;🔥 **DiffusionART** is released: a highly efficient and stable algorithm for diffusion post-training in Visual Generation ([[Paper]](https://arxiv.org/abs/2610.12572), [[Project]](https://vanzll.github.io/diffusionart-project/), [[Code]](https://github.com/vanzll/DiffusionART)).
+- *2026.10* &nbsp;🔥 **DiffusionART** is released: a highly efficient and stable algorithm for diffusion post-training in Visual Generation ([[Paper]](https://arxiv.org/abs/2610.12572), [[Project]](https://vanzll.github.io/diffusionart-project/), [[Code]](https://github.com/vanzll/DiffusionART), [[机器之心]](https://mp.weixin.qq.com/s/i7VJo2lvycS6jppsJMcWjQ)).
 - *2026.04*  &nbsp;🎉🎉 I was invited to give a talk by Meta MRS (Stable online RL for alignment of diffusion-based foundation models).
 - *2026.01*  &nbsp;🎉🎉 [Cave-Agent](https://arxiv.org/abs/2601.01569) is open-sourced: an object-oriented coding agentic framework with superior token-efficiency, empowering the agentic AI system being built by the Hong Kong Government.
 
@@ -178,6 +178,8 @@ New posts coming soon.
 .publications .honor p { margin: 0; }
 .publications .honor a { color: inherit; text-decoration: underline; }
 .publications .honor a:hover { color: inherit; text-decoration: none; }
+.publications .honor a.media-mention { color: #0f766e; }
+.dark-mode .publications .honor a.media-mention { color: #5eead4; }
 .publications .intro { font-size: 0.90rem; color: #555; font-weight: 600; font-style: italic; margin: 4px 0; }
 .publications .links a { font-size: 12px !important; }
 .publications .links { margin-top: 10px; display: flex; gap: 10px; flex-wrap: wrap; }

@@ -12,7 +12,7 @@ main:
     image_width: 1320
     image_height: 680
     intro: "Aggregation-first reward tilting with adaptive restoration for efficient, stable image and video reinforcement."
-    honor: "[Hugging Face Daily Papers #1](https://huggingface.co/papers/2610.12572)"
+    honor: "[Hugging Face Daily Papers #1](https://huggingface.co/papers/2610.12572) &nbsp;·&nbsp; <a class='media-mention' href='https://mp.weixin.qq.com/s/i7VJo2lvycS6jppsJMcWjQ'>机器之心</a>"
     models:
       - name: HF model
         url: https://huggingface.co/collections/vanzl/diffusionart
