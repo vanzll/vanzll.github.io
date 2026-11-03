@@ -663,21 +663,16 @@ f_{\rm fit}=-\nabla_{v_\theta}\ell_{\rm fit}
 
 
 
-<p id="zh-nft-center-ablation"><strong>0.5 不只是一个方便的中心。</strong>令中心化反馈为 <span class="math">\(h_i\)</span>，goodness 的中心为 <span class="math">\(m\)</span>。先看未截断的映射：</p>
+<p id="zh-nft-center-ablation">回看 NFT 的 goodness 计算，框中的 <span class="math">\(0.5\)</span> 决定了推拉的中心：</p>
 
 <div class="math" data-equation="nft-center-balance">
 \[
-r_i=m+\frac{h_i}{2},\qquad
-\sum_{i=1}^{K}(2r_i-1)
-=\sum_{i=1}^{K}h_i+K(2m-1).
+r_i=\boxed{0.5}+\frac12\operatorname{clip}\!\left(
+\frac{R_i-\bar R_c}{Z_c},-1,1\right).
 \]
 </div>
 
-<p>当中心化信号和为零、未触发截断时，<span class="math">\(m=0.50\)</span> 使 <span class="math">\(\sum_i(2r_i-1)=0\)</span>；改成 0.45 或 0.55，则分别留下 <span class="math">\(-0.1K\)</span> 或 <span class="math">\(+0.1K\)</span> 的系数偏置。也就是说，<strong>移动中心并不只是重标奖励，而是在改变整组样本的推拉平衡。</strong></p>
-
-<p><a href="#zh-nft-center-figure">图6B</a>展示了中心偏移后的训练结果：中心为 0.50 时持续提升，0.45 和 0.55 则很快降至接近零。</p>
-
-<p>这个实验把前面的代数问题变成了直接可见的训练差异：<strong>goodness 的中心控制着正负回归请求的平衡，而不只是分数的零点。</strong></p>
+<p>忽略截断，组内中心化使 <span class="math">\(\sum_i(2r_i-1)=\frac1{Z_c}\sum_i(R_i-\bar R_c)=0\)</span>，为不同 state 上自一致性力的全局抵消提供了系数平衡。我们只把框中的 0.5 改成 0.45 或 0.55，系数和便分别偏移 <span class="math">\(-0.1K\)</span> 或 <span class="math">\(+0.1K\)</span>。<a href="#zh-nft-center-figure">图6B</a>显示：<strong>中心只偏离 0.5 一点，两组训练就很快崩溃，而 0.5 对照持续上升。</strong>Goodness 的中心不是任意的分数零点，而是在平衡额外的自一致性请求。</p>
 
 <blockquote><strong>Insight：Forward RL 的回归信号有一个隐藏的自一致性项。</strong> 这一项对提升reward没有帮助， 并且会直接打崩训练。 正负分支联合训练和reward归一化必不可少， 因为它们可以一定程度上让该项的梯度在全局抵消， 但是无法完全抵消。</blockquote>
 

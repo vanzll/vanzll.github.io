@@ -658,21 +658,16 @@ f_{\rm fit}=-\nabla_{v_\theta}\ell_{\rm fit}
 </ul>
 <p>Combining them yields <span class="math">\((2r-1)(u-v_{\rm old})\)</span>: samples above the group mean pull; samples below it push. The consistency coefficient also changes from the one-sided r or −(1−r) to the signed 2r−1, allowing extra components from different samples to cancel during global gradient aggregation across states. This answers both <a href="#en-nft-question-negative">Question 2: why do we need positive and negative branches?</a> and <a href="#en-nft-question-goodness">Question 3: why replace r with goodness obtained by normalizing reward?</a>, sacrificing unbiasedness: if r is goodness, then <span class="math">\(\sum (2r-1)=0\)</span>, balancing the coefficients of consistency forces across states. But the gap varies across states, so balanced coefficients do not guarantee cancellation of the weighted vectors (<span class="math">\(\sum (2r-1)=0\)</span> does not imply <span class="math">\(\sum \mathrm{grad}\,(2r-1)f=0\)</span>). Any uncancelled residual still slows training or makes reward training collapse outright (Figure 6, right).</p>
 
-<p id="en-nft-center-ablation"><strong>0.5 is not just a convenient center.</strong> Let <span class="math">\(h_i\)</span> denote centered feedback and <span class="math">\(m\)</span> the goodness center. Before clipping, the mapping is:</p>
+<p id="en-nft-center-ablation">Recall NFT's goodness calculation: the boxed <span class="math">\(0.5\)</span> sets the center of pushing and pulling:</p>
 
 <div class="math" data-equation="nft-center-balance">
 \[
-r_i=m+\frac{h_i}{2},\qquad
-\sum_{i=1}^{K}(2r_i-1)
-=\sum_{i=1}^{K}h_i+K(2m-1).
+r_i=\boxed{0.5}+\frac12\operatorname{clip}\!\left(
+\frac{R_i-\bar R_c}{Z_c},-1,1\right).
 \]
 </div>
 
-<p>When centered feedback sums to zero and clipping is inactive, <span class="math">\(m=0.50\)</span> gives <span class="math">\(\sum_i(2r_i-1)=0\)</span>; moving to 0.45 or 0.55 instead leaves a coefficient offset of <span class="math">\(-0.1K\)</span> or <span class="math">\(+0.1K\)</span>. In other words, <strong>moving the center does not merely relabel rewards: it changes the group's balance of pushing and pulling.</strong></p>
-
-<p><a href="#en-nft-center-figure">Figure 6B</a> shows the outcomes after shifting the center: 0.50 improves steadily, whereas 0.45 and 0.55 rapidly fall close to zero.</p>
-
-<p>This experiment turns the algebraic distinction into a visible training difference: <strong>the goodness center controls the balance of positive and negative regression requests, not merely the score's zero point.</strong></p>
+<p>Ignoring clipping, group centering gives <span class="math">\(\sum_i(2r_i-1)=\frac1{Z_c}\sum_i(R_i-\bar R_c)=0\)</span>, balancing the coefficients so that consistency forces across states can cancel during global aggregation. We change only the boxed 0.5 to 0.45 or 0.55, shifting the coefficient sum by <span class="math">\(-0.1K\)</span> or <span class="math">\(+0.1K\)</span>. <a href="#en-nft-center-figure">Figure 6B</a> shows that <strong>even this small shift makes both runs collapse rapidly, while the 0.5 control keeps improving.</strong> The goodness center is not an arbitrary score origin: it balances the extra consistency requests.</p>
 
 <blockquote><strong>Insight: the regression signal in Forward RL contains a hidden consistency term.</strong> This term does not help improve reward and can directly cause training to collapse. Joint positive/negative-branch training and reward normalization are indispensable because they can partially cancel this term's gradients globally, but cannot eliminate them completely.</blockquote>
 
