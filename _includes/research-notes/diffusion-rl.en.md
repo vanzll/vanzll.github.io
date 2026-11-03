@@ -658,6 +658,25 @@ f_{\rm fit}=-\nabla_{v_\theta}\ell_{\rm fit}
 </ul>
 <p>Combining them yields <span class="math">\((2r-1)(u-v_{\rm old})\)</span>: samples above the group mean pull; samples below it push. The consistency coefficient also changes from the one-sided r or −(1−r) to the signed 2r−1, allowing extra components from different samples to cancel during global gradient aggregation across states. This answers both <a href="#en-nft-question-negative">Question 2: why do we need positive and negative branches?</a> and <a href="#en-nft-question-goodness">Question 3: why replace r with goodness obtained by normalizing reward?</a>, sacrificing unbiasedness: if r is goodness, then <span class="math">\(\sum (2r-1)=0\)</span>, balancing the coefficients of consistency forces across states. But the gap varies across states, so balanced coefficients do not guarantee cancellation of the weighted vectors (<span class="math">\(\sum (2r-1)=0\)</span> does not imply <span class="math">\(\sum \mathrm{grad}\,(2r-1)f=0\)</span>). Any uncancelled residual still slows training or makes reward training collapse outright (Figure 6, right).</p>
 
+<p id="en-nft-center-ablation"><strong>0.5 is not just a convenient center.</strong> Let <span class="math">\(h_i\)</span> denote centered feedback and <span class="math">\(m\)</span> the goodness center. Before clipping, the mapping is:</p>
+
+<div class="math" data-equation="nft-center-balance">
+\[
+r_i=m+\frac{h_i}{2},\qquad
+\sum_{i=1}^{K}(2r_i-1)
+=\sum_{i=1}^{K}h_i+K(2m-1).
+\]
+</div>
+
+<p>When centered feedback sums to zero and clipping is inactive, <span class="math">\(m=0.50\)</span> gives <span class="math">\(\sum_i(2r_i-1)=0\)</span>; moving to 0.45 or 0.55 instead leaves a coefficient offset of <span class="math">\(-0.1K\)</span> or <span class="math">\(+0.1K\)</span>. In other words, <strong>moving the center does not merely relabel rewards: it changes the group's balance of pushing and pulling.</strong></p>
+
+<figure id="en-nft-center-figure" class="figure-compact" data-figure="nft_center_balance">
+  <img src="/assets/blog/diffusion-rl/nft_center_balance.png" alt="Held-out OCR curves for NFT goodness centers 0.45, 0.50, and 0.55. Center 0.50 rises to about 0.98; both shifted centers fall close to zero." loading="lazy" width="4080" height="1710">
+  <figcaption><strong>Figure 6b: a small shift in goodness center accompanies a very different training outcome.</strong> The x-axis is rollout; the y-axis is held-out OCR accuracy. Center 0.50 improves steadily, whereas 0.45 and 0.55 rapidly fall close to zero.</figcaption>
+</figure>
+
+<p>This experiment turns the algebraic distinction into a visible training difference: <strong>the goodness center controls the balance of positive and negative regression requests, not merely the score's zero point.</strong></p>
+
 <blockquote><strong>Insight: the regression signal in Forward RL contains a hidden consistency term.</strong> This term does not help improve reward and can directly cause training to collapse. Joint positive/negative-branch training and reward normalization are indispensable because they can partially cancel this term's gradients globally, but cannot eliminate them completely.</blockquote>
 
 <p><strong>Matching endpoint distributions does not imply matching intermediate distribution evolution.</strong> Fine-tuning changes the actual reverse denoising dynamics. Reversing this evolution from t=1 to 0 need not match the evolution induced by straight-line re-noising of its endpoints; the two may differ substantially. In this sense, Reverse Process RL respects the current model's reverse process rather than assuming that straight-line noising inverts it.</p>

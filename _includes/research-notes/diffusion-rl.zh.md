@@ -663,6 +663,25 @@ f_{\rm fit}=-\nabla_{v_\theta}\ell_{\rm fit}
 
 
 
+<p id="zh-nft-center-ablation"><strong>0.5 不只是一个方便的中心。</strong>令中心化反馈为 <span class="math">\(h_i\)</span>，goodness 的中心为 <span class="math">\(m\)</span>。先看未截断的映射：</p>
+
+<div class="math" data-equation="nft-center-balance">
+\[
+r_i=m+\frac{h_i}{2},\qquad
+\sum_{i=1}^{K}(2r_i-1)
+=\sum_{i=1}^{K}h_i+K(2m-1).
+\]
+</div>
+
+<p>当中心化信号和为零、未触发截断时，<span class="math">\(m=0.50\)</span> 使 <span class="math">\(\sum_i(2r_i-1)=0\)</span>；改成 0.45 或 0.55，则分别留下 <span class="math">\(-0.1K\)</span> 或 <span class="math">\(+0.1K\)</span> 的系数偏置。也就是说，<strong>移动中心并不只是重标奖励，而是在改变整组样本的推拉平衡。</strong></p>
+
+<figure id="zh-nft-center-figure" class="figure-compact" data-figure="nft_center_balance">
+  <img src="/assets/blog/diffusion-rl/nft_center_balance.png" alt="NFT goodness 中心为 0.45、0.50、0.55 时的 held-out OCR 曲线。0.50 上升至约 0.98，其余两条降至接近零。" loading="lazy" width="4080" height="1710">
+  <figcaption><strong>图6b：Goodness 中心的微小偏移，对应截然不同的训练结果。</strong>横轴为 rollout，纵轴为 held-out OCR accuracy。中心为 0.50 时持续提升；偏移到 0.45 或 0.55 后，分数很快降至接近零。</figcaption>
+</figure>
+
+<p>这个实验把前面的代数问题变成了直接可见的训练差异：<strong>goodness 的中心控制着正负回归请求的平衡，而不只是分数的零点。</strong></p>
+
 <blockquote><strong>Insight：Forward RL 的回归信号有一个隐藏的自一致性项。</strong> 这一项对提升reward没有帮助， 并且会直接打崩训练。 正负分支联合训练和reward归一化必不可少， 因为它们可以一定程度上让该项的梯度在全局抵消， 但是无法完全抵消。</blockquote>
 
 <p><strong>终点分布相同，不代表中间的分布演化相同。</strong> 微调改变了真实的反向去噪 dynamics；把这段从 t=1 到 0 的分布演化反过来看，并不保证与终点重新直线加噪得到的演化一致，两者甚至可能相差很远。在这个意义上，Reverse Process RL尊重了当前模型的反向过程，而不是把直线加噪默认当作它的逆过程。</p>
