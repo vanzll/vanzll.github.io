@@ -90,6 +90,7 @@ button { color: inherit; }
 .article-body figure { margin: 32px 0; }
 .article-body figure img { display: block; width: 100%; height: auto; }
 .article-body figure.figure-compact { width: min(100%, 780px); margin-inline: auto; }
+.article-body figure.figure-wide { width: min(100%, 1000px); }
 .article-body figure[data-figure="force_measured_overview"] { width: min(100%, 1000px); }
 .force-table-scroll { max-width: 100%; overflow-x: auto; }
 .article-body .force-table { width: 100%; min-width: 740px; border-collapse: collapse; font-family: var(--sans); font-size: 13px; line-height: 1.5; }

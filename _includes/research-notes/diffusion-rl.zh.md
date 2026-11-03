@@ -598,7 +598,7 @@ a\|d-e\|^2+(1-a)\|d\|^2
 
 <p>回到<a href="#zh-nft-questions">3.1 末尾</a>我们留下的问题，先看最直接的反常现象：正支和负支单独训练都会崩溃，放在一起却能学起来。理论上的正负理想速度场沿着同一个 reward 改善方向，为什么实际训练需要两条分支？</p>
 
-<figure class="figure-compact" data-figure="nft_branch_geometry"><img src="/assets/blog/diffusion-rl/nft_branch_geometry.png" alt="图6：正负分支消融与前向反向自一致性力的几何分解" loading="lazy" width="2400" height="845"><figcaption>图6. 左：单独训练正支或负支失败，联合训练在图示窗口内提高 train GenEval。右：实线为正负分支的力，虚线拆出 reward 与自一致性分量；后者只能部分抵消。图中的 Δ 是理想 reward guidance 方向。</figcaption></figure>
+<figure id="zh-nft-center-figure" class="figure-compact figure-wide" data-figure="nft_branch_center_geometry"><img src="/assets/blog/diffusion-rl/nft_branch_center_geometry.png" alt="图6：A 正负分支消融；B goodness 中心消融；C 前向反向自一致性力的几何分解" loading="lazy" width="5500" height="1684"><figcaption>图6. <strong>A：</strong>单独训练正支或负支失败，联合训练提高 train GenEval。<strong>B：</strong>goodness 中心为 0.50 时 held-out OCR accuracy 持续提升；偏移到 0.45 或 0.55 后很快降至接近零，横轴为 rollout。<strong>C：</strong>实线为正负分支的力，虚线拆出 reward 与自一致性分量；后者只能部分抵消。Δ 是理想 reward guidance 方向。</figcaption></figure>
 
 <p>3.1 已证明：正负理想场相对原始 forward 场的 guidance 共线。<strong>但重点在于：实际 reverse 场 <span class="math">\(v_{\rm rvs}^{\rm old}(s)=v_{\rm old}(s)\)</span>，不一定等于其终点分布重新直线加噪诱导的理想场。</strong>记两者之差为 <span class="math">\(\Delta_{\rm fwd}(s)=v_{\rm fwd}^{\rm old}(s)-v_{\rm rvs}^{\rm old}(s)\)</span>。理想 guidance 从 forward 场出发， 所有理论推导也是基于old policy 产生endpoint 分布诱导出来的理想forward场，但实际训练对象确是 reverse process 模型真实输出的速度场，这个 gap 因而进入更新。</p>
 
@@ -675,10 +675,7 @@ r_i=m+\frac{h_i}{2},\qquad
 
 <p>当中心化信号和为零、未触发截断时，<span class="math">\(m=0.50\)</span> 使 <span class="math">\(\sum_i(2r_i-1)=0\)</span>；改成 0.45 或 0.55，则分别留下 <span class="math">\(-0.1K\)</span> 或 <span class="math">\(+0.1K\)</span> 的系数偏置。也就是说，<strong>移动中心并不只是重标奖励，而是在改变整组样本的推拉平衡。</strong></p>
 
-<figure id="zh-nft-center-figure" class="figure-compact" data-figure="nft_center_balance">
-  <img src="/assets/blog/diffusion-rl/nft_center_balance.png" alt="NFT goodness 中心为 0.45、0.50、0.55 时的 held-out OCR 曲线。0.50 上升至约 0.98，其余两条降至接近零。" loading="lazy" width="4080" height="1710">
-  <figcaption><strong>图6b：Goodness 中心的微小偏移，对应截然不同的训练结果。</strong>横轴为 rollout，纵轴为 held-out OCR accuracy。中心为 0.50 时持续提升；偏移到 0.45 或 0.55 后，分数很快降至接近零。</figcaption>
-</figure>
+<p><a href="#zh-nft-center-figure">图6B</a>展示了中心偏移后的训练结果：中心为 0.50 时持续提升，0.45 和 0.55 则很快降至接近零。</p>
 
 <p>这个实验把前面的代数问题变成了直接可见的训练差异：<strong>goodness 的中心控制着正负回归请求的平衡，而不只是分数的零点。</strong></p>
 

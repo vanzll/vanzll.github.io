@@ -594,7 +594,7 @@ a\|d-e\|^2+(1-a)\|d\|^2
 
 <p>Return to the questions at the <a href="#en-nft-questions">end of Section 3.1</a>. Start with a surprising observation: either branch alone collapses, yet combining them learns. The ideal positive and negative velocity fields point along the same reward-improving direction. Why does practical training need both branches?</p>
 
-<figure class="figure-compact" data-figure="nft_branch_geometry"><img src="/assets/blog/diffusion-rl/nft_branch_geometry.png" alt="Figure 6: Branch ablation and geometric decomposition of forward–reverse consistency forces" loading="lazy" width="2400" height="845"><figcaption>Figure 6. Left: either branch alone fails; joint training improves train GenEval in the displayed window. Right: solid arrows are branch forces; dashed arrows separate reward and consistency components, with only partial cancellation of the latter. Δ in the diagram denotes ideal reward guidance.</figcaption></figure>
+<figure id="en-nft-center-figure" class="figure-compact figure-wide" data-figure="nft_branch_center_geometry"><img src="/assets/blog/diffusion-rl/nft_branch_center_geometry.png" alt="Figure 6: A branch ablation; B goodness-center ablation; C forward–reverse consistency geometry" loading="lazy" width="5500" height="1684"><figcaption>Figure 6. <strong>A:</strong> either branch alone fails; joint training improves train GenEval. <strong>B:</strong> held-out OCR accuracy improves at goodness center 0.50, but rapidly falls close to zero at 0.45 and 0.55; the x-axis counts rollouts. <strong>C:</strong> solid arrows are branch forces; dashed arrows separate reward and consistency components, with only partial cancellation of the latter. Δ denotes ideal reward guidance.</figcaption></figure>
 
 <p>Section 3.1 established that positive and negative ideal guidance are collinear relative to the original forward field. <strong>The key is that the actual reverse field <span class="math">\(v_{\rm rvs}^{\rm old}(s)=v_{\rm old}(s)\)</span> need not equal the ideal field induced by straight-line noising its endpoints.</strong> Write their difference as <span class="math">\(\Delta_{\rm fwd}(s)=v_{\rm fwd}^{\rm old}(s)-v_{\rm rvs}^{\rm old}(s)\)</span>. Ideal guidance starts from the forward field, and the theoretical derivations use the ideal forward field induced by the old policy's endpoint distribution. The actual training object, however, is the reverse model's output velocity field, so this gap enters the update.</p>
 
@@ -670,10 +670,7 @@ r_i=m+\frac{h_i}{2},\qquad
 
 <p>When centered feedback sums to zero and clipping is inactive, <span class="math">\(m=0.50\)</span> gives <span class="math">\(\sum_i(2r_i-1)=0\)</span>; moving to 0.45 or 0.55 instead leaves a coefficient offset of <span class="math">\(-0.1K\)</span> or <span class="math">\(+0.1K\)</span>. In other words, <strong>moving the center does not merely relabel rewards: it changes the group's balance of pushing and pulling.</strong></p>
 
-<figure id="en-nft-center-figure" class="figure-compact" data-figure="nft_center_balance">
-  <img src="/assets/blog/diffusion-rl/nft_center_balance.png" alt="Held-out OCR curves for NFT goodness centers 0.45, 0.50, and 0.55. Center 0.50 rises to about 0.98; both shifted centers fall close to zero." loading="lazy" width="4080" height="1710">
-  <figcaption><strong>Figure 6b: a small shift in goodness center accompanies a very different training outcome.</strong> The x-axis is rollout; the y-axis is held-out OCR accuracy. Center 0.50 improves steadily, whereas 0.45 and 0.55 rapidly fall close to zero.</figcaption>
-</figure>
+<p><a href="#en-nft-center-figure">Figure 6B</a> shows the outcomes after shifting the center: 0.50 improves steadily, whereas 0.45 and 0.55 rapidly fall close to zero.</p>
 
 <p>This experiment turns the algebraic distinction into a visible training difference: <strong>the goodness center controls the balance of positive and negative regression requests, not merely the score's zero point.</strong></p>
 
