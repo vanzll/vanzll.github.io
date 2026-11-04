@@ -672,7 +672,7 @@ r_i=\boxed{0.5}+\frac12\operatorname{clip}\!\left(
 \]
 </div>
 
-<p>忽略截断，组内中心化使 <span class="math">\(\sum_i(2r_i-1)=\frac1{Z_c}\sum_i(R_i-\bar R_c)=0\)</span>，为不同 state 上自一致性力的全局抵消提供了系数平衡。我们只把框中的 0.5 改成 0.45 或 0.55，系数和便分别偏移 <span class="math">\(-0.1K\)</span> 或 <span class="math">\(+0.1K\)</span>。<a href="#zh-nft-center-figure">图6B</a>显示：<strong>中心只偏离 0.5 一点，两组训练就很快崩溃，而 0.5 对照持续上升。</strong>Goodness 的中心不是任意的分数零点，而是在平衡额外的自一致性请求。</p>
+忽略截断，组内中心化使 <span class="math">\(\sum_i(2r_i-1)=\frac1{Z_c}\sum_i(R_i-\bar R_c)=0\)</span>，为不同 state 上自一致性力的全局抵消提供了系数平衡。我们只把框中的 0.5 改成 0.45 或 0.55，系数和便分别偏移 <span class="math">\(-0.1K\)</span> 或 <span class="math">\(+0.1K\)</span>。<a href="#zh-nft-center-figure">图6B</a>显示：<strong>中心只偏离 0.5 一点，两组训练就很快崩溃，而 0.5 对照持续上升</strong>。这个消融实验进一步说明了NFT里面正负分支的作用。
 
 <blockquote><strong>Insight：Forward RL 的回归信号有一个隐藏的自一致性项。</strong> 这一项对提升reward没有帮助， 并且会直接打崩训练。 正负分支联合训练和reward归一化必不可少， 因为它们可以一定程度上让该项的梯度在全局抵消， 但是无法完全抵消。</blockquote>
 

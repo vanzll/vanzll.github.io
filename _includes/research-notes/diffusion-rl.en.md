@@ -667,7 +667,7 @@ r_i=\boxed{0.5}+\frac12\operatorname{clip}\!\left(
 \]
 </div>
 
-<p>Ignoring clipping, group centering gives <span class="math">\(\sum_i(2r_i-1)=\frac1{Z_c}\sum_i(R_i-\bar R_c)=0\)</span>, balancing the coefficients so that consistency forces across states can cancel during global aggregation. We change only the boxed 0.5 to 0.45 or 0.55, shifting the coefficient sum by <span class="math">\(-0.1K\)</span> or <span class="math">\(+0.1K\)</span>. <a href="#en-nft-center-figure">Figure 6B</a> shows that <strong>even this small shift makes both runs collapse rapidly, while the 0.5 control keeps improving.</strong> The goodness center is not an arbitrary score origin: it balances the extra consistency requests.</p>
+<p>Ignoring clipping, group centering gives <span class="math">\(\sum_i(2r_i-1)=\frac1{Z_c}\sum_i(R_i-\bar R_c)=0\)</span>, balancing the coefficients so that consistency forces across states can cancel during global aggregation. We change only the boxed 0.5 to 0.45 or 0.55, shifting the coefficient sum by <span class="math">\(-0.1K\)</span> or <span class="math">\(+0.1K\)</span>. <a href="#en-nft-center-figure">Figure 6B</a> shows that <strong>even this small shift makes both runs collapse rapidly, while the 0.5 control keeps improving.</strong> This ablation further illustrates the roles of NFT's positive and negative branches.</p>
 
 <blockquote><strong>Insight: the regression signal in Forward RL contains a hidden consistency term.</strong> This term does not help improve reward and can directly cause training to collapse. Joint positive/negative-branch training and reward normalization are indispensable because they can partially cancel this term's gradients globally, but cannot eliminate them completely.</blockquote>
 
