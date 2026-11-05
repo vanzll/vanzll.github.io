@@ -637,22 +637,6 @@ a\|d-e\|^2+(1-a)\|d\|^2
 <p>Subtracting a fixed vector leaves covariance unchanged, so the reward term remains g. The positive branch alone gives <span class="math">\(\mathbb E[re\mid s]=g+q\Delta_{\rm fwd}\)</span>; the negative branch gives <span class="math">\(-\mathbb E[(1-r)e\mid s]=\mathbb E[re\mid s]-\mathbb E[e\mid s]=g-(1-q)\Delta_{\rm fwd}\)</span>. Adding them reinforces the two g terms, but cancels the gap only down to <span class="math">\((2q-1)\Delta_{\rm fwd}\)</span>.</p>
 </details>
 
-<p><strong>NFT noises a sample <span class="math">\(x_0\)</span> to obtain s, then substitutes its goodness <span class="math">\(r(x_0)\)</span> and the sampled noise to obtain an estimate of <span class="math">\(\mathbb E[f_{\rm fit}\mid s]\)</span>:</strong></p>
-
-<div class="math" data-equation="nft-sample-force">
-\[
-\begin{aligned}
-f_{\rm fit}=-\nabla_{v_\theta}\ell_{\rm fit}
-&=2\beta(2r-1)(u-v_\theta),\\
-\left.\frac{f_{\rm fit}}{2\beta}\right|_{v_\theta=v_{\rm old}}
-&=\underbrace{(2r-1)[u-v_{\rm fwd}^{\rm old}(s)]}_{\text{sample reward guidance}}\\
-&\quad+\underbrace{(2r-1)\Delta_{\rm fwd}(s)}_{\text{sample consistency}}.
-\end{aligned}
-\]
-</div>
-
-<p>The first term estimates <span class="math">\(2g(s)\)</span>; the second is this sample's consistency force. Note that NFT substitutes goodness for r, so the estimator's unbiasedness is compromised to some extent.</p>
-
 <p id="en-nft-three-components"><strong>A finer loss decomposition: MSE is the interface for three forces.</strong>Fix a sampled state s and define <span class="math">\(v_{\rm fwd}^{\rm old}(s)=\mathbb E_{Q_{\rm old}}[u\mid s]\)</span>. Introducing this ideal old forward field into the reward-weighted regression gives:</p>
 
 <div class="math" data-equation="nft-three-loss">
@@ -679,7 +663,7 @@ f=-\nabla_{v_\theta}\ell_{\rm NFT}
 \]
 </div>
 
-<p><strong>The first term points from the ideal old forward field toward the sample target u; the second acts on the gap between actual old and the ideal forward field; the third restores current toward actual old.</strong>The first two reverse with the sign of 2r−1, while the third vanishes at current=old. Differences of squared distances separate these forces; the component losses need not be nonnegative.</p>
+<p><strong>The first term points from the ideal old forward field toward the sample target u; the second acts on the gap between actual old and the ideal forward field; the third restores current toward actual old.</strong>The first two reverse with the sign of 2r−1. <strong>At the on-policy point current=old, restoration vanishes, leaving only reward guidance and consistency.</strong> Differences of squared distances separate these forces; the component losses need not be nonnegative.</p>
 
 <p>At a fixed state, the positive branch contributes <span class="math">\(\mathbb E[r(u-v_{\rm fwd}^{\rm old})\mid s]=g(s)\)</span>, and the negative branch contributes <span class="math">\(-\mathbb E[(1-r)(u-v_{\rm fwd}^{\rm old})\mid s]=g(s)\)</span>. Thus <strong>reward guidance reinforces across branches, while consistency components attempt to cancel</strong>. Goodness centering balances the latter's coefficients. Here g is defined for the chosen feedback r; its relation to the original tilted-distribution target still depends on the goodness transformation.</p>
 

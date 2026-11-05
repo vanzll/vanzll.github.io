@@ -641,22 +641,6 @@ a\|d-e\|^2+(1-a)\|d\|^2
 <p>减去一个固定向量不改变 covariance，所以 reward 项仍是 g。正支单独给出 <span class="math">\(\mathbb E[re\mid s]=g+q\Delta_{\rm fwd}\)</span>；负支给出 <span class="math">\(-\mathbb E[(1-r)e\mid s]=\mathbb E[re\mid s]-\mathbb E[e\mid s]=g-(1-q)\Delta_{\rm fwd}\)</span>。相加后，两份 g 同向，gap 只抵消到 <span class="math">\((2q-1)\Delta_{\rm fwd}\)</span>。</p>
 </details>
 
-<p><strong>NFT使用一个样本<span class="math">\(x_0\)</span>加燥得到s, 然后把其goodness <span class="math">\(r(x_0)\)</span>和加的噪声代入则得到 <span class="math">\(\mathbb E[f_{\rm fit}\mid s]\)</span>的一个估计：</strong></p>
-
-<div class="math" data-equation="nft-sample-force">
-\[
-\begin{aligned}
-f_{\rm fit}=-\nabla_{v_\theta}\ell_{\rm fit}
-&=2\beta(2r-1)(u-v_\theta),\\
-\left.\frac{f_{\rm fit}}{2\beta}\right|_{v_\theta=v_{\rm old}}
-&=\underbrace{(2r-1)[u-v_{\rm fwd}^{\rm old}(s)]}_{\text{sample reward guidance}}\\
-&\quad+\underbrace{(2r-1)\Delta_{\rm fwd}(s)}_{\text{sample consistency}}.
-\end{aligned}
-\]
-</div>
-
-<p>第一项是 <span class="math">\(2g(s)\)</span> 的估计，第二项是这个样本携带的自一致性力。注意NFT使用的goodness来代替r， 所以估计的无偏性会被一定程度破坏。</p>
-
 <p id="zh-nft-three-components"><strong>进一步拆开 loss：MSE 是接口，背后是三股力。</strong>固定一次采样及其 state s，令 <span class="math">\(v_{\rm fwd}^{\rm old}(s)=\mathbb E_{Q_{\rm old}}[u\mid s]\)</span>。把这个理想 old forward 场加进前面的 reward 加权回归，便得到：</p>
 
 <div class="math" data-equation="nft-three-loss">
@@ -683,7 +667,7 @@ f=-\nabla_{v_\theta}\ell_{\rm NFT}
 \]
 </div>
 
-<p><strong>第一项从理想 old forward 场指向样本目标 u；第二项纠正实际 old 与理想 forward 场之间的 gap；第三项把 current 拉回实际 old。</strong>前两项随 2r−1 改变方向，第三项在 current=old 时为零。前两项写成平方距离之差，是为了分离作用力，并不要求它们各自是非负 loss。</p>
+<p><strong>第一项从理想 old forward 场指向样本目标 u；第二项纠正实际 old 与理想 forward 场之间的 gap；第三项把 current 拉回实际 old。</strong>前两项随 2r−1 改变方向。<strong>在 on-policy 的 current=old 处，恢复项为零，只剩 reward guidance 与 consistency。</strong>前两项写成平方距离之差，是为了分离作用力，并不要求它们各自是非负 loss。</p>
 
 <p>固定 state 后，正支的 <span class="math">\(\mathbb E[r(u-v_{\rm fwd}^{\rm old})\mid s]=g(s)\)</span>，负支的 <span class="math">\(-\mathbb E[(1-r)(u-v_{\rm fwd}^{\rm old})\mid s]=g(s)\)</span>。所以<strong>两支的 reward guidance 同向加强，自一致性分量则尝试抵消</strong>；goodness centering 正是在改善后一项的系数平衡。这里 g 按当前反馈 r 定义；它是否等于最初 tilted distribution 的目标，仍取决于 goodness 的变换。</p>
 
