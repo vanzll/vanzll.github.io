@@ -344,6 +344,8 @@ L_{\rm Fast}&=-\frac{1}{Gm}\sum_{i=1}^{G}\sum_{k\in\mathcal W_j}
 
 <p><strong>选时步是硬加权，调整 timestep weighting 是软加权：两者都在分配哪些 action 能影响合力。</strong> 硬加权把窗口外的权重置零，还能跳过对应的训练 forward/backward；每条轨迹的训练样本从 N 个减到 m 个。2.4 的 LoRA 实验也说明，高噪声位置学到的函数变化可以在低噪声位置产生收益，不必逐步训练才能逐步受益。</p>
 
+<p id="zh-video-credit"><strong>视频任务会放大 credit assignment 的问题。</strong>当有效 action credit 集中在极高噪声区域时，其他位置的更新很难改善 reward。Flow-GRPO Fast 虽然减少了训练步数，但如果窗口没有选对，credit assignment 仍可能差到几乎无法训练。因此，高噪声区域的选择可以决定训练是否有效，而不只是节省多少计算。</p>
+
 <p><strong>在选中的窗口内，还可以进一步做 timestep weighting。</strong> 沿用前面的采样公式：σₜₖ 控制探索强度，δₖ 是步长，ξᵢ,ₖ 是标准高斯噪声。因此 action 与均值 μ_old 的差，就是 <span class="math">\(\sigma_{t_k}\sqrt{\delta_k}\,\xi_{i,k}\)</span>。</p>
 
 <p>MSE 求导给出这个残差；从转移均值换到 velocity，再乘 <span class="math">\(\delta_k b_{t_k}\)</span>。把 advantage Aᵢ 和选定的分母乘进去，就得到 current=old 时的输出力：</p>
@@ -655,6 +657,36 @@ f_{\rm fit}=-\nabla_{v_\theta}\ell_{\rm fit}
 
 <p>第一项是 <span class="math">\(2g(s)\)</span> 的估计，第二项是这个样本携带的自一致性力。注意NFT使用的goodness来代替r， 所以估计的无偏性会被一定程度破坏。</p>
 
+<p id="zh-nft-three-components"><strong>进一步拆开 loss：MSE 是接口，背后是三股力。</strong>固定一次采样及其 state s，令 <span class="math">\(v_{\rm fwd}^{\rm old}(s)=\mathbb E_{Q_{\rm old}}[u\mid s]\)</span>。把这个理想 old forward 场加进前面的 reward 加权回归，便得到：</p>
+
+<div class="math" data-equation="nft-three-loss">
+\[
+\boxed{\begin{aligned}
+\ell_{\rm NFT}
+&=\underbrace{\beta(2r-1)\!\left[\|v_\theta-u\|^2-\|v_\theta-v_{\rm fwd}^{\rm old}\|^2\right]}_{\ell_{\rm guidance}}\\
+&\quad+\underbrace{\beta(2r-1)\!\left[\|v_\theta-v_{\rm fwd}^{\rm old}\|^2-\|v_\theta-v_{\rm old}\|^2\right]}_{\ell_{\rm consistency}}\\
+&\quad+\underbrace{\beta^2\|v_\theta-v_{\rm old}\|^2}_{\ell_{\rm restoration}}+C.
+\end{aligned}}
+\]
+</div>
+
+<p>这是逐样本等式，C 与 θ 无关；u、r、old 和理想 forward 场都停止梯度。总体 loss 对前述 <span class="math">\(x_0\sim p_{\rm old}(\cdot\mid c),\ t\sim\rho,\ \epsilon\sim\mathcal N(0,I)\)</span> 取期望。分别求负梯度，就能直接看到每项把 current 往哪里推：</p>
+
+<div class="math" data-equation="nft-three-force">
+\[
+\boxed{\begin{aligned}
+f=-\nabla_{v_\theta}\ell_{\rm NFT}
+&=\underbrace{2\beta(2r-1)(u-v_{\rm fwd}^{\rm old})}_{\text{reward guidance}}\\
+&\quad+\underbrace{2\beta(2r-1)(v_{\rm fwd}^{\rm old}-v_{\rm old})}_{\text{self-consistency}}\\
+&\quad+\underbrace{2\beta^2(v_{\rm old}-v_\theta)}_{\text{restoration}}.
+\end{aligned}}
+\]
+</div>
+
+<p><strong>第一项从理想 old forward 场指向样本目标 u；第二项纠正实际 old 与理想 forward 场之间的 gap；第三项把 current 拉回实际 old。</strong>前两项随 2r−1 改变方向，第三项在 current=old 时为零。前两项写成平方距离之差，是为了分离作用力，并不要求它们各自是非负 loss。</p>
+
+<p>固定 state 后，正支的 <span class="math">\(\mathbb E[r(u-v_{\rm fwd}^{\rm old})\mid s]=g(s)\)</span>，负支的 <span class="math">\(-\mathbb E[(1-r)(u-v_{\rm fwd}^{\rm old})\mid s]=g(s)\)</span>。所以<strong>两支的 reward guidance 同向加强，自一致性分量则尝试抵消</strong>；goodness centering 正是在改善后一项的系数平衡。这里 g 按当前反馈 r 定义；它是否等于最初 tilted distribution 的目标，仍取决于 goodness 的变换。</p>
+
 <p><strong>为什么还需要负分支？</strong>看实际样本： 分析current = old 即on-policy 情况，我们来看看如果只有某个分支的话会怎样（去掉共同的 2β 因子）：</p>
 <ul><li><strong>只有正分支：</strong>力为 <span class="math">\(r(u-v_{\rm old})=r[u-v_{\rm fwd}^{\rm old}(s)]+r\Delta_{\rm fwd}(s)\)</span>。无论样本好坏，都往 u 拉；低分样本只是拉得弱。自一致性分量也始终往理想 forward 场拉近， <em>相当于objective 里面多了一项 <strong>向reward-tilted 前向速度场的隐式蒸馏</strong></em>。</li><li><strong>只有负分支：</strong>力为 <span class="math">\(-(1-r)(u-v_{\rm old})=-(1-r)[u-v_{\rm fwd}^{\rm old}(s)]-(1-r)\Delta_{\rm fwd}(s)\)</span>。无论样本好坏，都推离 u；高分样本只是推得弱。自一致性分量始终把模型推离理想 forward 场。</li></ul>
 <p>两支合用，才得到 <span class="math">\((2r-1)(u-v_{\rm old})\)</span>：高于组均值的样本拉，低于组均值的样本推。自一致性系数也从单向的 r 或 −(1−r)，变成可正可负的 2r−1，使不同样本的额外分量有机会在全局跨state 梯度聚合的时候相抵。这同时解释了<a href="#zh-nft-question-negative">问题 2：为什么需要正负分支</a>， 和<a href="#zh-nft-question-goodness">问题 3：为什么需要用normalize reward之后的goodness分数取代这里的r</a>， 舍弃掉无偏性： 因为如果r是goodness，则满足 <span class="math">\(\sum (2r-1)=0\)</span> 也就是不同state上的自一致性力的系数平衡。但 gap 随 state 变化，系数平衡不保证加权向量抵消（<span class="math">\(\sum (2r-1)=0\)</span> 不意味着<span class="math">\(\sum \mathrm{grad}\,(2r-1)f=0\)</span>）。没有抵消干净的残差仍然会减慢训练， 或者reward训练直接崩溃。（如图6 右所示）</p>
@@ -873,11 +905,13 @@ g_i^{\rm restore}&=-J_i^\top J_i\Delta\theta,\\
 
 <p>把 ART 继续跑到 777 个 rollout 边界，最近50轮的 train OCR 均值仍约 <strong>0.962</strong>。它并不是把响应率固定在一个小值：最近50个第二更新窗口，guidance 的响应率已到约 <strong>2800</strong>，restoration 约 <strong>9000</strong>。恢复输出力均值只有 guidance 的约 <strong>40%</strong>，但响应率与保留率都更高。三个量走完，恢复的诊断聚合梯度在 <strong>49/50</strong> 个窗口大于 guidance，配对模长比平均约 <strong>2.7</strong>。</p>
 
-<figure id="zh-art-restoration-longrun" class="figure-compact" data-figure="art_longrun_restoration"><img src="/assets/blog/diffusion-rl/art_longrun_restoration.png" alt="图11b：ART 第二次更新的 guidance 与 restoration 长跑诊断，并与纯 on-policy NFT 对比" loading="lazy"><figcaption>图11b. ART 长跑与图11a的纯 on-policy NFT 对照。ART 只取第二更新窗口，每窗口同一组80个诊断 state；A 是这些 state 的 raw LoRA 梯度平均向量的模长，不是完整训练 batch 的梯度。NFT 只显示已有的0–109轮，没有恢复项；(c)仅画 ART 同窗口 A_restore/A_guidance，虚线1表示等模长。无平滑；响应率用对数轴，NFT 的有效点跨缺失区间连接但不补值。OCR 是更新前的训练 reward，不是 held-out eval。</figcaption></figure>
+<figure id="zh-art-restoration-longrun" class="figure-compact" data-figure="art_longrun_restoration"><img src="/assets/blog/diffusion-rl/art_longrun_restoration.png" alt="图11b：ART 第二次更新的 guidance 与 restoration 长跑诊断" loading="lazy"><figcaption>图11b. ART 第二更新窗口的响应率、聚合保留率、恢复／引导梯度模长比与 train OCR。每窗口同一组80个诊断 state；A 是其 raw LoRA 梯度平均向量的模长，不是完整训练 batch 或 Adam 更新。响应率用对数轴，不平滑；(c)虚线为等模长。</figcaption></figure>
 
-<p><strong>这让稳定性的解释从“guidance 不敏感”转向了“两股力能否持续配合”。</strong>沿 ART 实际训练轨迹，所测 guidance 的单位输出力对应的参数梯度越来越大，恢复作用也随之增强。它撤销的是模型已经共同实现过的变化，这与前面的“共同可实现”直觉相吻合。不过，模长更大不等于方向完全相反，也不等于 Adam 更新份额；要证明恢复是长期稳定的原因，还需要移除恢复项的对照。</p>
+<p><strong>为什么两次更新的 restoration 更好？关键是 adaptive。</strong>第一步产生实际漂移，第二步相对冻结 old 自动形成恢复。它有两层适应性：漂移越大，输出恢复力越强；如果 guidance 的高响应方向主导了首次移动，这份位移对应的 restoration 也可能有高响应。图11b中，两股响应共同增长，恢复响应持续高于 guidance，与这种反馈机制一致。</p>
 
-<blockquote><strong>Insight：高单样本响应率，不等于训练必然崩溃。</strong>只有 guidance 时，响应率突增可能放大更新；有竞争力时，还要看恢复作用能否跟上。ART 长跑展示了后者，而不是一个始终低敏感的模型。</blockquote>
+<p><strong>为什么 ART 的 guidance 更好？它没有 NFT 的那项 forward–reverse consistency。</strong>我们的机制解释是：NFT 的第二项会参与梯度竞争，可能分走 reward 学习的更新，这有助于理解 NFT 在部分视频任务中为何更慢。我们进一步假设，这项 consistency 很可能是响应率 spike 的关键来源：一旦产生极端、不利于 reward 的更新，restoration 就更难挽救 collapse。ART 直接聚合 covariance guidance，避开这项额外竞争；所示训练中，其响应总体渐增，reward 保持稳定。consistency 是否直接造成 spike，仍需分项干预验证。</p>
+
+<blockquote><strong>Insight：ART 的稳定性要从 guidance 与 restoration 两层理解。</strong>共享 covariance 避开 NFT 特有的自一致性项，两次更新则让恢复响应本轮实际漂移。</blockquote>
 
 <h5 id="zh-flow-force-mapping">3. Flow-GRPO：为什么单 state 的 单样本响应率 就这么低？</h5>
 
@@ -918,6 +952,10 @@ g_i^{\rm restore}&=-J_i^\top J_i\Delta\theta,\\
 <figure id="zh-force-competition" class="figure-compact" data-figure="force_competition"><img src="/assets/blog/diffusion-rl/force_competition_compact.png" alt="图14：首次更新位移及第二窗口恢复与 guidance 的强度和方向" loading="lazy" width="2400" height="960"><figcaption>图14：初次移动相近，后续竞争不同。左为首个 update 的输出变化 MSE；中、右为第二窗口恢复／guidance 梯度的模长比与 cosine。</figcaption></figure>
 
 <p>首个更新的输出变化 MSE 为 <strong>0.002318／0.002311</strong>，参数位移模长均约 <strong>0.888</strong>。但第二窗口的恢复/guidance 平均模长之比从 <strong>4.85 降至0.78</strong>。起步几乎同样远，随后学得快慢却不同：<strong>同一个力的尺度，在没有竞争力（这里是恢复力）时是整体尺度，有了恢复力后就成为相对尺度。所以<span class="math">\(\beta=1\)</span> 的两次更新实验，restoration在第二次更新的时候严重压过了guidance，导致严重减速，但也让训练更稳定一些。</strong></p>
+
+<p id="zh-ema-competition"><strong>EMA 调参的本质：让预设恢复机制接住 gradient spike。</strong>EMA 的 decay / schedule 预设参考的跟随时序，β 调节反馈与恢复的相对强度。调参要让恢复在危险更新出现时提供足够反向约束，同时不过度压慢平时的 reward 学习。与之相比，两次更新直接根据本轮实际漂移产生恢复，减少了对跨 rollout 预设时序的依赖。</p>
+
+<p>这里预设的是机制与系数，实际 lag 和恢复梯度仍随漂移及 Jacobian 变化。“接住”指限制有害更新的合力，不等于恢复范数更大就必然稳定；方向和 Adam 预条件同样重要。现有 on-policy NFT 的响应率 spike 与 collapse 相伴，并未单独证明改一套 EMA schedule 就能避免该次 collapse。</p>
 
 **Case Study 2：连续时间、连续空间 RL 中，KL 应该怎么调？**
 

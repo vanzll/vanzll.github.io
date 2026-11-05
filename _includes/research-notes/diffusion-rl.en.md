@@ -332,6 +332,8 @@ Each round:
 
 **Timestep selection is hard weighting; timestep reweighting is soft weighting. Both allocate influence over the resultant.** Hard weighting sets contributions outside the window to zero and skips their training forward/backward passes, reducing training samples per trajectory from N to m. The LoRA experiment in Section 2.4 also shows that changes learned at high-noise positions can benefit low-noise predictions: every position need not be trained to benefit.
 
+<p id="en-video-credit"><strong>Video tasks can amplify the credit-assignment problem.</strong>When useful action credit is concentrated at extremely high noise, updates elsewhere have little leverage over reward. Flow-GRPO Fast reduces the number of trained steps, but a poorly placed window can still make learning nearly ineffective. Choosing the high-noise region can therefore determine whether training works, not just how much computation it saves.</p>
+
 <p><strong>Within the selected window, we can further adjust timestep weighting.</strong> Reuse the sampling equation above: σₜₖ controls exploration, δₖ is the step size, and ξᵢ,ₖ is standard Gaussian noise. The sampled action's residual from μ_old is therefore <span class="math">\(\sigma_{t_k}\sqrt{\delta_k}\,\xi_{i,k}\)</span>.</p>
 
 <p>Differentiating the MSE gives this residual. Mapping the transition mean back to velocity multiplies it by <span class="math">\(\delta_k b_{t_k}\)</span>. Including advantage Aᵢ and the chosen denominator gives the output force at current=old:</p>
@@ -651,6 +653,36 @@ f_{\rm fit}=-\nabla_{v_\theta}\ell_{\rm fit}
 
 <p>The first term estimates <span class="math">\(2g(s)\)</span>; the second is this sample's consistency force. Note that NFT substitutes goodness for r, so the estimator's unbiasedness is compromised to some extent.</p>
 
+<p id="en-nft-three-components"><strong>A finer loss decomposition: MSE is the interface for three forces.</strong>Fix a sampled state s and define <span class="math">\(v_{\rm fwd}^{\rm old}(s)=\mathbb E_{Q_{\rm old}}[u\mid s]\)</span>. Introducing this ideal old forward field into the reward-weighted regression gives:</p>
+
+<div class="math" data-equation="nft-three-loss">
+\[
+\boxed{\begin{aligned}
+\ell_{\rm NFT}
+&=\underbrace{\beta(2r-1)\!\left[\|v_\theta-u\|^2-\|v_\theta-v_{\rm fwd}^{\rm old}\|^2\right]}_{\ell_{\rm guidance}}\\
+&\quad+\underbrace{\beta(2r-1)\!\left[\|v_\theta-v_{\rm fwd}^{\rm old}\|^2-\|v_\theta-v_{\rm old}\|^2\right]}_{\ell_{\rm consistency}}\\
+&\quad+\underbrace{\beta^2\|v_\theta-v_{\rm old}\|^2}_{\ell_{\rm restoration}}+C.
+\end{aligned}}
+\]
+</div>
+
+<p>This is a per-sample identity, with C independent of θ. Targets u, r, old and the ideal forward field are detached. The population loss averages over the same <span class="math">\(x_0\sim p_{\rm old}(\cdot\mid c),\ t\sim\rho,\ \epsilon\sim\mathcal N(0,I)\)</span> as above. Taking each negative output gradient reveals its direction:</p>
+
+<div class="math" data-equation="nft-three-force">
+\[
+\boxed{\begin{aligned}
+f=-\nabla_{v_\theta}\ell_{\rm NFT}
+&=\underbrace{2\beta(2r-1)(u-v_{\rm fwd}^{\rm old})}_{\text{reward guidance}}\\
+&\quad+\underbrace{2\beta(2r-1)(v_{\rm fwd}^{\rm old}-v_{\rm old})}_{\text{self-consistency}}\\
+&\quad+\underbrace{2\beta^2(v_{\rm old}-v_\theta)}_{\text{restoration}}.
+\end{aligned}}
+\]
+</div>
+
+<p><strong>The first term points from the ideal old forward field toward the sample target u; the second acts on the gap between actual old and the ideal forward field; the third restores current toward actual old.</strong>The first two reverse with the sign of 2r−1, while the third vanishes at current=old. Differences of squared distances separate these forces; the component losses need not be nonnegative.</p>
+
+<p>At a fixed state, the positive branch contributes <span class="math">\(\mathbb E[r(u-v_{\rm fwd}^{\rm old})\mid s]=g(s)\)</span>, and the negative branch contributes <span class="math">\(-\mathbb E[(1-r)(u-v_{\rm fwd}^{\rm old})\mid s]=g(s)\)</span>. Thus <strong>reward guidance reinforces across branches, while consistency components attempt to cancel</strong>. Goodness centering balances the latter's coefficients. Here g is defined for the chosen feedback r; its relation to the original tilted-distribution target still depends on the goodness transformation.</p>
+
 <p><strong>Why do we still need the negative branch?</strong> Look at the actual sample. At current=old, omitting the common 2β factor:</p>
 <ul>
 <li><strong>Positive branch only:</strong> the force is <span class="math">\(r(u-v_{\rm old})=r[u-v_{\rm fwd}^{\rm old}(s)]+r\Delta_{\rm fwd}(s)\)</span>. Every sample pulls toward u, good or bad; low-scoring samples merely pull less. The consistency component also always pulls toward the ideal forward field, <em>effectively adding <strong>implicit distillation toward the reward-tilted forward velocity field</strong> to the objective</em>.</li>
@@ -870,11 +902,13 @@ EMA and second updates, however, intervene on different schedules:
 
 <p>Continue ART through rollout boundary 777: mean train OCR over the latest 50 rollouts remains about <strong>0.962</strong>. Its response rate does not stay small. Over the latest 50 second-update windows, guidance's mean response rate is about <strong>2800</strong>, versus <strong>9000</strong> for restoration. Restoration's mean output force is only about <strong>40%</strong> of guidance's, but its response and retention are higher. After all three layers, restoration has a larger probe-aggregate gradient in <strong>49/50</strong> windows, with a mean paired norm ratio of about <strong>2.7</strong>.</p>
 
-<figure id="en-art-restoration-longrun" class="figure-compact" data-figure="art_longrun_restoration"><img src="/assets/blog/diffusion-rl/art_longrun_restoration.png" alt="Figure 11b: ART second-update guidance and restoration over the long run, compared with on-policy NFT" loading="lazy"><figcaption>Figure 11b. ART's long run with the same on-policy NFT reference as Figure 11a. ART uses second-update windows, with the same 80 probe states per window; A is the norm of their mean raw LoRA gradient, not the complete training-batch gradient. NFT is shown only over its observed rollouts 0–109 and has no restoration term; (c) shows only ART's same-window A_restore/A_guidance, with the dotted line at 1 marking equal norms. No smoothing; response uses a log axis, and NFT's valid points are connected across undefined intervals without imputation. OCR is the pre-update training reward, not held-out evaluation.</figcaption></figure>
+<figure id="en-art-restoration-longrun" class="figure-compact" data-figure="art_longrun_restoration"><img src="/assets/blog/diffusion-rl/art_longrun_restoration.png" alt="Figure 11b: ART second-update guidance and restoration over the long run" loading="lazy"><figcaption>Figure 11b. ART second-window response, aggregation retention, restoration/guidance gradient-norm ratio and train OCR. Each window uses the same 80 probe states; A is the norm of their mean raw LoRA gradient, not a complete training-batch gradient or Adam update. Response uses a log axis, without smoothing; the dotted line in (c) marks equal norms.</figcaption></figure>
 
-<p><strong>This shifts the stability question from "is guidance insensitive?" to "can the two forces keep working together?"</strong> Along ART's actual training trajectory, the measured guidance produces larger parameter gradients per unit output force, while restoration strengthens alongside it. Restoration undoes changes the model has already jointly realized, matching the earlier intuition. A larger norm, however, does not imply exactly opposing directions or an Adam update share. Establishing restoration as the cause of long-run stability still requires a restoration-removal ablation.</p>
+<p><strong>Why can two-update restoration work better? It is adaptive.</strong>The first update creates actual drift; the second automatically restores against frozen old. Adaptation operates at two levels: larger drift creates a stronger output force, and movement dominated by high-response guidance directions can also produce high-response restoration. In Figure 11b, the two responses rise together, with restoration remaining above guidance, consistent with this feedback mechanism.</p>
 
-<blockquote><strong>Insight: a high per-state response rate does not make collapse inevitable.</strong> With guidance alone, a response spike can amplify updates. With a competing force, we must also ask whether restoration keeps pace. ART's long run illustrates the latter, not a model that stays insensitive.</blockquote>
+<p><strong>Why is ART's guidance better? It avoids NFT's forward–reverse consistency term.</strong>Our mechanistic interpretation is that NFT's second term competes for parameter influence and can divert updates from reward learning, helping explain slower NFT learning on some video tasks. We further hypothesize that this consistency term is a plausible key source of response spikes: extreme updates adverse to reward can make collapse harder for restoration to rescue. ART aggregates covariance guidance directly, avoiding this extra competition; its response grows gradually overall while reward stays high in the shown run. Whether consistency directly causes the spikes still requires a component intervention.</p>
+
+<blockquote><strong>Insight: ART's stability has a guidance layer and a restoration layer.</strong>Shared covariance avoids NFT's specific consistency term, while two updates make restoration respond to actual drift within the rollout.</blockquote>
 
 <h5 id="en-flow-force-mapping">3. Flow-GRPO: why is even the per-state response rate so low?</h5>
 
@@ -913,6 +947,10 @@ At the first update, current=old and restoration is zero; β primarily changes g
 <figure id="en-force-competition" class="figure-compact" data-figure="force_competition"><img src="/assets/blog/diffusion-rl/force_competition_compact.png" alt="Figure 14: Initial movement and second-window restoration versus guidance strength and direction" loading="lazy" width="2400" height="960"><figcaption>Figure 14. Similar initial movement, different subsequent competition. Left: output-change MSE at the first update. Middle and right: restoration/guidance gradient-norm ratio and cosine in second windows.</figcaption></figure>
 
 The first update's output-change MSE is **0.002318/0.002311**, with parameter-displacement norms both about **0.888**. Yet the ratio of mean restoration/guidance norms in the second windows falls from **4.85 to 0.78**. Nearly equal initial movement leads to different learning speeds. **A force's scale is global without a competing force (here, restoration), but becomes relative once restoration appears.**
+
+<p id="en-ema-competition"><strong>The purpose of EMA tuning is to make preset restoration catch gradient spikes.</strong>The EMA decay or schedule presets reference tracking, and β sets feedback's strength relative to restoration. Tuning seeks enough opposing influence during harmful updates without excessively slowing ordinary reward learning. Two updates instead generate restoration from the current rollout's actual drift, reducing dependence on a preset tracking schedule across rollouts.</p>
+
+<p>The mechanism and coefficients are preset; realized lag and restoration gradients still change with drift and the Jacobian. “Catching” a spike means constraining its harmful contribution to the resultant update, not guaranteeing stability through a larger restoration norm. Direction and Adam preconditioning also matter. The on-policy NFT response spike accompanies collapse, but does not alone establish that another EMA schedule would have prevented that collapse.</p>
 
 **Case Study 2: how should we tune KL in continuous-time, continuous-space RL?**
 
