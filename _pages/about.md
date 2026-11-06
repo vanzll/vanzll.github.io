@@ -73,8 +73,8 @@ I love intellectual games in my spare time: I am a 17-years chess player as *Nat
 
 <div class="news" markdown="1">
 <div class="scroll-window" markdown="1" tabindex="0" role="region" aria-label="News" data-visible-items="9">
+
 - *2026.10* &nbsp;🔥 **DiffusionART** is released: a highly efficient and stable algorithm for diffusion post-training in Visual Generation ([[Paper]](https://arxiv.org/abs/2610.12572), [[Project]](https://vanzll.github.io/diffusionart-project/), [[Code]](https://github.com/vanzll/DiffusionART), [[机器之心]](https://mp.weixin.qq.com/s/i7VJo2lvycS6jppsJMcWjQ)).
-- *2026.04*  &nbsp;🎉🎉 I was invited to give a talk by Meta (topic: Stable online RL for alignment of diffusion-based foundation models).
 - *2026.01*  &nbsp;🎉🎉 [Cave-Agent](https://arxiv.org/abs/2601.01569) is open-sourced: an object-oriented coding agentic framework with superior token-efficiency, empowering the agentic AI system being built by the Hong Kong Government.
 
 </div>
@@ -98,6 +98,7 @@ New posts coming soon.
 
 <div id="invited-talks-section" markdown="1">
 
+- **Understanding Diffusion Reinforcement Learning through the Lens of Policy Optimization in Continuous Time and Space** -Invited by Tsinghua University (TSAIL group)
 - **Object-Oriented Agent Infrastructure** — Invited by *Qingke AI Community*
 - **Stable Online Alignment of Diffusion-based Foundation Model** — Invited by *Meta*
 
