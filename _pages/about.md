@@ -73,7 +73,7 @@ I love intellectual games in my spare time: I am a 17-years chess player as *Nat
 
 <div class="news" markdown="1">
 <div class="scroll-window" markdown="1" tabindex="0" role="region" aria-label="News" data-visible-items="9">
-- *2026.11* &nbsp;🎉 I am invited to give a talk at Tsinghua University (TSAIL Group).
+- *2026.11* &nbsp;🎉 I am invited to give a talk at TSAIL group at Tsinghua University.
 - *2026.10* &nbsp;🔥 **DiffusionART** is released: a highly efficient and stable algorithm for diffusion post-training in Visual Generation ([[Paper]](https://arxiv.org/abs/2610.12572), [[Project]](https://vanzll.github.io/diffusionart-project/), [[Code]](https://github.com/vanzll/DiffusionART), [[机器之心]](https://mp.weixin.qq.com/s/i7VJo2lvycS6jppsJMcWjQ)).
 - *2026.01*  &nbsp;🎉🎉 [Cave-Agent](https://arxiv.org/abs/2601.01569) is open-sourced: an object-oriented coding agentic framework with superior token-efficiency, empowering the agentic AI system being built by the Hong Kong Government.
 
@@ -98,7 +98,7 @@ New posts coming soon.
 
 <div id="invited-talks-section" markdown="1">
 
-- **Understanding Diffusion Reinforcement Learning through the Lens of Policy Optimization in Continuous Time and Space** - Invited by Tsinghua University (TSAIL group)
+- **Understanding Diffusion Reinforcement Learning through the Lens of Policy Optimization in Continuous Time and Space** - Invited by TSAIL group at Tsinghua Univetsity
 - **Object-Oriented Agent Infrastructure** — Invited by *Qingke AI Community*
 - **Stable Online Alignment of Diffusion-based Foundation Model** — Invited by *Meta*
 
@@ -411,20 +411,14 @@ html[data-theme="dark"] .exp-img img,
 
 <div id="misc-section" markdown="1">
 
-- In my spare time, I'm an **music enthusiast**. I’ve been playing guitar for more than 10 years and began teaching myself the piano when I was 15. During my undergraduate, I played music in two bands: "Minor Blue" and "Major Pink." See our photos: 
-
-<div style="display: flex; justify-content: space-between;">
-  <img src='images/Major pink.jpg' alt="sym" width="33%" style="display: inline-block;">
-  <img src='images/Minor Blue.jpg' alt="sym" width="33%" style="display: inline-block;">
-  <img src='images/Minor Blue_1.jpg' alt="sym" width="33%" style="display: inline-block;">
-</div>
+- In my spare time, I'm an **music enthusiast**. I’ve been playing guitar for more than 10 years and began teaching myself the piano when I was 15. During my undergraduate, I played music in several bands.
 
 
-- I am also a **17-years chess player**, with the honor of "National Level 3 Chess Athlete". I love the process of comprehensive planning, logical-thinking and reasoning. Visit my [Lichess profile](https://lichess.org/@/Carlos1333860).
+- I am a **17-years chess player**, with the honor of "National Chess Athlete (level III)". I love the process of logical-thinking and reasoning. Visit my [Lichess profile](https://lichess.org/@/Carlos1333860).
 
-- I play video games like **League of Legends**, where I achieved the "diamond" level as my historically highest honor. I also play 3A games like Elden Ring, Dark Souls, Nier Automata, and elder scrolls.
+- I play video games like **League of Legends**, where I achieved the "diamond" level as my historically highest honor. 
 
-- I have a deep interest in **philosophy of mind**, particularly Buddhism and Taoism, as paths to explore the fundamental nature of human existence. I am also intrigued by the potential integration of these philosophical insights with modern artificial intelligence.
+- I have a deep interest in **philosophy of mind**, particularly Buddhism and Taoism, as paths to explore the fundamental nature of human existence. 
 
 </div>
 
