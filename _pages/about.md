@@ -55,13 +55,13 @@ redirect_from:
 <!-- Dark mode is handled globally in layout/head; local button/styles removed -->
 
 
-I am Zhenglin Wan (万政霖), a CS Ph.D. student at [HPC-AI Lab](https://ai.comp.nus.edu.sg/) at National University of Singapore (NUS), advised by [Prof. Yang You](https://www.comp.nus.edu.sg/~youy/). Previously, I worked at Nanyang Technological University (NTU) with [Prof. Bo An](https://personal.ntu.edu.sg/boan/), [Centre for Frontier AI Research (CFAR)](https://www.a-star.edu.sg/cfar), [IHPC](https://www.a-star.edu.sg/ihpc/), [A\*STAR](https://www.a-star.edu.sg/) with [Prof. Ivor Tsang](https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang) , [Hong Kong Generative AI Research & Development Center (HKGAI)](https://www.hkgai.info/) with the team led by HKUST [Prof. Yike Guo](https://cse.hkust.edu.hk/admin/people/faculty/profile/yikeguo). I received my B.Sc (with highest honor) in Statistics and Data Science from The Chinese University of Hong Kong (CUHK).
+I am Zhenglin Wan (万政霖), a CS Ph.D. student at [HPC-AI Lab](https://ai.comp.nus.edu.sg/) at National University of Singapore (NUS), advised by [Prof. Yang You](https://www.comp.nus.edu.sg/~youy/). Before that, I received my B.Sc (with highest honor) in Statistics and Data Science from The Chinese University of Hong Kong (CUHK).
 
-My research is driven by the curiosity of genuinely understanding (both theoretically and intuitively) the rationale, spirit and failure modes of ML methodologies. Based on this principle, I am recently working on fundamental side of Multi-modal understanding & generation and RL Post-training. Particularly:
+My research is driven by a genuine intellectual curiosity to understand the underlying principles, intuitions, and failure modes of machine learning methodologies, with the ultimate goal of addressing fundamental challenges in machine learning that emerge from real-world problems faced by industry. Based on this principle, I am recently working on Multi-modal understanding & generation and RL Post-training. Particularly:
 
 - RL post-training on continuous-space generative models (such as diffusion model)
-- Unified AR-based understanding and Diffusion-based Generation and the RL-post-training paradigm of such systems
-- Long-horizon agents. Such as coding agent, agentic VLA and agentic Video Generation. And the RL paradigm for both un-unified and unified paradigm of generation and understanding.
+- Unified AR-based understanding & reasoning and Diffusion-based Generation, with the RL-post-training paradigm of such systems
+- Long-horizon agents. Such as coding agent, agentic VLA and agentic Video Generation, with the RL paradigm for both un-unified and unified paradigm of generation and understanding.
 
 I love intellectual games in my spare time: I am a 17-years chess player as *National Chess Athlete* in China, and have won the 1-st prize in Chinese Mathematics Olympiad (CMO)-1st round by 1.5-year's part-time self-training. For academic discussion and collaboration, please don't hesitate to reach out to me via email!
  
